@@ -1,0 +1,22 @@
+.login-pan {
+    display: flex;
+    position: relative;
+
+    border: solid black;
+    border-radius: 10px;
+
+    text-align: center;
+
+    transition: 1s;
+}
+
+.login-pan div {
+    text-align: right;
+}
+
+.login-input {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    transition: 1s;
+}
