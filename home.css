@@ -7,6 +7,7 @@
     url("https://db.onlinewebfonts.com/t/3e586c80352781ce22857ff85440cd09.ttf")format("truetype"),
     url("https://db.onlinewebfonts.com/t/3e586c80352781ce22857ff85440cd09.svg#Amiko")format("svg");
 }
+
 @font-face {
     font-family: "Abel";
     src: url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.eot");
@@ -17,11 +18,20 @@
     url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.svg#Abel")format("svg");
 }
 
-
+@font-face {
+    font-family: "Amiko Regular";
+    src: url("https://db.onlinewebfonts.com/t/151717dc27ffdcefe9d50d975c5e5827.eot");
+    src: url("https://db.onlinewebfonts.com/t/151717dc27ffdcefe9d50d975c5e5827.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/151717dc27ffdcefe9d50d975c5e5827.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/151717dc27ffdcefe9d50d975c5e5827.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/151717dc27ffdcefe9d50d975c5e5827.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/151717dc27ffdcefe9d50d975c5e5827.svg#Amiko Regular")format("svg");
+}
 
 html {
-    background-image: url("images/DESIGN\ DE\ FOND.svg");
+    background: no-repeat url("images/DESIGN DE FOND.svg");
     background-size:100%;
+    
 }
 
 .btn_container {
@@ -32,6 +42,7 @@ html {
 }
 
 .btn_decouvrir{
+    text-decoration: none;
     margin:0;
     padding-right: 5%;
     padding-left: 5%;
@@ -46,14 +57,17 @@ html {
     background-color: #000000;
     color:#FFFFFF; 
     border-radius:5px ;
-    font-family: Abel;
+    font-family: Amiko Regular;
     border:none;
 }
 
 .intro_container{
-    background-color:#FFFFFF;
-    margin-top : 34.5%; 
-    height: 200px;
+    size:0;
+    background-color:#EAFFFB;
+    margin-top : 10%; 
+    margin-left: -1%;
+    margin-right:-1%;
+    height: 300px;
     position: relative;
     border: 3px solid green;
 }
