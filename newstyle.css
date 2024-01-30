@@ -9,21 +9,22 @@
     font-display: swap;
 }
 
-.img-header {
-    width: 100%;
-    display: block; /* Ensures that the div takes up the full width */
-}
-
-.img-header img {
-    width: 100%; /* Ensures that the image stretches to the full width of its container */
-    height: auto; /* Keeps the image aspect ratio intact */
-    display: block; /* Removes any extra space below the image */
-}
-
 @font-face {
     font-family: 'alatsi';
     src: url('font\Alatsi-Regular.ttf');
 }
+
+@font-face {
+    font-family: 'abel';
+    src: url('ressources/font/Abel-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'amiko';
+    src: url('ressources/font/Amiko-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
 
 @keyframes fadeInUp {
     from {
@@ -35,14 +36,18 @@
         transform: translateY(0);
     }
 }
-.footer-anim {
-    animation-name: fadeInUp;
-    animation-duration: 1s;
-    animation-fill-mode: both; 
+
+.img-header {
+    width: 100%;
+    display: block; /* Ensures that the div takes up the full width */
 }
-*{
-    text-decoration: none;
+
+.img-header img {
+    width: 100%; /* Ensures that the image stretches to the full width of its container */
+    height: auto; /* Keeps the image aspect ratio intact */
+    display: block; /* Removes any extra space below the image */
 }
+
 
 main{
     background-image: url('ressources/forme10.webp'); /* Corrected slashes */
@@ -51,27 +56,39 @@ main{
     min-height: 100vh; /* This ensures that the main element is at least as tall as the viewport */
 }
 
+.footer-anim {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both; 
+}
+
+.footer-anim {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both; 
+}
+*{
+    text-decoration: none;
+}
 footer {
     padding: 10px 0;
     background-color: #3B4040;
     color: #82FFE1;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     font-family: 'alatsi', sans-serif;
     height: 150px;
 }
 
+
 .footer-nav {
-    margin-left: 30px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 3%;
     font-size: 17px;
 }
 
-.footer-nav a {
-    color: #82FFE1;
-    text-decoration: none;
-    padding-right: 20px;
-}
 
 .footer-nav a:hover {
     text-decoration: underline;
@@ -79,19 +96,13 @@ footer {
 }
 
 .copyright {
+    display: flex;
     flex-grow: 1;
     text-align: center;
     font-size: 20px;
-}
-
-.social-icons {
-    margin-right: 30px;
-}
-
-.social-icons a {
-    color: #82FFE1;
-    text-decoration: none;
-    padding-left: 10px;
+    padding-right: 8%;
+    padding-left: 16%;
+    flex: 1;
 }
 
 .moda{
@@ -99,18 +110,29 @@ footer {
     text-decoration: none;
     display: flex;
     font-size: 15px;
-    margin-right: 20px;
     align-items: center;
-}
-
-.moda a:hover {
-    text-decoration: underline;
-    color: aqua;
 }
 
 .social-icons a:hover{
     filter: drop-shadow(2px 2px 4px white);
 }
+
+.footer-nav, .moda, .social-icons, .copyright {
+    margin: 0 15px;  /* Adjust the margin as needed */
+    display: inline-flex; /* Use inline-flex for in-line alignment */
+    align-items: center; /* Align items vertically */
+}
+
+.footer-nav a, .social-icons a, .moda a {
+    color: #82FFE1;
+    text-decoration: none;
+    padding: 0 10px; /* Adjust padding for each link */
+}
+
+.social-icons {
+    justify-content: flex-end;
+}
+
 
 .first-p{
     justify-content: center;
@@ -161,18 +183,6 @@ footer {
     border-radius: 10px;
 }
 
-@font-face {
-    font-family: 'abel';
-    src: url('ressources/font/Abel-Regular.ttf') format('truetype');
-    font-display: swap;
-}
-@font-face {
-    font-family: 'amiko';
-    src: url('ressources/font/Amiko-Regular.ttf') format('truetype');
-    font-display: swap;
-}
-
-/* Other @font-face and global styles... */
 
 .global-side {
     display: flex;
@@ -184,12 +194,12 @@ footer {
 }
 
 .side-by-side {
-    padding: 10px;
     display: flex; 
-    justify-content: space-between; 
-    align-items: stretch;
-    width: 100%;
-    margin: 0 -10px; /* Adjust negative margin to handle the padding */
+    justify-content: space-around; /* This will distribute space around the items */
+    align-items: stretch; /* Keeps items stretched to fill the parent container */
+    gap: 40px; /* This creates space between the flex items */
+    width: 100%; /* Adjust the width as necessary */
+    padding: 0 100px; /* Add padding to the sides of the container if desired */
 }
 
 .left-div, .right-div {
@@ -202,6 +212,10 @@ footer {
     flex-direction: column;
     text-align: center;
     color: #3B4040;
+    margin-right: 10px;
+    flex: 1; /* Each div takes up equal space */
+    margin: 10px; /* Adjust margin as needed */
+    padding: 20px; /* Adjust padding as needed */
 }
 
 .left-div {
@@ -220,7 +234,7 @@ footer {
     font-family: 'amiko', sans-serif;
     font-weight: bold;
     font-size: 30px;
-    margin-bottom: 20px; /* Adjust as needed */
+    margin-bottom: 30px; /* Adjust as needed */
 }
 
 .left-div p, .right-div p {
@@ -228,13 +242,6 @@ footer {
     font-size: 21px;
 }
 
-.left-div img{
-    margin-left: 20px;
-}
-
-.left-div img{
-    margin-right: 20px;
-}
 
 /* Responsive design adjustments */
 @media screen and (max-width: 900px){
@@ -284,7 +291,9 @@ footer {
         margin-right: 0; 
         text-align: center; 
     }
-
+    .copyright{
+        padding-left: 10px;
+    }
     .footer-nav a,
     .social-icons a {
         padding: 5px 10px; 
