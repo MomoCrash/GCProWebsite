@@ -1,24 +1,4 @@
 @font-face {
-    font-family: "Amiko";
-    src: url("https://db.onlinewebfonts.com/t/3e586c80352781ce22857ff85440cd09.eot");
-    src: url("https://db.onlinewebfonts.com/t/3e586c80352781ce22857ff85440cd09.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/3e586c80352781ce22857ff85440cd09.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/3e586c80352781ce22857ff85440cd09.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/3e586c80352781ce22857ff85440cd09.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/3e586c80352781ce22857ff85440cd09.svg#Amiko")format("svg");
-}
-
-@font-face {
-    font-family: "Abel";
-    src: url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.eot");
-    src: url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.svg#Abel")format("svg");
-}
-
-@font-face {
     font-family: "Amiko Regular";
     src: url("https://db.onlinewebfonts.com/t/151717dc27ffdcefe9d50d975c5e5827.eot");
     src: url("https://db.onlinewebfonts.com/t/151717dc27ffdcefe9d50d975c5e5827.eot?#iefix")format("embedded-opentype"),
@@ -29,13 +9,15 @@
 }
 
 html {
-    background: no-repeat url("images/DESIGN DE FOND.svg");
-    background-size:100%;
-    
+    margin: 0;
+    padding: 0;
+    background-image: url("../ressources/mobile_fond.webp");   
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .btn_container {
-    margin-top : 34.5%; 
+    margin-top : 35%; 
     height: 200px;
     position: relative;
     border: 3px solid green;
