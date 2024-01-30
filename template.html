@@ -7,37 +7,50 @@
     <link href="css/style2.css" rel="stylesheet" type="text/css" />
 </head>
 
+<!-- PAS TOUCHE -->
+
 <div class="nav">
         <div class="nav-img">
-          <a href="#"><img src="ressources/logo_black.svg" alt="logo home"></a>
+          <a href="index.html"><img src="ressources/logo_black.svg" alt="logo home"></a>
         </div>
         <div class="nav-right">
-          <a href="#">NEWS</a>
-          <a href="#" class="nav-border">NOS EXPERIENCES</a>
-          <a href="#" class="nav-border">A PROPOS DE NOUS</a>
+          <a href="navbar.html">NEWS</a>
+          <a href="template.html" class="nav-border">NOS EXPERIENCES</a>
+          <a href="template.html" class="nav-border">A PROPOS DE NOUS</a>
           <a href="#" class="nav-border">NOS EQUIPEMENTS</a>
-          <a href="#" class="nav-border"><b>CONNEXION</b></a>
+          <a href="login.html" class="nav-border"><b>CONNEXION</b></a>
 
         </div>
 </div>
 
+<!--  -->
+
 <body>
+
+<!-- PARTIE TEXTE -->
+
+  <div class="top_container">
+    a
+  </div>
+
 
   <div class="btn_container">
     <div id="btn">
-        <button class="btn_decouvrir" type="button" onclick="window.open('https://store.steampowered.com/app/361420/ASTRONEER/','_blank');">DÉCOUVRIR</button>
+      <a href="#text"><button class="btn_decouvrir" type="button" >DÉCOUVRIR</button></a>
     </div>
   </div>
 
-  <div class="description">
-    <div class="description-button-video"><img src="ressources/image-68.webp" ></div>
-    <div class="description-text">
+  <div class="description" id="text">
+    <div class="description-button-video">
+      <a href="#img1"><img src="ressources/image-68.webp"></a></div>
+
+      <div class="description-text">
         <div class="description-text2">
             <h1>QU'EST CE QUE <img class="logo-description" src="ressources/battle_banner.webp" alt="logo secondaire the sense" width="20%" height="20%"> ?</h1>
             
         </div>
         <div class="description-explication">
-            <p>
+            <p id="text">
               Vous cherchez à connaitre qui est le meilleur dans la famille ou qui fera le S.A.M ce
               soir ? Venez régler vos comptes dans la BATTLE ROOM par équipe de 1 à 4 joueurs soit 8 joueurs au maximum. Au travers de nos différents modes de jeux, prouvez votre courage et montrez qu’au reste du monde que vous êtes le meilleur. Battez tous les records, faites ressortirvotre côté compétitif et pas de quartier ! N'attendez plus et rejoignez l’arène, pour prouver que vous serez le prochain champion de THE SENSE.
             </p>
@@ -45,17 +58,19 @@
     </div>
   </div>
 
-
+<!-- DERNIERE PARTIE -->
+  <div class="bottom_container">Top Left</div>
   <div class="second_part">
     <img src="ressources/forme10.webp">
-
+    
   </div>
-  
 
-  
 
 
 </body>
+
+<!-- PAS TOUCHE -->
+
 <footer>
   <div class="footer-nav">
       <a href="#">Nous contacter</a>
@@ -79,6 +94,17 @@
   </div>
 </footer>
 </body>
+
+<!-- POP UP VIDEO -->
+
+<a href="#_" class="lightbox" id="img1">
+  <div id="videoModal" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="false" style="display: block;">
+    <div class="modal-header"></div>
+    <div class="modal-body"><iframe width="870" height="489" src="https://www.youtube.com/embed/9Qzm66JX-RA" frameborder="0" allowfullscreen=""></iframe></div>
+    <div class="modal-footer"></div>
+  </div>
+
+
 <script>
 // Fonction qui sera appelée lorsque le footer entrera dans le viewport
 function handleIntersection(entries, observer) {
