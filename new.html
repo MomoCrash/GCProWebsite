@@ -8,7 +8,8 @@
     <link href="css/style2.css" rel="stylesheet" type="text/css"/>
     <title>Les News</title>
 </head>
-<header>
+<body>
+  <header>
     <div class="nav">
         <div class="nav-img">
           <a href="#"><img src="ressources/logo_black.svg" alt="logo home"></a>
@@ -27,22 +28,27 @@
 
 <main>
   <!-- Main content sections -->
-  <div class="first-p"><h1>SUIVEZ TOUTE L'ACTUALITE DE THE SENSE</h1>
-    <p>Nous souhaitons vous offrir toujours plus d’expériences immersive, c’est pourquoi nous avons à cœur de vous proposer de plus en plus de nouvelles aventures. Toute l’année, The Sense vous invite à rejoindre ces rooms événements et à découvrir celles qui arriveront plus tard.
-  </p></div>
+  <div class="animated-on-scroll">
+    <div class="first-p"><h1>SUIVEZ TOUTE L'ACTUALITE DE THE SENSE</h1>
+      <p>Nous souhaitons vous offrir toujours plus d’expériences immersive, c’est pourquoi nous avons à cœur de vous proposer de plus en plus de nouvelles aventures. Toute l’année, The Sense vous invite à rejoindre ces rooms événements et à découvrir celles qui arriveront plus tard.
+    </p></div>
+  </div>
   <section>
     <!-- News article -->
-    <div class="second-p">
+    <div class="animated-on-scroll">
+      <div class="second-p">
         <img src="ressources\image141.webp" alt="video" width=110% height=110%>
-        <div class="text-second">
+        <div class="text-second" animation-type="fadeIn" animation-delay="0.5s">
             <h1>ÉVÉNEMENT : LA LÉGENDE DU PÈRE NOËL</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
         </div>
+      </div>
     </div>
   </section>
   <section>
-    <div class="global-side">
+    <div class="animated-on-scroll">
+      <div class="global-side">
         <div class="side-by-side">
           <div class="left-div">
             <img src="ressources\image_8.webp" alt="video" width=110% height=110%>
@@ -60,8 +66,8 @@
           </div>
         </div>
       </div>
+    </div>
   </section>
-  <body>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -116,10 +122,6 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
 </main>
 <body>
   <footer>
@@ -143,26 +145,10 @@
         <a href="#"><img src="ressources/Facebook.png" alt="Facebook"></a>
     </div>
   </footer>  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="animation.js"></script>
+
 </body>
-<script>
-    // Fonction qui sera appelée lorsque le footer entrera dans le viewport
-    function handleIntersection(entries, observer) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('footer-anim');
-          // Optionnel: Désactivez l'observer si vous ne voulez l'animation qu'une seule fois
-          observer.unobserve(entry.target);
-        }
-      });
-    }
-  
-    // Création de l'observer avec la fonction et les options
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.1 // Déclenche l'animation lorsque 10% du footer est visible
-    });
-  
-    // Cible le footer pour l'observer
-    const footer = document.querySelector('footer');
-    observer.observe(footer);
-  </script>
 </html>
