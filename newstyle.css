@@ -1,0 +1,312 @@
+@font-face {
+    font-family: 'abel';
+    src: url('ressources/font/Abel-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'amiko';
+    src: url('ressources\font\Amiko-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+.img-header {
+    width: 100%;
+    display: block; /* Ensures that the div takes up the full width */
+}
+
+.img-header img {
+    width: 100%; /* Ensures that the image stretches to the full width of its container */
+    height: auto; /* Keeps the image aspect ratio intact */
+    display: block; /* Removes any extra space below the image */
+}
+
+@font-face {
+    font-family: 'alatsi';
+    src: url('font\Alatsi-Regular.ttf');
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.footer-anim {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both; 
+}
+*{
+    text-decoration: none;
+}
+
+main{
+    background-image: url('ressources/forme10.webp'); /* Corrected slashes */
+    background-size: cover; /* Cover the entire area of the element */
+    background-repeat: no-repeat;
+    min-height: 100vh; /* This ensures that the main element is at least as tall as the viewport */
+}
+
+footer {
+    padding: 10px 0;
+    background-color: #3B4040;
+    color: #82FFE1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'alatsi', sans-serif;
+    height: 150px;
+}
+
+.footer-nav {
+    margin-left: 30px;
+    font-size: 17px;
+}
+
+.footer-nav a {
+    color: #82FFE1;
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+    color: aqua;
+}
+
+.copyright {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 20px;
+}
+
+.social-icons {
+    margin-right: 30px;
+}
+
+.social-icons a {
+    color: #82FFE1;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.moda{
+    color: #82FFE1;
+    text-decoration: none;
+    display: flex;
+    font-size: 15px;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.moda a:hover {
+    text-decoration: underline;
+    color: aqua;
+}
+
+.social-icons a:hover{
+    filter: drop-shadow(2px 2px 4px white);
+}
+
+.first-p{
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    flex-direction: column;
+}
+
+.first-p h1{
+    font-size: 50px;
+    color: #3B4040;
+    font-family: 'amiko', sans-serif;
+    font-weight: bold;
+}
+
+.first-p p{
+    font-size: 30px;
+    color: #3B4040;
+    font-family: 'abel', sans-serif;
+}
+
+.second-p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    flex-direction: column;
+    text-align: center;
+}
+
+.second-p h1{
+    font-size: 50px;
+    color: #3B4040;
+    font-family: 'amiko', sans-serif;
+    font-weight: bold;
+}
+
+.second-p p{
+    font-size: 30px;
+    color: #3B4040;
+    font-family: 'abel', sans-serif;
+}
+
+.text-second{
+    padding: 10px;
+    padding: 3%;
+    background-color: #E5E5E5;
+    border-radius: 10px;
+}
+
+@font-face {
+    font-family: 'abel';
+    src: url('ressources/font/Abel-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'amiko';
+    src: url('ressources/font/Amiko-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+/* Other @font-face and global styles... */
+
+.global-side {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 10%;
+    flex-direction: column;
+    text-align: center;
+}
+
+.side-by-side {
+    padding: 10px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: stretch;
+    width: 100%;
+    margin: 0 -10px; /* Adjust negative margin to handle the padding */
+}
+
+.left-div, .right-div {
+    flex: 1; 
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #3B4040;
+}
+
+.left-div {
+    background-image: url('path-to-your-left-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.right-div {
+    background-image: url('path-to-your-right-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.left-div h2, .right-div h2 {
+    font-family: 'amiko', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.left-div p, .right-div p {
+    font-family: 'abel', sans-serif;
+    font-size: 21px;
+}
+
+.left-div img{
+    margin-left: 20px;
+}
+
+.left-div img{
+    margin-right: 20px;
+}
+
+/* Responsive design adjustments */
+@media screen and (max-width: 900px){
+    .side-by-side {
+        flex-direction: column;
+    }
+    
+    .left-div, .right-div {
+        width: 100%; /* Full width on small screens */
+        margin: 0; /* Reset margin */
+        padding: 20px; /* Adjust padding as needed */
+    }
+
+    .global-side {
+        padding: 0; /* Remove padding on smaller screens */
+    }
+}
+
+
+  .text-third{
+    padding: 3%;
+    background-color: #E5E5E5;
+    border-radius: 10px;
+  }
+
+  .text-four{
+    padding: 3%;
+    background-color: #E5E5E5;
+    border-radius: 10px;
+  }
+  
+@media screen and (max-width: 900px){
+    footer {
+        flex-direction: column;
+        align-items: center; 
+        padding: 20px;
+        height: auto; 
+    }
+
+    .footer-nav,
+    .social-icons,
+    .moda,
+    .copyright {
+        width: 100%; 
+        justify-content: center;
+        margin-left: 0; 
+        margin-right: 0; 
+        text-align: center; 
+    }
+
+    .footer-nav a,
+    .social-icons a {
+        padding: 5px 10px; 
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center; 
+        flex-wrap: wrap; 
+    }
+
+    .social-icons a {
+        padding-top: 10px;
+        padding-left: 0; 
+    }
+
+    .moda {
+        padding-top: 20px; 
+        flex-direction: column; 
+    }
+
+    .copyright {
+        padding-top: 20px; 
+    }
+}
