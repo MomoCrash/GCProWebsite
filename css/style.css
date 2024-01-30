@@ -13,14 +13,11 @@
         transform: translateY(0);
     }
 }
+
 .footer-anim {
     animation-name: fadeInUp;
     animation-duration: 1s;
     animation-fill-mode: both; /* Garde l'état final après la fin de l'animation */
-}
-*{
-    text-decoration: none;
-    color: #82FFE1;
 }
 footer {
     padding: 10px 0;
@@ -82,8 +79,6 @@ footer {
 .social-icons a:hover{
     filter: drop-shadow(2px 2px 4px white);
 }
-
-#LOGIN_PAGE
 
 .login-pan {
     display: flex;

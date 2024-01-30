@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<?php 
-
-include "sql/sql-manager.php"
-
-?>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,17 +12,16 @@ include "sql/sql-manager.php"
 
     <a id="login"> Connexion </a>
 
-    <form action="login.php" class="login-pan" style="width: 0px; height: 0px; visibility: hidden;">
+    <form action="account.php?method=login" method="POST" class="login-pan" style="width: 0px; height: 0px; visibility: hidden;">
         <div class="login-content">
             <p> Connexion </p>
             <p> Identifiant <input class="login-input" type="email" name="email" placeholder="abc@mail.fr"> </input>
             </p>
             <p> Mot de passe <input class="login-input" type="password" name="password" placeholder="······"> </input>
             </p>
-            <a style="gray" href="register.php"> Crée un compte </a> <button type="submit" name="submit"
+            <a style="gray" href="account.php?method='register'"> Crée un compte </a> <button type="submit" name="submit"
                 placeholder="Connexion"> Connexion </button>
         </div>
-
     </form>
 
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
