@@ -84,16 +84,18 @@ html {
     color:#646363;
     font-size: 200%;
     margin-left:10%;
-    margin-bottom:5%;
+    margin-bottom:2%;
 }
 
 .titre_intro {
     font-family: Abel;
     color:#3B4040;
-    font-size:200%;
-    display:block;
+    font-size:40px;
 }
-
+.logo{
+    height:57.31px;
+    margin-bottom: -1%;
+}
 .a_propos_btn{
     background:none;
     border:none;
@@ -103,10 +105,13 @@ html {
     display:block;
 }
 
+
 .img_trailer{
-    margin-top: 25%;
-    max-width: 50%;
-    height: 30%;
-    border:solid;
-    height: 100%;
+    width: 400px;
+    height:400px;
+    object-fit: cover;
+    margin: auto;
+    border:solid 20px #bbccca;
+    border-radius: 50%;
+    margin-left: 5%;
 }
