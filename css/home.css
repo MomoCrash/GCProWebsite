@@ -8,12 +8,33 @@
     url("https://db.onlinewebfonts.com/t/151717dc27ffdcefe9d50d975c5e5827.svg#Amiko Regular")format("svg");
 }
 
+@font-face {
+    font-family: "Abel";
+    src: url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.eot");
+    src: url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.svg#Abel")format("svg");
+}
+
+@font-face {
+    font-family: "Poppins Thin";
+    src: url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.eot");
+    src: url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.svg#Poppins Thin")format("svg");
+}
+
 html {
     margin: 0;
     padding: 0;
     background-image: url("../ressources/mobile_fond.webp");   
     background-repeat: no-repeat;
     background-size: cover;
+    height:100px;
 }
 
 .btn_container {
@@ -44,12 +65,48 @@ html {
 }
 
 .intro_container{
+    display:flex;
     size:0;
     background-color:#EAFFFB;
     margin-top : 10%; 
+    margin-top : 10%; 
     margin-left: -1%;
     margin-right:-1%;
-    height: 300px;
+    height: 1%;
     position: relative;
     border: 3px solid green;
+    text-align:center;
+}
+
+.texte_intro {
+    text-align:left;
+    font-family: Abel;
+    color:#646363;
+    font-size: 200%;
+    margin-left:10%;
+    margin-bottom:5%;
+}
+
+.titre_intro {
+    font-family: Abel;
+    color:#3B4040;
+    font-size:200%;
+    display:block;
+}
+
+.a_propos_btn{
+    background:none;
+    border:none;
+    margin-left:-5px;
+    font-family: "Poppins thin";
+    font-size:150%;
+    display:block;
+}
+
+.img_trailer{
+    margin-top: 25%;
+    max-width: 50%;
+    height: 30%;
+    border:solid;
+    height: 100%;
 }
