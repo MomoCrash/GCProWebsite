@@ -65,8 +65,6 @@
     background-image: url('../ressources/bryceforme1.webp');
     background-size: cover; /* Utilisez cover pour s'assurer que l'image couvre la zone */
     background-repeat: no-repeat;
-    width: 100%; /* Assurez-vous que .decouverte-img prend toute la largeur */
-    height: 100%; /* et la hauteur de son parent .decouvrir */
 }
 
 
