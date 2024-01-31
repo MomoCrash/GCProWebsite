@@ -19,7 +19,7 @@
             </p>
             <p> Mot de passe <input class="login-input" type="password" name="password" placeholder="······"> </input>
             </p>
-            <a style="gray" href="account.php?method='register'"> Crée un compte </a> <button type="submit" name="submit"
+            <a style="gray" href="account.php?method=register'"> Crée un compte </a> <button type="submit" name="submit"
                 placeholder="Connexion"> Connexion </button>
         </div>
     </form>
