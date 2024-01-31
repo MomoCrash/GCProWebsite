@@ -1,0 +1,351 @@
+@font-face {
+    font-family: 'abel';
+    src: url('../ressources/font/Abel-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'amiko';
+    src: url('../ressources/\font\Amiko-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'alatsi';
+    src: url('../ressources/font\Alatsi-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'abel';
+    src: url('../ressources/font/Abel-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'amiko';
+    src: url('../ressources/font/Amiko-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+.img-header {
+    width: 100%;
+    display: block; /* Ensures that the div takes up the full width */
+}
+
+.img-header img {
+    width: 100%; /* Ensures that the image stretches to the full width of its container */
+    height: auto; /* Keeps the image aspect ratio intact */
+    display: block; /* Removes any extra space below the image */
+}
+
+
+main{
+    background-image: url('../ressources/forme10.webp'); /* Corrected slashes */
+    background-size: cover; /* Cover the entire area of the element */
+    background-repeat: no-repeat;
+    min-height: 100vh; /* This ensures that the main element is at least as tall as the viewport */
+}
+
+.footer-anim {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both; 
+}
+
+.footer-anim {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both; 
+}
+*{
+    text-decoration: none;
+}
+footer {
+    padding: 10px 0;
+    background-color: #3B4040;
+    color: #82FFE1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'alatsi', sans-serif;
+    height: 150px;
+}
+
+
+.footer-nav {
+    display: flex;
+    justify-content: flex-start;
+    padding: 3%;
+    font-size: 17px;
+}
+
+
+.footer-nav a:hover {
+    text-decoration: underline;
+    color: aqua;
+}
+
+.copyright {
+    display: flex;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 20px;
+    padding-right: 8%;
+    padding-left: 16%;
+    flex: 1;
+}
+
+.moda{
+    color: #82FFE1;
+    text-decoration: none;
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+}
+
+.social-icons a:hover{
+    filter: drop-shadow(2px 2px 4px white);
+}
+
+.footer-nav, .moda, .social-icons, .copyright {
+    margin: 0 15px;  /* Adjust the margin as needed */
+    display: inline-flex; /* Use inline-flex for in-line alignment */
+    align-items: center; /* Align items vertically */
+}
+
+.footer-nav a, .social-icons a, .moda a {
+    color: #82FFE1;
+    text-decoration: none;
+    padding: 0 10px; /* Adjust padding for each link */
+}
+
+.social-icons {
+    justify-content: flex-end;
+}
+
+
+.first-p{
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    flex-direction: column;
+    animation-name: fadeIn;
+    animation-duration: 2s; /* Durée de l'animation */
+    animation-fill-mode: forwards;
+}
+
+.first-p h1{
+    font-size: 50px;
+    color: #3B4040;
+    font-family: 'amiko', sans-serif;
+    font-weight: bold;
+}
+
+.first-p p{
+    font-size: 30px;
+    color: #3B4040;
+    font-family: 'abel', sans-serif;
+}
+
+.second-p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+.second-p h1{
+    font-size: 50px;
+    color: #3B4040;
+    font-family: 'amiko', sans-serif;
+    font-weight: bold;
+}
+
+.animated-on-scroll {
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: all 0.4s ease-out;
+    transition-delay: 0.2s;
+  }
+  
+.animate{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.second-p p{
+    font-size: 30px;
+    color: #3B4040;
+    font-family: 'abel', sans-serif;
+}
+
+.text-second{
+    padding: 10px;
+    padding: 3%;
+    background-color: #E5E5E5;
+    border-radius: 10px;
+}
+
+
+.global-side {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 10%;
+    flex-direction: column;
+    text-align: center;
+}
+
+.side-by-side {
+    display: flex; 
+    justify-content: space-around; /* This will distribute space around the items */
+    align-items: stretch; /* Keeps items stretched to fill the parent container */
+    gap: 40px; /* This creates space between the flex items */
+    width: 100%; /* Adjust the width as necessary */
+    padding: 0 100px; /* Add padding to the sides of the container if desired */
+}
+
+.left-div, .right-div {
+    flex: 1; 
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #3B4040;
+    margin-right: 10px;
+    flex: 1; /* Each div takes up equal space */
+    margin: 10px; /* Adjust margin as needed */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.left-div {
+    background-image: url('path-to-your-left-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.right-div {
+    background-image: url('path-to-your-right-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.left-div h2, .right-div h2 {
+    font-family: 'amiko', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px; /* Adjust as needed */
+}
+
+.left-div p, .right-div p {
+    font-family: 'abel', sans-serif;
+    font-size: 21px;
+}
+
+
+/* Responsive design adjustments */
+@media screen and (max-width: 900px){
+    .side-by-side {
+        flex-direction: column;
+    }
+    
+    .left-div, .right-div {
+        width: 100%; /* Full width on small screens */
+        margin: 0; /* Reset margin */
+        padding: 20px; /* Adjust padding as needed */
+    }
+
+    .global-side {
+        padding: 0; /* Remove padding on smaller screens */
+    }
+}
+
+
+  .text-third{
+    padding: 3%;
+    background-color: #E5E5E5;
+    border-radius: 10px;
+  }
+
+  .text-four{
+    padding: 3%;
+    background-color: #E5E5E5;
+    border-radius: 10px;
+  }
+
+  .visible {
+    animation: fadeIn 2s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+@media screen and (max-width: 900px){
+    footer {
+        flex-direction: column;
+        align-items: center; 
+        padding: 20px;
+        height: auto; 
+    }
+
+    .footer-nav,
+    .social-icons,
+    .moda,
+    .copyright {
+        width: 100%; 
+        justify-content: center;
+        margin-left: 0; 
+        margin-right: 0; 
+        text-align: center; 
+    }
+    .copyright{
+        padding-left: 10px;
+    }
+    .footer-nav a,
+    .social-icons a {
+        padding: 5px 10px; 
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center; 
+        flex-wrap: wrap; 
+    }
+
+    .social-icons a {
+        padding-top: 10px;
+        padding-left: 0; 
+    }
+
+    .moda {
+        padding-top: 20px; 
+        flex-direction: column; 
+    }
+
+    .copyright {
+        padding-top: 20px; 
+    }
+}
