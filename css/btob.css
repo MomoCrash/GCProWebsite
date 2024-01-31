@@ -13,7 +13,7 @@ html{
 body {
     margin: 0;
     padding: 0;
-    background-image: url("../ressources/bryceforme2.webp");   
+    background-image: url("../ressources/bryceforme1.webp");   
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -85,13 +85,6 @@ body {
     filter: brightness(50%);
 }
 
-.decouvrir {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    padding-top: 4%;
-  }
-
 @font-face {
     font-family: 'abel';
     src: url('ressources/font/Abel-Regular.ttf') format('truetype');
@@ -149,8 +142,8 @@ body {
 
 
 main{
-    background-image: url(/ressources/forme1.webp); /* Corrected slashes */
-    background-size: 100%; /* Cover the entire area of the element */
+    background-image: url('ressources/forme10.webp'); /* Corrected slashes */
+    background-size: cover; /* Cover the entire area of the element */
     background-repeat: no-repeat;
     min-height: 100vh; /* This ensures that the main element is at least as tall as the viewport */
 }
@@ -443,3 +436,4 @@ footer {
         padding-top: 20px; 
     }
 }
+
