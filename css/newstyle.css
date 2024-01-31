@@ -162,6 +162,32 @@ footer {
     font-family: 'abel', sans-serif;
 }
 
+.last-p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    flex-direction: column;
+    animation-name: fadeIn;
+    animation-duration: 2s; /* Durée de l'animation */
+    animation-fill-mode: forwards;
+}
+
+.last-p h1{
+    display: flex;
+    font-size: 50px;
+    color: #3B4040;
+    font-family: 'amiko', sans-serif;
+    font-weight: bold;
+}
+
+.last-p p{
+    display: flex;
+    font-size: 30px;
+    color: #3B4040;
+    font-family: 'abel', sans-serif;
+}
+
 .second-p{
     display: flex;
     justify-content: center;
