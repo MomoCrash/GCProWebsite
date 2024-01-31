@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/style2.css" rel="stylesheet" type="text/css" />
-    <link href="css/login.css" rel="stylesheet" type="text/css" />
     <title>Les News</title>
 </head>
 
@@ -16,7 +15,6 @@
 
 session_start();
 if (isset($_SESSION["name"])) {
-  echo "set";
   $name = $_SESSION["name"];
   $email = $_SESSION["email"];
 }
@@ -40,10 +38,10 @@ if (isset($_SESSION["name"])) {
                     style="width: 0px; height: 0px; visibility: hidden; display:none;">
                     <div class="login-content">
                         <p> Connexion </p>
-                        <p> Identifiant <input class="login-input" type="email" name="email" placeholder="abc@mail.fr">
+                        <p> Identifiant <input class="form-label" type="email" name="email" placeholder="abc@mail.fr">
                             </input>
                         </p>
-                        <p> Mot de passe <input class="login-input" type="password" name="password"
+                        <p> Mot de passe <input class="form-label" type="password" name="password"
                                 placeholder="······"> </input>
                         </p>
                         <a style="gray" href="account.php?method=register"> Crée un compte </a> <button type="submit"
