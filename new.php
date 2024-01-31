@@ -32,7 +32,7 @@ if (isset($_SESSION["name"])) {
             <div class="nav-right">
                 <a href="#">NEWS</a>
                 <a href="#" class="nav-border">NOS EXPERIENCES</a>
-                <a href="#" class="nav-border">A PROPOS DE NOUS</a>
+                <a href="Apropos.html" class="nav-border">A PROPOS DE NOUS</a>
                 <a href="#" class="nav-border">NOS EQUIPEMENTS</a>
                 <a href="#" id="login" class="nav-border"><b> <?= isset($name) ? $name : "CONNEXION"; ?> </b></a>
                 <!-- Connexion page -->
