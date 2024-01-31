@@ -2,7 +2,7 @@
 
 $bdd_servername = "localhost";
 $bdd_username = "root";
-$bdd_password = "root";
+$bdd_password = "kevin";
 
 try {
     
