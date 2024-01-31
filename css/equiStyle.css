@@ -59,12 +59,11 @@
     align-items: center;
     padding: 4%;
     background-color: white; /* Fond blanc pour .decouvrir */
-}
-
-.decouvert-img {
     background-image: url('../ressources/bryceforme1.webp');
     background-size: cover; /* Utilisez cover pour s'assurer que l'image couvre la zone */
     background-repeat: no-repeat;
+    background-position: 0px -400px;
+  
 }
 
 
