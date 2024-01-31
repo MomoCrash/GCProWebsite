@@ -16,7 +16,6 @@
 
 session_start();
 if (isset($_SESSION["name"])) {
-  echo "set";
   $name = $_SESSION["name"];
   $email = $_SESSION["email"];
 }
