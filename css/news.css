@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'alatsi';
-    src: url('../ressources/font/Alatsi-Regular.ttf');
+    src: url('font\Alatsi-Regular.ttf');
 }
 
 @keyframes fadeInUp {
@@ -13,11 +13,13 @@
         transform: translateY(0);
     }
 }
-
 .footer-anim {
     animation-name: fadeInUp;
     animation-duration: 1s;
-    animation-fill-mode: both; /* Garde l'état final après la fin de l'animation */
+    animation-fill-mode: both; 
+}
+*{
+    text-decoration: none;
 }
 footer {
     padding: 10px 0;
@@ -31,14 +33,14 @@ footer {
 }
 
 .footer-nav {
-    margin-left: 30px; /* Adjust as needed */
+    margin-left: 30px;
     font-size: 17px;
 }
 
 .footer-nav a {
     color: #82FFE1;
     text-decoration: none;
-    padding-right: 20px; /* Spacing between nav links */
+    padding-right: 20px;
 }
 
 .footer-nav a:hover {
@@ -53,7 +55,7 @@ footer {
 }
 
 .social-icons {
-    margin-right: 30px; /* Adjust as needed */
+    margin-right: 30px;
 }
 
 .social-icons a {
@@ -80,26 +82,47 @@ footer {
     filter: drop-shadow(2px 2px 4px white);
 }
 
-.login-pan {
-    display: flex;
-    position: relative;
+@media screen and (max-width: 900px){
+    footer {
+        flex-direction: column;
+        align-items: center; 
+        padding: 20px;
+        height: auto; 
+    }
 
-    border: solid black;
-    border-radius: 10px;
+    .footer-nav,
+    .social-icons,
+    .moda,
+    .copyright {
+        width: 100%; 
+        justify-content: center;
+        margin-left: 0; 
+        margin-right: 0; 
+        text-align: center; 
+    }
 
-    text-align: center;
+    .footer-nav a,
+    .social-icons a {
+        padding: 5px 10px; 
+    }
 
-    transition: 1s;
-}
+    .social-icons {
+        display: flex;
+        justify-content: center; 
+        flex-wrap: wrap; 
+    }
 
-.login-content {
-    text-align: right;
-    transition: 0s;
-}
+    .social-icons a {
+        padding-top: 10px;
+        padding-left: 0; 
+    }
 
-.login-input {
-    display: inline-block;
-    width: 0px;
-    height: 0px;
-    transition: 1.1s;
+    .moda {
+        padding-top: 20px; 
+        flex-direction: column; 
+    }
+
+    .copyright {
+        padding-top: 20px; 
+    }
 }

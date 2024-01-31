@@ -4,23 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="css/style2.css" rel="stylesheet" type="text/css"/>
+    <link href="css/test.css" rel="stylesheet" type="text/css"/>
 </head>
-<body>
+  <nav class="navbar">
+      <div class="nav-img">
+        <a href="#"><img src="ressources/logo_black.svg" alt="logo home"></a>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="#">NEWS</a></li>
+          <li><a href="#" class="nav-border">NOS EXPERIENCES</a></li>
+          <li><a href="#" class="nav-border">A PROPOS DE NOUS</a></li>
+          <li><a href="#" class="nav-border">NOS EQUIPEMENTS</a></li>
+          <li><a href="#" class="nav-border"><b>CONNEXION</b></a></li>
+        </ul>
+      </div>
+      <img src="ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton">
+  </nav>
+  <header></header>
 
-  <div class="nav">
-        <div class="nav-img">
-          <a href="#"><img src="ressources/logo_black.svg" alt="logo home"></a>
-        </div>
-        <div class="nav-right">
-          <a href="#">NEWS</a>
-          <a href="#" class="nav-border">NOS EXPERIENCES</a>
-          <a href="#" class="nav-border">A PROPOS DE NOUS</a>
-          <a href="#" class="nav-border">NOS EQUIPEMENTS</a>
-          <a href="#" class="nav-border"><b>CONNEXION</b></a>
-
-        </div>
+  <div class="top_container">
+    a
   </div>
 
-</body>
+  <script>
+    const menubtns = document.querySelector(".menu_bouton")
+    const navLinks = document.querySelector(".nav-links")
+
+    menubtns.addEventListener('click',()=>{
+      navLinks.classList.toggle('mobile-menu')
+    })
+  </script>
+
 </html>
