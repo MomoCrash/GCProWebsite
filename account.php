@@ -164,7 +164,7 @@ include "sql/sql-manager.php"
         if ($count > 0 && password_verify($password, $currentRow["password"])) {
 
             session_start();
-            $_SESSION["name"] = $name;
+            $_SESSION["name"] = $currentRow["name"];
             $_SESSION["email"] = $email;
 
             header("Location: new.php");

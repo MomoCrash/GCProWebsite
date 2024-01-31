@@ -10,12 +10,25 @@
 
 <body>
 
+
+    <!-- Grand Calendrier de présentation de la semaine a venir -->
+
     <div>
         <div id="calendar" class="calendar"></div>
+        <button id="next"> Next </button>
+        <button id="previous"> Previous </button>
+        <button id="reserver"> Reserver </button>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <?php 
+    
+    if (isset($_GET["date"])) {
+        echo $_GET["date"];
+    }
+
+    ?>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
