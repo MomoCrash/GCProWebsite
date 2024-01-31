@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'alatsi';
-    src: url('ressources/font/Alatsi-Regular.ttf');
+    src: url('../ressources/font/Alatsi-Regular.ttf');
 }
 
 @keyframes fadeInUp {

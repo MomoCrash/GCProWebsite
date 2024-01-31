@@ -1,27 +1,27 @@
 @font-face {
     font-family: 'abel';
-    src: url('ressources/font/Abel-Regular.ttf') format('truetype');
+    src: url('../ressources/font/Abel-Regular.ttf') format('truetype');
     font-display: swap;
 }
 @font-face {
     font-family: 'amiko';
-    src: url('ressources\font\Amiko-Regular.ttf') format('truetype');
+    src: url('../ressources/\font\Amiko-Regular.ttf') format('truetype');
     font-display: swap;
 }
 
 @font-face {
     font-family: 'alatsi';
-    src: url('font\Alatsi-Regular.ttf');
+    src: url('../ressources/font\Alatsi-Regular.ttf');
 }
 
 @font-face {
     font-family: 'abel';
-    src: url('ressources/font/Abel-Regular.ttf') format('truetype');
+    src: url('../ressources/font/Abel-Regular.ttf') format('truetype');
     font-display: swap;
 }
 @font-face {
     font-family: 'amiko';
-    src: url('ressources/font/Amiko-Regular.ttf') format('truetype');
+    src: url('../ressources/font/Amiko-Regular.ttf') format('truetype');
     font-display: swap;
 }
 
@@ -55,7 +55,7 @@
 
 
 main{
-    background-image: url('ressources/forme10.webp'); /* Corrected slashes */
+    background-image: url('../ressources/forme10.webp'); /* Corrected slashes */
     background-size: cover; /* Cover the entire area of the element */
     background-repeat: no-repeat;
     min-height: 100vh; /* This ensures that the main element is at least as tall as the viewport */
