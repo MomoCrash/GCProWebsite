@@ -13,7 +13,8 @@ html{
 body {
     margin: 0;
     padding: 0;
-    background-image: url("../ressources/bryceforme2.webp");   
+    background-image: url("../ressources/bryceforme2.webp");
+    background-position: 10px 10px;   
     background-repeat: no-repeat;
     background-size: cover;
 }
