@@ -30,7 +30,7 @@ if (isset($_SESSION["name"])) {
             <div class="nav-right">
                 <a href="#">NEWS</a>
                 <a href="#" class="nav-border">NOS EXPERIENCES</a>
-                <a href="Apropos.html" class="nav-border">A PROPOS DE NOUS</a>
+                <a href="#" class="nav-border">A PROPOS DE NOUS</a>
                 <a href="#" class="nav-border">NOS EQUIPEMENTS</a>
                 <a href="#" id="login" class="nav-border"><b> <?= isset($name) ? $name : "CONNEXION"; ?> </b></a>
                 <!-- Connexion page -->
@@ -113,23 +113,6 @@ if (isset($_SESSION["name"])) {
                     </div>
                 </div>
             </div>
-            <section>
-            <!-- News article -->
-            <div class="animated-on-scroll">
-                <div class="last-p">
-                    <img src="ressources\image144.webp" alt="video" width=110% height=110%>
-                    <div class="text-second" animation-type="fadeIn" animation-delay="0.5s">
-                        <h1>ÉVÉNEMENT : LE MYSTÈRE DU LOUP PHARAON</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
         </section>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">

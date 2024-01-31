@@ -105,18 +105,18 @@ body {
     border: 3px solid rgb(35, 166, 175);
 }
 
-.btn_container {
-    height: 40vh;
-    position: relative;
-    border: 3px solid rgb(255, 25, 25);
-}
-
 .description{
     background: #CDFFF3;
     display: flex;
     border: 3px solid green;
 }
 
+
+.btn_container {
+    height: 40vh;
+    position: relative;
+    border: 3px solid rgb(255, 25, 25);
+}
 
 .btn_container :hover{
     color: rgb(212, 212, 212);
