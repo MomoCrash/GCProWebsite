@@ -58,7 +58,7 @@ if (isset($_SESSION["name"])) {
     </header>
     <div class="decouvrir">
         <div class="decouvert-img">
-        <a href="#"><img src="ressources/discover.webp" alt="decouvrir" width=100% height=100%></a>
+            <a href="#"><img src="ressources/discover.webp" alt="decouvrir" width=100% height=100%></a>
         </div>
     </div>
     <main>
