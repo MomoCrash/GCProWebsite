@@ -19,6 +19,42 @@ body {
     background-size: cover;
 }
 
+.firs-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff; /* Mettez ici la couleur ou l'image de fond souhaitée */
+    padding: 50px;
+    padding-top: 5%;
+}
+
+.img-first {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 300px; 
+    height: 300px;
+    margin-right: 20px; 
+    position: relative;
+}
+
+.text-content {
+    flex: 1; /* prend l'espace restant */
+}
+
+
+.text-content h1 {
+    margin-bottom: 10px; /* espace sous le titre */
+    font-weight: bold;
+    font-family: 'amiko';
+    font-size: 40px;
+}
+
+.text-content p {
+    margin: 0;
+    font-size: 30px;
+    font-family: 'abel';
+}
+
 .nav {
     position: relative;
     backdrop-filter: blur(7px);
