@@ -1,7 +1,6 @@
 var currentDays = 0;
 
 var selectedDay=null;
-var selectedHour=null;
 var selectedDiv=null;
 
 function addDays(date, days) {
@@ -26,13 +25,16 @@ function generateCalendar() {
 
         timeSlots.forEach(time => {
 
+            data = time.split("h");
+
             dayClass.append($("<div>").attr("class", "time-slot").text(time).click(function() {
                 if (selectedDay != null) {
                     selectedDiv.classList.toggle("selected")
                 }
                 this.classList.toggle('selected');
+                dayDate.setHours(parseInt(data[0]));
+                dayDate.setMinutes(parseInt(data[1]));
                 selectedDay = dayDate;
-                selectedHour = time;
                 selectedDiv = this;
             }));
         });
@@ -56,7 +58,7 @@ $("#previous").click(function() {
 
 $("#reserver").click(function() {
     if (selectedDay == null) return
-    console.log(formatDate(selectedDay) + " " + selectedHour)
+    console.log(formatDate(selectedDay))
 
     $.ajax({
         method: "GET",
@@ -64,7 +66,7 @@ $("#reserver").click(function() {
         data: { date: selectedDay.toJSON() }
       })
         .done(function( msg ) {
-          alert(msg);
+          $("body").append(msg)
         });
 });
 

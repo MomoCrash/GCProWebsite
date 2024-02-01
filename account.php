@@ -166,7 +166,6 @@ include "sql/sql-manager.php"
             session_start();
             $_SESSION["name"] = $currentRow["name"];
             $_SESSION["email"] = $email;
-
             header("Location: new.php");
 
         } else {
