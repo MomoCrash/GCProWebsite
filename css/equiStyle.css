@@ -186,3 +186,16 @@ section{
     from { opacity: 0; }
     to { opacity: 1; }
   }
+
+  @media screen and (max-width: 923px){
+        .firs-div{
+            flex-direction: column;
+            text-align: center;
+            padding: 10px;
+            padding-top: 10px;
+        }
+
+        .firs-div p{
+            font-size: 18px;
+        }
+  }
