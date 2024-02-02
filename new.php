@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/style2.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/style.css">
     <title>Les News</title>
 </head>
 
@@ -181,27 +182,33 @@ if (isset($_SESSION["name"])) {
     </main>
 
     <body>
-        <footer>
-            <div class="footer-nav">
-                <a href="#">Nous contacter</a>
-                <a href="#">Réservation</a>
-                <a href="#">FAQ</a>
+    <footer>
+        <div class="footer-nav">
+            <a href="#"><span>Nous contacter</span></a>
+            <a href="#"><span>Réservation</span></a>
+            <a href="#"><span>FAQ</span></a>
+        </div>
+        <div class="copyright">
+            © THE SENSE, SAS. Tous droits réservés
+        </div>
+        <div class="moda">
+            <a href="#"><span>Modalités</span></a>
+            <span> | </span>
+            <a href="#"><span>Politique de confidentialité </span></a>
+            <div class="contact">
+              <span> | </span>
+              <a href="#"><span>Contact</span></a>
             </div>
-            <div class="copyright">
-                © THE SENSE, SAS. Tous droits réservés
-            </div>
-            <div class="moda">
-                <a href="#">Modalités </a>
-                <span> | </span>
-                <a href="#"> Politique de confidentialité </a>
-            </div>
-            <div class="social-icons">
-                <a href="#"><img src="ressources/Youtube.png" alt="Youtube"></a>
-                <a href="#"><img src="ressources/Instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="ressources/Twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="ressources/Facebook.png" alt="Facebook"></a>
-            </div>
-        </footer>
+            
+        </div>
+        <div class="social-icons">
+            <!-- Replace # with actual links to your social media profiles -->
+            <a href="#"><img src="ressources/Youtube.png" alt="Youtube"></a>
+            <a href="#"><img src="ressources/Instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="ressources/Twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="ressources/Facebook.png" alt="Facebook"></a>
+        </div>
+    </footer>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
         </script>
