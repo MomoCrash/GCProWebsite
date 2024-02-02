@@ -186,6 +186,18 @@ section{
     animation: fadeIn 2s forwards;
   }
   
+  .image-container {
+    position: relative;
+    display: inline-block; /* ou block selon le besoin */
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 10px; /* Ajustez la position selon le besoin */
+    left: 10px; /* Ajustez la position selon le besoin */
+    color: white; /* La couleur du texte */
+  }
+  
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
