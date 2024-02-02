@@ -10,7 +10,7 @@ function addDays(date, days) {
 }
 
 function formatDate(date) {
-    return date.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'short' });
+    return date.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute:'2-digit'});
 }
 
 function generateCalendar() {
@@ -58,7 +58,6 @@ $("#previous").click(function() {
 
 $("#reserver").click(function() {
     if (selectedDay == null) return
-    console.log(formatDate(selectedDay))
 
     $.ajax({
         method: "GET",
@@ -66,7 +65,7 @@ $("#reserver").click(function() {
         data: { date: selectedDay.toJSON() }
       })
         .done(function( msg ) {
-          $("body").append(msg)
+          $("body").empty().append($("<h1>").text("Vous avez fait une réservation pour le " + formatDate(selectedDay)));
         });
 });
 
