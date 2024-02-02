@@ -10,6 +10,10 @@ function addDays(date, days) {
 }
 
 function formatDate(date) {
+    return date.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long'});
+}
+
+function formatDateWithHours(date) {
     return date.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute:'2-digit'});
 }
 
@@ -19,7 +23,7 @@ function generateCalendar() {
 
     for (let i = 0+currentDays; i < 2+currentDays; i++) {
         let dayDate = addDays(currentDate, i);
-        let dayClass = $('<div>').attr("class", "day");
+        let dayClass = $('<div class="calendar-col">').attr("class", "day");
 
         $(".calendar").append(dayClass.append("<h3>" + formatDate(dayDate) + "</h3>"))
 
@@ -27,7 +31,7 @@ function generateCalendar() {
 
             data = time.split("h");
 
-            dayClass.append($("<div>").attr("class", "time-slot").text(time).click(function() {
+            dayClass.append($('<div class="calendar-col">').attr("class", "time-slot").text(time).click(function() {
                 if (selectedDay != null) {
                     selectedDiv.classList.toggle("selected")
                 }
@@ -65,7 +69,7 @@ $("#reserver").click(function() {
         data: { date: selectedDay.toJSON() }
       })
         .done(function( msg ) {
-          $("body").empty().append($("<h1>").text("Vous avez fait une réservation pour le " + formatDate(selectedDay)));
+          $("body").empty().append($("<h1>").text("Vous avez fait une réservation pour le " + formatDateWithHours(selectedDay)));
         });
 });
 

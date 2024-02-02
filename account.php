@@ -3,7 +3,12 @@
 
 <?php 
 
-include "sql/sql-manager.php"
+include "sql/sql-manager.php";
+
+$method = "login";
+    if (isset($_GET["method"])) {
+        $method = $_GET["method"];
+    }
 
 ?>
 
@@ -14,6 +19,8 @@ include "sql/sql-manager.php"
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/style2.css" rel="stylesheet" type="text/css" />
+    <meta name="google-signin-client_id"
+        content="1055389349967-6clh6ao3sp4aadjb22g7sa0fbcvn0g99.apps.googleusercontent.com">
     <title>Document</title>
 </head>
 
@@ -41,7 +48,7 @@ include "sql/sql-manager.php"
 
     </header>
 
-    <?php if(isset($_GET["method"]) && $_GET["method"] == "login"): ?>
+    <?php if($method == "login"): ?>
     <div id="form-login" class="row align-items-center justify-content-center">
         <form action="account.php?method=login" method="POST" class="row justify-content-center" style="margin: 0;">
             <div class="login-content">
@@ -63,8 +70,10 @@ include "sql/sql-manager.php"
                 <button type="submit" name="submit" placeholder="Connexion"> Connexion </button>
             </div>
         </form>
+
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
     </div>
-    <?php elseif(isset($_GET["method"]) && $_GET["method"] == "register"): ?>
+    <?php elseif($method == "register"): ?>
     <div id="form-login" class="row align-items-center justify-content-center">
         <div class="text-center">
             <form action="account.php?method=register" method="POST">
@@ -108,7 +117,7 @@ include "sql/sql-manager.php"
 
     <?php 
 
-    if ($_GET["method"] == "register" && isset($_POST["password"])) {
+    if ($method == "register" && isset($_POST["password"])) {
 
         $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
         $email = refracto_text($_POST["email"]);
@@ -140,7 +149,11 @@ include "sql/sql-manager.php"
             $_SESSION["name"] = $name;
             $_SESSION["email"] = $email;
 
-            header("Location: new.php");
+            $redirect = "index.html";
+            if (isset($_GET["redirect"])) {
+                $redirect = $_GET["redirect"];
+            }
+            header("Location: " . $redirect);
             
         } else {
 
@@ -150,7 +163,7 @@ include "sql/sql-manager.php"
 
     }
         
-    if ($_GET["method"] == "login" && isset($_POST["password"])) {
+    if ($method == "login" && isset($_POST["password"])) {
 
         $password = $_POST["password"];
         $email = refracto_text($_POST["email"]);
@@ -166,7 +179,12 @@ include "sql/sql-manager.php"
             session_start();
             $_SESSION["name"] = $currentRow["name"];
             $_SESSION["email"] = $email;
-            header("Location: new.php");
+            $redirect = "index.html";
+
+            if (isset($_GET["redirect"])) {
+                $redirect = $_GET["redirect"];
+            }
+            header("Location: " . $redirect);
 
         } else {
 
@@ -177,6 +195,17 @@ include "sql/sql-manager.php"
     }
 
     ?>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    }
+    </script>
 
 </body>
 
