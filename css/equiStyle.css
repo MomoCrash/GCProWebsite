@@ -173,6 +173,10 @@ main{
     padding: 3%;
 }
 
+.img-third img, .img-four img, .img-five img {
+    border-radius: 10px;
+}
+
 section{
     margin-left: 40px;
     margin-right: 40px;
