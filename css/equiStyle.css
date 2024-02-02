@@ -188,14 +188,61 @@ section{
   }
 
   @media screen and (max-width: 923px){
-        .firs-div{
-            flex-direction: column;
-            text-align: center;
-            padding: 10px;
-            padding-top: 10px;
-        }
+    .firs-div, .second-div, .third-div, .four-div, .five-div{
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        padding-top: 10px;
+    }
+    
+    .firs-div p, .second-div p, .third-div p, .four-div p, .five-div p {
+        font-size: 18px;
+        font-family: 'abel';
+        font-weight: 400;
+    }
+    
+    .firs-div h1, .second-div h1, .third-div h1, .four-div h1, .five-div h1 {
+        font-size: 20px;
+        font-family: 'amiko';
+        font-weight: 700;
+        padding-bottom: 20px;
+        padding-top: 40px;
+    }
+    
 
-        .firs-div p{
-            font-size: 18px;
-        }
+    .img-first{
+        height: 171px;
+        width: 171px;
+    }
+
+    .img-third, .img-four, .img-five {
+        height: 258px; /* Set the height of the image container */
+        width: 400px; /* Set the width of the image container */
+        display: flex; /* Use flexbox to center the content */
+        align-items: center; /* Center content vertically within the container */
+        justify-content: center; /* Center content horizontally within the container */
+        overflow: hidden; /* Ensures the content doesn't spill outside the container */
+        border-radius: 10px; /* Optional: Adds rounded corners to the container */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow to the container */
+        background: url('/path/to/your/image.png') no-repeat center center; /* Replace with the path to your image */
+        background-size: cover; /* Ensure the background image covers the entire container */
+    }
+
+    .img-third img, .img-four img, .img-five img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; 
+        object-position: center;
+        border-radius: 10px;
+    }
+
+    .four-div {
+        display: flex;
+        flex-direction: column-reverse; /* Ceci inversera l'ordre des éléments flex enfants */
+    }
+    
+    /* Assurez-vous que la largeur des enfants de .four-div est définie ou gérée correctement */
+    .four-div .text-content, .four-div .img-four {
+        flex: 1; /* Cela attribuera une largeur égale aux deux enfants, ajustez selon les besoins */
+    }
   }
