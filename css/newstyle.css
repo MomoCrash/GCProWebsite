@@ -61,17 +61,6 @@ main{
     min-height: 100vh; /* This ensures that the main element is at least as tall as the viewport */
 }
 
-.footer-anim {
-    animation-name: fadeInUp;
-    animation-duration: 1s;
-    animation-fill-mode: both; 
-}
-
-.footer-anim {
-    animation-name: fadeInUp;
-    animation-duration: 1s;
-    animation-fill-mode: both; 
-}
 *{
     text-decoration: none;
 }
@@ -217,6 +206,21 @@ main{
     .global-side {
         padding: 0; /* Remove padding on smaller screens */
     }
+
+    .first-p p, .second-p p{
+        font-size: 18px;
+        font-family: 'abel';
+        font-weight: 400;
+    }
+    
+    .first-p h1, .second-p h1{
+        font-size: 20px;
+        font-family: 'amiko';
+        font-weight: 700;
+        padding-bottom: 20px;
+        padding-top: 40px;
+    }
+
 }
 
 
@@ -241,49 +245,4 @@ main{
     to { opacity: 1; }
   }
   
-@media screen and (max-width: 900px){
-    footer {
-        flex-direction: column;
-        align-items: center; 
-        padding: 20px;
-        height: auto; 
-    }
 
-    .footer-nav,
-    .social-icons,
-    .moda,
-    .copyright {
-        width: 100%; 
-        justify-content: center;
-        margin-left: 0; 
-        margin-right: 0; 
-        text-align: center; 
-    }
-    .copyright{
-        padding-left: 10px;
-    }
-    .footer-nav a,
-    .social-icons a {
-        padding: 5px 10px; 
-    }
-
-    .social-icons {
-        display: flex;
-        justify-content: center; 
-        flex-wrap: wrap; 
-    }
-
-    .social-icons a {
-        padding-top: 10px;
-        padding-left: 0; 
-    }
-
-    .moda {
-        padding-top: 20px; 
-        flex-direction: column; 
-    }
-
-    .copyright {
-        padding-top: 20px; 
-    }
-}

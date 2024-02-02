@@ -9,50 +9,29 @@
     <link href="css/style2.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/newstyle.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/mainstyle.css" rel="stylesheet" type="text/css"/>
 
     <title>Les News</title>
 </head>
 
-<?php
-
-session_start();
-if (isset($_SESSION["name"])) {
-  $name = $_SESSION["name"];
-  $email = $_SESSION["email"];
-}
-
-?>
 
 <body>
     <header>
-        <div class="nav">
+        <nav class="navbar" id="navbar">
             <div class="nav-img">
-                <a href="#"><img src="ressources/logo_black.svg" alt="logo home"></a>
+              <a href="#"><img src="ressources/logo_black.svg" alt="logo home"></a>
             </div>
-            <div class="nav-right">
-                <a href="#">NEWS</a>
-                <a href="#" class="nav-border">NOS EXPERIENCES</a>
-                <a href="Apropos.html" class="nav-border">A PROPOS DE NOUS</a>
-                <a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a>
-                <a href="#" id="login" class="nav-border"><b> <?= isset($name) ? $name : "CONNEXION"; ?> </b></a>
-                <!-- Connexion page -->
-                <form action="account.php?method=login" method="POST" class="login-pan"
-                    style="width: 0px; height: 0px; visibility: hidden; display:none;">
-                    <div class="login-content">
-                        <p> Connexion </p>
-                        <p> Identifiant <input class="form-label" type="email" name="email" placeholder="abc@mail.fr">
-                            </input>
-                        </p>
-                        <p> Mot de passe <input class="form-label" type="password" name="password"
-                                placeholder="······"> </input>
-                        </p>
-                        <a style="gray" href="account.php?method=register"> Crée un compte </a> <button type="submit"
-                            name="submit" placeholder="Connexion"> Connexion </button>
-                    </div>
-                </form>
-
+            <div class="nav-links">
+              <ul>
+                <li><a href="new.php">NEWS</a></li>
+                <li><a href="#" class="nav-border">NOS EXPERIENCES</a></li>
+                <li><a href="Apropos.html" class="nav-border">A PROPOS DE NOUS</a></li>
+                <li><a href="equipement.html" class="nav-border">NOS EQUIPEMENTS</a></li>
+                <li><a href="#" class="nav-border"><b>CONNEXION</b></a></li>
+              </ul>
             </div>
-        </div>
+            <img src="ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton" id="menu_bouton">
+        </nav>
         <div class="img-header"><img src="ressources/EN TÊTE.png" alt="header"></div>
     </header>
 
