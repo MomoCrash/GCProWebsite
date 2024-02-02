@@ -10,6 +10,7 @@ window.onclick = function() {
     if (actTrailer.classList.contains("active")) {
         actTrailer.classList.toggle("active")
         actTrailer.pause()
+        line.classList.toggle("active")
     }
   };
 btn.onclick = function() {
@@ -18,7 +19,12 @@ btn.onclick = function() {
         line.classList.toggle("active");
         sleep(4000).then(() => {actTrailer.classList.toggle("active"); 
                                 video.play(); 
-                                line.classList.toggle("active");
+                                line.classList.toggle("active");      
                             })
+        video.addEventListener('ended',function() {
+            video.pause()
+            video.currentTime = 0
+            actTrailer.classList.toggle("active")
+        })
     }
 }
