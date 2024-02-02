@@ -17,7 +17,7 @@ btn.onclick = function() {
     if (!actTrailer.classList.contains("active")) {
         line.style.zIndex = "1000";
         line.classList.toggle("active");
-        sleep(4000).then(() => {actTrailer.classList.toggle("active"); 
+        sleep(2750).then(() => {actTrailer.classList.toggle("active"); 
                                 video.play(); 
                                 line.classList.toggle("active");      
                             })

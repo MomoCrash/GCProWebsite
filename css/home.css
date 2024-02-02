@@ -1,3 +1,4 @@
+/*POLICES D'ECRITURE*/
 @font-face {
     font-family: "Amiko Regular";
     src: url("https://db.onlinewebfonts.com/t/151717dc27ffdcefe9d50d975c5e5827.eot");
@@ -28,6 +29,16 @@
     url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.svg#Poppins Thin")format("svg");
 }
 
+@font-face {
+    font-family: "Amiko Bold";
+    src: url("https://db.onlinewebfonts.com/t/cd3710e0f5f9d9f61502468e8d71a5f5.eot");
+    src: url("https://db.onlinewebfonts.com/t/cd3710e0f5f9d9f61502468e8d71a5f5.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/cd3710e0f5f9d9f61502468e8d71a5f5.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/cd3710e0f5f9d9f61502468e8d71a5f5.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/cd3710e0f5f9d9f61502468e8d71a5f5.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/cd3710e0f5f9d9f61502468e8d71a5f5.svg#Amiko Bold")format("svg");
+}
+
 html {
     scroll-behavior: smooth;
     margin: 0;
@@ -38,6 +49,7 @@ html {
     height:100px;
 }
 
+/*BOUTON DECOUVRIR*/
 .btn_container {
     margin-top : 35%; 
     height: 200px;
@@ -60,28 +72,30 @@ html {
     border:none;
 }
 
+/*BANDEAU INTRO*/
 .intro_container{
+    padding-top:5%;
+    padding-bottom: 5%;
     display:flex;
     size:0;
     background-color:#EAFFFB;
-    margin-top : 10%; 
-    margin-top : 10%; 
-    margin-left: -1%;
+    margin-top : 17.5%; 
     height: 1%;
+    margin-left: -1%;
+    margin-right: -0.4%;
     position: relative;
     text-align:center;
 }
 
-.texte_intro {
+.text_intro {
     text-align:left;
     font-family: Abel;
     color:#646363;
     font-size: 200%;
     margin-left:5%;
-    margin-top:3%;
 }
 
-.titre_intro {
+.title_intro {
     font-family: Abel;
     color:#3B4040;
     font-size:40px;
@@ -92,7 +106,7 @@ html {
     margin-bottom: -0.25%;
 }
 
-.a_propos_btn{
+.about_btn{
     text-decoration: none;
     color:#646363;
     margin-left:-5px;
@@ -101,11 +115,10 @@ html {
     display:block;
 }
 
+/*BOUTON ACTIVATION TRAILER*/
 .img_trailer{
     width: 433px;
     height: 440px;
-    margin-top: 15%;
-    margin-bottom: 3%;
     margin-left: 3%;
 }
 
@@ -125,7 +138,7 @@ html {
 /*TRAILER*/
 .trailer{
     position: fixed;
-    top: -17.20%;
+    top: -17.2%;
     left: 50%;
     transform: translate(-50%,50%) scale(0);
     width: 100%;
@@ -147,7 +160,7 @@ html {
 /*ANIMATION LIGNE*/
 
 .line { 
-    width: 1091px; 
+    width: 591px; 
     max-width:90%;
     height: 614px; 
     position: fixed;    
@@ -172,7 +185,7 @@ html {
     animation-delay: 0s, 1s;
     z-index: 1000;
 } 
-/*#3B4040*/
+
 @keyframes slidein {
     from {width:0px; height:3px; top:50%}
     to   {width:100%;height:3px; top:50%}
@@ -183,3 +196,134 @@ html {
     to   { transform: scaleY(1);}
 }
 
+/*ESPACES*/
+.space{
+    height:200px;
+}
+
+/*CSS EXPERIENCES*/
+
+/*EXP INTRO*/
+
+.title{
+    font-family: Amiko Bold;
+    font-weight:bold;
+    font-size:30px;
+    color:#3B4040;
+    margin-left:10%;
+}
+
+.txt_intro{
+    font-family: Abel;
+    font-size:25px;
+    color:#646363;
+    margin-left:10%;  
+}
+
+/*EXP IMAGES*/
+.img_exp{
+    margin: auto;
+    width: 80%;
+    height:575px;
+    position: relative;
+    background-image: url(../ressources/exp_1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.infos{
+    width:200px;
+    height:75px;
+    display: flex;
+    border-radius: 15px;
+    backdrop-filter: blur(4px);
+    float:right;
+    margin-right: -100px;
+    margin-top: 475px;
+    padding-top: 10px;
+    justify-content: space-evenly;
+}
+
+.time{
+    text-align: center;
+    width: 75px;
+    height:75px;
+    position:relative;
+}
+
+.player_amount{
+    text-align: center;
+    width: 75px;
+    height:75px;
+    position:relative;
+}
+
+.likes{
+    text-align:center;
+    width:100px;
+    height:100px;
+    position: relative;
+    float:right;
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+.subtxt{
+    font-family: Abel;
+    color:#ffffff;
+    font-size:80%;
+}
+
+/*TXT EXPLICATIF EXPERIENCES*/
+.about_exp{
+    background-color: #e6e6ee;
+    height:0%;
+    width:77%;
+    align-self: center;
+    margin: auto;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.about_title{
+    display: flex;
+    align-items: center;
+    height:0%;
+    margin-bottom: -30px;
+    margin-left: 30px;
+    margin-top: 0px;
+}
+
+.about_txt{
+    font-family: Abel;
+    color:#646363;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.txt_about_title{
+    font-family: Amiko bold;
+    font-size:30px;
+    height:37px;
+    color:#3B4040;
+}
+
+.break_line{
+    height:50px;
+    width:1px;
+    background:#3B4040;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.room_title{
+    font-family: Poppins Thin;
+    color:#3B4040;
+    font-size: 40px;
+}
+
+.book_btn{
+    text-align: center;
+    margin-top: 55px;
+}
