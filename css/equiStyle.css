@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'abel';
+    src: url('../ressources/font/Abel-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'amiko';
+    src: url('../ressources/\font\Amiko-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'alatsi';
+    src: url('../ressources/font\Alatsi-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'abel';
+    src: url('../ressources/font/Abel-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'amiko';
+    src: url('../ressources/font/Amiko-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+.img-header {
+    width: 100%;
+    display: block;
+}
+
+.img-header img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+.decouvrir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+    background-color: white; /* Fond blanc pour .decouvrir */
+    background-image: url('../ressources/bryceforme1.webp');
+    background-size: cover; /* Utilisez cover pour s'assurer que l'image couvre la zone */
+    background-repeat: no-repeat;
+    background-position: 0px -400px;
+  
+}
+
+
+
+main{
+    background-image: url('../ressources/forme10.webp'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+}
+
+
+
+.animated-on-scroll {
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: all 0.4s ease-out;
+    transition-delay: 0.2s;
+  }
+  
+.animate{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.firs-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EAFFFB; /* Mettez ici la couleur ou l'image de fond souhaitée */
+    padding: 50px;
+    padding-top: 5%;
+}
+
+
+.img-first {
+    width: 440px; 
+    height: 440px;
+    margin-right: 60px; 
+    margin-left: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.img-first img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-content {
+    flex: 1; /* prend l'espace restant */
+}
+
+.text-content h1 {
+    margin-bottom: 10px; /* espace sous le titre */
+    font-weight: bold;
+    font-family: 'amiko';
+    font-size: 40px;
+}
+
+.text-content p {
+    margin: 0;
+    font-size: 30px;
+    font-family: 'abel';
+}
+
+.second-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    padding-top: 100px;
+    border-radius: 10px;
+}
+
+.third-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EAFFFB;
+    border-radius: 10px;
+}
+
+.text-content-third{
+    padding: 3%;
+}
+
+.four-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EAFFFB;
+    border-radius: 10px;
+}
+
+.five-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EAFFFB;
+    border-radius: 10px;
+}
+
+.text-content-four, .text-content-third, .text-content-five{
+    padding: 3%;
+}
+
+section{
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 1%;
+}
+  .visible {
+    animation: fadeIn 2s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }

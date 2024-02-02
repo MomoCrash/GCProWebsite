@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/btob.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="css/mainstyle.css" rel="stylesheet" type="text/css" />
     <link href="css/login.css" rel="stylesheet" type="text/css" />
     <title>B TO B</title>
 </head>
@@ -55,7 +55,6 @@ if (isset($_SESSION["name"])) {
         </div>
         <div class="img-header"><img src="ressources/entetebtob.png" alt="header"></div>
         
-    </header>
     <div class="decouvrir">
         <div class="decouvert-img">
             <a href="#"><img src="ressources/discover.webp" alt="decouvrir" width=100% height=100%></a>
@@ -224,3 +223,21 @@ if (isset($_SESSION["name"])) {
     </body>
 
 </html>
+<script>
+    const menubtns = document.querySelector(".menu_bouton")
+    const navLinks = document.querySelector(".nav-links")
+    const navbar = document.getElementById("navbar")
+    var meow = true
+    
+
+    menubtns.addEventListener('click',()=>{
+      navLinks.classList.toggle('mobile-menu');
+      if(meow){
+      navbar.style.backdropFilter = 'none';
+      meow = false
+      }else{
+        navbar.style.backdropFilter = 'blur(10px)'
+        meow = true
+      }
+    })
+</script>
