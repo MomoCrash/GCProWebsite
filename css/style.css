@@ -90,6 +90,41 @@ footer {
     filter: drop-shadow(2px 2px 4px white);
 }
 
+/* Style de base pour vos liens */
+a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #82FFE1;
+    padding: 5px 0;
+    margin: 0 10px; /* Exemple de margin, ajustez selon vos besoins */
+}
+
+/* Le span à l'intérieur du lien pour appliquer la barre d'animation */
+a span {
+    position: relative;
+    display: inline-block;
+}
+
+/* Pseudo-élément pour la barre d'animation */
+a span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Décalez légèrement la barre en dessous du texte */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: aqua;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Lorsque vous passez la souris sur le lien, animez la largeur de la barre */
+a:hover span::after {
+    width: 100%;
+}
+
+
+
 
 .login-pan {
     display: flex;
