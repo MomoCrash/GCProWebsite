@@ -91,7 +91,7 @@ footer {
 }
 
 /* Style de base pour vos liens */
-a {
+.barAnim {
     position: relative;
     display: inline-block;
     text-decoration: none;
