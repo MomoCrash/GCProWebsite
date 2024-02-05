@@ -21,6 +21,16 @@
 }
 
 @font-face {
+    font-family: "Amiko Bold";
+    src: url("https://db.onlinewebfonts.com/t/cd3710e0f5f9d9f61502468e8d71a5f5.eot");
+    src: url("https://db.onlinewebfonts.com/t/cd3710e0f5f9d9f61502468e8d71a5f5.eot#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/cd3710e0f5f9d9f61502468e8d71a5f5.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/cd3710e0f5f9d9f61502468e8d71a5f5.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/cd3710e0f5f9d9f61502468e8d71a5f5.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/cd3710e0f5f9d9f61502468e8d71a5f5.svg#Amiko Bold")format("svg");
+}
+
+@font-face {
     font-family: "Abel";
     src: url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.eot");
     src: url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.eot?#iefix")format("embedded-opentype"),
@@ -54,6 +64,15 @@ html{
     background-size: 100% auto;
     background-position: center top;
 
+}
+
+.fond_page_news{
+    margin: 0;
+    padding: 0;
+    background-image: url("../ressources/EN\ TÊTE.png");   
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
 }
 
 .fond_template{
@@ -126,9 +145,8 @@ ul {
     text-align: right;
     text-decoration: none;
     margin-right: 0%;
-    margin-top: 0%;
     margin-bottom: 0%;
-    
+    padding-top: 12px;
 }
 
 .nav-img {
@@ -136,8 +154,8 @@ ul {
     color: #f2f2f2;
     text-align: right;
     text-decoration: none;
-    margin-top: 5px;
     margin-left: 10px;
+    padding-bottom: 5px;
 }
   
 .nav_dark_room-border{
@@ -163,7 +181,8 @@ ul {
     box-sizing: border-box;
     backdrop-filter: blur(10px);
     overflow: hidden;
-  }
+    padding: 0px;
+}
 
 .navbar a {
     color: black;
@@ -190,6 +209,21 @@ ul {
     
 }
 
+.nav-border{
+    border-left: 1px solid gray;
+}
+
+.navbar .menu_bouton{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 10px;
+    width: 35px;
+    height: 30px;
+    right: 2%;   
+}
+
 .nav-links {
     float: right;
     color: #f2f2f2;
@@ -210,11 +244,46 @@ ul {
     margin-left: 10px;
 }
   
+.navbar_news {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    background-color: rgb(217, 196, 255, 0.5);
+}
+
+.navbar_news a {
+    color: black;
+    text-align: center;
+    padding: 0px 30px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Abel_pro";
+}
+  
+.navbar_news a:hover {
+    filter: blur(0.3px);
+    color: rgb(0, 0, 0);
+    font-size: 26px;
+    text-decoration: underline;
+}
+
+.navbar_news .nav-links ul{
+    display: flex;
+}
+  
+.navbar_news .nav-links ul li{
+    margin: 0 0px;
+    
+}
+
 .nav-border{
     border-left: 1px solid gray;
 }
 
-.navbar .menu_bouton{
+.navbar_news .menu_bouton{
     display: none;
     position: absolute;
     cursor: pointer;
@@ -222,12 +291,36 @@ ul {
     margin-right: 10px;
     width: 35px;
     height: 30px;
-    right: 2%;
-    
+    right: 2%;   
 }
 
 @media screen and (max-width: 1000px) {
     
+    /* PAGE NEWS */
+
+    .navbar_news{
+        padding: 0;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+        z-index: 10;
+    }
+
+    .navbar_news .menu_bouton{
+        display: block;
+        z-index: 15;
+    }
+
+    .navbar_news-border{
+        border: 0px white;
+    }
+
+    .navbar_news .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+    
+    /* PAGE DARK  */
+
     .navbar_dark_room{
         padding: 0;
         overflow: hidden;
@@ -239,6 +332,17 @@ ul {
         display: block;
         z-index: 15;
     }
+
+    .nav_dark_room-border{
+        border: 0px white;
+    }
+
+    .navbar_dark_room .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+
+    /* PAS TOUCHE */
 
     .nav-links{
         top: 0;
@@ -280,12 +384,7 @@ ul {
         align-items: center;
     }
 
-    .navbar_dark_room .nav-links ul li {
-        margin: 25px 0;
-        font-size: 1.2em;
-
-    }
-    
+    /* PAGE AUTRES */
 
     .nav-border{
         border-left: 0px solid gray;
@@ -307,9 +406,7 @@ ul {
         display: block;
         z-index: 15;
     }
-    .nav_dark_room-border{
-        border: 0px white;
-    }
+
     .nav-links{
         top: 0;
         left: 0;
@@ -464,8 +561,7 @@ ul {
 
 .second_part img{
     width: 100%;
-    height: 200vh;
-    position: relative;
+    margin-bottom: -1%;
 }
 
 .img_trailer{
@@ -912,3 +1008,264 @@ footer {
 }
 
 /* FIN FOOTER */
+/*CSS EXPERIENCES*/
+
+.intro_exp{
+    background-image: url(../ressources/forme9.webp);
+    background-size: 100%;
+    margin-top: -1%;
+    padding-top: 90px;
+}
+
+.intro_exp_darkroom{
+    background-image: url(../ressources/forme7.webp);
+    background-size: 100%;
+    margin-top: -1%;
+    padding-top: 90px;
+}
+
+@media screen and (max-width: 1000px) {
+    .intro_exp{
+        background-image: url(../ressources/forme10.webp);}
+
+}
+
+/*EXP INTRO*/
+
+.title{
+    font-family: Amiko Bold;
+    font-weight:bold;
+    font-size:30px;
+    color:#3B4040;
+    margin-left:10%;
+    margin-bottom: 40px;
+}
+
+.title_darkroom{
+    font-family: Amiko Bold;
+    font-weight:bold;
+    font-size:30px;
+    color:white;
+    margin-left:10%;
+    margin-bottom: 40px;
+}
+
+.txt_intro{
+    font-family: Abel;
+    font-size:25px;
+    color:#646363;
+    margin-left:10%;
+}
+
+/*EXP IMAGES*/
+.img_exp{
+    margin: auto;
+    width: 80%;
+    height:622px;
+    position: relative;
+
+}
+
+.img_behind{
+    width:100%;
+    height:622px;
+    position: absolute;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.infos{
+    width:200px;
+    height:75px;
+    display: flex;
+    border-radius: 15px;
+    backdrop-filter: blur(4px);
+    float:right;
+    margin-right: -100px;
+    margin-top: 475px;
+    padding-top: 10px;
+    justify-content: space-evenly;
+}
+
+.time{
+    text-align: center;
+    width: 75px;
+    height:75px;
+    position:relative;
+    font-size: 150%;
+}
+
+.player_amount{
+    text-align: center;
+    width: 75px;
+    height:75px;
+    position:relative;
+    font-size: 150%;
+}
+
+.likes{
+    text-align:center;
+    width:100px;
+    height:100px;
+    position: relative;
+    float:right;
+    margin-top: 25px;
+    margin-right: 20px;
+    font-size: 200%;
+}
+
+.subtxt{
+    font-family: Abel;
+    color:#ffffff;
+    font-size:80%;
+}
+
+
+.img_behind{
+    transition:0.5s;
+}
+.img_behind:hover{
+    box-shadow: 0px 20px 10px -15px #111;
+}
+
+/*TXT EXPLICATIF EXPERIENCES*/
+.about_exp{
+    background-color: #e6e6ee;
+    height:0%;
+    width:77%;
+    align-self: center;
+    margin: auto;
+    border-radius: 0px 0px 15px 15px;
+    padding-bottom: 30px;
+}
+
+.about_exp_battleroom{
+    background-color: #CDFFF3;
+    height:0%;
+    width:77%;
+    align-self: center;
+    margin: auto;
+    border-radius: 0px 0px 15px 15px;
+    padding-bottom: 30px;
+}
+
+.about_exp_darkroom{
+    background-color: #616161;
+    height:0%;
+    width:77%;
+    align-self: center;
+    margin: auto;
+    border-radius: 0px 0px 15px 15px;
+    padding-bottom: 30px;
+}
+
+/*Titre*/
+.about_title{
+    display: flex;
+    align-items: center;
+    height:0%;
+    margin-bottom: -30px;
+    margin-left: 30px;
+    margin-top: 0px;
+}
+
+
+
+/*avertissement +18*/
+.warn{
+    position: absolute;
+    margin-top:75px;
+    margin-left: 58px;
+    padding-bottom: 10px;
+    font-family: Abel;
+    color: #ad0000;
+    font-size: 20px;
+}
+
+/*text*/
+.about_txt{
+    font-family: Abel;
+    color:#646363;
+    font-size: 20px;
+    margin-left: 6%;
+    margin-right: 5%;
+    margin-top:2%;
+}
+
+.about_txt_darkroom{
+    font-family: Abel;
+    color:#ffffff;
+    font-size: 20px;
+    margin-left: 6%;
+    margin-right: 5%;
+    margin-top:2%;
+}
+
+.txt_about_title{
+    font-family: Amiko bold;
+    font-size:30px;
+    height:37px;
+    color:#3B4040;
+    margin-left: 4%;
+}
+
+.txt_about_title_darkroom{
+    font-family: Amiko bold;
+    font-size:30px;
+    height:37px;
+    color:#ffffff;
+    margin-left: 4%;
+}
+
+
+.break_line{
+    height:30px;
+    width:1px;
+    background:#3B4040;
+    margin-right: 25px;
+    margin-top: -1%;
+    margin-left: 25px;
+}
+
+.break_line_darkroom{
+    height:30px;
+    width:1px;
+    background:#ffffff;
+    margin-right: 25px;
+    margin-top: -1%;
+    margin-left: 25px;
+}
+
+.room_title{
+    font-family: Poppins Thin;
+    color:#3B4040;
+    font-size: 40px;
+}
+
+.room_title_darkroom{
+    font-family: Poppins Thin;
+    color:#ffffff;
+    font-size: 40px;
+}
+
+
+/*bouton réserver*/
+.book_btn{
+    height: 52px;
+    width: 201px;
+    margin: auto;
+}
+
+.book_img{
+    width:100%;
+    height:100%;
+}
+
+.book_btn:hover{
+    height: 54px;
+    width: 210px;
+    margin-bottom: -2px;
+}
+
+.space{
+    height:50px;
+}
