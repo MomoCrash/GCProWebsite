@@ -34,7 +34,7 @@ if (isset($_SESSION["name"])) {
                 <a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a>
                 <a href="#" id="login" class="nav-border"><b> <?= isset($name) ? $name : "CONNEXION"; ?> </b></a>
                 <!-- Connexion page -->
-                <form action="account.php?method=login" method="POST" class="login-pan"
+                <form action="account.php?method=login&redirect=new.php" method="POST" class="login-pan"
                     style="width: 0px; height: 0px; visibility: hidden; display:none;">
                     <div class="login-content">
                         <p> Connexion </p>
