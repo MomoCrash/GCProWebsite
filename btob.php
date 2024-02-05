@@ -231,5 +231,5 @@
         navbar.style.backdropFilter = 'blur(10px)'
         meow = true
       }
-    })
+    });
 </script>
