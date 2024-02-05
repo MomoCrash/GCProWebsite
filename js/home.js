@@ -1,10 +1,12 @@
 let btn = document.querySelector(".img_trailer")
 let actTrailer = document.querySelector(".trailer")
 let line = document.querySelector(".line")
+let img_book = document.querySelector(".img_book")
 let video = document.getElementById("video")
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
 
 window.onclick = function() {
     if (actTrailer.classList.contains("active")) {
