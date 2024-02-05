@@ -1,0 +1,41 @@
+@font-face {
+    font-family: amiko;
+    src: url("../ressources/font/Abel-Pro.ttf");
+    font-display: swap;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #000000;
+}
+
+.day {
+    margin: 0 10px;
+    color: red;
+}
+
+.time-slot {
+    padding: 5px;
+    margin: 5px 0;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.not-available {
+    background-color: #9C0000;
+}
+
+.selected {
+    border: solid white 1px;
+    border-radius: 9px;
+}
+
+.available {
+    background-color: #00BA8D;
+}

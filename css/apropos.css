@@ -13,9 +13,46 @@ html{
 body {
     margin: 0;
     padding: 0;
-    background-image: url("../ressources/bryceforme2.webp");   
+    background-image: url("../ressources/bryceforme2.webp");
+    background-position: 10px 10px;   
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.firs-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff; /* Mettez ici la couleur ou l'image de fond souhaitée */
+    padding: 50px;
+    padding-top: 5%;
+}
+
+.img-first {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 300px; 
+    height: 300px;
+    margin-right: 20px; 
+    position: relative;
+}
+
+.text-content {
+    flex: 1; /* prend l'espace restant */
+}
+
+
+.text-content h1 {
+    margin-bottom: 10px; /* espace sous le titre */
+    font-weight: bold;
+    font-family: 'amiko';
+    font-size: 40px;
+}
+
+.text-content p {
+    margin: 0;
+    font-size: 30px;
+    font-family: 'abel';
 }
 
 .nav {
@@ -89,7 +126,7 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center;
-    padding-top: 4%;
+    padding: 4%;
   }
 
 @font-face {
@@ -442,4 +479,74 @@ footer {
     .copyright {
         padding-top: 20px; 
     }
+}
+
+.intro_container{
+    display:flex;
+    size:0;
+    background-color:#EAFFFB;
+    margin-left: -1%;
+    margin-right:-1%;
+    height: 1%;
+    position: relative;
+    border: 3px solid green;
+    text-align:center;
+}
+
+.texte_intro {
+    text-align:left;
+    font-family: Abel;
+    color:#646363;
+    font-size: 200%;
+    margin-left:5%;
+    margin-top:3%;
+}
+
+.titre_intro {
+    font-family: Abel;
+    color:#3B4040;
+    font-size:40px;
+}
+.logo{
+    height:57.31px;
+    margin-bottom: -1%;
+}
+.a_propos_btn{
+    text-decoration: none;
+    color:#646363;
+    margin-left:-5px;
+    font-family: "Poppins thin";
+    font-size:125%;
+    display:block;
+}
+
+.img_container{
+    display: inline-block; 
+    position: relative; 
+    width: 1500px; 
+    height: 400px; 
+    overflow: hidden;
+    border:solid 20px #bbccca; 
+    border-radius: 50%;
+    margin-left: 5%;
+    margin-top:3%;
+    margin-bottom: 3%;
+}
+
+.img_trailer{
+    position:absolute;
+    width: auto; 
+    height: 110%; 
+    position: cover;
+    margin-left: -150%;
+    margin-top: -1%;
+}
+
+.play_arrow{
+    position:absolute;
+    width: auto;
+    height:30%;
+    margin-left: -10%;
+    margin-top: 35%;
+    opacity:0.4;
 }

@@ -1,8 +1,8 @@
 <?php
 
 $bdd_servername = "localhost";
-$bdd_username = "root";
-$bdd_password = "kevin";
+$bdd_username = "admin";
+$bdd_password = "palworld";
 
 try {
     
