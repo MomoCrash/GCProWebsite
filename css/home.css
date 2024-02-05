@@ -160,8 +160,8 @@ html {
 /*ANIMATION LIGNE*/
 
 .line { 
+    margin: auto;
     width: 591px; 
-    max-width:90%;
     height: 614px; 
     position: fixed;    
     top: 50%; 
@@ -287,6 +287,7 @@ html {
     align-self: center;
     margin: auto;
     border-radius: 0px 0px 15px 15px;
+    padding-bottom: 30px;
 }
 
 .about_title{
@@ -296,6 +297,14 @@ html {
     margin-bottom: -30px;
     margin-left: 30px;
     margin-top: 0px;
+}
+.warn{
+    position: absolute;
+    margin-top:75px;
+    margin-left:2px;
+    font-family: Abel;
+    color: #ff7878;
+    font-size: 20px;
 }
 
 .about_txt{
@@ -327,6 +336,17 @@ html {
 }
 
 .book_btn{
-    text-align: center;
-    margin-top: 55px;
+    height: 52px;
+    width: 201px;
+    margin:auto;
+}
+
+.book_btn:hover{
+    content: url('../ressources/carre.webp');
+}
+.img_behind{
+    transition:0.5s;
+}
+.img_behind:hover{
+    box-shadow: 0px 20px 10px -15px #111;
 }

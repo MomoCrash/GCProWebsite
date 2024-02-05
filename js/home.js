@@ -8,8 +8,8 @@ function sleep(ms) {
 
 window.onclick = function() {
     if (actTrailer.classList.contains("active")) {
-        actTrailer.classList.toggle("active")
         actTrailer.pause()
+        actTrailer.classList.toggle("active")
         line.classList.toggle("active")
     }
   };
