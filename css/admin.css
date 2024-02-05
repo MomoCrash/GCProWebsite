@@ -127,3 +127,15 @@ button[type="submit"]:hover {
 .edit-article {
     color: #00f; /* Couleur bleue pour les liens de modification */
 }
+
+.animated-on-scroll {
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: all 0.4s ease-out;
+    transition-delay: 0.2s;
+  }
+  
+.animate{
+    opacity: 1;
+    transform: translateX(0);
+}
