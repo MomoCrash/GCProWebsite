@@ -1,0 +1,109 @@
+@font-face {
+    font-family: amiko;
+    src: url("../ressources/font/Amiko-Regular.ttf");
+    font-display: swap;
+}
+
+.booking-title {
+    color: white;
+    margin: 0;
+    margin-top: 2%;
+}
+.booking-subtitle {
+    color: red;
+    margin: 0;
+}
+
+
+.calendar {
+    width: 2000px;
+    display: flex;
+    background-color: #000000;
+    padding: 10px;
+    display: flex;
+}
+
+.day {
+    width: 90px;
+    height: 400px;
+    margin: 0 10px;
+    color: red;
+}
+
+.time-slot {
+    padding: 5px;
+    margin: 5px 0;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.not-available {
+    background-color: #9C0000;
+}
+
+.selected {
+    border: solid white 1px;
+    border-radius: 9px;
+}
+
+.available {
+    background-color: #00BA8D;
+}
+
+.container-back {
+    width: 80%;
+    background-color: #000000;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+
+.container-large {
+    width: 80%;
+    background-color: #000000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.horizontal-container {
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    margin: 1%;
+    padding: 10px;
+    width: 300px;
+    height: 35px;
+    font-size: large;
+    border-radius: 5px;
+    background-color: #3B4040;
+    border: 1px solid;
+  }
+
+.day-display {
+    color: #3B4040;
+    margin: 0;
+}
+
+.hour-display {
+    color: #9C0000;
+    margin: 0;
+}
+
+  ::placeholder {
+    color: #BBBBBB;
+    opacity: 1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #BBBBBB;
+  }

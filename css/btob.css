@@ -1,114 +1,27 @@
 @font-face {
-    font-family: amiko;
-    src: url("../ressources/font/Abel-Pro.ttf");
-    font-display: swap;
-}
-
-html{
-    height: 100%;
-    width: 100%;
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url("../ressources/bryceforme1.webp");   
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.nav {
-    position: relative;
-    backdrop-filter: blur(7px);
-    overflow: hidden;
-    margin-top: 0%;
-    margin-right: 0%;
-    
-  }
-
-.nav a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 0px 30px;
-    text-decoration: none;
-    font-size: 25px;
-    font-family: "amiko";
-}
-  
-.nav a:hover {
-    filter: blur(0.3px);
-    color: rgb(212, 212, 212);
-}
-  
-.nav-right {
-    float: right;
-    color: #f2f2f2;
-    text-align: right;
-    text-decoration: none;
-    margin-right: 5%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-}
-
-.nav-img {
-    float: left;
-    color: #f2f2f2;
-    text-align: right;
-    text-decoration: none;
-    margin-top: 5px;
-    margin-left: 10px;
-}
-  
-.nav-border{
-    border-left: 1px solid gray;
-}
-
-  @media screen and (max-width: 800px) {
-  
-    .nav a {
-      float: none;
-      display: block;
-    }
-}
-
-.box {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 50%;
-    display: block;
-    filter: brightness(50%);
-}
-
-@font-face {
     font-family: 'abel';
-    src: url('ressources/font/Abel-Regular.ttf') format('truetype');
+    src: url('../ressources/font/Abel-Regular.ttf') format('truetype');
     font-display: swap;
 }
 @font-face {
     font-family: 'amiko';
-    src: url('ressources\font\Amiko-Regular.ttf') format('truetype');
+    src: url('../ressources/\font\Amiko-Regular.ttf') format('truetype');
     font-display: swap;
 }
 
 @font-face {
     font-family: 'alatsi';
-    src: url('font\Alatsi-Regular.ttf');
+    src: url('../ressources/font\Alatsi-Regular.ttf');
 }
 
 @font-face {
     font-family: 'abel';
-    src: url('ressources/font/Abel-Regular.ttf') format('truetype');
+    src: url('../ressources/font/Abel-Regular.ttf') format('truetype');
     font-display: swap;
 }
 @font-face {
     font-family: 'amiko';
-    src: url('ressources/font/Amiko-Regular.ttf') format('truetype');
+    src: url('../ressources/font/Amiko-Regular.ttf') format('truetype');
     font-display: swap;
 }
 
@@ -131,21 +44,35 @@ body {
 
 .img-header {
     width: 100%;
-    display: block; /* Ensures that the div takes up the full width */
+    display: block;
 }
 
 .img-header img {
-    width: 100%; /* Ensures that the image stretches to the full width of its container */
-    height: auto; /* Keeps the image aspect ratio intact */
-    display: block; /* Removes any extra space below the image */
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+.decouvrir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+    background-color: white; /* Fond blanc pour .decouvrir */
+    background-image: url('../ressources/bryceforme1.webp');
+    background-size: cover; /* Utilisez cover pour s'assurer que l'image couvre la zone */
+    background-repeat: no-repeat;
+    background-position: 0px -400px;
+  
 }
 
 
+
 main{
-    background-image: url('ressources/forme10.webp'); /* Corrected slashes */
-    background-size: cover; /* Cover the entire area of the element */
+    background-image: url('../ressources/forme10.webp'); 
+    background-size: cover; 
     background-repeat: no-repeat;
-    min-height: 100vh; /* This ensures that the main element is at least as tall as the viewport */
+    min-height: 100vh; 
 }
 
 .footer-anim {
@@ -226,45 +153,6 @@ footer {
 }
 
 
-.first-p{
-    justify-content: center;
-    align-items: center;
-    padding: 10%;
-    flex-direction: column;
-    animation-name: fadeIn;
-    animation-duration: 2s; /* Durée de l'animation */
-    animation-fill-mode: forwards;
-}
-
-.first-p h1{
-    font-size: 50px;
-    color: #3B4040;
-    font-family: 'amiko', sans-serif;
-    font-weight: bold;
-}
-
-.first-p p{
-    font-size: 30px;
-    color: #3B4040;
-    font-family: 'abel', sans-serif;
-}
-
-.second-p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10%;
-    flex-direction: column;
-    text-align: center;
-  }
-
-.second-p h1{
-    font-size: 50px;
-    color: #3B4040;
-    font-family: 'amiko', sans-serif;
-    font-weight: bold;
-}
-
 .animated-on-scroll {
     opacity: 0;
     transform: translateX(-300px);
@@ -277,110 +165,92 @@ footer {
     transform: translateX(0);
 }
 
-
-.second-p p{
-    font-size: 30px;
-    color: #3B4040;
-    font-family: 'abel', sans-serif;
-}
-
-.text-second{
-    padding: 10px;
-    padding: 3%;
-    background-color: #E5E5E5;
-    border-radius: 10px;
-}
-
-
-.global-side {
+.firs-div {
     display: flex;
-    justify-content: center;
-    align-items: center; 
-    padding: 10%;
-    flex-direction: column;
-    text-align: center;
-}
-
-.side-by-side {
-    display: flex; 
-    justify-content: space-around; /* This will distribute space around the items */
-    align-items: stretch; /* Keeps items stretched to fill the parent container */
-    gap: 40px; /* This creates space between the flex items */
-    width: 100%; /* Adjust the width as necessary */
-    padding: 0 100px; /* Add padding to the sides of the container if desired */
-}
-
-.left-div, .right-div {
-    flex: 1; 
-    margin: 10px;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
-    color: #3B4040;
-    margin-right: 10px;
-    flex: 1; /* Each div takes up equal space */
-    margin: 10px; /* Adjust margin as needed */
-    padding: 20px; /* Adjust padding as needed */
+    justify-content: center;
+    background: #EAFFFB; /* Mettez ici la couleur ou l'image de fond souhaitée */
+    padding: 50px;
+    padding-top: 5%;
 }
 
-.left-div {
-    background-image: url('path-to-your-left-image.jpg');
-    background-size: cover;
-    background-position: center;
+
+.img-first {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 300px; 
+    height: 300px;
+    margin-right: 20px; 
+    position: relative;
 }
 
-.right-div {
-    background-image: url('path-to-your-right-image.jpg');
-    background-size: cover;
-    background-position: center;
+.img-first img {
+    width: 50%;
+    height: auto;
+    display: block;
 }
 
-.left-div h2, .right-div h2 {
-    font-family: 'amiko', sans-serif;
+
+.text-content {
+    flex: 1; /* prend l'espace restant */
+}
+
+.text-content h1 {
+    margin-bottom: 10px; /* espace sous le titre */
     font-weight: bold;
+    font-family: 'amiko';
+    font-size: 40px;
+}
+
+.text-content p {
+    margin: 0;
     font-size: 30px;
-    margin-bottom: 30px; /* Adjust as needed */
+    font-family: 'abel';
 }
 
-.left-div p, .right-div p {
-    font-family: 'abel', sans-serif;
-    font-size: 21px;
+.second-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    padding-top: 100px;
 }
 
-
-/* Responsive design adjustments */
-@media screen and (max-width: 900px){
-    .side-by-side {
-        flex-direction: column;
-    }
-    
-    .left-div, .right-div {
-        width: 100%; /* Full width on small screens */
-        margin: 0; /* Reset margin */
-        padding: 20px; /* Adjust padding as needed */
-    }
-
-    .global-side {
-        padding: 0; /* Remove padding on smaller screens */
-    }
+.third-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EAFFFB;
 }
 
-
-  .text-third{
+.text-content-third{
     padding: 3%;
-    background-color: #E5E5E5;
-    border-radius: 10px;
-  }
+}
 
-  .text-four{
+.four-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EAFFFB;
+}
+
+.five-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EAFFFB;
+}
+
+.text-content-four, .text-content-third, .text-content-five{
     padding: 3%;
-    background-color: #E5E5E5;
-    border-radius: 10px;
-  }
+}
 
+section{
+    padding-left: 2%;
+    padding-right: 2%;
+    padding: 1%;
+    border-radius: 30px;
+}
   .visible {
     animation: fadeIn 2s forwards;
   }
@@ -390,50 +260,62 @@ footer {
     to { opacity: 1; }
   }
   
-@media screen and (max-width: 900px){
-    footer {
+  @media screen and (max-width: 923px){
+    .firs-div, .second-div, .third-div, .four-div, .five-div{
         flex-direction: column;
-        align-items: center; 
+        text-align: center;
         padding: 20px;
-        height: auto; 
-    }
-
-    .footer-nav,
-    .social-icons,
-    .moda,
-    .copyright {
-        width: 100%; 
-        justify-content: center;
-        margin-left: 0; 
-        margin-right: 0; 
-        text-align: center; 
-    }
-    .copyright{
-        padding-left: 10px;
-    }
-    .footer-nav a,
-    .social-icons a {
-        padding: 5px 10px; 
-    }
-
-    .social-icons {
-        display: flex;
-        justify-content: center; 
-        flex-wrap: wrap; 
-    }
-
-    .social-icons a {
         padding-top: 10px;
-        padding-left: 0; 
+    }
+    
+    .firs-div p, .second-div p, .third-div p, .four-div p, .five-div p {
+        font-size: 18px;
+        font-family: 'abel';
+        font-weight: 400;
+    }
+    
+    .firs-div h1, .second-div h1, .third-div h1, .four-div h1, .five-div h1 {
+        font-size: 20px;
+        font-family: 'amiko';
+        font-weight: 700;
+        padding-bottom: 20px;
+        padding-top: 40px;
+    }
+    
+
+    .img-first{
+        height: 171px;
+        width: 171px;
     }
 
-    .moda {
-        padding-top: 20px; 
-        flex-direction: column; 
+    .img-third, .img-four, .img-five {
+        height: 258px; /* Set the height of the image container */
+        width: 400px; /* Set the width of the image container */
+        display: flex; /* Use flexbox to center the content */
+        align-items: center; /* Center content vertically within the container */
+        justify-content: center; /* Center content horizontally within the container */
+        overflow: hidden; /* Ensures the content doesn't spill outside the container */
+        border-radius: 10px; /* Optional: Adds rounded corners to the container */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow to the container */
+        background: url('/path/to/your/image.png') no-repeat center center; /* Replace with the path to your image */
+        background-size: cover; /* Ensure the background image covers the entire container */
     }
 
-    .copyright {
-        padding-top: 20px; 
+    .img-third img, .img-four img, .img-five img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; 
+        object-position: center;
+        border-radius: 10px;
     }
-}
 
+    .four-div {
+        display: flex;
+        flex-direction: column-reverse; /* Ceci inversera l'ordre des éléments flex enfants */
+    }
+    
+    /* Assurez-vous que la largeur des enfants de .four-div est définie ou gérée correctement */
+    .four-div .text-content, .four-div .img-four {
+        flex: 1; /* Cela attribuera une largeur égale aux deux enfants, ajustez selon les besoins */
+    }
+  }

@@ -61,81 +61,8 @@ main{
     min-height: 100vh; /* This ensures that the main element is at least as tall as the viewport */
 }
 
-.footer-anim {
-    animation-name: fadeInUp;
-    animation-duration: 1s;
-    animation-fill-mode: both; 
-}
-
-.footer-anim {
-    animation-name: fadeInUp;
-    animation-duration: 1s;
-    animation-fill-mode: both; 
-}
 *{
     text-decoration: none;
-}
-footer {
-    padding: 10px 0;
-    background-color: #3B4040;
-    color: #82FFE1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'alatsi', sans-serif;
-    height: 150px;
-}
-
-
-.footer-nav {
-    display: flex;
-    justify-content: flex-start;
-    padding: 3%;
-    font-size: 17px;
-}
-
-
-.footer-nav a:hover {
-    text-decoration: underline;
-    color: aqua;
-}
-
-.copyright {
-    display: flex;
-    flex-grow: 1;
-    text-align: center;
-    font-size: 20px;
-    padding-right: 8%;
-    padding-left: 16%;
-    flex: 1;
-}
-
-.moda{
-    color: #82FFE1;
-    text-decoration: none;
-    display: flex;
-    font-size: 15px;
-    align-items: center;
-}
-
-.social-icons a:hover{
-    filter: drop-shadow(2px 2px 4px white);
-}
-
-.footer-nav, .moda, .social-icons, .copyright {
-    margin: 0 15px;  /* Adjust the margin as needed */
-    display: inline-flex; /* Use inline-flex for in-line alignment */
-    align-items: center; /* Align items vertically */
-}
-
-.footer-nav a, .social-icons a, .moda a {
-    color: #82FFE1;
-    text-decoration: none;
-    padding: 0 10px; /* Adjust padding for each link */
-}
-
-.social-icons {
-    justify-content: flex-end;
 }
 
 
@@ -279,6 +206,21 @@ footer {
     .global-side {
         padding: 0; /* Remove padding on smaller screens */
     }
+
+    .first-p p, .second-p p{
+        font-size: 18px;
+        font-family: 'abel';
+        font-weight: 400;
+    }
+    
+    .first-p h1, .second-p h1{
+        font-size: 20px;
+        font-family: 'amiko';
+        font-weight: 700;
+        padding-bottom: 20px;
+        padding-top: 40px;
+    }
+
 }
 
 
@@ -303,49 +245,4 @@ footer {
     to { opacity: 1; }
   }
   
-@media screen and (max-width: 900px){
-    footer {
-        flex-direction: column;
-        align-items: center; 
-        padding: 20px;
-        height: auto; 
-    }
 
-    .footer-nav,
-    .social-icons,
-    .moda,
-    .copyright {
-        width: 100%; 
-        justify-content: center;
-        margin-left: 0; 
-        margin-right: 0; 
-        text-align: center; 
-    }
-    .copyright{
-        padding-left: 10px;
-    }
-    .footer-nav a,
-    .social-icons a {
-        padding: 5px 10px; 
-    }
-
-    .social-icons {
-        display: flex;
-        justify-content: center; 
-        flex-wrap: wrap; 
-    }
-
-    .social-icons a {
-        padding-top: 10px;
-        padding-left: 0; 
-    }
-
-    .moda {
-        padding-top: 20px; 
-        flex-direction: column; 
-    }
-
-    .copyright {
-        padding-top: 20px; 
-    }
-}
