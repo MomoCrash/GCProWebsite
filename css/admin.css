@@ -1,0 +1,129 @@
+/* CSS de base pour la page d'administration */
+@font-face {
+    font-family: 'abel';
+    src: url('../ressources/font/Abel-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'amiko';
+    src: url('../ressources/\font\Amiko-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'alatsi';
+    src: url('../ressources/font\Alatsi-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'abel';
+    src: url('../ressources/font/Abel-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'amiko';
+    src: url('../ressources/font/Amiko-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+body{
+    background-color: #d4d4d4;
+}
+.admin-container h2{
+    font-family: 'amiko';
+    font-weight: 700;
+}
+.form-group{
+    font-family: 'abel';
+    font-weight: 400;
+}
+.admin-container {
+    background: #fff;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #004494;
+}
+
+.article{
+    background: #fff;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.select{
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'abel';
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .admin-container {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+/* Ajout du style pour les liens de suppression et de modification */
+.delete-article,
+.edit-article {
+    color: #f00; /* Couleur rouge pour les liens de suppression */
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.edit-article {
+    color: #00f; /* Couleur bleue pour les liens de modification */
+}
