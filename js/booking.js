@@ -20,10 +20,18 @@ function formatDateWithHours(date) {
 function generateCalendar() {
     const timeSlots = ['10h20', '11h50', '13h20', '14h50', '16h20', '17h50', '19h20', '20h50'];
     let currentDate = new Date();
+    let weekDate = addDays(currentDate, currentDays);
+    let week = (weekDate.getUTCDate());
 
-    for (let i = 0+currentDays; i < 2+currentDays; i++) {
+    for (let i = currentDays; i < 2+currentDays; i++) {
         let dayDate = addDays(currentDate, i);
         let dayClass = $('<div class="calendar-col">').attr("class", "day");
+
+        $("#week-field").text("Du " + week + " au " + (week+1) + " " + dayDate.toLocaleDateString('fr-FR', {month: 'long'}))
+
+        if (i != currentDays) {
+            $(".calendar").append('<div class="separator" style="height: 300px; margin: auto;"></div>')
+        }
 
         $(".calendar").append(dayClass.append("<h3>" + formatDate(dayDate) + "</h3>"))
 
@@ -38,6 +46,8 @@ function generateCalendar() {
                 this.classList.toggle('selected');
                 dayDate.setHours(parseInt(data[0]));
                 dayDate.setMinutes(parseInt(data[1]));
+                $(".day-display").text(formatDate(dayDate))
+                $(".hour-display").text(time)
                 selectedDay = dayDate;
                 selectedDiv = this;
             }));
@@ -58,6 +68,23 @@ $("#previous").click(function() {
     }
     $(".calendar").empty();
     generateCalendar();
+});
+
+$("#cancel").click(function() {
+    window.history.back();
+});
+
+$("#reserver").click(function() {
+    if (selectedDay == null) return
+
+    $.ajax({
+        method: "GET",
+        url: "booking.php",
+        data: { date: selectedDay.toJSON() }
+      })
+        .done(function( msg ) {
+          $("body").empty().append($("<h1>").text("Vous avez fait une réservation pour le " + formatDateWithHours(selectedDay)));
+        });
 });
 
 $("#reserver").click(function() {
