@@ -179,6 +179,11 @@ $method = "login";
             session_start();
             $_SESSION["name"] = $currentRow["name"];
             $_SESSION["email"] = $email;
+            if ($currentRow["admin"] == 1) {
+                $_SESSION["admin"] = true;
+            } else {
+                $_SESSION["admin"] = false;
+            }
             $redirect = "index.html";
 
             if (isset($_GET["redirect"])) {
@@ -199,6 +204,7 @@ $method = "login";
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script>
     function onSignIn(googleUser) {
+        console.log("Test");
         var profile = googleUser.getBasicProfile();
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         console.log('Name: ' + profile.getName());
