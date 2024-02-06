@@ -78,60 +78,53 @@
     </div>
   </section>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="ressources/image129.webp" alt="First slide">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>LES ÉQUIPEMENTS THE SENSE</h5>
-              <p>Tous nos équipements sont prévus pour toutes les tailles et tous les âges, ils conviennent aussi bien aux adultes qu'aux jeunes de 12 ans. Ils vous garantissent également un confort à toutes épreuves lors de vos voyages chez nous.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="ressources/Rectangle94.webp" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block">
-              <p>"C'est dingue, j'ai vraiment eu l'impression d'être transporté dans un autre monde. Avant je ne faisais pas d'expérience VR car je ne croyais pas en la qualité mais grâce à The Sense, j'ai pu traverser la frontière du réel."</p>
-              <p>- Denise, 23 Octobre 2020 -</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="ressources/image127.webp" alt="Third slide">
-            <div class="carousel-caption d-none d-md-block">
-              <p>“Avec mes fils nous avons tenté l'expérience “NAMELESS”, moi qui pensais avoir tout vu dans le domaine de l'horreur, je ne me suis jamais autant trompé. Si vous êtes à la recherche de sensation forte et de frissons, la DARK ROOM est faite pour vous”</p>
-              <p>- Denise, 23 Octobre 2020 -</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="ressources/image128.webp" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>NOUVELLE ROOM EN VUE !</h5>
-              <p>En 2021, préparez à manger du slime en pleine face, les fantômes de Ghost Buster arrivent chez THE SENSE. Ça promet de belles parties de chasse aux fantômes dans tout le complexe. Les réservations sont d'ores et déjà possible sur place et en Février sur internet.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="ressources/image130.webp" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block">
-              <p>“Avec mes fils nous avons tenté l'expérience “NAMELESS”, moi qui pensais avoir tout vu dans le domaine de l'horreur, je ne me suis jamais autant trompé. Si vous êtes à la recherche de sensation forte et de frissons, la DARK ROOM est faite pour vous”</p>
-              <p>- Denise, 23 Octobre 2020 -</p>
-            </div>
+      <div class="container">
+          <div class="hours-container">
+
+              <h2>NOS HORAIRES</h2>
+                <form action="Apropos.php" method="post">
+                  <input id="nom" name="nom" size="28" type="text" placeholder="Nom"/> 
+                  <input id="prenom" name="prenom" size="27" type="text" placeholder="Prenom"/> <br> <br>
+                  <input id="mail" name="mail" size="27" type="text" placeholder="Mail"/> <br> <br>
+                  <input id="content" name="content" size="81" type="text" placeholder="Votre message/avis"/></p>
+                  <input type="submit" value="Envoyer" name="submit"> </input>
+                </form>
+                <p> Ou </p>
+                <p> par téléphone </p>
+                <a href="tel:0601023672">06 01 02 36 72</a>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
+
+        <?php 
+
+            function sendMail($mail, $name, $content) {
+              
+              // Envoyer le mail
+              $subject = "Message d'utilisateur.";
+              
+              $message = 'Message reçu de '.$name.',<br>';
+              $message .= $content.',<br>';
+              $message .= "Mail du client: ". $mail;
+              
+              // Always set content-type when sending HTML email
+              $headers = "MIME-Version: 1.0" . "\r\n";
+              $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+              
+              // More headers
+              $headers .= 'From: '.$name.' <'. $mail .'>' . "\r\n";
+              $headers .= 'To: The Sense <thesense@alwaysdata.net>' . "\r\n";
+              
+              mail($mail,$subject,$message,$headers);
+            }
+
+            if (isset($_POST["mail"])) {
+
+              sendMail($_POST["mail"], $_POST["nom"]." ". $_POST["prenom"], $_POST["content"]);
+
+            }
+
+        ?>
+    
 </main>
 <body>
   <footer>

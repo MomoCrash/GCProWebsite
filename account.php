@@ -3,12 +3,20 @@
 
 <?php 
 
-require_once "sql/sql-manager.php";
+include "sql/sql-manager.php";
 
 $method = "login";
-    if (isset($_GET["method"])) {
-        $method = $_GET["method"];
-    }
+if (isset($_GET["method"])) {
+    $method = $_GET["method"];
+}
+
+session_start();
+if ($_SESSION["id"]) {
+    $id = $_SESSION["id"];
+    $email = $_SESSION["email"];
+    $name = $_SESSION["name"];
+    $admin = $_SESSION["admin"];
+}
 
 ?>
 
@@ -16,9 +24,8 @@ $method = "login";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/newstyle.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="css/booking.css" rel="stylesheet" type="text/css" />
     <meta name="google-signin-client_id"
         content="1055389349967-6clh6ao3sp4aadjb22g7sa0fbcvn0g99.apps.googleusercontent.com">
     <title>Document</title>
@@ -48,7 +55,7 @@ $method = "login";
 
     </header>
 
-    <?php if($method == "login"): ?>
+    <?php if($method == "login" && !isset($email)): ?>
     <div id="form-login" class="row align-items-center justify-content-center">
         <form action="account.php?method=login" method="POST" class="row justify-content-center" style="margin: 0;">
             <div class="login-content">
@@ -70,10 +77,8 @@ $method = "login";
                 <button type="submit" name="submit" placeholder="Connexion"> Connexion </button>
             </div>
         </form>
-
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
     </div>
-    <?php elseif($method == "register"): ?>
+    <?php elseif($method == "register"  && !isset($email)): ?>
     <div id="form-login" class="row align-items-center justify-content-center">
         <div class="text-center">
             <form action="account.php?method=register" method="POST">
@@ -113,44 +118,40 @@ $method = "login";
     </div>
     <?php endif; ?>
 
-    <br> <br>
+    <?php if(isset($id)): ?>
+
+    <?php
+    $request =  $conn->prepare("SELECT * FROM users WHERE email='" . $email . "';");
+    $request->execute();
+    //nombre de lignes retournées
+    $count = $request->rowCount();
+    $currentRow  = $request -> fetch();
+    setcookie('fidelityCount', $currentRow["fidelity"], time() + (86400 * 30), "/");
+    ?>
+
+    <div class="panel">
+        <div id="background" class="vertical-container">
+            <p> Mon adresse mail <?= $email ?></p>
+            <p> Mot de passe XXXXXXXX</p>
+
+            <div class="horizontal-container">
+                <p>Réservations
+                <p class="fidelity-text"></p>
+                </p>
+            </div>
+            <div class="horizontal-container">
+                <div class="fidelity-point"></div>
+            </div>
+        </div>
+    </div>
+
+    <?php endif; ?>
 
     <?php 
 
-    function register_user($password, $email, $name, $phone ) {
-
-        $request =  $conn->prepare("SELECT * FROM users WHERE email='" . $email . "';");
-        $request->execute();
-        //nombre de lignes retournées
-        $count = $request->rowCount();
-        $currentRow  = $request -> fetch();
-
-        if ($count < 1) {
-
-            $request =  $conn->prepare("INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `admin`) VALUES (NULL, '" . $name . "', '" . $email . "', '" . $password . "', '" . $phone . "', '0');");
-            $request->execute();
-
-            session_start();
-            $_SESSION["name"] = $name;
-            $_SESSION["email"] = $email;
-
-            $request =  $conn->prepare("SELECT * FROM users WHERE email='" . $email . "';");
-            $request->execute();
-            $currentRow  = $request -> fetch();
-
-            $_SESSION["id"] = $currentRow["id"];
-            $_SESSION["admin"] = false;
-
-            return $currentRow["id"];
-            
-        } else {
-            return null;
-        }
-    }
-
     if ($method == "register" && isset($_POST["password"])) {
 
-        $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+        $password = $_POST["password"];
         $email = refracto_text($_POST["email"]);
         $name = refracto_text($_POST["name"]);
         if (isset($_GET["phone"])) {
@@ -164,7 +165,26 @@ $method = "login";
             return;
         }
 
-        if (register_user($password, $email, $name, $phone) != null) {
+        $request =  $conn->prepare("SELECT * FROM users WHERE email='" . $email . "';");
+        $request->execute();
+        //nombre de lignes retournées
+        $count = $request->rowCount();
+        $currentRow  = $request -> fetch();
+
+        if ($count < 1) {
+
+            $request =  $conn->prepare("INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `admin`) VALUES (NULL, '" . $name . "', '" . $email . "', '" . password_hash($password, PASSWORD_DEFAULT) . "', '" . $phone . "', '0');");
+            $request->execute();
+
+            $_SESSION["name"] = $name;
+            $_SESSION["email"] = $email;
+
+            $request =  $conn->prepare("SELECT * FROM users WHERE email='" . $email . "';");
+            $request->execute();
+            $currentRow  = $request -> fetch();
+
+            $_SESSION["id"] = $currentRow["id"];
+            $_SESSION["admin"] = false;
 
             $redirect = "index.html";
             if (isset($_GET["redirect"])) {
@@ -191,7 +211,6 @@ $method = "login";
 
         if ($count > 0 && password_verify($password, $currentRow["password"])) {
 
-            session_start();
             $_SESSION["name"] = $currentRow["name"];
             $_SESSION["email"] = $email;
             $_SESSION["id"] = $currentRow["id"];
@@ -217,17 +236,8 @@ $method = "login";
 
     ?>
 
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script>
-    function onSignIn(googleUser) {
-        console.log("Test");
-        var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-    }
-    </script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/account.js"></script>
 
 </body>
 

@@ -139,7 +139,7 @@ if (isset($_SESSION["email"])) {
                     date_default_timezone_set('Europe/Paris'); 
                     $sqlDate = date("Y-m-d H:i:s", strtotime($day));
 
-                    $request =  $conn->prepare("INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `admin`) VALUES (NULL, '" . $name . " " . $firstname . "', '". $email ."', '', '". $phone ."', '0');");
+                    $request =  $conn->prepare("INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `fidelity`, `admin`) VALUES (NULL, '" . $name . " " . $firstname . "', '". $email ."', '', '". $phone ."', '1', '0');");
                     $request->execute();
 
                     $_SESSION["name"] = $name;
@@ -176,6 +176,9 @@ if (isset($_SESSION["email"])) {
 
                     date_default_timezone_set('Europe/Paris'); 
                     $sqlDate = date("Y-m-d H:i:s", strtotime($day));
+
+                    $request =  $conn->prepare("UPDATE `users` SET `fidelity` = '". (intval($currentRow["fidelity"])+1) ."' WHERE `users`.`id` = ". $id .";");
+                    $request->execute();
 
                     $request =  $conn->prepare("INSERT INTO `booking` (`id`, `user_id`, `date`, `player_number`, `paid`, `discover_way`) VALUES (NULL, '" . $id . "', '" . $sqlDate . "', '" . $player_number . "', '" . $paid . "', '4');");
                     $request->execute();
