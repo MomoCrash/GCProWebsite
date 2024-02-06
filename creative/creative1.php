@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="../css/mainstyle.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../css/creative.css">
+    <script src="creative.js"></script>
 </head>
 <body class="fond_creative">
   <nav class="navbar" id="navbar">
@@ -51,18 +53,38 @@
           <p>Notre catalogue ne vous suffit pas ? Vous aimeriez laisser parler votre imagination ? Grâce à la CREATIVE ROOM, concept inédit en France, la créativité est votre seule limite, créez de toute pièce l'univers dans lequel vous voyagerez par la suite. Que ce soit dans la jungle ou en haut de montagnes enneigées, pour affronter des démons ou enquêter sur la disparition de bébés licornes roses fluos, le choix vous appartient. Alors tester votre imagination dans la CREATIVE ROOM et entraîner vos amis ou votre famille dans votre univers.
           </p>
 
-
-
-
     </div>
   </div>
 
+  <div class="mid_contenair">
+    <div class="animated-on-scroll">
+      <div class="imgldb" id="darkRoomDiv">
+        <a href="#" onclick="showDarkRoomContent()"><img src="../ressources/dark_room.png" alt="Dark room"></a>
+      </div>
+      </div>
+
+      <!-- Ajoutez cette nouvelle div à votre HTML où vous voulez que le nouveau contenu apparaisse -->
+      <div id="darkRoomContent" style="display:none;">
+        <!-- Insérez ici le contenu que vous souhaitez afficher -->
+        <!-- Le contenu de la deuxième image -->
+      </div>
+    </div>
+    <div class="animated-on-scroll">
+      <div class="imgldb">
+        <a href="#"><img src="../ressources/light_room.png" alt="Light Room"></a>
+      </div>
+    </div>
+    <div class="animated-on-scroll">
+      <div class="imgldb">
+        <a href="#"><img src="../ressources/battle_room.png" alt="Battle Room"></a>
+      </div>
+    </div>
+  </div>
   <!-- DERNIERE PARTIE -->
   <div class="second_part">
     <div class="pc"><img src="../ressources/forme8.webp"></div>
     <div class="mobile"><img src="../ressources/forme8.webp"></div>
   </div>
-
 
 
 </body>
