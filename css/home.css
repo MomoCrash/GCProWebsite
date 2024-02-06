@@ -223,13 +223,15 @@ html {
 .img_exp{
     margin: auto;
     width: 80%;
-    height:622px;
+    height:700px;
     position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
 .img_behind{
     width:100%;
-    height:622px;
+    height:700px;
     position: absolute;
     border-radius: 15px 15px 0px 0px;
 }
@@ -376,4 +378,137 @@ html {
     text-decoration: none;
     color:#646363;
     font-family: "Poppins thin";                                                                                              
+}
+
+/*PRICING*/
+.pricing{
+    background-image: url("../ressources/image_7.webp");   
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: -0.5%;
+    margin-right: -0.4%;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.book_price{
+    text-align: center;
+    color:white;
+    font-family: poppins thin;
+}
+
+.catchphrase{
+    font-size: 50px;
+}
+
+.amount_player{
+    text-align: center;
+    color:white;
+    font-family:abel;
+}
+
+.number{
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.amount{
+    
+    font-family: abel;
+    color:white;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.plus{
+    background-color: transparent;
+    border: none;
+    font-size: 50px;
+    color:white;
+}
+
+.plus:hover{
+    cursor: pointer;
+}
+
+.minus:hover{
+    cursor: pointer;
+}
+
+.minus{
+    margin-bottom: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 50px;
+    color:white;
+}
+
+.ppp{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    align-items: flex-end;
+}
+
+.room_logo{
+    width: 100%;
+    height:100%;
+    margin-bottom: 20px;
+}
+/*TEXTE DU PRIX*/
+.price_txt{
+    font-family: abel;
+    color: white;
+    font-size: 20px;
+}
+
+.lightprice{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.creativeprice{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.per{
+    color:white;
+    font-size: 15px;
+}
+
+.pers{
+    font-size: 15px;
+    color:#9C0000;
+}
+
+.book_planning{
+    height:1000px;
+    background-color: #000000;
+    margin-left: -0.5%;
+    margin-right: -0.5%;
+}
+
+/*NEWS DU MOIS*/
+.experiences_flex{
+    display:flex;
+    justify-content: space-between;
+}
+
+.imgtxt{
+    display: block;
+}
+
+.about_new{
+    background-color: #e6e6ee;
+    height:0%;
+    width:77%;
+    align-self: center;
+    margin: auto;
+    border-radius: 0px 0px 15px 15px;
+    padding-bottom: 30px;
 }

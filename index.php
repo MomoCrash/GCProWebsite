@@ -325,7 +325,18 @@
                 <p class="catchphrase">N'ATTENDEZ PLUS, RÉSERVEZ</p> 
             </div>
 
+<<<<<<< Updated upstream
             <div class="player_amount">
+=======
+        <div class="pricing">
+
+            <div class="book_price">
+                <img src="ressources/RESERVER.webp" alt="image reserver"/>
+                <p class="catchphrase">N'ATTENDEZ PLUS, RÉSERVEZ</p> 
+            </div>
+
+            <div class="amount_player">
+>>>>>>> Stashed changes
                 <img src="ressources/NOS_TARIFS.webp" alt="tarifs"/>
                 <div class="hor_line"></div>
                 <p class="txt1">Voir les tarifs pour</p>
@@ -333,11 +344,118 @@
             </div>
 
             <div class="number">
+<<<<<<< Updated upstream
                 <button onclick="decrement()">-</button>
                 <p class="amount"></p>
                 <button onclick="decrement()">+</button>
             </div>
         <div class=pricing></div>
+=======
+                <button class="minus" onclick="decrement()">-</button>
+                <p class="amount">4</p>
+                <button class="plus" onclick="increment()">+</button>
+            </div>
+
+            <div class="ppp">
+
+                <div class="lightroom_pricing">
+                    <img class="room_logo" src="ressources/LIGHT_ROOM_WHITE.webp" alt="lightroom_logo"/>
+                    <p class="price_txt">DE 10H À 18H: <span class="lightprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 18H À 21H: <span class="lightprice">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                </div>
+
+                <div class="darkroom_pricing">
+                    <img class="room_logo" src="ressources/DARK_ROOM_WHITE.webp" alt="darkroom_logo"/>
+                    <p class="price_txt">DE 10H À 18H: <span class="lightprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 18H À 21H: <span class="lightprice">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                </div>     
+
+                <div class="battleroom_pricing">
+                    <img class="room_logo" src="ressources/BATTLE_ROOM.webp" alt="battleroom_logo"/>
+                    <p class="price_txt">DE 10H À 18H: <span class="creativeprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 18H À 21H: <span class="creativeprice">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                </div>    
+
+                <div class="creativeroom_pricing">
+                    <img class="room_logo" src="ressources/CREATIVE_ROOM.webp" alt="battleroom_logo"/>
+                    <p class="price_txt">DE 10H À 18H: <span class="lightprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 18H À 21H: <span class="lightprice">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                </div>   
+
+
+            </div>
+
+            
+        </div>
+        <div class="book_planning">
+                
+        </div>
+
+        <!--ESPACE-->
+        <div class="space"></div>
+        
+        <!--TITRE-->
+        <div class="title">
+                <p>VOUS EN VOULEZ TOUJOURS PLUS ?</p>
+            </div>
+        <!--=================================NEWS=================================-->
+        <div class="experiences_flex">
+            
+
+        <!--==================1 EXPERIENCE==================-->
+            <div class="imgtxt">
+                <!--IMAGE DE L'EXPERIENCE AVEC TOUS SES COMPOSANTS-->
+                <div class="img_exp">
+
+                    <img class="img_behind" src="ressources/image_8.webp" alt="image de l'experience"/><!--image du fond-->
+
+                </div>
+
+                <!--TEXTE EXPLICATION DE L'EXPERIENCE-->
+                <div class="about_exp">
+
+                    <!--TITRE-->
+                    <div class="about_title">
+                        <p class="txt_about_title">ÉVÉNEMENT : LA CHASSE À L’OEUF</p>
+                    </div>
+
+                    <!--TXT A PROPOS-->
+                    <div class="about_txt">
+                        <p>La chasse à l'oeuf est un évènement durant lequel vous aurez l'occasion entre amis ou en famille de chercher tous es oeufs 
+                            déposés par le lapin à l'occasion de pâques
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="imgtxt">
+                <!--IMAGE DE L'EXPERIENCE AVEC TOUS SES COMPOSANTS-->
+                <div class="img_exp">
+
+                    <img class="img_behind" src="ressources/image_.webp" alt="image de l'experience"/><!--image du fond-->
+                    <!--NB DE LIKES-->
+
+                </div>
+
+                <!--TEXTE EXPLICATION DE L'EXPERIENCE-->
+                <div class="about_new">
+
+                    <!--TITRE-->
+                    <div class="about_title">
+                        <p class="txt_about_title">ÉVÉNEMENT : LA CHASSE À L’OEUF</p>
+                    </div>
+
+                    <!--TXT A PROPOS-->
+                    <div class="about_txt">
+                        <p>La chasse à l'oeuf est un évènement durant lequel vous aurez l'occasion entre amis ou en famille de chercher tous es oeufs 
+                            déposés par le lapin à l'occasion de pâques
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+>>>>>>> Stashed changes
         <!--ESPACE-->
         <div class="space"></div>
     </body>
