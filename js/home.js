@@ -1,3 +1,4 @@
+//Trailer
 let btn = document.querySelector(".img_trailer")
 let actTrailer = document.querySelector(".trailer")
 let line = document.querySelector(".line")
@@ -29,4 +30,15 @@ btn.onclick = function() {
             actTrailer.classList.toggle("active")
         })
     }
+}
+
+//CIRCLE PLUS
+let circleplus = document.querySelector(".circle-plus")
+let circleplustwo = document.querySelector(".circle-plus-two")
+
+circleplus.onclick = function(){
+    circleplus.classList.toggle("opened")
+}
+circleplustwo.onclick = function(){
+    circleplustwo.classList.toggle("opened")
 }

@@ -6,6 +6,7 @@
         <link rel="icon" href="../ressources/ongletIcon.png" />
         <link rel="stylesheet" type="text/css" href="css/home.css" />
         <title>The Sense - Home</title>
+
     </head>
     <body>
 
@@ -319,15 +320,8 @@
 
         <!--ESPACE-->
         <div class="space"></div>
-        <div class=pricing></div>
-            <div class="book_price">
-                <img src="ressources/RESERVER.webp" alt="image reserver"/>
-                <p class="catchphrase">N'ATTENDEZ PLUS, RÉSERVEZ</p> 
-            </div>
+        <!--=================================PRIX=================================-->
 
-<<<<<<< Updated upstream
-            <div class="player_amount">
-=======
         <div class="pricing">
 
             <div class="book_price">
@@ -336,7 +330,6 @@
             </div>
 
             <div class="amount_player">
->>>>>>> Stashed changes
                 <img src="ressources/NOS_TARIFS.webp" alt="tarifs"/>
                 <div class="hor_line"></div>
                 <p class="txt1">Voir les tarifs pour</p>
@@ -344,19 +337,13 @@
             </div>
 
             <div class="number">
-<<<<<<< Updated upstream
-                <button onclick="decrement()">-</button>
-                <p class="amount"></p>
-                <button onclick="decrement()">+</button>
-            </div>
-        <div class=pricing></div>
-=======
                 <button class="minus" onclick="decrement()">-</button>
                 <p class="amount">4</p>
                 <button class="plus" onclick="increment()">+</button>
             </div>
 
-            <div class="ppp">
+            <div class="priceperperson">
+
 
                 <div class="lightroom_pricing">
                     <img class="room_logo" src="ressources/LIGHT_ROOM_WHITE.webp" alt="lightroom_logo"/>
@@ -387,6 +374,7 @@
 
             
         </div>
+        
         <div class="book_planning">
                 
         </div>
@@ -402,7 +390,7 @@
         <div class="experiences_flex">
             
 
-        <!--==================1 EXPERIENCE==================-->
+            <!--==================1 EXPERIENCE==================-->
             <div class="imgtxt">
                 <!--IMAGE DE L'EXPERIENCE AVEC TOUS SES COMPOSANTS-->
                 <div class="img_exp">
@@ -412,7 +400,7 @@
                 </div>
 
                 <!--TEXTE EXPLICATION DE L'EXPERIENCE-->
-                <div class="about_exp">
+                <div class="about_new">
 
                     <!--TITRE-->
                     <div class="about_title">
@@ -433,7 +421,7 @@
                 <!--IMAGE DE L'EXPERIENCE AVEC TOUS SES COMPOSANTS-->
                 <div class="img_exp">
 
-                    <img class="img_behind" src="ressources/image_.webp" alt="image de l'experience"/><!--image du fond-->
+                    <img class="img_behind" src="ressources/image_9.webp" alt="image de l'experience"/><!--image du fond-->
                     <!--NB DE LIKES-->
 
                 </div>
@@ -455,9 +443,140 @@
 
                 </div>
             </div>
->>>>>>> Stashed changes
+        </div>
         <!--ESPACE-->
         <div class="space"></div>
+
+        <!--TITRE-->
+        <div class="title">
+            <p>QU'EST CE QUI VOUS RETIENT ?</p>
+        </div>
+
+
+        <!--=================================CARROUSEL=================================-->
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="ressources/OHSUKA.png" style="width:100%">
+            <div class="text"><p class="txt_about_title_darkroom">NOUVELLE ROOM EN VUE !<p>
+                <div class="about_txt_darkroom">En 2021, préparez à manger du slime en pleine face, les fantômes de Ghost Buster arrivent chez THE SENSE. Ça promet de belles parties de chasse aux fantômes dans tout le complexe. Les réservations sont d’ores et déjà possible sur place et en Février sur internet.</div>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="ressources/OHSUKA.png" style="width:100%">
+        <div class="text">dsfsdffsddsfddsf</div>
+        </div>
+
+        <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="ressources/OHSUKA.png" style="width:100%">
+        <div class="text">fsdfsdfdsfdsfdsfdsfd</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <!--ESPACE-->
+        <div class="space"></div>
+
+        <div class="title">
+            <p>FOIRE AUX QUESTIONS</p>
+        </div>
+
+        <!--=================================FAQ=================================-->
+        <div class="FAQ">
+
+            <!--==================1 QUESTION==================-->
+            <div class="question">
+
+                <!--BOUTON DEROULANT-->
+                <div class="circle-plus closed">
+
+                    <div class="circle">
+
+                        <div class="horizontal"></div>
+                        <div class="vertical"></div>
+
+                    </div>
+                </div>
+
+                <div class="circle-plus-two closed">
+                    <div class="circle">
+                        <div class="horizontal"></div>
+                        <div class="vertical"></div>
+                    </div>
+                </div>
+
+                <div class="question_txt">
+                    <p class="p_question">Qu'est ce que The SENSE ?</p>
+                </div>
+            </div>
+            <div class="answer">
+                <p class="p_answer">
+                    The SENSE est une immersion poussée grâce à la réalité virtuelle. The SENSE propose de nombreuses expériences
+                    à faire entre amis ou avec la famille. Vous pouvez tout à fait favoriser une expérience avec de l’action comme notre 
+                    Dark Room basé sur l’horreur. Ou encore, si vous le souhaiter par exemple, vous pouvez favoriser l’aspect compétitif 
+                    en participant aux expériences de notre Battle Room. De plus, The SENSE propose un système de création d’expérience où 
+                    les clients peuvent à leurs tours imaginer et créer la meilleure expériences possibles. </p>
+            </div>
+
+            
+        </div>
     </body>
     <script src="js/home.js"></script>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 8000); // Change image every 2 seconds
+    }
+
+
+    let slideyay = 1;
+    erm(slideyay);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        erm(slideyay += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        erm(slideyay = n);
+    }
+
+    function erm(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideyay = 1}
+        if (n < 1) {slideyay = slides.length}
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideyay-1].style.display = "block";
+        dots[slideyay-1].className += " active";
+    }
+</script>
+    
 </html>
