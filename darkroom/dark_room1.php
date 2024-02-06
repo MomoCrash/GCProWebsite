@@ -17,12 +17,25 @@
           <li><a href="#" class="nav_dark_room-border">NOS EXPERIENCES</a></li>
           <li><a href="#" class="nav_dark_room-border">A PROPOS DE NOUS</a></li>
           <li><a href="#" class="nav_dark_room-border">NOS EQUIPEMENTS</a></li>
-          <li><a href="#" class="nav_dark_room-border"><b>CONNEXION</b></a></li>
+          <li><a href="#" id="login" class="nav_dark_room-border"><b>CONNEXION</b></a></li>
         </ul>
       </div>
       <img src="../ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton" id="menu_bouton">
   </nav>
   <header></header>
+  <div class="loginbg">
+    <form action="../account.php?method=login&redirect='../darkroom/dark_room1.php'" method="POST" class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
+          <div class="login-content">
+              <p><SPAN STYLE="color:#000000"><b>Connexion</b></span></p>
+              <p> Identifiant <input class="login-input form-label" type="email" name="email" placeholder="abc@mail.fr"> </input>
+              </p>
+              <p> Mot de passe <input class="login-input form-label" type="password" name="password" placeholder="······"> </input>
+              </p>
+              <a style="gray" href="../account.php?method=register'">Crée un compte</a>      <button type="submit" name="submit"
+                  placeholder="Connexion">Connexion</button>
+          </div>
+    </form>
+  </div>
 
   <div class="top_container">
     <div class="position_logo"><img src="../ressources/logo_top_darkroom.png" alt="logos"></div>
@@ -350,5 +363,7 @@
   }
 
   </script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="../js/actions.js"></script>
 
 </html>
