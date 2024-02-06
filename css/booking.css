@@ -54,6 +54,11 @@ body {
     cursor: pointer;
 }
 
+.time-slot:hover {
+    border: #cdcdcd solid 1px;
+    border-radius: 10px;
+}
+
 .not-available {
     background-color: #9C0000;
 }

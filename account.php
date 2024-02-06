@@ -3,7 +3,7 @@
 
 <?php 
 
-include "sql/sql-manager.php";
+require_once "sql/sql-manager.php";
 
 $method = "login";
     if (isset($_GET["method"])) {
@@ -117,6 +117,37 @@ $method = "login";
 
     <?php 
 
+    function register_user($password, $email, $name, $phone ) {
+
+        $request =  $conn->prepare("SELECT * FROM users WHERE email='" . $email . "';");
+        $request->execute();
+        //nombre de lignes retournées
+        $count = $request->rowCount();
+        $currentRow  = $request -> fetch();
+
+        if ($count < 1) {
+
+            $request =  $conn->prepare("INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `admin`) VALUES (NULL, '" . $name . "', '" . $email . "', '" . $password . "', '" . $phone . "', '0');");
+            $request->execute();
+
+            session_start();
+            $_SESSION["name"] = $name;
+            $_SESSION["email"] = $email;
+
+            $request =  $conn->prepare("SELECT * FROM users WHERE email='" . $email . "';");
+            $request->execute();
+            $currentRow  = $request -> fetch();
+
+            $_SESSION["id"] = $currentRow["id"];
+            $_SESSION["admin"] = false;
+
+            return $currentRow["id"];
+            
+        } else {
+            return null;
+        }
+    }
+
     if ($method == "register" && isset($_POST["password"])) {
 
         $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
@@ -129,36 +160,20 @@ $method = "login";
         }
 
         if ($password != $_POST["password_repeat"]) {
-
             echo "Les mots de passes ne sont pas identiques.";
-
+            return;
         }
 
-        $request =  $conn->prepare("SELECT * FROM users WHERE email='" . $email . "';");
-        $request->execute();
-        //nombre de lignes retournées
-        $count = $request->rowCount();
-        $currentRow  = $request -> fetch();
-
-        if ($count < 1) {
-
-            $request =  $conn->prepare("INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `admin`) VALUES (NULL, '$name', '$email', '$password', '$phone', '0');");
-            $request->execute();
-
-            session_start();
-            $_SESSION["name"] = $name;
-            $_SESSION["email"] = $email;
+        if (register_user($password, $email, $name, $phone) != null) {
 
             $redirect = "index.html";
             if (isset($_GET["redirect"])) {
                 $redirect = $_GET["redirect"];
             }
             header("Location: " . $redirect);
-            
+
         } else {
-
-            echo "Le compte existe déjà.";
-
+            echo "Un problème est survenue lors de la création du compte.";
         }
 
     }
@@ -179,6 +194,7 @@ $method = "login";
             session_start();
             $_SESSION["name"] = $currentRow["name"];
             $_SESSION["email"] = $email;
+            $_SESSION["id"] = $currentRow["id"];
             if ($currentRow["admin"] == 1) {
                 $_SESSION["admin"] = true;
             } else {
