@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="../ressources/ongletIcon.png" />
         <link rel="stylesheet" type="text/css" href="css/home.css" />
+        <link rel="stylesheet" href="css/style.css">
         <title>The Sense - Home</title>
 
     </head>
@@ -529,6 +530,33 @@
 
             
         </div>
+        <footer>
+        <div class="footer-nav">
+            <a class="barAnim" href="#"><span>Nous contacter</span></a>
+            <a class="barAnim" href="#"><span>Réservation</span></a>
+            <a class="barAnim" href="#"><span>FAQ</span></a>
+        </div>
+        <div class="copyright">
+            © THE SENSE, SAS. Tous droits réservés
+        </div>
+        <div class="moda">
+            <a class="barAnim" href="#"><span>Modalités</span></a>
+            <span> | </span>
+            <a class="barAnim" href="#"><span>Politique de confidentialité </span></a>
+            <div class="contact">
+              <span> | </span>
+              <a class="barAnim" href="#"><span>Contact</span></a>
+            </div>
+            
+        </div>
+        <div class="social-icons">
+            <!-- Replace # with actual links to your social media profiles -->
+            <a href="#"><img src="ressources/Youtube.png" alt="Youtube"></a>
+            <a href="#"><img src="ressources/Instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="ressources/Twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="ressources/Facebook.png" alt="Facebook"></a>
+        </div>
+    </footer>
     </body>
     <script src="js/home.js"></script>
 
