@@ -76,12 +76,17 @@
   </div>
 
   <!-- DERNIERE PARTIE -->
-  <div class="second_part">
-    <div class="pc"><img src="../ressources/forme7.webp"></div>
-    <div class="mobile"><img src="../ressources/forme7.webp"></div>
-  </div>
+  
+  <div class="intro_exp_darkroom">
+  <img class="tonpere" src="../ressources/BOUTON RETOUR.png">
+    
+    <div class="img_dark2">
+      <img src="../ressources/imgdarkroomtop2.png">
+    </div>
 
+    <div class="space"></div>
 
+</div>
 
 </body>
 

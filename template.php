@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="css/test.css" rel="stylesheet" type="text/css"/>
+    <link href="css/mainstyle.css" rel="stylesheet" type="text/css"/>
+    <script src="https://www.paypal.com/sdk/js?client-id=AZnYiH2U3I5gyVjD-xbHsvDYujBeMmvmD-UmrhfOHTOQLT9LP0Il05FQ6q6H1v5YLSxTZDFviJ5qCnrf"></script>
 </head>
   <nav class="navbar" id="navbar">
       <div class="nav-img">
@@ -24,126 +25,29 @@
   <header></header>
 
   <div class="top_container">
-    mettre les logos ici
+    <div id="paypal-button-container" class="paypal"></div>
   </div>
-
-  <div class="btn_container">
-    <div id="btn">
-      <a href="#text"><button class="btn_decouvrir" type="button" >DÉCOUVRIR</button></a>
-    </div>
-  </div>
-
-    <div class="intro_container" id="intro">
-
-      <a href="#img1"><img class="img_trailer" src="ressources/VIDEO.webp"/></a>
-
-
-      <div class = "texte_intro">
-
-          <div class="titre_intro">
-              <p>QU'EST CE QUE <img class="logo" src="ressources/Sense.webp"/> ?</p>
-          </div> 
-
-          <p> Préparez-vous pour une expérience unique qui vous emmenera dans un autre univers.
-              Vivez vos émotions comme vous ne l’avez jamais fait auparavant. Avec THE SENSE
-              explorez d’autres dimensions et vivez l’impossible en interragissant avec un
-              environnement dynamique et virtuel. Ce n’est pas une expérience en réalité virtuelle
-              que vous vivez, c’est la réalité.
-          </p>
-
-          <a href="Apropos.html" class="a_propos_btn">DÉCOUVREZ THE SENSE ➜</a>
-
-
-    </div>
-  </div>
-
-  <!-- DERNIERE PARTIE -->
-  <div class="bottom_container">Top Left</div>
-  <div class="second_part">
-    <img src="ressources/forme10.webp">
-  </div>
-
-
-
-</body>
-
-<!-- PAS TOUCHE -->
-
-<footer>
-  <div class="footer-nav">
-      <a href="#">Nous contacter</a>
-      <a href="#">Réservation</a>
-      <a href="#">FAQ</a>
-  </div>
-  <div class="copyright">
-      © THE SENSE, SAS. Tous droits réservés
-  </div>
-  <div class="moda">
-      <a href="#">Modalités </a>
-      <span> | </span>
-      <a href="#">  Politique de confidentialité </a>
-  </div>
-  <div class="social-icons">
-      <!-- Replace # with actual links to your social media profiles -->
-      <a href="#"><img src="ressources/Youtube.png" alt="Youtube"></a>
-      <a href="#"><img src="ressources/Instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="ressources/Twitter.png" alt="Twitter"></a>
-      <a href="#"><img src="ressources/Facebook.png" alt="Facebook"></a>
-  </div>
-</footer>
-
-<!-- POP UP VIDEO -->
-
-<a href="#_" class="lightbox" id="img1">
-  <div id="videoModal" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="false" style="display: block;">
-    <div class="modal-header"></div>
-    <div class="modal-body"><iframe width="870" height="489" src="https://www.youtube.com/embed/9Qzm66JX-RA" frameborder="0" allowfullscreen=""></iframe></div>
-    <div class="modal-footer"></div>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-  </script>
-
   <script>
-
-    const menubtns = document.querySelector(".menu_bouton")
-    const navLinks = document.querySelector(".nav-links")
-    const navbar = document.getElementById("navbar")
-    var meow = true
-    
-
-    menubtns.addEventListener('click',()=>{
-      navLinks.classList.toggle('mobile-menu');
-      if(meow){
-      navbar.style.backdropFilter = 'none';
-      meow = false
-      }else{
-        navbar.style.backdropFilter = 'blur(10px)'
-        meow = true
-      }
-    })
-
-    function handleIntersection(entries, observer) {
-      entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('footer-anim');
-    // Optionnel: Désactivez l'observer si vous ne voulez l'animation qu'une seule fois
-        observer.unobserve(entry.target);
-        }
-      });
+  paypal.Buttons({
+    createOrder: function(data, actions){
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '3123121213'
+          }
+        }]
+      })
+    },
+    onApprove: function(data, actions){
+      return actions.order.capture().then(function(details){
+        alert("Transaction OK : "+details.payer.name.given_name);
+      })
+    },
+    onError: function (err){
+      console.error('Payment Error :', err);
+      alert("Payment Failed");
     }
-
-    // Création de l'observer avec la fonction et les options
-    const observer = new IntersectionObserver(handleIntersection, {
-    threshold: 0.1 // Déclenche l'animation lorsque 10% du footer est visible
-    });
-
-  // Cible le footer pour l'observer
-  const footer = document.querySelector('footer');
-  observer.observe(footer);
-
-
+  }).render("#paypal-button-container");
   </script>
 
 </html>
