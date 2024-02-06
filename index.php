@@ -319,11 +319,25 @@
 
         <!--ESPACE-->
         <div class="space"></div>
+        <div class=pricing></div>
+            <div class="book_price">
+                <img src="ressources/RESERVER.webp" alt="image reserver"/>
+                <p class="catchphrase">N'ATTENDEZ PLUS, RÉSERVEZ</p> 
+            </div>
 
-        <div class="book_price">
-            <img src="ressources/RESERVER.webp" alt="image reserver"/>
-            <p class="catchphrase">N'ATTENDEZ PLUS, RÉSERVEZ</p> 
-        </div>
+            <div class="player_amount">
+                <img src="ressources/NOS_TARIFS.webp" alt="tarifs"/>
+                <div class="hor_line"></div>
+                <p class="txt1">Voir les tarifs pour</p>
+                <p class="txt2">(max 8 joueurs)</p>
+            </div>
+
+            <div class="number">
+                <button onclick="decrement()">-</button>
+                <p class="amount"></p>
+                <button onclick="decrement()">+</button>
+            </div>
+        <div class=pricing></div>
         <!--ESPACE-->
         <div class="space"></div>
     </body>
