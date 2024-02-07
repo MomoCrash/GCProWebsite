@@ -28,7 +28,7 @@
             </div>
             <img src="ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton" id="menu_bouton">
         </nav>
-        <div class="img-header"><img src="ressources\EN TÊTEtext.webp" alt="header"></div>
+        <div class="img-header"><img src="ressources\EN-TÊTEtext.webp" alt="header"></div>
         
     </header>
     <div class="decouvrir">
