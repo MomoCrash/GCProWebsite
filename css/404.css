@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'alatsi';
+    src: url('../ressources/font/Alatsi-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'abel';
+    src: url('../ressources/font/Abel-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+}
+
+.error-container {
+    text-align: center;
+}
+
+.error-title {
+    font-size: 190px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+}
+
+.error-text {
+    font-size: 1.125rem;
+}
+
+.animate-blink {
+    animation: blink 1s infinite;
+}
+
+.barAnim {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #82FFE1;
+    padding: 5px 0;
+    margin: 0 10px; /* Exemple de margin, ajustez selon vos besoins */
+}
+
+/* Le span à l'intérieur du lien pour appliquer la barre d'animation */
+a span {
+    position: relative;
+    display: inline-block;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+/* Pseudo-élément pour la barre d'animation */
+a span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Décalez légèrement la barre en dessous du texte */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: aqua;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Lorsque vous passez la souris sur le lien, animez la largeur de la barre */
+a:hover span::after {
+    width: 100%;
+}
