@@ -39,40 +39,56 @@
     url("https://db.onlinewebfonts.com/t/cd3710e0f5f9d9f61502468e8d71a5f5.svg#Amiko Bold")format("svg");
 }
 
-html {
+html{
     scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-    background-image: url("../ressources/mobile_fond.webp");   
+}
+body {
+    background: url(../ressources/mobile_fond.webp); 
+    background-position:center;
     background-repeat: no-repeat;
-    background-size: cover;
-    height:100px;
+    background-position: fixed;
+    background-size: cover; 
 }
 
 /*BOUTON DECOUVRIR*/
 .btn_container {
     margin-top : 35%; 
-    height: 200px;
+    height: 300px;
     position: relative;
 }
 
-.btn_decouvrir{
+.discover_btn{
     text-decoration: none;
     margin:0;
     position: absolute;
-    top: 50%;
+    margin-top: 150px;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    font-size: 25%;
-    background-color: #000000;
+    background: #000000;
+    background: linear-gradient(to left, black 50%, white 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+
+    padding:10px;
+    padding-right: 50px;
+    padding-left:50px;
+    font-size: 30px;
     color:#FFFFFF; 
-    border-radius:5px ;
+    border-radius:15px;
     font-family: Amiko Regular;
-    border:none;
+    border:solid 1px black;
+    transition: .5s ease-out;
 }
 
-/*BANDEAU INTRO*/
+.discover_btn:hover{
+    text-decoration: none;
+    color: black;
+    background-position: left;
+}
+
+
+/*====================================BANDEAU INTRO==========================================*/
 .intro_container{
     padding-top:5%;
     padding-bottom: 5%;
@@ -115,6 +131,11 @@ html {
     display:block;
 }
 
+.about_btn:hover{
+    text-decoration: none;
+    color:#646363;
+
+}
 /*BOUTON ACTIVATION TRAILER*/
 .img_trailer{
     width: 433px;
@@ -144,16 +165,20 @@ html {
     width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 100000;
+    z-index: -1000;
+    pointer-events: none;
 }
 
 .trailer.active{
     transform: translate(-50%,50%) scale(1);
+    z-index: 1000;
+    pointer-events: none;
 }
 
 
 @media (max-width:991px) {
     .trailer video{
+        margin-top: 150px;;
         max-width:90%;
     }
 }
@@ -161,8 +186,8 @@ html {
 
 .line { 
     margin: auto;
-    width: 591px; 
-    height: 614px; 
+    width: 55%; 
+    height: 650px; 
     position: fixed;    
     top: 50%; 
     left: 50%; 
@@ -376,10 +401,14 @@ html {
 }
 
 .discover_room{
-    
     text-decoration: none;
     color:#646363;
     font-family: "Poppins thin";                                                                                              
+}
+
+.discover_room:hover{
+    text-decoration: none;
+    color:#646363;                                                                                        
 }
 
 /*PRICING*/
@@ -426,6 +455,7 @@ html {
 }
 
 .plus{
+    margin-bottom: 15px;
     background-color: transparent;
     border: none;
     font-size: 50px;
@@ -441,7 +471,7 @@ html {
 }
 
 .minus{
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     background-color: transparent;
     border: none;
     font-size: 50px;
@@ -589,13 +619,11 @@ html {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
 
 
 /*=====================================FAQ=====================================*/
 .container{
+    margin-left:200px;
     width:20px;
     height: 20px;
     padding-left: 0%;
@@ -645,12 +673,24 @@ html {
 
 .question{
     display: flex;
+    align-items: baseline;
+}
+
+.question_txt{
+    width:100%;
+}
+.question_title{
+    margin-left: 30px;
+    font-family: Abel;
+    color:#3B4040;
+    font-size:40px;
 }
 
 .answer{
-    margin-left: 10%;
+    margin-left: 250px;
     font-family: poppins thin;
-    color:#646363;   
+    color:#646363; 
+    font-size:30px;  
 }
 
 /*=====================================CARROUSEL=====================================*/

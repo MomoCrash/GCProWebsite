@@ -11,12 +11,9 @@
     </head>
     <body>
 
-
         <!--=================================BOUTON DECOUVRIR=================================-->
-       <div class="btn_container">
-            <div id="btn">
-              <a href="#text"><button class="btn_decouvrir" type="button" >DÉCOUVRIR</button></a>
-            </div>
+        <div class="btn_container">
+            <a href="#intro" class="discover_btn">Découvrir</a>
         </div> 
 
         <!--=================================BANDEAU INTRO=================================-->
@@ -32,7 +29,7 @@
                     <div class="line"></div>
 
                     <div class="trailer">
-                        <video id="video" width="1090"><source src="Trailer/Trailer.mp4" type="video/mp4" /></video>
+                        <video id="video" width="1090"><source src="ressources/Trailer/Trailer.mp4" type="video/mp4" /></video>
                     </div>
                 </div>
             </div>
@@ -457,106 +454,179 @@
         <!--=================================CARROUSEL=================================-->
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <!--===========1slide===========-->
-            <img class="d-block w-100" src="ressources/Rectangle46.png" alt="First slide">
-            <div class="carousel-caption d-none d-md-block">
-              <div class="images">
-                <img src="ressources/imagelep.png" alt="leprogres">
-              </div>
-              <p class="title_intro">"C'est la meilleure manière de faire découvrir l'expérience VR à vos enfants et vos grand-parents mais aussi de changer des perpétuels bowlings ou séance de cinéma du week-end"</p>
+            <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!--===========1slide===========-->
+                    <img class="d-block w-100" src="ressources/Rectangle46.png" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                    <div class="images">
+                        <img src="ressources/imagelep.png" alt="leprogres">
+                    </div>
+                    <p class="title_intro">"C'est la meilleure manière de faire découvrir l'expérience VR à vos enfants et vos grand-parents mais aussi de changer des perpétuels bowlings ou séance de cinéma du week-end"</p>
+                </div>
             </div>
-          </div>
-          <div class="carousel-item">
+            <div class="carousel-item">
+                
+                <!--===========1slide===========-->
+                <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="images">
+                        <img src="ressources/image125.png" alt="lyonmag">
+                    </div>
+                <p class="title_intro">"Bluffé par la qualité du service, que ce soit l’accueil et la prise en charge du groupe. Quant à l’expérience, rien à dire, c’est une expérience unique au monde”</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+
+                <!--===========1slide===========-->
+                <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="images">
+                        <img src="ressources/lemonde-removebg-preview.png" alt="lemonde">
+                    </div>
+                <p class="title_intro">"WOW”</p>
+                </div>
+            </div>
             
-            <!--===========1slide===========-->
-            <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block">
-                <div class="images">
-                    <img src="ressources/image125.png" alt="lyonmag">
-                </div>
-              <p class="title_intro">"Bluffé par la qualité du service, que ce soit l’accueil et la prise en charge du groupe. Quant à l’expérience, rien à dire, c’est une expérience unique au monde”</p>
-            </div>
-          </div>
-          <div class="carousel-item">
+            <div class="carousel-item">
 
-            <!--===========1slide===========-->
-            <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block">
-                <div class="images">
-                    <img src="ressources/lemonde-removebg-preview.png" alt="lemonde">
+                <!--===========1slide===========-->
+                <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="images">
+                        <img src="ressources/lefigaro-removebg-preview.png" alt="lefigaro">
+                    </div>
+                <p class="title_intro">"Bluffé par la qualité du service, que ce soit l’accueil et la prise en charge du groupe. Quant à l’expérience, rien à dire, c’est une expérience unique au monde”</p>
                 </div>
-              <p class="title_intro">"WOW”</p>
             </div>
-          </div>
-          <div class="carousel-item">
 
-            <!--===========1slide===========-->
-            <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block">
-                <div class="images">
-                    <img src="ressources/lefigaro-removebg-preview.png" alt="lefigaro">
-                </div>
-              <p class="title_intro">"Bluffé par la qualité du service, que ce soit l’accueil et la prise en charge du groupe. Quant à l’expérience, rien à dire, c’est une expérience unique au monde”</p>
-            </div>
-          </div>
-          <div class="carousel-item">
+            <div class="carousel-item">
 
-            <!--===========1slide===========-->
-            <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block">
-                <div class="images">
-                    <img src="ressources/Logo_DL-removebg-preview.png" alt="ledauphiné">
+                <!--===========1slide===========-->
+                <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="images">
+                        <img src="ressources/Logo_DL-removebg-preview.png" alt="ledauphiné">
+                    </div>
+                <p class="title_intro">"Bluffé par la qualité du service, que ce soit l’accueil et la prise en charge du groupe. Quant à l’expérience, rien à dire, c’est une expérience unique au monde”</p>
                 </div>
-              <p class="title_intro">"Bluffé par la qualité du service, que ce soit l’accueil et la prise en charge du groupe. Quant à l’expérience, rien à dire, c’est une expérience unique au monde”</p>
             </div>
-          </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
 
+        <!--ESPACE-->
+        <div class="space"></div>
         <!--=================================FAQ=================================-->
         <div class="FAQ">
+            <!--TITRE-->
+            <div class="about_title">
+                <p class="txt_about_title" style="margin-left:170px">FOIRE AUX QUESTIONS</p>
+            </div>
 
             <!--==================1 QUESTION==================-->
             <div class="question">
 
-                <!--BOUTON DEROULANT-->
+                    <!--BOUTON DEROULANT-->
                 <div class="container">
-                    <div class="button"></div>
+                    <div class="button1"></div>
                 </div>
 
-                <div class="question_txt">
-                    <p class="title_intro">Qu'est ce que The SENSE ?</p>
+                    <div class="question_txt">
+                        <p class="question_title">Qu'est ce que The SENSE ?</p>
+                    </div>
+                </div>
+                <div class="answer1">
+                    <p class="p_answer">
+                        The SENSE est une immersion poussée grâce à la réalité virtuelle. The SENSE propose de nombreuses expériences
+                        à faire entre amis ou avec la famille. Vous pouvez tout à fait favoriser une expérience avec de l’action comme notre 
+                        Dark Room basé sur l’horreur. Ou encore, si vous le souhaiter par exemple, vous pouvez favoriser l’aspect compétitif 
+                        en participant aux expériences de notre Battle Room. De plus, The SENSE propose un système de création d’expérience où 
+                        les clients peuvent à leurs tours imaginer et créer la meilleure expériences possibles. </p>
                 </div>
             </div>
-            <div class="answer">
-                <p class="p_answer">
-                    The SENSE est une immersion poussée grâce à la réalité virtuelle. The SENSE propose de nombreuses expériences
-                    à faire entre amis ou avec la famille. Vous pouvez tout à fait favoriser une expérience avec de l’action comme notre 
-                    Dark Room basé sur l’horreur. Ou encore, si vous le souhaiter par exemple, vous pouvez favoriser l’aspect compétitif 
-                    en participant aux expériences de notre Battle Room. De plus, The SENSE propose un système de création d’expérience où 
-                    les clients peuvent à leurs tours imaginer et créer la meilleure expériences possibles. </p>
+
+            <!--==================1 QUESTION==================-->
+            <div class="question">
+
+                    <!--BOUTON DEROULANT-->
+                <div class="container">
+                    <div class="button1"></div>
+                </div>
+
+                    <div class="question_txt">
+                        <p class="question_title">Qu'est ce que The SENSE ?</p>
+                    </div>
+                </div>
+                <div class="answer1">
+                    <p class="p_answer">
+                        The SENSE est une immersion poussée grâce à la réalité virtuelle. The SENSE propose de nombreuses expériences
+                        à faire entre amis ou avec la famille. Vous pouvez tout à fait favoriser une expérience avec de l’action comme notre 
+                        Dark Room basé sur l’horreur. Ou encore, si vous le souhaiter par exemple, vous pouvez favoriser l’aspect compétitif 
+                        en participant aux expériences de notre Battle Room. De plus, The SENSE propose un système de création d’expérience où 
+                        les clients peuvent à leurs tours imaginer et créer la meilleure expériences possibles. </p>
+                </div>
             </div>
 
-            
-        </div>
+            <!--==================1 QUESTION==================-->
+            <div class="question">
 
+                    <!--BOUTON DEROULANT-->
+                <div class="container">
+                    <div class="button1"></div>
+                </div>
+
+                    <div class="question_txt">
+                        <p class="question_title">Qu'est ce que The SENSE ?</p>
+                    </div>
+                </div>
+                <div class="answer1">
+                    <p class="p_answer">
+                        The SENSE est une immersion poussée grâce à la réalité virtuelle. The SENSE propose de nombreuses expériences
+                        à faire entre amis ou avec la famille. Vous pouvez tout à fait favoriser une expérience avec de l’action comme notre 
+                        Dark Room basé sur l’horreur. Ou encore, si vous le souhaiter par exemple, vous pouvez favoriser l’aspect compétitif 
+                        en participant aux expériences de notre Battle Room. De plus, The SENSE propose un système de création d’expérience où 
+                        les clients peuvent à leurs tours imaginer et créer la meilleure expériences possibles. </p>
+                </div>
+            </div>
+
+            <!--==================1 QUESTION==================-->
+            <div class="question">
+
+                    <!--BOUTON DEROULANT-->
+                <div class="container">
+                    <div class="button1"></div>
+                </div>
+
+                    <div class="question_txt">
+                        <p class="question_title">Qu'est ce que The SENSE ?</p>
+                    </div>
+                </div>
+                <div class="answer1">
+                    <p class="p_answer">
+                        The SENSE est une immersion poussée grâce à la réalité virtuelle. The SENSE propose de nombreuses expériences
+                        à faire entre amis ou avec la famille. Vous pouvez tout à fait favoriser une expérience avec de l’action comme notre 
+                        Dark Room basé sur l’horreur. Ou encore, si vous le souhaiter par exemple, vous pouvez favoriser l’aspect compétitif 
+                        en participant aux expériences de notre Battle Room. De plus, The SENSE propose un système de création d’expérience où 
+                        les clients peuvent à leurs tours imaginer et créer la meilleure expériences possibles. </p>
+                </div>
+            </div>
         <!--=================================FOOTER=================================-->
         <footer>
         <div class="footer-nav">
