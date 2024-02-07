@@ -614,7 +614,6 @@ ul {
 .btn_container {
     height: 40vh;
     position: relative;
-    border: 3px solid rgb(255, 25, 25);
 }
 
 .btn_container :hover{
@@ -913,7 +912,6 @@ html{
 body {
     margin: 0;
     padding: 0;
-    background-image: url("../ressources/forme4.webp");   
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -1009,7 +1007,6 @@ body {
 .btn_container {
     height: 40vh;
     position: relative;
-    border: 3px solid rgb(255, 25, 25);
 }
 
 .btn_container :hover{

@@ -47,6 +47,12 @@
             </form>
         </div>
     <main>
+        <div class="btn_container">
+            <div id="btn">
+                <a href="#text"><button class="btn_decouvrir" type="button">DÉCOUVRIR</button></a>
+            </div>
+        </div>
+        <div id="text"></div>
         <div class="animated-on-scroll">
             <div class="firs-div">
                 <div class="img-first"><img src="ressources\VIDEOEQUIP.webp" alt="header" width=440 height=440></div>
