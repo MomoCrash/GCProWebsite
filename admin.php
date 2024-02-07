@@ -139,6 +139,52 @@
             <button type="submit">Ajouter le Code</button>
         </form>
         </div>
+        <div class="admin-container">
+            <h2>Gestion des utilisateurs</h2>
+                <form method="post" action="updateAdminStatus.php">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom</th>
+                                <th>Email</th>
+                                <th>Admin</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                $users = array();
+                                try {
+                                    $stmt = $conn->query("SELECT id, name, email, admin FROM users"); // Assurez-vous que 'users' est le nom de votre table d'utilisateurs
+                                    $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                } catch(PDOException $e) {
+                                    echo "Erreur: " . $e->getMessage();
+                                }
+
+                                foreach ($users as $user):
+                            ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($user['id']); ?></td>
+                                <td><?php echo htmlspecialchars($user['name']); ?></td>
+                                <td><?php echo htmlspecialchars($user['email']); ?></td>
+                                <td>
+                                    <input type="checkbox" name="admin[<?php echo $user['id']; ?>]" value="1" <?php echo ($user['admin'] == 1 ? 'checked' : ''); ?>>
+                                    
+                                </td>
+                            </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                    <button type="submit">Mettre à jour les statuts</button>
+                </form>
+            </div>
+        </div>
+        <div class="admin-container">
+            <div class="newletter">
+                <h3>Newsletter</h3>
+                <input type="text"></input>
+            </div>
+        </div>
     </main>
 
     <body>
