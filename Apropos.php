@@ -5,31 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/apropos.css" rel="stylesheet" type="text/css"/>
+    <link href="css/mainstyle.css" rel="stylesheet" type="text/css"/>
     <title>A propos</title>
 </head>
 <body>
-  <header>
-    <div class="nav">
+      <nav class="navbar" id="navbar" style="position: inherit;">
         <div class="nav-img">
-          <a href="#"><img src="ressources/logo_black.svg" alt="logo home"></a>
+            <a href="index.php"><img src="ressources/logo_black.svg" alt="logo home"></a>
         </div>
-        <div class="nav-right">
-          <a href="#">NEWS</a>
-          <a href="#" class="nav-border">NOS EXPERIENCES</a>
-          <a href="#" class="nav-border">A PROPOS DE NOUS</a>
-          <a href="#" class="nav-border">NOS EQUIPEMENTS</a>
-          <a href="#" class="nav-border"><b>CONNEXION</b></a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="new.php">NEWS</a></li>
+                <li><a href="lightroom/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
+                <li><a href="apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
+                <li><a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
+                <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
+            </ul>
+        </div>
+        <img src="ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton" id="menu_bouton">
+    </nav>
+    <header></header>
+    <div class="img-header"><img src="ressources/THE SENSE.webp" alt="header"></div>
+    <div class="loginbg" style="margin-top: -36%;">
+        <form action="account.php?method=login&redirect=apropos.php" method="POST" class="login-pan mb-3"
+            style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
+            <div class="login-content">
+                <p><SPAN STYLE="color:#000000"><b>Connexion</b></span></p>
+                <p> Identifiant <input class="login-input form-label" type="email" name="email"
+                        placeholder="abc@mail.fr"> </input>
+                </p>
+                <p> Mot de passe <input class="login-input form-label" type="password" name="password"
+                        placeholder="······"> </input>
+                </p>
+                <a style="gray" href="../account.php?method=register'">Crée un compte</a> <button type="submit"
+                    name="submit" placeholder="Connexion">Connexion</button>
+            </div>
+        </form>
+    </div>
 
-        </div>
-  </div>
-  <div class="img-header"><img src="ressources/THE SENSE.webp" alt="header"></div>
-</header>
 
 <main>
   <div class="animated-on-scroll">
     <div class="decouvrir">
-        <a href="#"><img src="ressources/discover.webp" alt="decouvrir" width=100% height=100%></a>
+        <a href="#text"><img src="ressources/discover.webp" alt="decouvrir" width=100% height=100%></a>
     </div>
+    <div id="text"></div>
     <div class="animated-on-scroll">
       <div class="firs-div">
           <div class="img-first"><img src="ressources\VIDEObtob.png" alt="header"></div>
@@ -154,4 +174,27 @@
   <script src="js/animation.js"></script>
 
 </body>
+<script>
+    const menubtns = document.querySelector(".menu_bouton")
+    const navLinks = document.querySelector(".nav-links")
+    const navbar = document.getElementById("navbar")
+    var meow = true
+    
+
+    menubtns.addEventListener('click',()=>{
+      navLinks.classList.toggle('mobile-menu');
+      if(meow){
+      navbar.style.backdropFilter = 'none';
+      meow = false
+      }else{
+        navbar.style.backdropFilter = 'blur(10px)'
+        meow = true
+      }
+    })
+
+
+</script>
+<script src="js/actions.js"></script>
+
+
 </html>

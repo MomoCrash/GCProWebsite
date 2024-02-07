@@ -16,47 +16,52 @@
 
 
 <body>
-    <header>
-        <div class="nav">
-            <div class="nav-img">
-                <a href="#"><img src="ressources/logo_black.svg" alt="logo home"></a>
-            </div>
-            <div class="nav-right">
-                <a href="new.php">NEWS</a>
-                <a href="#" class="nav-border">NOS EXPERIENCES</a>
-                <a href="Apropos.html" class="nav-border">A PROPOS DE NOUS</a>
-                <a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a>
-                <a href="#" id="login" class="nav-border"><b> <?= isset($name) ? $name : "CONNEXION"; ?> </b></a>
-                <!-- Connexion page -->
-                <form action="account.php?method=login" method="POST" class="login-pan"
-                    style="width: 0px; height: 0px; visibility: hidden; display:none;">
-                    <div class="login-content">
-                        <p> Connexion </p>
-                        <p> Identifiant <input class="login-input" type="email" name="email" placeholder="abc@mail.fr">
-                            </input>
-                        </p>
-                        <p> Mot de passe <input class="login-input" type="password" name="password"
-                                placeholder="······"> </input>
-                        </p>
-                        <a style="gray" href="account.php?method=register"> Crée un compte </a> <button type="submit"
-                            name="submit" placeholder="Connexion"> Connexion </button>
-                    </div>
-                </form>
-
-            </div>
+<nav class="navbar" id="navbar" style="position: inherit;">
+        <div class="nav-img">
+            <a href="index.php"><img src="ressources/logo_black.svg" alt="logo home"></a>
         </div>
-        <div class="img-header"><img src="ressources/entetebtob.png" alt="header"></div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="new.php">NEWS</a></li>
+                <li><a href="lightroom/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
+                <li><a href="apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
+                <li><a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
+                <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
+            </ul>
+        </div>
+        <img src="ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton" id="menu_bouton">
+    </nav>
+    <header></header>
+    <div class="img-header"><img src="ressources/entetebtob.png" alt="header"></div>
+    <div class="loginbgb2b">
+        <form action="account.php?method=login&redirect='darkroom/dark_room1.php'" method="POST" class="login-pan mb-3"
+            style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
+            <div class="login-content">
+                <p><SPAN STYLE="color:#000000"><b>Connexion</b></span></p>
+                <p> Identifiant <input class="login-input form-label" type="email" name="email"
+                        placeholder="abc@mail.fr"> </input>
+                </p>
+                <p> Mot de passe <input class="login-input form-label" type="password" name="password"
+                        placeholder="······"> </input>
+                </p>
+                <a style="gray" href="../account.php?method=register'">Crée un compte</a> <button type="submit"
+                    name="submit" placeholder="Connexion">Connexion</button>
+            </div>
+        </form>
+    </div>
+
         
-    <div class="decouvrir">
-        <div class="decouvert-img">
-            <a href="#"><img src="ressources/discover.webp" alt="decouvrir" width=100% height=100%></a>
+    <div class="btn_container" style="background-image: url(ressources/bryceforme1.webp); background-size: 100%;">
+        <div id="btn">
+        <a href="#text"><button class="btn_decouvrirb2b" type="button" >DÉCOUVRIR</button></a>
         </div>
     </div>
+    <div id="text"></div>
     <main>
         <div class="animated-on-scroll">
             <div class="firs-div">
                 <div class="img-first"><img src="ressources\VIDEObtob.png" alt="header"></div>
-                <div class="text-content">
+                <div class="text-content" >
                     <h1>THE SENSE POUR LES PROFESSIONELS</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
@@ -231,5 +236,6 @@
         navbar.style.backdropFilter = 'blur(10px)'
         meow = true
       }
-    });
+    })
+
 </script>

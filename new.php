@@ -15,16 +15,16 @@
 
 
 <body class="fond_page_news">
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" style="position: inherit;">
         <div class="nav-img">
-            <a href="#"><img src="ressources/logo_black.svg" alt="logo home"></a>
+            <a href="index.php"><img src="ressources/logo_black.svg" alt="logo home"></a>
         </div>
         <div class="nav-links">
             <ul>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#" class="nav-border">NOS EXPERIENCES</a></li>
-                <li><a href="#" class="nav-border">A PROPOS DE NOUS</a></li>
-                <li><a href="#" class="nav-border">NOS EQUIPEMENTS</a></li>
+                <li><a href="new.php">NEWS</a></li>
+                <li><a href="lightroom/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
+                <li><a href="apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
+                <li><a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
                 <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
             </ul>
         </div>
@@ -234,5 +234,27 @@
         <script src="../js/actions.js"></script>
 
     </body>
+
+<script>
+    const menubtns = document.querySelector(".menu_bouton")
+    const navLinks = document.querySelector(".nav-links")
+    const navbar = document.getElementById("navbar")
+    var meow = true
+    
+
+    menubtns.addEventListener('click',()=>{
+      navLinks.classList.toggle('mobile-menu');
+      if(meow){
+      navbar.style.backdropFilter = 'none';
+      meow = false
+      }else{
+        navbar.style.backdropFilter = 'blur(10px)'
+        meow = true
+      }
+    })
+
+
+
+</script>
 
 </html>
