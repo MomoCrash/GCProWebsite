@@ -4,10 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="../ressources/ongletIcon.png" />
-        <link rel="stylesheet" type="text/css" href="css/home.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css" />
         <title>The Sense - Home</title>
-
     </head>
     <body>
 
@@ -456,40 +456,79 @@
 
         <!--=================================CARROUSEL=================================-->
 
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
-
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="ressources/OHSUKA.png" style="width:100%">
-            <div class="text"><p class="txt_about_title_darkroom">NOUVELLE ROOM EN VUE !<p>
-                <div class="about_txt_darkroom">En 2021, préparez à manger du slime en pleine face, les fantômes de Ghost Buster arrivent chez THE SENSE. Ça promet de belles parties de chasse aux fantômes dans tout le complexe. Les réservations sont d’ores et déjà possible sur place et en Février sur internet.</div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <!--===========1slide===========-->
+            <img class="d-block w-100" src="ressources/Rectangle46.png" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="images">
+                <img src="ressources/imagelep.png" alt="leprogres">
+              </div>
+              <p class="title_intro">"C'est la meilleure manière de faire découvrir l'expérience VR à vos enfants et vos grand-parents mais aussi de changer des perpétuels bowlings ou séance de cinéma du week-end"</p>
             </div>
-        </div>
+          </div>
+          <div class="carousel-item">
+            
+            <!--===========1slide===========-->
+            <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="images">
+                    <img src="ressources/image125.png" alt="lyonmag">
+                </div>
+              <p class="title_intro">"Bluffé par la qualité du service, que ce soit l’accueil et la prise en charge du groupe. Quant à l’expérience, rien à dire, c’est une expérience unique au monde”</p>
+            </div>
+          </div>
+          <div class="carousel-item">
 
-        <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="ressources/OHSUKA.png" style="width:100%">
-        <div class="text">dsfsdffsddsfddsf</div>
-        </div>
+            <!--===========1slide===========-->
+            <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="images">
+                    <img src="ressources/lemonde-removebg-preview.png" alt="lemonde">
+                </div>
+              <p class="title_intro">"WOW”</p>
+            </div>
+          </div>
+          <div class="carousel-item">
 
-        <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="ressources/OHSUKA.png" style="width:100%">
-        <div class="text">fsdfsdfdsfdsfdsfdsfd</div>
-        </div>
+            <!--===========1slide===========-->
+            <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="images">
+                    <img src="ressources/lefigaro-removebg-preview.png" alt="lefigaro">
+                </div>
+              <p class="title_intro">"Bluffé par la qualité du service, que ce soit l’accueil et la prise en charge du groupe. Quant à l’expérience, rien à dire, c’est une expérience unique au monde”</p>
+            </div>
+          </div>
+          <div class="carousel-item">
 
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <!--===========1slide===========-->
+            <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="images">
+                    <img src="ressources/Logo_DL-removebg-preview.png" alt="ledauphiné">
+                </div>
+              <p class="title_intro">"Bluffé par la qualité du service, que ce soit l’accueil et la prise en charge du groupe. Quant à l’expérience, rien à dire, c’est une expérience unique au monde”</p>
+            </div>
+          </div>
         </div>
-        <!--ESPACE-->
-        <div class="space"></div>
-
-        <div class="title">
-            <p>FOIRE AUX QUESTIONS</p>
-        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
 
         <!--=================================FAQ=================================-->
         <div class="FAQ">
@@ -498,25 +537,12 @@
             <div class="question">
 
                 <!--BOUTON DEROULANT-->
-                <div class="circle-plus closed">
-
-                    <div class="circle">
-
-                        <div class="horizontal"></div>
-                        <div class="vertical"></div>
-
-                    </div>
-                </div>
-
-                <div class="circle-plus-two closed">
-                    <div class="circle">
-                        <div class="horizontal"></div>
-                        <div class="vertical"></div>
-                    </div>
+                <div class="container">
+                    <div class="button"></div>
                 </div>
 
                 <div class="question_txt">
-                    <p class="p_question">Qu'est ce que The SENSE ?</p>
+                    <p class="title_intro">Qu'est ce que The SENSE ?</p>
                 </div>
             </div>
             <div class="answer">
@@ -530,6 +556,8 @@
 
             
         </div>
+
+        <!--=================================FOOTER=================================-->
         <footer>
         <div class="footer-nav">
             <a class="barAnim" href="#"><span>Nous contacter</span></a>
@@ -560,51 +588,9 @@
     </body>
     <script src="js/home.js"></script>
 
-<script>
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}
-        slides[slideIndex-1].style.display = "block";
-        setTimeout(showSlides, 8000); // Change image every 2 seconds
-    }
-
-
-    let slideyay = 1;
-    erm(slideyay);
-
-    // Next/previous controls
-    function plusSlides(n) {
-        erm(slideyay += n);
-    }
-
-    // Thumbnail image controls
-    function currentSlide(n) {
-        erm(slideyay = n);
-    }
-
-    function erm(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideyay = 1}
-        if (n < 1) {slideyay = slides.length}
-        for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideyay-1].style.display = "block";
-        dots[slideyay-1].className += " active";
-    }
-</script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
     
 </html>
