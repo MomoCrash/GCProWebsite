@@ -33,7 +33,7 @@
     <header></header>
     <div class="img-header"><img src="ressources/EN TÊTE.png" alt="header"></div>
     <div class="loginbg">
-        <form action="account.php?method=login&redirect='darkroom/dark_room1.php'" method="POST" class="login-pan mb-3"
+        <form action="account.php?method=login&redirect=darkroom/dark_room1.php" method="POST" class="login-pan mb-3"
             style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
             <div class="login-content">
                 <p><SPAN STYLE="color:#000000"><b>Connexion</b></span></p>
