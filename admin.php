@@ -41,6 +41,7 @@
         ?>
 
 <body>
+    
     <header>
         <nav class="navbar" id="navbar">
             <div class="nav-img">
@@ -124,9 +125,8 @@
                 </form>
             </div>
         </div>
-
+        <div class="promo">
         <h2>Ajouter un Code Promo</h2>
-
         <form method="post" action="codepromo.php">
             <div class="form-group">
                 <label for="code">Code Promo:</label>
@@ -138,6 +138,7 @@
             </div>
             <button type="submit">Ajouter le Code</button>
         </form>
+        </div>
     </main>
 
     <body>
