@@ -99,21 +99,22 @@
   </section>
 
       <div class="container">
-          <div class="hours-container">
+          <div class="contact-container">
 
-              <h2>NOS HORAIRES</h2>
+            <h2>CONTACTEZ NOUS</h2>
                 <form action="Apropos.php" method="post">
-                  <input id="nom" name="nom" size="28" type="text" placeholder="Nom"/> 
-                  <input id="prenom" name="prenom" size="27" type="text" placeholder="Prenom"/> <br> <br>
-                  <input id="mail" name="mail" size="27" type="text" placeholder="Mail"/> <br> <br>
-                  <input id="content" name="content" size="81" type="text" placeholder="Votre message/avis"/></p>
+                  <input class="inputcontact" id="nom" name="nom" size="28" type="text" placeholder="Nom"/> 
+                  <input class="inputcontact" id="prenom" name="prenom" size="27" type="text" placeholder="Prenom"/> <br> <br>
+                  <input class="inputcontact" id="mail" name="mail" size="27" type="text" placeholder="Mail"/> <br> <br>
+                  <input class="inputcontact" id="content" name="content" size="81" type="text" placeholder="Votre message/avis"/></p>
                   <input type="submit" value="Envoyer" name="submit"> </input>
                 </form>
-                <p> Ou </p>
-                <p> par téléphone </p>
-                <a href="tel:0601023672">06 01 02 36 72</a>
+                <div class="tel">
+                  <p> ou par téléphone </p>
+                  <a href="tel:0601023672">06 01 02 36 72</a>
+                </div>
           </div>
-        </div>
+      </div>
 
         <?php 
 
