@@ -9,14 +9,14 @@
 <body class="fond_template">
   <nav class="navbar" id="navbar">
       <div class="nav-img">
-        <a href="#"><img src="../ressources/logo_black.svg" alt="logo home"></a>
+        <a href="../index.php"><img src="../ressources/logo_black.svg" alt="logo home"></a>
       </div>
       <div class="nav-links">
         <ul>
-          <li><a href="battle_room1.html">NEWS</a></li>
-          <li><a href="battle_room2.html" class="nav-border">NOS EXPERIENCES</a></li>
-          <li><a href="battle_room3.html" class="nav-border">A PROPOS DE NOUS</a></li>
-          <li><a href="../darkroom/dark_room1.html" class="nav-border">NOS EQUIPEMENTS</a></li>
+          <li><a href="../new.php">NEWS</a></li>
+          <li><a href="../lightroom/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
+          <li><a href="../apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
+          <li><a href="../equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
           <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
         </ul>
       </div>
@@ -24,7 +24,7 @@
   </nav>
   <header></header>
   <div class="loginbg">
-    <form action="../account.php?method=login&redirect='../darkroom/dark_room1.php'" method="POST" class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
+    <form action="../account.php?method=login&redirect=../lightroom/light_room2.php" method="POST" class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
           <div class="login-content">
               <p><SPAN STYLE="color:#000000"><b>Connexion</b></span></p>
               <p> Identifiant <input class="login-input form-label" type="email" name="email" placeholder="abc@mail.fr"> </input>
@@ -49,6 +49,7 @@
       <a href="#text"><button class="btn_decouvrir" type="button" >DÉCOUVRIR</button></a>
     </div>
   </div>
+  <div id="text"></div>
 
     <div class="intro_container" id="intro">
 
@@ -72,10 +73,16 @@
   </div>
 
   <!-- DERNIERE PARTIE -->
-  <div class="second_part">
-    <div class="pc"><img src="../ressources/forme10.webp"></div>
-    <div class="mobile"><img src="../ressources/forme9.webp"></div>
-  </div>
+  <div class="intro_exp_darkroom">
+  <a href="../lightroom/light_room1.php"><img class="tonpere" src="../ressources/retournnoir.png"></a>
+    
+    <div class="img_dark2">
+      <img src="../ressources/lightroom_banner2.png">
+    </div>
+
+    <div class="space"></div>
+
+</div>
 
 
 
