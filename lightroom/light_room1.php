@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="../css/mainstyle.css" rel="stylesheet" type="text/css"/>
+
 </head>
 <body class="fond_template">
   <nav class="navbar" id="navbar">
@@ -18,13 +18,25 @@
           <li><a href="#" class="nav-border">NOS EXPERIENCES</a></li>
           <li><a href="#" class="nav-border">A PROPOS DE NOUS</a></li>
           <li><a href="#" class="nav-border">NOS EQUIPEMENTS</a></li>
-          <li><a href="../login.php" class="nav-border"><b>CONNEXION</b></a></li>
+          <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
         </ul>
       </div>
       <img src="../ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton" id="menu_bouton">
   </nav>
   <header></header>
-
+  <div class="loginbg">
+    <form action="../account.php?method=login&redirect='../darkroom/dark_room1.php'" method="POST" class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
+          <div class="login-content">
+              <p><SPAN STYLE="color:#000000"><b>Connexion</b></span></p>
+              <p> Identifiant <input class="login-input form-label" type="email" name="email" placeholder="abc@mail.fr"> </input>
+              </p>
+              <p> Mot de passe <input class="login-input form-label" type="password" name="password" placeholder="······"> </input>
+              </p>
+              <a style="gray" href="../account.php?method=register'">Crée un compte</a>      <button type="submit" name="submit"
+                  placeholder="Connexion">Connexion</button>
+          </div>
+    </form>
+  </div>
   <div class="top_container">
     <div class="position_logo"><img src="../ressources/logo_lightroom.png" alt="logos"></div>
     <div class="position_logo_mobile">
@@ -80,7 +92,7 @@
     <!--IMAGE DE L'EXPERIENCE AVEC TOUS SES COMPOSANTS-->
     <div class="img_exp">
 
-        <img class="img_behind" src="../ressources/image_45.webp" alt="image de l'experience"/><!--image du fond-->
+        <img class="img_behind" src="../ressources/lightroom_img.webp" alt="image de l'experience"/><!--image du fond-->
         <!--NB DE LIKES-->
         <div class="likes">
             <img src="../ressources/like.webp" alt="image like"/>
@@ -184,76 +196,35 @@
 
   </div>
 
+<!-- Slideshow container -->
+<div class="slideshow-container">
 
-        <!-- Bootstrap CSS -->
-      
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="../ressources/Rectangle 94.png" style="width:100%">
+    <div class="text"><p class="txt_about_title_darkroom"><p>
+      <div class="text_slideshowdown"><b>“C’est dingue, j’ai vraiment eu l’impression d’être transporté dans un autre monde. Avant je ne faisais pas d’expérience VR car je ne croyais pas en la qualité mais grâce à The Sense, j’ai pu traverser la frontière du réel.”
+<br><br>- Denise, 23 Octobre 2020 - </b></div>
+    </div>
+  </div>
 
-        <title>News</title>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="../ressources/image129.webp" alt="First slide">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>LES ÉQUIPEMENTS THE SENSE</h5>
-                  <p>Tous nos équipements sont prévus pour toutes les tailles et tous les âges, ils conviennent aussi bien aux adultes qu'aux jeunes de 12 ans. Ils vous garantissent également un confort à toutes épreuves lors de vos voyages chez nous.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="../ressources/Rectangle94.webp" alt="Second slide">
-                <div class="carousel-caption d-none d-md-block">
-                  <p>"C'est dingue, j'ai vraiment eu l'impression d'être transporté dans un autre monde. Avant je ne faisais pas d'expérience VR car je ne croyais pas en la qualité mais grâce à The Sense, j'ai pu traverser la frontière du réel."</p>
-                  <p>- Denise, 23 Octobre 2020 -</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="../ressources/image127.webp" alt="Third slide">
-                <div class="carousel-caption d-none d-md-block">
-                  <p>“Avec mes fils nous avons tenté l'expérience “NAMELESS”, moi qui pensais avoir tout vu dans le domaine de l'horreur, je ne me suis jamais autant trompé. Si vous êtes à la recherche de sensation forte et de frissons, la DARK ROOM est faite pour vous”</p>
-                  <p>- Denise, 23 Octobre 2020 -</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="../ressources/image128.webp" alt="Second slide">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>NOUVELLE ROOM EN VUE !</h5>
-                  <p>En 2021, préparez à manger du slime en pleine face, les fantômes de Ghost Buster arrivent chez THE SENSE. Ça promet de belles parties de chasse aux fantômes dans tout le complexe. Les réservations sont d'ores et déjà possible sur place et en Février sur internet.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="../ressources/image130.webp" alt="Second slide">
-                <div class="carousel-caption d-none d-md-block">
-                  <p>“Avec mes fils nous avons tenté l'expérience “NAMELESS”, moi qui pensais avoir tout vu dans le domaine de l'horreur, je ne me suis jamais autant trompé. Si vous êtes à la recherche de sensation forte et de frissons, la DARK ROOM est faite pour vous”</p>
-                  <p>- Denise, 23 Octobre 2020 -</p>
-                </div>
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-    
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="../ressources/image129.webp" style="width:100%">
+    <div class="text"></div>
+  </div>
 
-  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="../ressources/image130.webp" style="width:100%">
+    <div class="text"></div>
+  </div>
 
-  
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div> 
 
 
 </body>
@@ -337,7 +308,54 @@
   const footer = document.querySelector('footer');
   observer.observe(footer);
 
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 8000); // Change image every 2 seconds
+  }
+
+
+  let slideyay = 1;
+  erm(slideyay);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    erm(slideyay += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    erm(slideyay = n);
+  }
+
+  function erm(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideyay = 1}
+    if (n < 1) {slideyay = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideyay-1].style.display = "block";
+    dots[slideyay-1].className += " active";
+  }
 
   </script>
+
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="../js/actions.js"></script>
 
 </html>
