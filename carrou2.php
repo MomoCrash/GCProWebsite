@@ -29,6 +29,7 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
+            <!--===========1slide===========-->
             <img class="d-block w-100" src="ressources/Rectangle46.png" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
               <div class="images">
@@ -38,6 +39,8 @@
             </div>
           </div>
           <div class="carousel-item">
+            
+            <!--===========1slide===========-->
             <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
                 <div class="images">
@@ -47,6 +50,8 @@
             </div>
           </div>
           <div class="carousel-item">
+
+            <!--===========1slide===========-->
             <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
                 <div class="images">
@@ -56,6 +61,8 @@
             </div>
           </div>
           <div class="carousel-item">
+
+            <!--===========1slide===========-->
             <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
                 <div class="images">
@@ -65,6 +72,8 @@
             </div>
           </div>
           <div class="carousel-item">
+
+            <!--===========1slide===========-->
             <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
                 <div class="images">

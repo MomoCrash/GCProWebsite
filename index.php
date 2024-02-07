@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="../ressources/ongletIcon.png" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/home.css" />
         <title>The Sense - Home</title>
     </head>
@@ -319,13 +321,276 @@
 
         <!--ESPACE-->
         <div class="space"></div>
+        <!--=================================PRIX=================================-->
 
-        <div class="book_price">
-            <img src="ressources/RESERVER.webp" alt="image reserver"/>
-            <p class="catchphrase">N'ATTENDEZ PLUS, RÉSERVEZ</p> 
+        <div class="pricing">
+
+            <div class="book_price">
+                <img src="ressources/RESERVER.webp" alt="image reserver"/>
+                <p class="catchphrase">N'ATTENDEZ PLUS, RÉSERVEZ</p> 
+            </div>
+
+            <div class="amount_player">
+                <img src="ressources/NOS_TARIFS.webp" alt="tarifs"/>
+                <div class="hor_line"></div>
+                <p class="txt1">Voir les tarifs pour</p>
+                <p class="txt2">(max 8 joueurs)</p>
+            </div>
+
+            <div class="number">
+                <button class="minus" onclick="decrement()">-</button>
+                <p class="amount">4</p>
+                <button class="plus" onclick="increment()">+</button>
+            </div>
+
+            <div class="priceperperson">
+
+
+                <div class="lightroom_pricing">
+                    <img class="room_logo" src="ressources/LIGHT_ROOM_WHITE.webp" alt="lightroom_logo"/>
+                    <p class="price_txt">DE 10H À 18H: <span class="lightprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 18H À 21H: <span class="lightprice">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                </div>
+
+                <div class="darkroom_pricing">
+                    <img class="room_logo" src="ressources/DARK_ROOM_WHITE.webp" alt="darkroom_logo"/>
+                    <p class="price_txt">DE 10H À 18H: <span class="lightprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 18H À 21H: <span class="lightprice">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                </div>     
+
+                <div class="battleroom_pricing">
+                    <img class="room_logo" src="ressources/BATTLE_ROOM.webp" alt="battleroom_logo"/>
+                    <p class="price_txt">DE 10H À 18H: <span class="creativeprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 18H À 21H: <span class="creativeprice">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                </div>    
+
+                <div class="creativeroom_pricing">
+                    <img class="room_logo" src="ressources/CREATIVE_ROOM.webp" alt="battleroom_logo"/>
+                    <p class="price_txt">DE 10H À 18H: <span class="lightprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 18H À 21H: <span class="lightprice">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                </div>   
+
+
+            </div>
+
+            
+        </div>
+        
+        <div class="book_planning">
+                
+        </div>
+
+        <!--ESPACE-->
+        <div class="space"></div>
+        
+        <!--TITRE-->
+        <div class="title">
+                <p>VOUS EN VOULEZ TOUJOURS PLUS ?</p>
+            </div>
+        <!--=================================NEWS=================================-->
+        <div class="experiences_flex">
+            
+
+            <!--==================1 EXPERIENCE==================-->
+            <div class="imgtxt">
+                <!--IMAGE DE L'EXPERIENCE AVEC TOUS SES COMPOSANTS-->
+                <div class="img_exp">
+
+                    <img class="img_behind" src="ressources/image_8.webp" alt="image de l'experience"/><!--image du fond-->
+
+                </div>
+
+                <!--TEXTE EXPLICATION DE L'EXPERIENCE-->
+                <div class="about_new">
+
+                    <!--TITRE-->
+                    <div class="about_title">
+                        <p class="txt_about_title">ÉVÉNEMENT : LA CHASSE À L’OEUF</p>
+                    </div>
+
+                    <!--TXT A PROPOS-->
+                    <div class="about_txt">
+                        <p>La chasse à l'oeuf est un évènement durant lequel vous aurez l'occasion entre amis ou en famille de chercher tous es oeufs 
+                            déposés par le lapin à l'occasion de pâques
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="imgtxt">
+                <!--IMAGE DE L'EXPERIENCE AVEC TOUS SES COMPOSANTS-->
+                <div class="img_exp">
+
+                    <img class="img_behind" src="ressources/image_9.webp" alt="image de l'experience"/><!--image du fond-->
+                    <!--NB DE LIKES-->
+
+                </div>
+
+                <!--TEXTE EXPLICATION DE L'EXPERIENCE-->
+                <div class="about_new">
+
+                    <!--TITRE-->
+                    <div class="about_title">
+                        <p class="txt_about_title">ÉVÉNEMENT : LA CHASSE À L’OEUF</p>
+                    </div>
+
+                    <!--TXT A PROPOS-->
+                    <div class="about_txt">
+                        <p>La chasse à l'oeuf est un évènement durant lequel vous aurez l'occasion entre amis ou en famille de chercher tous es oeufs 
+                            déposés par le lapin à l'occasion de pâques
+                        </p>
+                    </div>
+
+                </div>
+            </div>
         </div>
         <!--ESPACE-->
         <div class="space"></div>
+
+        <!--TITRE-->
+        <div class="title">
+            <p>QU'EST CE QUI VOUS RETIENT ?</p>
+        </div>
+
+
+        <!--=================================CARROUSEL=================================-->
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <!--===========1slide===========-->
+            <img class="d-block w-100" src="ressources/Rectangle46.png" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="images">
+                <img src="ressources/imagelep.png" alt="leprogres">
+              </div>
+              <p class="title_intro">"C'est la meilleure manière de faire découvrir l'expérience VR à vos enfants et vos grand-parents mais aussi de changer des perpétuels bowlings ou séance de cinéma du week-end"</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            
+            <!--===========1slide===========-->
+            <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="images">
+                    <img src="ressources/image125.png" alt="lyonmag">
+                </div>
+              <p class="title_intro">"Bluffé par la qualité du service, que ce soit l’accueil et la prise en charge du groupe. Quant à l’expérience, rien à dire, c’est une expérience unique au monde”</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+
+            <!--===========1slide===========-->
+            <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="images">
+                    <img src="ressources/lemonde-removebg-preview.png" alt="lemonde">
+                </div>
+              <p class="title_intro">"WOW”</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+
+            <!--===========1slide===========-->
+            <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="images">
+                    <img src="ressources/lefigaro-removebg-preview.png" alt="lefigaro">
+                </div>
+              <p class="title_intro">"Bluffé par la qualité du service, que ce soit l’accueil et la prise en charge du groupe. Quant à l’expérience, rien à dire, c’est une expérience unique au monde”</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+
+            <!--===========1slide===========-->
+            <img class="d-block w-100" src="ressources/Rectangle46.png" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="images">
+                    <img src="ressources/Logo_DL-removebg-preview.png" alt="ledauphiné">
+                </div>
+              <p class="title_intro">"Bluffé par la qualité du service, que ce soit l’accueil et la prise en charge du groupe. Quant à l’expérience, rien à dire, c’est une expérience unique au monde”</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+        <!--=================================FAQ=================================-->
+        <div class="FAQ">
+
+            <!--==================1 QUESTION==================-->
+            <div class="question">
+
+                <!--BOUTON DEROULANT-->
+                <div class="container">
+                    <div class="button"></div>
+                </div>
+
+                <div class="question_txt">
+                    <p class="title_intro">Qu'est ce que The SENSE ?</p>
+                </div>
+            </div>
+            <div class="answer">
+                <p class="p_answer">
+                    The SENSE est une immersion poussée grâce à la réalité virtuelle. The SENSE propose de nombreuses expériences
+                    à faire entre amis ou avec la famille. Vous pouvez tout à fait favoriser une expérience avec de l’action comme notre 
+                    Dark Room basé sur l’horreur. Ou encore, si vous le souhaiter par exemple, vous pouvez favoriser l’aspect compétitif 
+                    en participant aux expériences de notre Battle Room. De plus, The SENSE propose un système de création d’expérience où 
+                    les clients peuvent à leurs tours imaginer et créer la meilleure expériences possibles. </p>
+            </div>
+
+            
+        </div>
+
+        <!--=================================FOOTER=================================-->
+        <footer>
+        <div class="footer-nav">
+            <a class="barAnim" href="#"><span>Nous contacter</span></a>
+            <a class="barAnim" href="#"><span>Réservation</span></a>
+            <a class="barAnim" href="#"><span>FAQ</span></a>
+        </div>
+        <div class="copyright">
+            © THE SENSE, SAS. Tous droits réservés
+        </div>
+        <div class="moda">
+            <a class="barAnim" href="#"><span>Modalités</span></a>
+            <span> | </span>
+            <a class="barAnim" href="#"><span>Politique de confidentialité </span></a>
+            <div class="contact">
+              <span> | </span>
+              <a class="barAnim" href="#"><span>Contact</span></a>
+            </div>
+            
+        </div>
+        <div class="social-icons">
+            <!-- Replace # with actual links to your social media profiles -->
+            <a href="#"><img src="ressources/Youtube.png" alt="Youtube"></a>
+            <a href="#"><img src="ressources/Instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="ressources/Twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="ressources/Facebook.png" alt="Facebook"></a>
+        </div>
+    </footer>
     </body>
     <script src="js/home.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+    
 </html>
