@@ -590,11 +590,11 @@ footer {
 
 
 .contact-container {
-  background-color: #f4f7f6;
+  background-color: rgba(255, 255, 255, 0);
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0);
 }
 
 h2 {
@@ -613,6 +613,16 @@ form {
   margin-bottom: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
+}
+
+.submitcontact {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #08f1e6;
+    border-radius: 4px;
+    color: #ffffff;
+    background-color: rgba(12, 247, 255, 0.945);
+    margin: auto;
 }
 
 .tel {
