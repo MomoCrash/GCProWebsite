@@ -99,22 +99,23 @@ if (isset($_SESSION["email"])) {
     <div class="mid_contenair">
         <div class="animated-on-scroll" style="margin-bottom: 10px">
             <div id="darkRoomDiv">
-                <div id="dark-content" class="horizontal-container" style=" margin: auto;">
+                <div id="dark-content" class="horizontal-container" style="margin: auto;">
                 </div>
             </div>
         </div>
         <div class="animated-on-scroll" style="margin-bottom: 10px">
             <div id="lightRoomDiv">
-                <div id="light-content" class="horizontal-container">
+                <div id="light-content" class="horizontal-container" style="margin: auto;">
                 </div>
             </div>
         </div>
         <div class="animated-on-scroll" style="margin-bottom: 10px">
             <div id="battleRoomDiv">
-                <div id="battle-content" class="horizontal-container">
+                <div id="battle-content" class="horizontal-container" style="margin: auto;">
                 </div>
             </div>
         </div>
+        <div id="calendar" class="calendar"></div>
     </div>
 
 
@@ -202,6 +203,7 @@ if (isset($_SESSION["email"])) {
     </script>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="../js/actions.js"></script>
+    <script src="../js/booking.js"></script>
     <script src="../js/creative.js"></script>
 
 </html>

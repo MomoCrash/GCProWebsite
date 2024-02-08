@@ -41,7 +41,7 @@
   border-radius: 10px;
   transition: 1.5s;
 
-  background-image: url("../ressources/84imgdark2.png");
+  background-image: url("../ressources/fond-styler.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
@@ -57,7 +57,7 @@
   border-radius: 10px;
   transition: 1.5s;
 
-  background-image: url("../ressources/84imgdark2.png");
+  background-image: url("../ressources/image-styler.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
@@ -87,38 +87,6 @@
 
 .vertical-container {
   margin: auto auto;
-}
-  
-#lightRoomDiv {
-  height: 300px;
-  width: 85%;
-  margin: auto;
-
-  border-radius: 10px;
-  transition: 1.5s;
-
-  background-image: url("../ressources/84imgdark2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-
-  cursor: pointer;
-}
-
-#battleRoomDiv {
-  height: 300px;
-  width: 85%;
-  margin: auto;
-
-  border-radius: 10px;
-  transition: 1.5s;
-
-  background-image: url("../ressources/84imgdark2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-
-  cursor: pointer;
 }
 
 .imgldb img {

@@ -26,17 +26,17 @@ function open(page) {
   switch (page) {
     case "dark":
       $("#darkRoomDiv").css("height", "900px");
-      modeSelector(page, ["Escape game","Battle","Survival"], ["../ressources/temps_estime.png", "../ressources/bn_joueur.png"])
+      delayOpen(page, ["Escape game","Battle","Survival"], ["Cimetière", "Maison", "Ecole"], ["../ressources/temps_estime.png", "../ressources/bn_joueur.png"])
       break;
 
     case "light":
       $("#lightRoomDiv").css("height", "900px");
-      modeSelector(page, ["Escape game","Battle","Survival"], ["../ressources/temps_estime.png", "../ressources/bn_joueur.png"])
+      delayOpen(page, ["Escape game","Battle","Survival"], ["Cimetière", "Maison", "Ecole"], ["../ressources/temps_estime.png", "../ressources/bn_joueur.png"])
       break;
 
     case "battle":
       $("#battleRoomDiv").css("height", "900px");
-      modeSelector(page, ["EscapeGame","Battle","Survival"], ["../ressources/temps_estime.png", "../ressources/bn_joueur.png"])
+      delayOpen(page, ["EscapeGame","Battle","Survival"], ["Cimetière", "Maison", "Ecole"], ["../ressources/temps_estime.png", "../ressources/bn_joueur.png"])
       break;
   
     default:
@@ -51,14 +51,14 @@ async function wait(ms) {
 }
 
 // Apply a delay on the section open to wait page opening
-async function delayOpen(page, modes, param) {
+async function delayOpen(page, modes, map, ressources) {
     await wait(600);
     if (lastOpen == null) return;
-    updateSection(page, modes, param);
+    modeSelector(page, modes, map, ressources);
 }
 
 // Generator for generate a complete mode with imge / name / modes
-function modeSelector(name, modes, images) {
+function modeSelector(name, modes, map, images) {
       let content = $('#' + name + '-content');
 
       for (let index = 0; index < modes.length; index++) {
@@ -76,7 +76,8 @@ function modeSelector(name, modes, images) {
         }
 
         horizontalContainer.click(function() {
-          mapSelector(name);
+          mapSelector(name, map, images);
+          document.cookie="mode=" + modes[index];
           clickSection = true;
         });
         largeContainer.append(horizontalContainer);
@@ -85,13 +86,15 @@ function modeSelector(name, modes, images) {
       }
 }
 
-function mapSelector(name, modes, images) {
-  let content = $('#' + name + '-content');
+// Select The map
+function mapSelector(name, map, images) {
+      let content = $('#' + name + '-content');
+      content.empty();
 
-      for (let index = 0; index < modes.length; index++) {
+      for (let index = 0; index < map.length; index++) {
 
-        let largeContainer = $('<div id="' + modes[index] + '" class="vertical-container">');
-        largeContainer.append('<h1>' + modes[index] + '</h1> <p>Default Description</p>');
+        let largeContainer = $('<div id="' + map[index] + '" class="vertical-container">');
+        largeContainer.append('<h1>' + map[index] + '</h1> <p>Default Description</p>');
         let horizontalContainer = $('<div class="horizontal-container">');
 
         for (let index = 0; index < images.length; index++) {
@@ -103,13 +106,45 @@ function mapSelector(name, modes, images) {
         }
 
         horizontalContainer.click(function() {
-          mapSelector(name);
+          document.cookie="map=" + map[index];
+          difficultySelector(name, ["Flipette", "Dark Room", "Fou Furieux"])
           clickSection = true;
         });
         largeContainer.append(horizontalContainer);
         content.append(largeContainer);
 
       }
+}
+
+function difficultySelector(name, difficulty) {
+
+  let content = $('#' + name + '-content');
+  content.empty();
+
+  for (let index = 0; index < difficulty.length; index++) {
+
+    let largeContainer = $('<div id="' + difficulty[index] + '" class="vertical-container">');
+    largeContainer.append('<h1>' + difficulty[index] + '</h1> <p>Default Description</p>');
+    let horizontalContainer = $('<div class="horizontal-container">');
+
+    horizontalContainer.click(function() {
+      document.cookie="difficulty=" + difficulty[index];
+      payExperience(name);
+      clickSection = true;
+    });
+    largeContainer.append(horizontalContainer);
+    content.append(largeContainer);
+
+  }
+
+}
+
+function payExperience(name) {
+  console.log('NIQUE ZEUBI');
+  generateCalendar(2);
+  console.log('NIQUE LABAC');
+  closeAll();
+  let content = $('#' + name + '-content');
 }
 
 function reduceAll() {
