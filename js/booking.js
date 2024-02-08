@@ -80,5 +80,7 @@ $("#previous").click(function() {
 
 
 $("#cancel").click(function() {
-    window.history.back();
+    var newurl = window.location.origin + window.location.pathname;
+    window.history.pushState({path:newurl},'',newurl);
+    window.location.reload();
 });
