@@ -593,26 +593,26 @@ form {
 
 @media screen and (max-width: 923px){
     .popup-btn img{
-            height: 250px;
-            width: 250px;
-        }
-    
-        .titre_intro p{
-            text-align: center;
-            font-size: 20px;
-            font-family: 'amiko';
-            font-weight: 700;
-        }
-    
-        .alaide{
-            text-align: center;
-            font-size: 18px;
-            font-family: 'abel';
-            font-weight: 400;
-        }
+        height: 250px;
+        width: 250px;
     }
+    
+    .titre_intro p{
+        text-align: center;
+        font-size: 20px;
+        font-family: 'amiko';
+        font-weight: 700;
+    }
+    
+    .alaide{
+        text-align: center;
+        font-size: 18px;
+        font-family: 'abel';
+        font-weight: 400;
+    }
+}
 
-    /*BOUTON DECOUVRIR*/
+/*BOUTON DECOUVRIR*/
 .btn_container {
     height: 300px;
     position: relative;
