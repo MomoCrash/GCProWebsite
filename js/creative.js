@@ -25,6 +25,8 @@ function open(page) {
   var newurl = window.location.origin + window.location.pathname;
   window.history.pushState({path:newurl},'',newurl);
 
+  addGetUrl("page", page)
+
   // Switch beetween the different states
   switch (page) {
     case "dark":
@@ -137,6 +139,7 @@ function difficultySelector(name, difficulty) {
     horizontalContainer.click(function() {
       document.cookie="difficulty=" + difficulty[index];
       addGetUrl("difficulty", difficulty[index])
+      addGetUrl("inPayment", "true")
       payExperience(name);
       clickSection = true;
     });
@@ -148,10 +151,9 @@ function difficultySelector(name, difficulty) {
 }
 
 function payExperience(name) {
-  generateCalendar(2);
   closeAll();
   hideSection(name);
-  $(".container-back").append('<?php include booking.php ?>')
+  $("#bookPanel").css("display", "flex")
 }
 
 function addGetUrl(name, param) {
@@ -216,3 +218,8 @@ $("#lightRoomDiv").click(function() {
 $("#battleRoomDiv").click(function() {
   open("battle");
 });
+
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('inPayment') == "true") {
+  payExperience(urlParams.get('page'))
+}

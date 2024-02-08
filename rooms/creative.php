@@ -12,6 +12,8 @@
 
 <?php
 
+include "../sql/sql-manager.php";
+
 session_start();
 if (isset($_SESSION["email"])) {
 
@@ -116,7 +118,9 @@ if (isset($_SESSION["email"])) {
                 </div>
             </div>
         </div>
-        <?php include_once "../booking.php"; ?>
+        <div id="bookPanel" style="display: none;">
+            <?php include_once "booking.php"; ?>
+        </div>
     </div>
 
 
