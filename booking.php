@@ -1,34 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<?php
-
-require_once "sql/sql-manager.php";
-
-session_start();
-if (isset($_SESSION["email"])) {
-
-    $email = $_SESSION["email"];
-    $name = $_SESSION["name"];
-    $id = $_SESSION["id"];
-
-}
-
-?>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking</title>
-    <link rel="stylesheet" href="css/booking.css">
-    <script src="https://www.paypal.com/sdk/js?client-id=AZnYiH2U3I5gyVjD-xbHsvDYujBeMmvmD-UmrhfOHTOQLT9LP0Il05FQ6q6H1v5YLSxTZDFviJ5qCnrf"></script>
-
-</head>
-
 <body>
-
     <!-- Grand Calendrier de présentation de la semaine a venir -->
-
     <div class="container-back">
         <form action="booking.php" method="POST">
             <h2 class="booking-title" style="font-weight: 700;"> VOTRE RESERVATION EST PRETE ! </h2>
@@ -218,9 +189,6 @@ if (isset($_SESSION["email"])) {
             }
 
         ?>
-    <div class="caldendrierdue">
-        <div id="calendar" class="calendar"></div>
-    </div>
     
 
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -261,7 +229,3 @@ if (isset($_SESSION["email"])) {
         
     </script>
 </body>
-
-
-
-</html>
