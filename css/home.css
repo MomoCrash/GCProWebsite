@@ -48,10 +48,8 @@ body {
     background-position: fixed;
     background-size: cover; */
     background: url(../ressources/mobile_fond.webp); 
-    background-size: 100%;
-    resize: both;
-    overflow: scroll;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /*BOUTON DECOUVRIR*/
@@ -91,7 +89,15 @@ body {
     background-position: left;
 }
 
+@media screen and (max-width: 1000px) {
+    .discover_btn{
+        display: block;
+    }
 
+    .btn_container{
+        display:block;
+    }
+}
 /*====================================BANDEAU INTRO==========================================*/
 .intro_container{
     padding-top:5%;
@@ -158,6 +164,27 @@ body {
     .texte_intro{
         text-align:center;
     }
+}
+
+@media screen and (max-width: 923px){
+    .popup-btn img{
+            height: 250px;
+            width: 250px;
+        }
+    
+        .title_intro {
+            text-align: center;
+            font-size: 20px;
+            font-family: 'amiko';
+            font-weight: 700;
+        }
+    
+        .text_intro p{
+            text-align: center;
+            font-size: 18px;
+            font-family: 'abel';
+            font-weight: 400;
+        }
 }
 
 /*TRAILER*/
@@ -792,4 +819,11 @@ body {
 
 .carousel-control-next:hover, .carousel-control-prev:hover {
     text-decoration: none;
+}
+
+/*================================VERSION TELEPHONE=====================================*/
+@media screen and (max-width: 1000px) {
+    .book_img{
+        margin-top: 83px;
+    }
 }

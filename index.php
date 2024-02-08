@@ -3,9 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="../ressources/ongletIcon.png" />
+        <link rel="icon" href="ressources/ongletIcon.png" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
+        <link href="css/mainstyle.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="css/home.css" />
         <link rel="stylesheet" href="css/bookingstyle.css">
         <link rel="stylesheet" href="css/booking.css">
@@ -21,7 +22,7 @@
             <div class="nav-links" style="margin-bottom: -1%">
                 <ul>
                     <li><a href="new.php">NEWS</a></li>
-                    <li><a href="lightroom/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
+                    <li><a href="rooms/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
                     <li><a href="apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
                     <li><a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
                     <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
@@ -41,7 +42,7 @@
                     <p> Mot de passe <input class="login-input form-label" type="password" name="password"
                             placeholder="······"> </input>
                     </p>
-                    <a style="gray" href="../account.php?method=register'">Crée un compte</a> <button type="submit"
+                    <a style="gray" href="account.php?method=register'">Crée un compte</a> <button type="submit"
                         name="submit" placeholder="Connexion">Connexion</button>
                 </div>
             </form>
@@ -162,12 +163,12 @@
 
                 <!--BOUTON POUR RESERVER-->
                 <div class="book_btn">
-                    <a href="lightroom/light_room1.php"><img class="book_img" src="ressources/reserve.webp" alt="bouton reserver"></a>
+                    <a href="rooms/light_room2.php"><img class="book_img" src="ressources/reserve.webp" alt="bouton reserver"></a><!--todo-->
                 </div>
 
                 <!--BOUTON DISCOVER-->
                 <div class="room_discover">
-                    <a href="lightroom/light_room1.php" class="discover_room"><p>DÉCOUVREZ LA LIGHT ROOM →</p></a>
+                    <a href="rooms/light_room1.php" class="discover_room"><p>DÉCOUVREZ LA LIGHT ROOM →</p></a>
                 </div>
             </div>
         
@@ -223,12 +224,12 @@
 
                 <!--BOUTON POUR RESERVER-->
                 <div class="book_btn">
-                    <a href="darkroom/dark_room1.php"><img class="book_img" src="ressources/reserve.webp" alt="bouton reserver"></a>
+                    <a href="rooms/dark_room2.php"><img class="book_img" src="ressources/reserve.webp" alt="bouton reserver"></a><!--todo-->
                 </div>
 
                 <!--BOUTON DISCOVER-->
                 <div class="room_discover">
-                    <a href="darkroom/dark_room1.php" class="discover_room"><p>DÉCOUVREZ LA DARK ROOM →</p></a>
+                    <a href="rooms/dark_room1.php" class="discover_room"><p>DÉCOUVREZ LA DARK ROOM →</p></a>
                 </div>
             </div>
 
@@ -284,12 +285,12 @@
 
                 <!--BOUTON POUR RESERVER-->
                 <div class="book_btn">
-                    <a href="battleroom/battle_room1.php"><img class="book_img" src="ressources/reserve.webp" alt="bouton reserver"></a>
+                    <a href="rooms/battle_room2.php"><img class="book_img" src="ressources/reserve.webp" alt="bouton reserver"></a><!--todo-->
                 </div>
 
                 <!--BOUTON DISCOVER-->
                 <div class="room_discover">
-                    <a href="battleroom/battle_room1.php" class="discover_room"><p>DÉCOUVREZ LA BATTLE ROOM →</p></a>
+                    <a href="rooms/battle_room1.php" class="discover_room"><p>DÉCOUVREZ LA BATTLE ROOM →</p></a>
                 </div>
             </div>
         </div>
@@ -340,12 +341,12 @@
 
                 <!--BOUTON POUR RESERVER-->
                 <div class="book_btn">
-                    <a href="creative/creative.php"><img class="book_img" src="ressources/reserve.webp" alt="bouton reserver"></a>
+                    <a href="rooms/creative.php"><img class="book_img" src="ressources/reserve.webp" alt="bouton reserver"></a>
                 </div>
 
                 <!--BOUTON DOSCPVER-->
                 <div class="room_discover">
-                    <a href="creative/creative.php" class="discover_room"><p>DÉCOUVREZ LA CREATIVE ROOM →</p></a>
+                    <a href="rooms/creative.php" class="discover_room"><p>DÉCOUVREZ LA CREATIVE ROOM →</p></a>
                 </div>
 
             </div>
@@ -420,8 +421,8 @@
         
         <!--TITRE-->
         <div class="title">
-                <p>VOUS EN VOULEZ TOUJOURS PLUS ?</p>
-            </div>
+            <p>VOUS EN VOULEZ TOUJOURS PLUS ?</p>
+        </div>
         <!--=================================NEWS=================================-->
         
         <div class="experiences_flex">
