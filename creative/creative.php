@@ -7,6 +7,7 @@
     <title>Document</title>
     <link href="../css/mainstyle.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="../css/creative.css">
+    <link rel="stylesheet" href="../css/booking.css">
 </head>
 
 <?php

@@ -127,7 +127,10 @@ function difficultySelector(name, difficulty) {
     largeContainer.append('<h1>' + difficulty[index] + '</h1> <p>Default Description</p>');
     let horizontalContainer = $('<div class="horizontal-container">');
 
+    horizontalContainer.text("Description de la dificulté")
+
     horizontalContainer.click(function() {
+      console.log("Salut")
       document.cookie="difficulty=" + difficulty[index];
       payExperience(name);
       clickSection = true;
