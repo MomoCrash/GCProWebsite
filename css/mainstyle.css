@@ -68,11 +68,7 @@ html{
 
 .fond_page_news{
     margin: 0;
-    padding: 0;
-    background-image: url("../ressources/EN\ TÊTE.png");   
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center top;
+    padding: 0;  
 }
 
 .fond_template{
@@ -146,7 +142,6 @@ ul {
     text-decoration: none;
     margin-right: 0%;
     margin-bottom: 0%;
-    padding-top: 12px;
 }
 
 .nav-img {
@@ -155,7 +150,6 @@ ul {
     text-align: right;
     text-decoration: none;
     margin-left: 10px;
-    padding-bottom: 5px;
 }
   
 .nav_dark_room-border{
@@ -232,7 +226,6 @@ ul {
     margin-right: 6%;
     margin-top: 0%;
     margin-bottom: 0%;
-    
 }
 
 .nav-img {
@@ -356,6 +349,7 @@ ul {
         align-items: center;
         margin-left: -100%;
         transition: all 0.5s ease;
+        z-index: 10;
     }
 
     .nav-links{
@@ -478,6 +472,25 @@ ul {
     padding-bottom: 1%;
     position: absolute;
     top: 50%;
+    left: 49%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 125%;
+    background-color: #000000;
+    color:#FFFFFF; 
+    border-radius:5px ;
+    font-family: Abel_pro;
+    border:none;
+}
+
+.btn_decouvrirb2b{
+    margin:0;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    position: absolute;
+    top: 22%;
     left: 49%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -798,7 +811,9 @@ ul {
         display: block;
         z-index: -5;
         height: 55%;
-        margin-left: 47%;
+        margin-left: 37%;
+        margin-right: 12%;
+    
     }
 
     .position_logo_mobile_dark{
@@ -940,30 +955,6 @@ footer {
     filter: drop-shadow(2px 2px 4px white);
 }
 
-.login-pan {
-    display: flex;
-    position: relative;
-
-    border: solid black;
-    border-radius: 10px;
-
-    text-align: center;
-
-    transition: 1s;
-}
-
-.login-content {
-    text-align: right;
-    transition: 0s;
-}
-
-.login-input {
-    display: inline-block;
-    width: 100px;
-    height: 20px;
-    transition: 1.1s;
-}
-
 @media screen and (max-width: 923px){
     footer{
         flex-direction: column-reverse;
@@ -1084,7 +1075,7 @@ footer {
     margin-top: 475px;
     padding-top: 10px;
     justify-content: space-evenly;
-}
+} 
 
 .time{
     text-align: center;
@@ -1200,6 +1191,15 @@ footer {
     margin-top:2%;
 }
 
+.text_slideshowdown{
+    font-family: Abel;
+    color:#ffffff;
+    font-size: 38px;
+    margin-left: 6%;
+    margin-right: 5%;
+    margin-top:0%;
+}
+
 .txt_about_title{
     font-family: Amiko bold;
     font-size:30px;
@@ -1268,4 +1268,161 @@ footer {
 
 .space{
     height:50px;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  margin-bottom: -2%;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  position: absolute;
+  margin-left: -2%;
+  bottom: 8%;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  position: absolute;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.login-pan {
+    display: flex;
+    position: relative;
+    float: right;
+    border: solid black;
+    background-color: rgba(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 1%;
+    margin-right: 10%;
+    text-align: center;
+    transition: 1s;
+    font-family: abel;
+}
+
+.login-content {
+    text-align: right;
+    transition: 0s;
+    margin-left: 10px;
+    
+}
+
+.login-input {
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    transition: 1.1s;
+    border: 1.2px solid rgb(78, 209, 209);
+    border-radius: 4px;
+}
+
+.loginbg{
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    margin-right: -100%;
+    transition: all 0.5s ease;
+}
+
+.loginbgb2b{
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    margin-right: -100%;
+    transition: all 0.5s ease;
+    margin-top: -35%;
+}
+
+.paypal{
+    top: 20%;
+    margin-left: 40%;
+    width: 10%;
+}
+
+.img_dark2{
+    font-family: Amiko Bold;
+    font-weight:bold;
+    font-size:30px;
+    color:white;
+    width: 100%;
+    text-align: center;
+    margin-bottom: -29px;
+}
+
+.tonpere{
+    margin-left: 15%;
+    margin-bottom: 1%;
 }

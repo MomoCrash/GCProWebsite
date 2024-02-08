@@ -1,7 +1,50 @@
 @font-face {
     font-family: amiko;
     src: url("../ressources/font/Amiko-Regular.ttf");
-    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: abel;
+    src: url("../ressources/font/Abel-Pro.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins Thin";
+    src: url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.eot");
+    src: url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.svg#Poppins Thin")format("svg");
+}
+
+body {
+    font-family: amiko;
+    font-weight: 400;
+}
+
+.fidelity-text {
+    text-align: left;
+    width: 80%;
+}
+
+.panel {
+    width: 100%;
+    display: flex;
+}
+
+#background {
+    margin: auto;
+    width: 60%;
+}
+
+.separator {
+    border: 1px solid rgba(255,255,255,.20);
+    width: 0;
+    height: 0;
+    margin: 0;
 }
 
 .booking-title {
@@ -16,17 +59,15 @@
 
 
 .calendar {
-    width: 2000px;
+    width: 100%;
     display: flex;
-    background-color: #000000;
     padding: 10px;
-    display: flex;
 }
 
 .day {
     width: 90px;
-    height: 400px;
-    margin: 0 10px;
+    height: 100%;
+    margin: 0 auto;
     color: red;
 }
 
@@ -36,6 +77,11 @@
     color: white;
     text-align: center;
     cursor: pointer;
+}
+
+.time-slot:hover {
+    border: #cdcdcd solid 1px;
+    border-radius: 10px;
 }
 
 .not-available {
@@ -63,7 +109,7 @@
 
 
 .container-large {
-    width: 80%;
+    width: 90%;
     background-color: #000000;
     padding: 10px;
     display: flex;
@@ -73,30 +119,68 @@
 
 .horizontal-container {
     width: 90%;
-    padding: 10px;
     display: flex;
     justify-content: space-between;
+    margin-left: 5%;
+}
+
+.vertical-container {
+    margin: auto auto;
 }
 
 .item {
     margin: 1%;
-    padding: 10px;
-    width: 300px;
-    height: 35px;
+    padding: 5px;
+    width: 100%;
+    height: auto;
     font-size: large;
     border-radius: 5px;
     background-color: #3B4040;
     border: 1px solid;
+    color:#cdcdcd;
   }
 
 .day-display {
     color: #3B4040;
-    margin: 0;
+    margin: 0;  
 }
 
 .hour-display {
     color: #9C0000;
     margin: 0;
+}
+
+.text {
+    color: white;
+    text-align: center;
+    margin-left: 15%;
+}
+
+#reserver {
+
+    margin: auto;
+    background-image: url("../ressources/RESERVERXL.png");
+    background-size: contain;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    padding: 6%;
+    padding-bottom: 0;
+    cursor: pointer;
+
+}
+
+#cancel {
+    margin: auto;
+    background-color: transparent;
+    border: none;
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    font-size: 150%;
+    margin-top: -2%;
+    margin-bottom: 4%;
 }
 
   ::placeholder {
@@ -107,3 +191,103 @@
   ::-ms-input-placeholder { /* Edge 12 -18 */
     color: #BBBBBB;
   }
+
+@media screen and (max-width: 900px){
+    .horizontal-container {
+        justify-content: unset;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .container-large {
+        width: 90%;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .item {
+        width: 100%;
+        margin: auto;
+    }
+    .calendar {
+        padding: 0;
+    }
+}
+
+.paypal{
+    margin-left: 25%;
+    margin-top: 10%;
+    width: 50%;
+    color: white;
+}
+
+.paypal #document button{
+    color: white;
+}
+
+.prevnextbtn{
+    margin-top: 15%;
+    color: white;
+    text-decoration: none;
+}
+
+.bottom-text-book{
+    font-style: normal;
+    color: white;
+}
+
+.title-bottom{
+    margin-top: 2%;
+    margin-bottom: -2%;
+    font-size: 175%;
+}
+
+.underline-bottom{
+    text-align: center;
+    border: white;
+    border-radius: 100px;
+    margin-bottom: 4%;
+    margin-top: 1%;
+}
+
+.text-bottom{
+    text-align: center;
+    font-size: 120%;
+    font-family: "Poppins Thin";
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.end_text_bottom{
+    font-size: 70%;
+}
+
+.bruh{
+    background: none;
+    margin-left: 10%;
+}
+
+/* MOBILE BRUH */
+
+@media screen and (max-width: 1000px) {
+    .vertical-container{
+        text-align: center;
+    }
+
+    .horizontal-container{
+        text-align: center;
+    }
+
+    .paypal{
+        margin-left: 18%;
+    }
+
+    .text{
+        margin-left: 8%;
+    }
+
+    .bruh{
+        margin-right: 10%;
+        margin-left: 5%;
+    }
+}

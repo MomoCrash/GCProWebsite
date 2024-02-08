@@ -13,7 +13,7 @@ html{
 body {
     margin: 0;
     padding: 0;
-    background-image: url("../ressources/bryceforme2.webp");
+    background-image: url("/ressources/fond_a_propos.png"); /* Corrected slashes */ /* Cover the entire area of the element */
     background-position: 10px 10px;   
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,61 +53,6 @@ body {
     margin: 0;
     font-size: 30px;
     font-family: 'abel';
-}
-
-.nav {
-    position: relative;
-    backdrop-filter: blur(7px);
-    overflow: hidden;
-    margin-top: 0%;
-    margin-right: 0%;
-    
-  }
-
-.nav a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 0px 30px;
-    text-decoration: none;
-    font-size: 25px;
-    font-family: "amiko";
-}
-  
-.nav a:hover {
-    filter: blur(0.3px);
-    color: rgb(212, 212, 212);
-}
-  
-.nav-right {
-    float: right;
-    color: #f2f2f2;
-    text-align: right;
-    text-decoration: none;
-    margin-right: 5%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-}
-
-.nav-img {
-    float: left;
-    color: #f2f2f2;
-    text-align: right;
-    text-decoration: none;
-    margin-top: 5px;
-    margin-left: 10px;
-}
-  
-.nav-border{
-    border-left: 1px solid gray;
-}
-
-  @media screen and (max-width: 800px) {
-  
-    .nav a {
-      float: none;
-      display: block;
-    }
 }
 
 .box {
@@ -251,17 +196,33 @@ body {
 .img-header {
     width: 100%;
     display: block; /* Ensures that the div takes up the full width */
+    z-index: -10;
+    position: relative;
+}
+
+@media screen and (max-width: 923px){
+    .img-header{
+        display: block;
+        z-index: -5;    
+    }
+
+    .img-header img {
+        display: block;
+        z-index: -5;    
+    }
+
+
+
+
 }
 
 .img-header img {
     width: 100%; /* Ensures that the image stretches to the full width of its container */
-    height: auto; /* Keeps the image aspect ratio intact */
-    display: block; /* Removes any extra space below the image */
 }
 
 
 main{
-    background-image: url(/ressources/forme1.webp); /* Corrected slashes */
+    background-image: url(/ressources/fond_a_propos.svg); /* Corrected slashes */
     background-size: 100%; /* Cover the entire area of the element */
     background-repeat: no-repeat;
     min-height: 100vh; /* This ensures that the main element is at least as tall as the viewport */
@@ -277,6 +238,7 @@ main{
     animation-name: fadeInUp;
     animation-duration: 1s;
     animation-fill-mode: both; 
+    
 }
 *{
     text-decoration: none;
@@ -624,4 +586,46 @@ footer {
     margin-left: -10%;
     margin-top: 35%;
     opacity:0.4;
+}
+
+
+.contact-container {
+  background-color: #f4f7f6;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.inputcontact {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tel {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.tel a {
+  text-decoration: none;
+  color: #5cb85c;
+  font-weight: bold;
+}
+
+.tel a:hover {
+  color: #4cae4c;
 }

@@ -16,24 +16,17 @@ html{
     scroll-behavior: smooth;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url("../ressources/forme4.webp");   
-    background-repeat: no-repeat;
-    background-size: cover;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    padding: 0px;
 }
 
-.nav {
-    position: relative;
-    backdrop-filter: blur(7px);
-    overflow: hidden;
-    margin-top: 0%;
-    margin-right: 0%;
-  }
-
-.nav a {
-    float: left;
+.navbar a {
     color: black;
     text-align: center;
     padding: 0px 30px;
@@ -42,19 +35,46 @@ body {
     font-family: "Abel_pro";
 }
   
-.nav a:hover {
+.navbar a:hover {
     filter: blur(0.3px);
-    color: rgb(212, 212, 212);
+    color: rgb(0, 0, 0);
+    font-size: 26px;
+    text-decoration: underline;
+}
+
+.navbar .nav-links ul{
+    display: flex;
+    margin-bottom: 0.5%;
 }
   
-.nav-right {
+.navbar .nav-links ul li{
+    margin: 0 0px;
+    
+}
+
+.nav-border{
+    border-left: 1px solid gray;
+}
+
+.navbar .menu_bouton{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 10px;
+    width: 35px;
+    height: 30px;
+    right: 2%;   
+}
+
+.nav-links {
     float: right;
     color: #f2f2f2;
     text-align: right;
     text-decoration: none;
-    margin-right: 5%;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-right: 6%;
+    margin-top: 0%;
+    margin-bottom: 0%;
 }
 
 .nav-img {
@@ -66,16 +86,211 @@ body {
     margin-left: 10px;
 }
   
+.navbar_news {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    background-color: rgb(217, 196, 255, 0.5);
+}
+
+.navbar_news a {
+    color: black;
+    text-align: center;
+    padding: 0px 30px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "Abel_pro";
+}
+  
+.navbar_news a:hover {
+    filter: blur(0.3px);
+    color: rgb(0, 0, 0);
+    font-size: 26px;
+    text-decoration: underline;
+}
+
+.navbar_news .nav-links ul{
+    display: flex;
+}
+  
+.navbar_news .nav-links ul li{
+    margin: 0 0px;
+    
+}
+
 .nav-border{
     border-left: 1px solid gray;
 }
 
-  @media screen and (max-width: 800px) {
-  
-    .nav a {
-      float: none;
-      display: block;
+.navbar_news .menu_bouton{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 10px;
+    width: 35px;
+    height: 30px;
+    right: 2%;   
+}
+
+@media screen and (max-width: 1000px) {
+    
+    /* PAGE NEWS */
+
+    .navbar_news{
+        padding: 0;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+        z-index: 10;
     }
+
+    .navbar_news .menu_bouton{
+        display: block;
+        z-index: 15;
+    }
+
+    .navbar_news-border{
+        border: 0px white;
+    }
+
+    .navbar_news .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+    
+    /* PAGE DARK  */
+
+    .navbar_dark_room{
+        padding: 0;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+        z-index: 10;
+    }
+
+    .navbar_dark_room .menu_bouton{
+        display: block;
+        z-index: 15;
+    }
+
+    .nav_dark_room-border{
+        border: 0px white;
+    }
+
+    .navbar_dark_room .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+
+    /* PAS TOUCHE */
+
+    .nav-links{
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 100vh;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+        z-index: 10;
+    }
+
+    .nav-links{
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 100vh;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu{
+        margin-left: 0;
+    }
+
+    .nav-links ul{
+        padding-left: 0%;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* PAGE AUTRES */
+
+    .nav-border{
+        border-left: 0px solid gray;
+    }
+    
+    .btn_container{
+        display: none;
+    }
+    
+
+    .navbar{
+        padding: 0;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+        z-index: 10;
+    }
+
+    .navbar .menu_bouton{
+        display: block;
+        z-index: 15;
+    }
+
+    .nav-links{
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        height: 100vh;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu{
+        margin-left: 0;
+    }
+
+    .nav-links ul{
+        padding-left: 0%;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+
+    }
+    
+
+    .nav-border{
+        border-left: 0px solid gray;
+    }
+    
+    .btn_container{
+        display: none;
+    }
+    
 }
 
 .box {
@@ -316,4 +531,44 @@ body {
     padding: 0;
     max-height: none;
     overflow: hidden; 
+}
+
+.login-pan {
+    display: flex;
+    position: relative;
+    float: right;
+    border: solid black;
+    background-color: rgba(255, 255, 255);
+    border-radius: 10px;
+    margin-top: -34%;
+    margin-right: 10%;
+    text-align: center;
+    transition: 1s;
+    font-family: abel;
+}
+
+.login-content {
+    text-align: right;
+    transition: 0s;
+    margin-left: 10px;
+    
+}
+
+.login-input {
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    transition: 1.1s;
+    border: 1.2px solid rgb(78, 209, 209);
+    border-radius: 4px;
+}
+
+.loginbg{
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    margin-right: -100%;
+    transition: all 0.5s ease;
+    z-index: 1;
 }

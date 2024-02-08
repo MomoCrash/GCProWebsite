@@ -1,0 +1,113 @@
+.mid_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; 
+}
+
+.imgldb {
+  width: calc(100% - 40px);
+  min-width: (100% - 40px); 
+  margin: 20px; 
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  box-sizing: border-box; 
+  margin-bottom: 20px;
+}
+
+#darkRoomDiv {
+  height: 300px;
+  width: 85%;
+  margin: auto;
+
+  border-radius: 10px;
+  transition: 1.5s;
+
+  background-image: url("../ressources/84imgdark2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+
+  cursor: pointer;
+}
+
+#lightRoomDiv {
+  height: 300px;
+  width: 85%;
+  margin: auto;
+
+  border-radius: 10px;
+  transition: 1.5s;
+
+  background-image: url("../ressources/fond-styler.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+
+  cursor: pointer;
+}
+
+#battleRoomDiv {
+  height: 300px;
+  width: 85%;
+  margin: auto;
+
+  border-radius: 10px;
+  transition: 1.5s;
+
+  background-image: url("../ressources/image-styler.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+
+  cursor: pointer;
+}
+
+.separator {
+  border: 1px solid rgba(255, 255, 255);
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.horizontal-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color: white;
+}
+
+.logoroom {
+  height: 30px; 
+  width: 30px;
+}
+
+.vertical-container {
+  margin: auto auto;
+}
+
+.imgldb img {
+  width: 100%; 
+  height: auto; 
+  display: block; 
+}
+
+
+.mid_container {
+  padding: 0 20px;
+}
+
+
+@media (max-width: 768px) {
+  .imgldb {
+    width: calc(100% - 20px); 
+    margin: 10px; 
+  }
+  .mid_container {
+    padding: 0 10px; 
+  }
+}
+
