@@ -8,6 +8,7 @@
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"></noscript>
     <link href="css/equiStyle.css" rel="stylesheet" type="text/css" media="screen">
     <link href="css/mainstyle.css" rel="stylesheet" type="text/css"/>
+    
     <title>Les News</title>
 </head>
 
@@ -48,22 +49,39 @@
         </div>
     <main>
         <div class="btn_container">
-            <div id="btn">
-                <a href="#text"><button class="btn_decouvrir" type="button">DÉCOUVRIR</button></a>
-            </div>
-        </div>
+            <a href="#intro" class="discover_btn">Découvrir</a>
+        </div> 
         <div id="text"></div>
-        <div class="animated-on-scroll">
-            <div class="firs-div">
-                <div class="img-first"><img src="ressources\VIDEOEQUIP.webp" alt="header" width=440 height=440></div>
-                <div class="text-content">
-                    <h1>LA VR, UNE AFFAIRE D’EXCELLENCE</h1>
-                    <p>Pour une expérience aussi bien virtuelle que réelle nous avons besoin d’équipements de hautes qualités prêt à vous suivre là où vous irez ! Pour nous, la garantie d’une expérience réussie passe forcément par la qualité de notre matériel. C’est pourquoi nous cherchons constamment les dernières technologies sur le marché pour pouvoir vous proposer le meilleur de la Réalité Virtuelle. Nous travaillons également directement avec les marques leaders du marchés pour vous proposer du matériels adaptés à vos besoins (Lunettes, coiffures, fauteuil roulant, petits et grands, ...). Chez The Sense, l’excellence de nos outils vous garantissent la qualité de votre voyage dans une autre dimension.</p>
+            <div class="intro_container" id="intro">
+            <!--LOGO A GAUCHE-->
+            <div class="popup-btn"><img class="img_trailer" src="ressources/VIDEO.webp"/></div>
+                
+            <!--POPUP VIDEO-->
+            <div class="popup-wrap">
+                
+                <div class="popup-box">
+                        
+                    <div class="line"></div>
+
+                    <div class="trailer">
+                        <video id="video" width="1090"><source src="ressources/Trailer/Trailer.mp4" type="video/mp4" /></video>
+                    </div>
                 </div>
             </div>
-        </div>
-        
+                
+            <!--TEXTE A DROITE-->
+            <div class = "text_intro">
 
+                <div class="title_intro">
+                    <p>LA VR, UNE AFFAIRE D’EXCELLENCE</p>
+                </div> 
+                <p> Pour une expérience aussi bien virtuelle que réelle nous avons besoin d’équipements de hautes qualités prêt à vous suivre là où vous irez ! Pour nous, la garantie d’une expérience réussie passe forcément par la qualité de notre matériel. C’est pourquoi nous cherchons constamment les dernières technologies sur le marché pour pouvoir vous proposer le meilleur de la Réalité Virtuelle. Nous travaillons également directement avec les marques leaders du marchés pour vous proposer du matériels adaptés à vos besoins (Lunettes, coiffures, fauteuil roulant, petits et grands, ...). Chez The Sense, l’excellence de nos outils vous garantissent la qualité de votre voyage dans une autre dimension.
+                    
+            </div>
+        </div>
+
+        <div class="space"></div>
+        
             <div class="animated-on-scroll">
                 <div class="second-div">
                     <div class="text-content">
@@ -215,6 +233,7 @@
                 <a href="#"><img src="ressources/Facebook.png" alt="Facebook"></a>
             </div>
         </footer>
+        <script src="js/equip.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

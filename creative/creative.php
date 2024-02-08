@@ -116,7 +116,7 @@ if (isset($_SESSION["email"])) {
                 </div>
             </div>
         </div>
-        <div id="calendar" class="calendar"></div>
+        <?php include_once "../booking.php"; ?>
     </div>
 
 
