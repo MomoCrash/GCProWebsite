@@ -82,4 +82,3 @@ $("#previous").click(function() {
 $("#cancel").click(function() {
     window.history.back();
 });
-
