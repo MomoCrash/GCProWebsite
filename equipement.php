@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"></noscript>
-    <link href="/css/equiStyle.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/Lootchycss/equiStyle.css" rel="stylesheet" type="text/css" media="screen">
     <link href="/css/mainstyle.css" rel="stylesheet" type="text/css"/>
     
     <title>Les News</title>

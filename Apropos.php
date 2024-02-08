@@ -46,9 +46,9 @@
 
 
 <main>
-    <div class="decouvrir" style="position: relative; z-index: 1;">
-        <a href="#text"><img src="ressources/discover.webp" alt="decouvrir" width=100% height=100%></a>
-    </div>
+    <div class="btn_container">
+        <a href="#intro" class="discover_btn">Découvrir</a>
+    </div> 
     <div id="text"></div>
     <div class="animated-on-scroll">
         <div class="intro_container" id="intro">
@@ -75,9 +75,10 @@
                 <div class="titre_intro">
                     <p>THE SENSE, UNE IDÉE NOVATRICE</p>
                 </div>
-
-                <p> The Sense est né d’un projet d’école de quatre étudiants en école de commerce. Se basant sur une idée originaire des États-Unis, les quatre amis décidèrent d’adapter ce concept inédit au marché français en y ajoutant leurs idées novatrices. Mélant deux activités attractives, la Réalité Virtuel et les Escape Game, THE SENSE joint le meilleur des deux mondes pour vous proposer des expériences inédites et époustouflantes. N’hésitez plus et franchisser la frontière du réel.
-                </p>
+                <div class="alaide">
+                    <p> The Sense est né d’un projet d’école de quatre étudiants en école de commerce. Se basant sur une idée originaire des États-Unis, les quatre amis décidèrent d’adapter ce concept inédit au marché français en y ajoutant leurs idées novatrices. Mélant deux activités attractives, la Réalité Virtuel et les Escape Game, THE SENSE joint le meilleur des deux mondes pour vous proposer des expériences inédites et époustouflantes. N’hésitez plus et franchisser la frontière du réel.
+                    </p>
+                </div>
 
         </div>
     </div>
@@ -231,7 +232,7 @@
 
 </script>
 <script src="js/actions.js"></script>
-<script src="js/home.js"></script>
+<script src="js/equip.js"></script>
 
 
 </html>
