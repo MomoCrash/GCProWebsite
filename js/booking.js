@@ -64,21 +64,22 @@ function generateCalendar(size) {
 }
 
 $("#next").click(function() {
-    currentDays+=2;
-    $(".calendar").empty();
-    generateCalendar();
-});
+        currentDays+=2;
+        $(".calendar").empty();
+        generateCalendar(2);
+    });
+
 
 $("#previous").click(function() {
     if (currentDays-2 >= 0) {
         currentDays-=2;
     }
     $(".calendar").empty();
-    generateCalendar();
+    generateCalendar(2);
 });
+
 
 $("#cancel").click(function() {
     window.history.back();
 });
 
-generateCalendar(2)

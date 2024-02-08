@@ -40,10 +40,10 @@ if ($_SESSION["id"]) {
                 <a href="index.html"><img src="ressources/logo_black.svg" alt="logo home"></a>
             </div>
             <div class="nav-right">
-                <a href="navbar.html">NEWS</a>
-                <a href="template.html" class="nav-border">NOS EXPERIENCES</a>
-                <a href="template.html" class="nav-border">A PROPOS DE NOUS</a>
-                <a href="#" class="nav-border">NOS EQUIPEMENTS</a>
+                <a href="new.php">NEWS</a>
+                <a href="lightroom/light_room1.php" class="nav-border">NOS EXPERIENCES</a>
+                <a href="apropos.php" class="nav-border">A PROPOS DE NOUS</a>
+                <a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a>
                 <a href="login.html" class="nav-border"><b>CONNEXION</b></a>
 
             </div>
