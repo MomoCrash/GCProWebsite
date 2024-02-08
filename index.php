@@ -348,26 +348,26 @@
 
                 <div class="lightroom_pricing">
                     <img class="room_logo" src="ressources/LIGHT_ROOM_WHITE.webp" alt="lightroom_logo"/>
-                    <p class="price_txt">DE 10H À 18H: <span class="lightprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
-                    <p class="price_txt">DE 18H À 21H: <span class="lightpriceNoon">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 10H À 18H: <span class="lightprice">50€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 18H À 21H: <span class="lightpriceNoon">40€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
                 </div>
 
                 <div class="darkroom_pricing">
                     <img class="room_logo" src="ressources/DARK_ROOM_WHITE.webp" alt="darkroom_logo"/>
-                    <p class="price_txt">DE 10H À 18H: <span class="lightprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
-                    <p class="price_txt">DE 18H À 21H: <span class="lightpriceNoon">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 10H À 18H: <span class="lightprice">50€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 18H À 21H: <span class="lightpriceNoon">40€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
                 </div>     
 
                 <div class="battleroom_pricing">
                     <img class="room_logo" src="ressources/BATTLE_ROOM.webp" alt="battleroom_logo"/>
-                    <p class="price_txt">DE 10H À 18H: <span class="lightprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
-                    <p class="price_txt">DE 18H À 21H: <span class="lightpriceNoon">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 10H À 18H: <span class="lightprice">50€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 18H À 21H: <span class="lightpriceNoon">40€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
                 </div>    
 
                 <div class="creativeroom_pricing">
                     <img class="room_logo" src="ressources/CREATIVE_ROOM.webp" alt="battleroom_logo"/>
-                    <p class="price_txt">DE 10H À 18H: <span class="lightprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
-                    <p class="price_txt">DE 18H À 21H: <span class="lightpriceNoon">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 10H À 18H: <span class="lightprice">50€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 18H À 21H: <span class="lightpriceNoon">40€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
                 </div>   
 
 
@@ -530,11 +530,11 @@
             </div>
 
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="carousel-control-prev-icon-real" aria-hidden="true"><</span>
             <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="carousel-control-next-icon-real" aria-hidden="true">></span>
             <span class="sr-only">Next</span>
             </a>
 
