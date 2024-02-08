@@ -43,11 +43,15 @@ html{
     scroll-behavior: smooth;
 }
 body {
-    background: url(../ressources/mobile_fond.webp); 
-    background-position:center;
+/*  background-position:center;
     background-repeat: no-repeat;
     background-position: fixed;
-    background-size: cover; 
+    background-size: cover; */
+    background: url(../ressources/mobile_fond.webp); 
+    background-size: contain;
+    resize: both;
+    overflow: scroll;
+    background-repeat: no-repeat;
 }
 
 /*BOUTON DECOUVRIR*/
