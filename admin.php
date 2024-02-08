@@ -48,13 +48,13 @@
               <a href="#"><img src="ressources/logo_black.svg" alt="logo home"></a>
             </div>
             <div class="nav-links">
-              <ul>
-                <li><a href="new.php">NEWS</a></li>
-                <li><a href="#" class="nav-border">NOS EXPERIENCES</a></li>
-                <li><a href="Apropos.html" class="nav-border">A PROPOS DE NOUS</a></li>
-                <li><a href="equipement.html" class="nav-border">NOS EQUIPEMENTS</a></li>
-                <li><a href="#" class="nav-border"><b>CONNEXION</b></a></li>
-              </ul>
+                <ul>
+                    <li><a href="new.php">NEWS</a></li>
+                    <li><a href="rooms/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
+                    <li><a href="apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
+                    <li><a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
+                    <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
+                </ul>
             </div>
             <img src="ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton" id="menu_bouton">
         </nav>
