@@ -252,11 +252,11 @@ if (isset($_SESSION["email"])) {
         }).render("#paypal-button-container");
 
         const btn = document.getElementById("root")
-        var meow = true
+        var isOpen = true
         
-        if(meow){
+        if(isOpen){
         btn.style.background = 'white';
-        meow = false
+        isOpen = false
         }
         
     </script>
