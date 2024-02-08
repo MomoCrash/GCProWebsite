@@ -21,6 +21,8 @@ if (isset($_SESSION["email"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
     <link rel="stylesheet" href="css/booking.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=AZnYiH2U3I5gyVjD-xbHsvDYujBeMmvmD-UmrhfOHTOQLT9LP0Il05FQ6q6H1v5YLSxTZDFviJ5qCnrf"></script>
+
 </head>
 
 <body>
@@ -34,10 +36,12 @@ if (isset($_SESSION["email"])) {
             <div class="separator" style="width: 60%; margin: 10px auto 10px auto;"></div>
             <div class="horizontal-container">
                 <div class="vertical-container">
-                    <img id="previous"> Previous </img>
-                    <img id="next"> Next </img>
-                    <h3 id="week-field" class="text"> </h3>
-                    <div id="calendar" class="calendar"></div>
+                    <div class="prevnextbtn">
+                        <h3 id="week-field" class="text"> </h3>
+                        <a href="#" id="previous" class="bruh" style="text-decoration: none; color: white;"><img><<    </img></a>
+                        <a href="#" id="next" style="text-decoration: none; color: white;"><img>    >></img></a>
+                        <div id="calendar" class="calendar"></div>
+                    </div>
                 </div>
 
                 <?php if(isset($email)): ?>
@@ -54,7 +58,9 @@ if (isset($_SESSION["email"])) {
                         <option value="4">4 joueurs</option>
                         <option value="5">5 joueurs</option>
                     </select>
+                    <div id="paypal-button-container" class="paypal"></div> <!-- PAYPAL PAYMENT -->
                 </div>
+                
                 <?php else: ?>
                 <div class="vertical-container">
                     <div class="login-content">
@@ -95,6 +101,7 @@ if (isset($_SESSION["email"])) {
                                 </input>
                                 <case class="item" id="promo"> APPLIQUER </case>
                             </div>
+                            <div id="paypal-button-container" class="paypal"></div>
                         </div>
                     </div>
                 </div>
@@ -102,8 +109,31 @@ if (isset($_SESSION["email"])) {
             </div>
             <input type='submit' name="submit" id="reserver"> </button>
         </form>
+        <button id="cancel" class="cancel">Cancel</button>
+        <div class="bottom-text-book">
+                <div class="title-bottom">
+                    <p>INFORMATIONS IMPORTANTES</p>
+                </div>
+                <div class="underline-bottom">
+                    <img src="ressources/Rectangle 236.png">
+                </div>
+                <div class="text-bottom">
+                    <b>La room que vous avez sélectionné est une room qui comporte certains passages physiques et/ou éprouvants. Cette room est donc déconseillée aux personnes cardiaques, sensibles, aux femmes enceintes et aux mineurs (un justificatif sera demandé). 
+                    <br><br>
+                    Dans ce cadre, nous vous conseilllons de :<br><br>
+
+                            - Prévoir des chaussures fermées<br>
+                            - Prévoir des vétements confortables pouvant être légérement salis <br><br>
+
+                    En arrivant sur place vous recevrez des consignes qu’il vous faudra respecter scrupuleusement pour votre sécurité.<br><br>
+
+                    <div class="end_text_bottom">*The Sense décline toute responsabilité en cas de non respect de ces consignes.</div></b>
+                </div>
+                <div class="underline-bottom">
+                    <img src="ressources/Rectangle 236.png">
+                </div>
+        </div>
     </div>
-    <button id="cancel"> Cancel </button>
     </div>
     <?php
 
@@ -196,6 +226,42 @@ if (isset($_SESSION["email"])) {
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="js/booking.js"></script>
 
+    <script>
+
+        generateCalendar(2)
+
+        paypal.Buttons({
+            createOrder: function(data, actions){
+            return actions.order.create({
+                purchase_units: [{
+                amount: {
+                    value: '0.5'
+                }
+                }]
+            })
+            },
+            onApprove: function(data, actions){
+            return actions.order.capture().then(function(details){
+                alert("Transaction OK : "+details.payer.name.given_name);
+            })
+            },
+            onError: function (err){
+            console.error('Payment Error :', err);
+            alert("Payment Failed");
+            }
+        }).render("#paypal-button-container");
+
+        const btn = document.getElementById("root")
+        var isOpen = true
+        
+        if(isOpen){
+        btn.style.background = 'white';
+        isOpen = false
+        }
+        
+    </script>
 </body>
+
+
 
 </html>

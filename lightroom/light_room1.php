@@ -17,8 +17,8 @@
           <li><a href="../new.php">NEWS</a></li>
           <li><a href="../lightroom/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
           <li><a href="../apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
-          <li><a href="#" class="nav-border">NOS EQUIPEMENTS</a></li>
-          <li><a href="../equipement.php" id="login" class="nav-border"><b>CONNEXION</b></a></li>
+          <li><a href="../equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
+          <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
         </ul>
       </div>
       <img src="../ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton" id="menu_bouton">
@@ -276,17 +276,17 @@
     const menubtns = document.querySelector(".menu_bouton")
     const navLinks = document.querySelector(".nav-links")
     const navbar = document.getElementById("navbar")
-    var meow = true
+    var isOpen = true
     
 
     menubtns.addEventListener('click',()=>{
       navLinks.classList.toggle('mobile-menu');
-      if(meow){
+      if(isOpen){
       navbar.style.backdropFilter = 'none';
-      meow = false
+      isOpen = false
       }else{
         navbar.style.backdropFilter = 'blur(10px)'
-        meow = true
+        isOpen = true
       }
     })
 

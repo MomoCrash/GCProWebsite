@@ -10,6 +10,16 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Poppins Thin";
+    src: url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.eot");
+    src: url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.svg#Poppins Thin")format("svg");
+}
+
 body {
     font-family: amiko;
     font-weight: 400;
@@ -111,6 +121,7 @@ body {
     width: 90%;
     display: flex;
     justify-content: space-between;
+    margin-left: 5%;
 }
 
 .vertical-container {
@@ -131,7 +142,7 @@ body {
 
 .day-display {
     color: #3B4040;
-    margin: 0;
+    margin: 0;  
 }
 
 .hour-display {
@@ -141,6 +152,8 @@ body {
 
 .text {
     color: white;
+    text-align: center;
+    margin-left: 15%;
 }
 
 #reserver {
@@ -151,14 +164,13 @@ body {
     background-color: transparent;
     background-repeat: no-repeat;
     border: none;
-    padding: 5%;
+    padding: 6%;
     padding-bottom: 0;
     cursor: pointer;
 
 }
 
 #cancel {
-
     margin: auto;
     background-color: transparent;
     border: none;
@@ -166,7 +178,9 @@ body {
     text-decoration: underline;
     cursor: pointer;
     padding: 0;
-
+    font-size: 150%;
+    margin-top: -2%;
+    margin-bottom: 4%;
 }
 
   ::placeholder {
@@ -196,5 +210,84 @@ body {
     }
     .calendar {
         padding: 0;
+    }
+}
+
+.paypal{
+    margin-left: 25%;
+    margin-top: 10%;
+    width: 50%;
+    color: white;
+}
+
+.paypal #document button{
+    color: white;
+}
+
+.prevnextbtn{
+    margin-top: 15%;
+    color: white;
+    text-decoration: none;
+}
+
+.bottom-text-book{
+    font-style: normal;
+    color: white;
+}
+
+.title-bottom{
+    margin-top: 2%;
+    margin-bottom: -2%;
+    font-size: 175%;
+}
+
+.underline-bottom{
+    text-align: center;
+    border: white;
+    border-radius: 100px;
+    margin-bottom: 4%;
+    margin-top: 1%;
+}
+
+.text-bottom{
+    text-align: center;
+    font-size: 120%;
+    font-family: "Poppins Thin";
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.end_text_bottom{
+    font-size: 70%;
+}
+
+.bruh{
+    background: none;
+    margin-left: 10%;
+}
+
+/* MOBILE BRUH */
+
+@media screen and (max-width: 1000px) {
+    .vertical-container{
+        text-align: center;
+    }
+
+    .horizontal-container{
+        text-align: center;
+    }
+
+    .paypal{
+        margin-left: 18%;
+    }
+
+    .text{
+        margin-left: 8%;
+    }
+
+    .bruh{
+        margin-right: 10%;
+        margin-left: 5%;
     }
 }

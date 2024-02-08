@@ -132,17 +132,17 @@
     const menubtns = document.querySelector(".menu_bouton")
     const navLinks = document.querySelector(".nav-links")
     const navbar = document.getElementById("navbar")
-    var meow = true
+    var isOpen = true
     
 
     menubtns.addEventListener('click',()=>{
       navLinks.classList.toggle('mobile-menu');
-      if(meow){
+      if(isOpen){
       navbar.style.backdropFilter = 'none';
-      meow = false
+      isOpen = false
       }else{
         navbar.style.backdropFilter = 'blur(10px)'
-        meow = true
+        isOpen = true
       }
     })
 
