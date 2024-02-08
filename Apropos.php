@@ -107,7 +107,7 @@
                   <input class="inputcontact" id="prenom" name="prenom" size="27" type="text" placeholder="Prenom"/> <br> <br>
                   <input class="inputcontact" id="mail" name="mail" size="27" type="text" placeholder="Mail"/> <br> <br>
                   <input class="inputcontact" id="content" name="content" size="81" type="text" placeholder="Votre message/avis"/></p>
-                  <input type="submit" value="Envoyer" name="submit"> </input>
+                  <input class="submitcontact" type="submit" value="Envoyer" name="submit"> </input>
                 </form>
                 <div class="tel">
                   <p> ou par téléphone </p>
@@ -115,6 +115,11 @@
                 </div>
           </div>
       </div>
+      <br>
+      <br>
+      <br>
+      <br>
+
 
         <?php 
 
