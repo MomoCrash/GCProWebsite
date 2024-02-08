@@ -14,7 +14,7 @@
       <div class="nav-links">
         <ul>
           <li><a href="../new.php">NEWS</a></li>
-          <li><a href="../lightroom/light_room1.php" class="nav_dark_room-border">NOS EXPERIENCES</a></li>
+          <li><a href="../rooms/light_room1.php" class="nav_dark_room-border">NOS EXPERIENCES</a></li>
           <li><a href="../apropos.php" class="nav_dark_room-border">A PROPOS DE NOUS</a></li>
           <li><a href="../equipement.php" class="nav_dark_room-border">NOS EQUIPEMENTS</a></li>
           <li><a href="#" id="login" class="nav_dark_room-border"><b>CONNEXION</b></a></li>

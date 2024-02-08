@@ -13,7 +13,7 @@ html{
 body {
     margin: 0;
     padding: 0;
-    background-image: url("/ressources/fond_a_propos.png"); /* Corrected slashes */ /* Cover the entire area of the element */
+    background-image: url("../ressources/fond_a_propos.png"); /* Corrected slashes */ /* Cover the entire area of the element */
     background-position: 10px 10px;   
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,7 +23,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ffffff; /* Mettez ici la couleur ou l'image de fond souhaitée */
+    background-image: url("../ressources/fond_a_propos.png"); /* Corrected slashes */ /* Cover the entire area of the element */
+    background-position: 10px 10px;   
+    background-repeat: no-repeat;
+    background-size: cover;/* Mettez ici la couleur ou l'image de fond souhaitée */
     padding: 50px;
     padding-top: 5%;
 }
@@ -518,32 +521,7 @@ footer {
     }
 }
 
-.intro_container{
-    display:flex;
-    size:0;
-    background-color:#EAFFFB;
-    margin-left: -1%;
-    margin-right:-1%;
-    height: 1%;
-    position: relative;
-    border: 3px solid green;
-    text-align:center;
-}
 
-.texte_intro {
-    text-align:left;
-    font-family: Abel;
-    color:#646363;
-    font-size: 200%;
-    margin-left:5%;
-    margin-top:3%;
-}
-
-.titre_intro {
-    font-family: Abel;
-    color:#3B4040;
-    font-size:40px;
-}
 .logo{
     height:57.31px;
     margin-bottom: -1%;
@@ -570,14 +548,6 @@ footer {
     margin-bottom: 3%;
 }
 
-.img_trailer{
-    position:absolute;
-    width: auto; 
-    height: 110%; 
-    position: cover;
-    margin-left: -150%;
-    margin-top: -1%;
-}
 
 .play_arrow{
     position:absolute;

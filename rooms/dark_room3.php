@@ -14,7 +14,7 @@
       <div class="nav-links">
         <ul>
           <li><a href="../new.php">NEWS</a></li>
-          <li><a href="../lightroom/light_room1.php" class="nav_dark_room-border">NOS EXPERIENCES</a></li>
+          <li><a href="../rooms/light_room1.php" class="nav_dark_room-border">NOS EXPERIENCES</a></li>
           <li><a href="../apropos.php" class="nav_dark_room-border">A PROPOS DE NOUS</a></li>
           <li><a href="../equipement.php" class="nav_dark_room-border">NOS EQUIPEMENTS</a></li>
           <li><a href="#" id="login" class="nav_dark_room-border"><b>CONNEXION</b></a></li>
@@ -24,7 +24,7 @@
   </nav>
   <header></header>
   <div class="loginbg">
-    <form action="../account.php?method=login&redirect=../darkroom/dark_room3.php" method="POST" class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
+    <form action="../account.php?method=login&redirect=../rooms/dark_room3.php" method="POST" class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
           <div class="login-content">
               <p><SPAN STYLE="color:#000000"><b>Connexion</b></span></p>
               <p> Identifiant <input class="login-input form-label" type="email" name="email" placeholder="abc@mail.fr"> </input>

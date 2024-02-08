@@ -14,7 +14,7 @@
       <div class="nav-links">
         <ul>
           <li><a href="../new.php">NEWS</a></li>
-          <li><a href="../lightroom/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
+          <li><a href="../rooms/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
           <li><a href="../apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
           <li><a href="../equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
           <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
@@ -24,7 +24,7 @@
   </nav>
   <header></header>
   <div class="loginbg">
-    <form action="../account.php?method=login&redirect=../lightroom/light_room2.php" method="POST" class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
+    <form action="../account.php?method=login&redirect=../rooms/light_room2.php" method="POST" class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
           <div class="login-content">
               <p><SPAN STYLE="color:#000000"><b>Connexion</b></span></p>
               <p> Identifiant <input class="login-input form-label" type="email" name="email" placeholder="abc@mail.fr"> </input>
@@ -87,7 +87,7 @@
 
   <!-- DERNIERE PARTIE -->
   <div class="intro_exp_darkroom">
-  <a href="../lightroom/light_room1.php"><img class="tonpere" src="../ressources/retournnoir.png"></a>
+  <a href="../lightroom/light_room1.php"><img class="redirectbtn" src="../ressources/retournnoir.png"></a>
     
     <div class="img_dark2">
       <img src="../ressources/lightroom_banner2.png">
