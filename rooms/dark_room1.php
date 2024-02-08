@@ -24,7 +24,7 @@
   </nav>
   <header></header>
   <div class="loginbg">
-    <form action="../account.php?method=login&redirect=../darkroom/dark_room1.php" method="POST" class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
+    <form action="../account.php?method=login&redirect=../rooms/dark_room1.php" method="POST" class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
           <div class="login-content">
               <p><SPAN STYLE="color:#000000"><b>Connexion</b></span></p>
               <p> Identifiant <input class="login-input form-label" type="email" name="email" placeholder="abc@mail.fr"> </input>
