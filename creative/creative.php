@@ -99,40 +99,21 @@ if (isset($_SESSION["email"])) {
     <div class="mid_contenair">
         <div class="animated-on-scroll" style="margin-bottom: 10px">
             <div id="darkRoomDiv">
-                <div id="dark-content" class="horizontal-container">
-                    <div class="vertical-container">
-                        <h1>HEY HEY HEY</h1>
-                        <p>HEY HEY HEY</p>
-                        <div class="horizontal-container">
-                            <div class="vertical-container">
-                                <img class="logoroom" src="../ressources/temps_estime.png" alt="Kevin">
-                                <p>60 minutes</p>
-                            </div>
-                            <div class="vertical-container">
-                                <img class="logoroom" src="../ressources/bn_joueur.png" alt="Kevin">
-                                <p>5-2-1</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="separator" style="height: 200px"></div>
-                    <div class="vertical-container">
-                        <p>HEY HEY HEY</p>
-                        <p>HEY HEY HEY</p>
-                    </div>
-                    <div class="separator" style="height: 200px"></div>
-                    <div class="vertical-container">
-                        <p>HEY HEY HEY</p>
-                        <p>HEY HEY HEY</p>
-                    </div>
+                <div id="dark-content" class="horizontal-container" style=" margin: auto;">
                 </div>
             </div>
         </div>
         <div class="animated-on-scroll" style="margin-bottom: 10px">
-            <div class="imgldb" id="lightRoomDiv"></div>
+            <div id="lightRoomDiv">
+                <div id="light-content" class="horizontal-container">
+                </div>
+            </div>
         </div>
         <div class="animated-on-scroll" style="margin-bottom: 10px">
-            <div class="imgldb" id="battleRoomDiv"></div>
+            <div id="battleRoomDiv">
+                <div id="battle-content" class="horizontal-container">
+                </div>
+            </div>
         </div>
     </div>
 
