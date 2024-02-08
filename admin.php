@@ -48,13 +48,13 @@
               <a href="#"><img src="ressources/logo_black.svg" alt="logo home"></a>
             </div>
             <div class="nav-links">
-              <ul>
-                <li><a href="new.php">NEWS</a></li>
-                <li><a href="#" class="nav-border">NOS EXPERIENCES</a></li>
-                <li><a href="Apropos.html" class="nav-border">A PROPOS DE NOUS</a></li>
-                <li><a href="equipement.html" class="nav-border">NOS EQUIPEMENTS</a></li>
-                <li><a href="#" class="nav-border"><b>CONNEXION</b></a></li>
-              </ul>
+                <ul>
+                    <li><a href="new.php">NEWS</a></li>
+                    <li><a href="rooms/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
+                    <li><a href="apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
+                    <li><a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
+                    <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
+                </ul>
             </div>
             <img src="ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton" id="menu_bouton">
         </nav>
@@ -125,19 +125,21 @@
                 </form>
             </div>
         </div>
-        <div class="promo">
-        <h2>Ajouter un Code Promo</h2>
-        <form method="post" action="codepromo.php">
-            <div class="form-group">
-                <label for="code">Code Promo:</label>
-                <input type="text" id="code" name="code" maxlength="10" required>
+        <div class="animated-on-scroll">
+            <div class="promo">
+            <h2>Ajouter un Code Promo</h2>
+                <form method="post" action="codepromo.php">
+                    <div class="form-group">
+                        <label for="code">Code Promo:</label>
+                        <input type="text" id="code" name="code" maxlength="10" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="usages_left">Nombre d'usages:</label>
+                        <input type="number" id="usages_left" name="usages_left" min="1" max="100" required>
+                    </div>
+                    <button type="submit">Ajouter le Code</button>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="usages_left">Nombre d'usages:</label>
-                <input type="number" id="usages_left" name="usages_left" min="1" max="100" required>
-            </div>
-            <button type="submit">Ajouter le Code</button>
-        </form>
         </div>
         <div class="animated-on-scroll">
             <div class="admin-container">
@@ -156,7 +158,7 @@
                                 <?php
                                     $users = array();
                                     try {
-                                        $stmt = $conn->query("SELECT id, name, email, admin FROM users"); // Assurez-vous que 'users' est le nom de votre table d'utilisateurs
+                                        $stmt = $conn->query("SELECT id, name, email, admin FROM users");
                                         $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     } catch(PDOException $e) {
                                         echo "Erreur: " . $e->getMessage();
@@ -169,8 +171,9 @@
                                     <td><?php echo htmlspecialchars($user['name']); ?></td>
                                     <td><?php echo htmlspecialchars($user['email']); ?></td>
                                     <td>
+                                        <!-- Champ caché pour s'assurer qu'une valeur est envoyée même si la case est décochée -->
+                                        <input type="hidden" name="admin[<?php echo $user['id']; ?>]" value="0">
                                         <input type="checkbox" name="admin[<?php echo $user['id']; ?>]" value="1" <?php echo ($user['admin'] == 1 ? 'checked' : ''); ?>>
-                                        
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>

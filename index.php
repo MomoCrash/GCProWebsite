@@ -10,16 +10,11 @@
         <link rel="stylesheet" type="text/css" href="css/home.css" />
         <link rel="stylesheet" href="css/bookingstyle.css">
         <link rel="stylesheet" href="css/booking.css">
-<<<<<<< Updated upstream
-=======
-        
->>>>>>> Stashed changes
+        <link href="css/mainstyle.css" rel="stylesheet" type="text/css"/>
 
         <title>The Sense - Home</title>
     </head>
     <body>
-<<<<<<< Updated upstream
-=======
         <nav class="navbar" id="navbar" style="position: inherit;">
             <div class="nav-img">
                 <a href="index.php"><img src="ressources/logo_black.svg" alt="logo home"></a>
@@ -52,7 +47,6 @@
                 </div>
             </form>
         </div>
->>>>>>> Stashed changes
 
         <!--=================================BOUTON DECOUVRIR=================================-->
         <div class="btn_container">
@@ -103,7 +97,7 @@
 
         
             <!--INTRO-->
-            <div class="intro_exp">
+            <div class="intro_index">
 
                 <div class="title">
                     <p>LA RÉALITÉ À PORTÉE DE MAIN</p>
@@ -749,9 +743,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="js/booking.js"></script>
+    <script src="js/actions.js"></script>
 
     <script>
         generateCalendar(7)
     </script>
     
+    <script>
+    const menubtns = document.querySelector(".menu_bouton")
+    const navLinks = document.querySelector(".nav-links")
+    const navbar = document.getElementById("navbar")
+    var isOpen = true
+    
+
+    menubtns.addEventListener('click',()=>{
+      navLinks.classList.toggle('mobile-menu');
+      if(isOpen){
+      navbar.style.backdropFilter = 'none';
+      isOpen = false
+      }else{
+        navbar.style.backdropFilter = 'blur(10px)'
+        isOpen = true
+      }
+    })
+
+
+
+    </script>
+
+
+
 </html>

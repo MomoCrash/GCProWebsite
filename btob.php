@@ -51,21 +51,48 @@
     </div>
 
         
-    <div class="btn_container" style="background-image: url(ressources/bryceforme1.webp); background-size: 100%;">
-        <div id="btn">
-        <a href="#text"><button class="btn_decouvrirb2b" type="button" >DÉCOUVRIR</button></a>
-        </div>
-    </div>
-    <div id="text"></div>
-    <main>
-        <div class="animated-on-scroll">
-            <div class="firs-div">
-                <div class="img-first"><img src="ressources\VIDEObtob.png" alt="header"></div>
-                <div class="text-content" >
-                    <h1>THE SENSE POUR LES PROFESSIONELS</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <!--=================================BOUTON DECOUVRIR=================================-->
+            <div class="btn_container">
+                <a href="#intro" class="discover_btn">Découvrir</a>
+            </div> 
+             <!--=================================BANDEAU INTRO=================================-->
+            <div class="intro_container" id="intro">
+                <!--LOGO A GAUCHE-->
+                <div class="popup-btn"><img class="img_trailer" src="ressources/VIDEO.webp"/></div>
+                
+                <!--POPUP VIDEO-->
+                <div class="popup-wrap">
+                
+                    <div class="popup-box">
+                        
+                        <div class="line"></div>
+
+                        <div class="trailer">
+                            <video id="video" width="1090"><source src="ressources/Trailer/Trailer.mp4" type="video/mp4" /></video>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                
+                <!--TEXTE A DROITE-->
+                <div class = "text_intro">
+
+                    <div class="title_intro">
+                        <p>QU'EST CE QUE <img class="logo" src="ressources/Sense.webp"/> ?</p>
+                    </div> 
+        
+                    <p> Préparez-vous pour une expérience unique qui vous emmenera dans un autre univers.
+                        Vivez vos émotions comme vous ne l’avez jamais fait auparavant. Avec THE SENSE
+                        explorez d’autres dimensions et vivez l’impossible en interragissant avec un
+                        environnement dynamique et virtuel. Ce n’est pas une expérience en réalité virtuelle
+                        que vous vivez, c’est la réalité.
+                    </p>
+
+                    <a href="Apropos.php" class="about_btn">DÉCOUVREZ THE SENSE ➜</a>
+                </div>
+        </div>
+
+        <!--ESPACE-->
+        <div class="space"></div>
         </div>
         
 
@@ -216,9 +243,9 @@
         </script>
         <script src="js/actions.js"></script>
         <script src="js/animation.js"></script>
-
+        <script src="js/btob.js"></script>
     </body>
-
+    
 </html>
 <script>
     const menubtns = document.querySelector(".menu_bouton")
@@ -237,5 +264,6 @@
         isOpen = true
       }
     })
+
 
 </script>

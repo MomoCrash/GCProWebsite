@@ -585,6 +585,10 @@ ul {
     margin-left:5%;
 }
 
+.img_trailer:hover{
+    cursor: pointer;
+}
+
 .intro_container{
     display:flex;
     size:0;
@@ -701,6 +705,10 @@ ul {
     }
     .red_texte{
         text-align:center;
+    }
+
+    .top_container{
+        margin-left: 12%
     }
 }
 
@@ -1004,6 +1012,11 @@ footer {
 .intro_exp{
     background-image: url(../ressources/forme9.webp);
     background-size: 100%;
+    margin-top: -1%;
+    padding-top: 90px;
+}
+
+.intro_index{
     margin-top: -1%;
     padding-top: 90px;
 }
@@ -1338,10 +1351,6 @@ footer {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
-
 /* Fading animation */
 .fade {
   animation-name: fade;
@@ -1421,4 +1430,69 @@ footer {
 .tonpere{
     margin-left: 15%;
     margin-bottom: 1%;
+}
+
+/*TRAILER*/
+.trailer{
+    position: fixed;
+    top: -17.2%;
+    left: 50%;
+    transform: translate(-50%,50%) scale(0);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: -1000;
+    pointer-events: none;
+}
+
+.trailer.active{
+    transform: translate(-50%,50%) scale(1);
+    z-index: 1000;
+    pointer-events: none;
+}
+
+
+@media (max-width:991px) {
+    .trailer video{
+        margin-top: 150px;;
+        max-width:90%;
+    }
+}
+/*ANIMATION LIGNE*/
+
+.line { 
+    margin: auto;
+    width: 55%; 
+    height: 650px; 
+    position: fixed;    
+    top: 50%; 
+    left: 50%; 
+    display: flex;
+    transform: translate(-50%, -50%); 
+    z-index:-1000;
+} 
+
+.line.active::before { 
+    content: ""; 
+    position: fixed;
+    display: flex; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: black; 
+    animation: slidein, openin;
+    animation-duration: 1s, 2s; 
+    animation-delay: 0s, 1s;
+    z-index: 1000;
+} 
+
+@keyframes slidein {
+    from {width:0px; height:3px; top:50%}
+    to   {width:100%;height:3px; top:50%}
+}
+
+@keyframes openin {
+    from { width:100%;height:3px; top:50%}
+    to   { transform: scaleY(1);}
 }

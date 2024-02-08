@@ -1,36 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<?php
-
-require_once "sql/sql-manager.php";
-
-session_start();
-if (isset($_SESSION["email"])) {
-
-    $email = $_SESSION["email"];
-    $name = $_SESSION["name"];
-    $id = $_SESSION["id"];
-
-}
-
-?>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking</title>
-    <link rel="stylesheet" href="css/booking.css">
-    <script src="https://www.paypal.com/sdk/js?client-id=AZnYiH2U3I5gyVjD-xbHsvDYujBeMmvmD-UmrhfOHTOQLT9LP0Il05FQ6q6H1v5YLSxTZDFviJ5qCnrf"></script>
-
-</head>
-
 <body>
-
     <!-- Grand Calendrier de présentation de la semaine a venir -->
-
     <div class="container-back">
-        <form action="booking.php" method="POST">
+        <form method="POST">
             <h2 class="booking-title" style="font-weight: 700;"> VOTRE RESERVATION EST PRETE ! </h2>
             <h4 class="booking-subtitle" style="font-family: abel;"> IL NE RESTE PLUS QU'A VALIDER ! </h4>
             <div class="separator" style="width: 60%; margin: 10px auto 10px auto;"></div>
@@ -38,8 +9,10 @@ if (isset($_SESSION["email"])) {
                 <div class="vertical-container">
                     <div class="prevnextbtn">
                         <h3 id="week-field" class="text"> </h3>
-                        <a href="#" id="previous" class="bruh" style="text-decoration: none; color: white;"><img><<    </img></a>
-                        <a href="#" id="next" style="text-decoration: none; color: white;"><img>    >></img></a>
+                        <a href="#" id="previous" class="bruh" style="text-decoration: none; color: white;"><img>
+                            << </img>
+                        </a>
+                        <a href="#" id="next" style="text-decoration: none; color: white;"><img> >></img></a>
                         <div id="calendar" class="calendar"></div>
                     </div>
                 </div>
@@ -60,7 +33,7 @@ if (isset($_SESSION["email"])) {
                     </select>
                     <div id="paypal-button-container" class="paypal"></div> <!-- PAYPAL PAYMENT -->
                 </div>
-                
+
                 <?php else: ?>
                 <div class="vertical-container">
                     <div class="login-content">
@@ -101,40 +74,53 @@ if (isset($_SESSION["email"])) {
                                 </input>
                                 <case class="item" id="promo"> APPLIQUER </case>
                             </div>
-                            <div id="paypal-button-container" class="paypal"></div>
+                            <div class="horizontal-container">
+                                <div id="paypal-button-container" class="paypal"></div>
+                                <div class="separator" style="height: 100px; margin: 10px auto 10px auto;"></div>
+                                <div class="vertical-container">
+                                    <h3 style="margin: 0;">Paiement Individuel</h3>
+                                    <h5 style="margin: 0; margin-bottom: 10%">(Sur place)</h5>
+                                    <input type="checkbox" name="onPlace" id="onPlace">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <?php endif; ?>
             </div>
-            <input type='submit' name="submit" id="reserver"> </button>
+            <a href="#bookPanel"> <input type='submit' name="submit" id="reserver"> </input></a>
         </form>
         <button id="cancel" class="cancel">Cancel</button>
         <div class="bottom-text-book">
-                <div class="title-bottom">
-                    <p>INFORMATIONS IMPORTANTES</p>
-                </div>
-                <div class="underline-bottom">
-                    <img src="ressources/Rectangle 236.png">
-                </div>
-                <div class="text-bottom">
-                    <b>La room que vous avez sélectionné est une room qui comporte certains passages physiques et/ou éprouvants. Cette room est donc déconseillée aux personnes cardiaques, sensibles, aux femmes enceintes et aux mineurs (un justificatif sera demandé). 
+            <div class="title-bottom">
+                <p>INFORMATIONS IMPORTANTES</p>
+            </div>
+            <div class="underline-bottom">
+                <img src="../ressources/Rectangle 236.png">
+            </div>
+            <div class="text-bottom">
+                <b>La room que vous avez sélectionné est une room qui comporte certains passages physiques et/ou
+                    éprouvants. Cette room est donc déconseillée aux personnes cardiaques, sensibles, aux femmes
+                    enceintes et aux mineurs (un justificatif sera demandé).
                     <br><br>
                     Dans ce cadre, nous vous conseilllons de :<br><br>
 
-                            - Prévoir des chaussures fermées<br>
-                            - Prévoir des vétements confortables pouvant être légérement salis <br><br>
+                    - Prévoir des chaussures fermées<br>
+                    - Prévoir des vétements confortables pouvant être légérement salis <br><br>
 
-                    En arrivant sur place vous recevrez des consignes qu’il vous faudra respecter scrupuleusement pour votre sécurité.<br><br>
+                    En arrivant sur place vous recevrez des consignes qu’il vous faudra respecter scrupuleusement pour
+                    votre sécurité.<br><br>
 
-                    <div class="end_text_bottom">*The Sense décline toute responsabilité en cas de non respect de ces consignes.</div></b>
-                </div>
-                <div class="underline-bottom">
-                    <img src="ressources/Rectangle 236.png">
-                </div>
+                    <div class="end_text_bottom">*The Sense décline toute responsabilité en cas de non respect de ces
+                        consignes.</div>
+                </b>
+            </div>
+            <div class="underline-bottom">
+                <img src="../ressources/Rectangle 236.png">
+            </div>
         </div>
     </div>
-    </div>
+
     <?php
 
             $day = $_COOKIE['date'];
@@ -151,8 +137,18 @@ if (isset($_SESSION["email"])) {
                 $player_number = $_POST["player_number"];
                 $discorver_way = $_POST["discorver_way"];
 
-                //// TODO
-                $paid = 0;
+                $allowed = false;
+                if (isset($_POST["onPlace"]) && $_POST["onPlace"]) {
+                    $paid = 0;
+                    $allowed = true;
+                } else if (isset($_COOKIE["paid"])) {
+                    $paid = $_COOKIE["paid"];
+                    if ($paid == 0) {
+                        $allowed = false;
+                    } else {
+                        $allowed = true;
+                    }
+                }
 
                 $request =  $conn->prepare("SELECT * FROM users WHERE email='" . $email . "';");
                 $request->execute();
@@ -201,67 +197,74 @@ if (isset($_SESSION["email"])) {
                     $name = $_POST["name"];
                     $player_number = $_POST["player_number"];
 
-                    //// TODO
-                    $paid = 0;
+                    $allowed = false;
+                    if (isset($_POST["onPlace"]) && $_POST["onPlace"]) {
+                        $paid = 0;
+                        $allowed = true;
+                    } else if (isset($_COOKIE["paid"])) {
+                        $paid = $_COOKIE["paid"];
+                        if ($paid == 0) {
+                            $allowed = false;
+                        } else {
+                            $allowed = true;
+                        }
+                    }
 
-                    date_default_timezone_set('Europe/Paris'); 
-                    $sqlDate = date("Y-m-d H:i:s", strtotime($day));
+                    if ($allowed) {
+                        date_default_timezone_set('Europe/Paris'); 
+                        $sqlDate = date("Y-m-d H:i:s", strtotime($day));
 
-                    $request =  $conn->prepare("UPDATE `users` SET `fidelity` = '". (intval($currentRow["fidelity"])+1) ."' WHERE `users`.`id` = ". $id .";");
-                    $request->execute();
+                        $request =  $conn->prepare("UPDATE `users` SET `fidelity` = '". (intval($currentRow["fidelity"])+1) ."' WHERE `users`.`id` = ". $id .";");
+                        $request->execute();
 
-                    $request =  $conn->prepare("INSERT INTO `booking` (`id`, `user_id`, `date`, `player_number`, `paid`, `discover_way`) VALUES (NULL, '" . $id . "', '" . $sqlDate . "', '" . $player_number . "', '" . $paid . "', '4');");
-                    $request->execute();
+                        $request =  $conn->prepare("INSERT INTO `booking` (`id`, `user_id`, `date`, `player_number`, `paid`, `discover_way`) VALUES (NULL, '" . $id . "', '" . $sqlDate . "', '" . $player_number . "', '" . $paid . "', '4');");
+                        $request->execute();
+                    } else {
+                        echo "Echec lors du payement veillez payer sur place ou réesayer.";
+                    }
 
                 }
 
             }
 
         ?>
-    <div class="caldendrierdue">
-        <div id="calendar" class="calendar"></div>
-    </div>
-    
+
 
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="js/booking.js"></script>
+    <script src="../js/booking.js"></script>
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=AZnYiH2U3I5gyVjD-xbHsvDYujBeMmvmD-UmrhfOHTOQLT9LP0Il05FQ6q6H1v5YLSxTZDFviJ5qCnrf">
+    </script>
 
     <script>
+    generateCalendar(2)
 
-        generateCalendar(2)
-
-        paypal.Buttons({
-            createOrder: function(data, actions){
+    paypal.Buttons({
+        createOrder: function(data, actions) {
             return actions.order.create({
                 purchase_units: [{
-                amount: {
-                    value: '0.5'
-                }
+                    amount: {
+                        value: '0.5'
+                    }
                 }]
             })
-            },
-            onApprove: function(data, actions){
-            return actions.order.capture().then(function(details){
-                alert("Transaction OK : "+details.payer.name.given_name);
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                document.cookie = "paid=1";
             })
-            },
-            onError: function (err){
-            console.error('Payment Error :', err);
-            alert("Payment Failed");
-            }
-        }).render("#paypal-button-container");
+        },
+        onError: function(err) {
+            document.cookie = "paid=1";
+        }
+    }).render("#paypal-button-container");
 
-        const btn = document.getElementById("root")
-        var isOpen = true
-        
-        if(isOpen){
+    const btn = document.getElementById("root")
+    var isOpen = true
+
+    if (isOpen) {
         btn.style.background = 'white';
         isOpen = false
-        }
-        
+    }
     </script>
 </body>
-
-
-
-</html>

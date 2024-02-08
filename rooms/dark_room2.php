@@ -6,25 +6,25 @@
     <title>Document</title>
     <link href="../css/mainstyle.css" rel="stylesheet" type="text/css"/>
 </head>
-<body class="fond_template">
-  <nav class="navbar" id="navbar">
+<body class="fond_dark_room">
+  <nav class="navbar_dark_room" id="navbar">
       <div class="nav-img">
         <a href="../index.php"><img src="../ressources/logo_black.svg" alt="logo home"></a>
       </div>
       <div class="nav-links">
         <ul>
           <li><a href="../new.php">NEWS</a></li>
-          <li><a href="../lightroom/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
-          <li><a href="../apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
-          <li><a href="../equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
-          <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
+          <li><a href="../rooms/light_room1.php" class="nav_dark_room-border">NOS EXPERIENCES</a></li>
+          <li><a href="../apropos.php" class="nav_dark_room-border">A PROPOS DE NOUS</a></li>
+          <li><a href="../equipement.php" class="nav_dark_room-border">NOS EQUIPEMENTS</a></li>
+          <li><a href="#" id="login" class="nav_dark_room-border"><b>CONNEXION</b></a></li>
         </ul>
       </div>
       <img src="../ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton" id="menu_bouton">
   </nav>
   <header></header>
   <div class="loginbg">
-    <form action="../account.php?method=login&redirect=../lightroom/light_room2.php" method="POST" class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
+    <form action="../account.php?method=login&redirect=../rooms/dark_room2.php" method="POST" class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
           <div class="login-content">
               <p><SPAN STYLE="color:#000000"><b>Connexion</b></span></p>
               <p> Identifiant <input class="login-input form-label" type="email" name="email" placeholder="abc@mail.fr"> </input>
@@ -38,9 +38,9 @@
   </div>
 
   <div class="top_container">
-    <div class="position_logo"><img src="../ressources/logo_lightroom.png" alt="logos"></div>
-    <div class="position_logo_mobile">
-      <img src="../ressources/logo_lightroom.png" >
+    <div class="position_logo"><img src="../ressources/logo_top_darkroom.png" alt="logos"></div>
+    <div class="position_logo_mobile_dark">
+      <img src="../ressources/logo_top_darkroom.png" >
     </div>
   </div>
 
@@ -51,20 +51,37 @@
   </div>
   <div id="text"></div>
 
-    <div class="intro_container" id="intro">
+    <div class="intro_container_dark_room" id="intro">
 
-      <a href="#img1"><img class="img_trailer" src="../ressources/image_battle.png"/></a>
+      <div class="popup-btn"><img class="img_trailer" src="../ressources/darkroom_video.png"/></div>
+              
+              <!--POPUP VIDEO-->
+              <div class="popup-wrap">
+              
+                  <div class="popup-box">
+                      
+                      <div class="line"></div>
+
+                      <div class="trailer">
+                          <video id="video" width="1090"><source src="../ressources/Trailer/Trailer.mp4" type="video/mp4" /></video>
+                      </div>
+                  </div>
+              </div>
 
 
-      <div class = "texte_intro">
+      <div class = "texte_intro_white">
 
-          <div class="titre_intro">
-              <p>QU'EST CE QUE LA <img src="../ressources/BATTLE_ROOM_pc.png" class="battle_room_logo"/><img src="../ressources/BATTLE_ROOM_mobile.png" class="battle_room_logo_mobile"/> ?</p>
+          <div class="titre_intro_white">
+              <p>QU'EST CE QUE LA <img src="../ressources/darkroom.webp" class="battle_room_logo"/><img src="../ressources/darkroom.webp" class="battle_room_logo_mobile"/> ?</p>
           </div> 
 
-          <p> Vous cherchez à connaitre qui est le meilleur dans la famille ou qui fera le S.A.M ce
-            soir ? Venez régler vos comptes dans la BATTLE ROOM par équipe de 1 à 4 joueurs soit 8 joueurs au maximum. Au travers de nos différents modes de jeux, prouvez votre courage et montrez qu’au reste du monde que vous êtes le meilleur. Battez tous les records, faites ressortirvotre côté compétitif et pas de quartier ! N'attendez plus et rejoignez l’arène, pour prouver que vous serez le prochain champion de THE SENSE.
+          <p> Vous pensez ne pas avoir peur du noir ? Que rien ne pourra vous effrayer ? Vous avez tord. Avec la DARK ROOM, toutes vos peurs deviendront réelles et en rien de temps, il ne 
+            vous restera plus que vos jambes pour vous enfuir. Vous vous penser suffisamment
+            fort pour affronter vos peurs ? Franchissez donc le seuil de la DARK ROOM. Vous avez
+            hâte d’y entrer mais dans le noir... Personne ne vous verra mourir.
           </p>
+
+          <div class="red_texte"><p>*Les expériences proposées dans cette salle ne conviennent pas à un public mineur ou sensible.</p></div>
 
 
 
@@ -73,18 +90,17 @@
   </div>
 
   <!-- DERNIERE PARTIE -->
+  
   <div class="intro_exp_darkroom">
-  <a href="../lightroom/light_room1.php"><img class="tonpere" src="../ressources/retournnoir.png"></a>
+  <a href="dark_room1.php"><img class="redirectbtn" src="../ressources/BOUTON RETOUR.png"></a>
     
     <div class="img_dark2">
-      <img src="../ressources/lightroom_banner2.png">
+      <img src="../ressources/imgdarkroomtop2.png">
     </div>
 
     <div class="space"></div>
 
 </div>
-
-
 
 </body>
 
@@ -92,17 +108,22 @@
 
 <footer>
   <div class="footer-nav">
-      <a href="#">Nous contacter</a>
-      <a href="#">Réservation</a>
-      <a href="#">FAQ</a>
+      <a href="#"><span>Nous contacter</span></a>
+      <a href="#"><span>Réservation</span></a>
+      <a href="#"><span>FAQ</span></a>
   </div>
   <div class="copyright">
       © THE SENSE, SAS. Tous droits réservés
   </div>
   <div class="moda">
-      <a href="#">Modalités </a>
+      <a href="#"><span>Modalités</span></a>
       <span> | </span>
-      <a href="#">  Politique de confidentialité </a>
+      <a href="#"><span>Politique de confidentialité </span></a>
+      <div class="contact">
+        <span> | </span>
+        <a href="#"><span>Contact</span></a>
+      </div>
+      
   </div>
   <div class="social-icons">
       <!-- Replace # with actual links to your social media profiles -->
@@ -166,5 +187,6 @@
   </script>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="../js/actions.js"></script>
+  <script src="../js/home.js"></script>
 
 </html>

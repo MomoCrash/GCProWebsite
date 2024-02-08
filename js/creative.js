@@ -22,6 +22,11 @@ function open(page) {
   // Set the opened page to current
   lastOpen=page;
 
+  var newurl = window.location.origin + window.location.pathname;
+  window.history.pushState({path:newurl},'',newurl);
+
+  addGetUrl("page", page)
+
   // Switch beetween the different states
   switch (page) {
     case "dark":
@@ -76,8 +81,9 @@ function modeSelector(name, modes, map, images) {
         }
 
         horizontalContainer.click(function() {
-          mapSelector(name, map, images);
           document.cookie="mode=" + modes[index];
+          addGetUrl("mode", modes[index])
+          mapSelector(name, map, images);
           clickSection = true;
         });
         largeContainer.append(horizontalContainer);
@@ -107,6 +113,7 @@ function mapSelector(name, map, images) {
 
         horizontalContainer.click(function() {
           document.cookie="map=" + map[index];
+          addGetUrl("map", map[index])
           difficultySelector(name, ["Flipette", "Dark Room", "Fou Furieux"])
           clickSection = true;
         });
@@ -130,8 +137,9 @@ function difficultySelector(name, difficulty) {
     horizontalContainer.text("Description de la dificulté")
 
     horizontalContainer.click(function() {
-      console.log("Salut")
       document.cookie="difficulty=" + difficulty[index];
+      addGetUrl("difficulty", difficulty[index])
+      addGetUrl("inPayment", "true")
       payExperience(name);
       clickSection = true;
     });
@@ -143,11 +151,44 @@ function difficultySelector(name, difficulty) {
 }
 
 function payExperience(name) {
-  console.log('NIQUE ZEUBI');
-  generateCalendar(2);
-  console.log('NIQUE LABAC');
   closeAll();
-  let content = $('#' + name + '-content');
+  hideSection(name);
+  $("#bookPanel").css("display", "flex")
+}
+
+function addGetUrl(name, param) {
+  let queryAdd = window.location.search;
+  console.log(queryAdd);
+  if (queryAdd == "") {
+    queryAdd = '?' + name + '=' + param;
+  } else {
+    queryAdd += '&' + name + '=' + param;
+  }
+  var newurl = window.location.origin + window.location.pathname + queryAdd;
+  window.history.pushState({path:newurl},'',newurl);
+}
+
+function hideSection(name) {
+   // Switch beetween the different states
+   switch (name) {
+    case "dark":
+      $("#lightRoomDiv").css("display", "none");
+      $("#battleRoomDiv").css("display", "none");
+      break;
+
+    case "light":
+      $("#darkRoomDiv").css("display", "none");
+      $("#battleRoomDiv").css("display", "none");
+      break;
+
+    case "battle":
+      $("#lightRoomDiv").css("display", "none");
+      $("#darkRoomDiv").css("display", "none");
+      break;
+  
+    default:
+      break;
+  }
 }
 
 function reduceAll() {
@@ -177,3 +218,8 @@ $("#lightRoomDiv").click(function() {
 $("#battleRoomDiv").click(function() {
   open("battle");
 });
+
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('inPayment') == "true") {
+  payExperience(urlParams.get('page'))
+}

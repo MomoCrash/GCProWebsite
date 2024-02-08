@@ -16,7 +16,7 @@
         <div class="nav-links">
             <ul>
                 <li><a href="new.php">NEWS</a></li>
-                <li><a href="lightroom/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
+                <li><a href="rooms/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
                 <li><a href="apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
                 <li><a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
                 <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
@@ -45,23 +45,44 @@
 
 
 <main>
-  <div class="animated-on-scroll">
-    <div class="decouvrir">
+    <div class="decouvrir" style="position: relative; z-index: 1;">
         <a href="#text"><img src="ressources/discover.webp" alt="decouvrir" width=100% height=100%></a>
     </div>
     <div id="text"></div>
     <div class="animated-on-scroll">
-      <div class="firs-div">
-          <div class="img-first"><img src="ressources\VIDEObtob.png" alt="header"></div>
-          <div class="text-content">
-              <h1>THE SENSE POUR LES PROFESSIONELS</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-      </div>
-  </div>
-    <div class="first-p"><h1>QUI SOMMES-NOUS ?</h1>
-      <p>The Sense est une société formée par quatre étudiants en école de commerce qui détiennent la majorité des parts. Le restant étant la propriété de DreamAway, entreprise française spécialiste du milieu de la VR.
-    </p></div>
+        <div class="intro_container" id="intro">
+
+            <!--LOGO A GAUCHE-->
+            <div class="popup-btn"><img class="img_trailer" src="ressources/VIDEO.webp"/></div>
+                
+                <!--POPUP VIDEO-->
+                <div class="popup-wrap">
+                
+                    <div class="popup-box">
+                        
+                        <div class="line"></div>
+
+                        <div class="trailer">
+                            <video id="video" width="1090"><source src="ressources/Trailer/Trailer.mp4" type="video/mp4" /></video>
+                        </div>
+                    </div>
+                </div>
+
+
+            <div class="texte_intro">
+
+                <div class="titre_intro">
+                    <p>THE SENSE, UNE IDÉE NOVATRICE</p>
+                </div>
+
+                <p> The Sense est né d’un projet d’école de quatre étudiants en école de commerce. Se basant sur une idée originaire des États-Unis, les quatre amis décidèrent d’adapter ce concept inédit au marché français en y ajoutant leurs idées novatrices. Mélant deux activités attractives, la Réalité Virtuel et les Escape Game, THE SENSE joint le meilleur des deux mondes pour vous proposer des expériences inédites et époustouflantes. N’hésitez plus et franchisser la frontière du réel.
+                </p>
+
+        </div>
+    </div>
+
+
+    
   </div>
   <section>
     <!-- News article -->
@@ -107,7 +128,7 @@
                   <input class="inputcontact" id="prenom" name="prenom" size="27" type="text" placeholder="Prenom"/> <br> <br>
                   <input class="inputcontact" id="mail" name="mail" size="27" type="text" placeholder="Mail"/> <br> <br>
                   <input class="inputcontact" id="content" name="content" size="81" type="text" placeholder="Votre message/avis"/></p>
-                  <input type="submit" value="Envoyer" name="submit"> </input>
+                  <input class="submitcontact" type="submit" value="Envoyer" name="submit"> </input>
                 </form>
                 <div class="tel">
                   <p> ou par téléphone </p>
@@ -115,6 +136,11 @@
                 </div>
           </div>
       </div>
+      <br>
+      <br>
+      <br>
+      <br>
+
 
         <?php 
 
@@ -148,27 +174,35 @@
     
 </main>
 <body>
-  <footer>
+<footer>
     <div class="footer-nav">
-        <a href="#">Nous contacter</a>
-        <a href="#">Réservation</a>
-        <a href="#">FAQ</a>
+        <a href="#"><span>Nous contacter</span></a>
+        <a href="#"><span>Réservation</span></a>
+        <a href="#"><span>FAQ</span></a>
     </div>
     <div class="copyright">
         © THE SENSE, SAS. Tous droits réservés
     </div>
     <div class="moda">
-        <a href="#">Modalités </a>
+        <a href="#"><span>Modalités</span></a>
         <span> | </span>
-        <a href="#">  Politique de confidentialité </a>
+        <a href="#"><span>Politique de confidentialité </span></a>
+        <div class="contact">
+            <span> | </span>
+            <a href="#"><span>Contact</span></a>
+        </div>
+
     </div>
     <div class="social-icons">
+        <!-- Replace # with actual links to your social media profiles -->
         <a href="#"><img src="ressources/Youtube.png" alt="Youtube"></a>
         <a href="#"><img src="ressources/Instagram.png" alt="Instagram"></a>
         <a href="#"><img src="ressources/Twitter.png" alt="Twitter"></a>
         <a href="#"><img src="ressources/Facebook.png" alt="Facebook"></a>
     </div>
-  </footer>  
+</footer>
+
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -196,6 +230,7 @@
 
 </script>
 <script src="js/actions.js"></script>
+<script src="js/home.js"></script>
 
 
 </html>

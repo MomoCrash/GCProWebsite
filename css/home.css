@@ -48,12 +48,6 @@ body {
     background-position: fixed;
     background-size: cover; */
     background: url(../ressources/mobile_fond.webp); 
-<<<<<<< Updated upstream
-    background-size: contain;
-    resize: both;
-    overflow: scroll;
-=======
->>>>>>> Stashed changes
     background-repeat: no-repeat;
     background-size: cover;
 }

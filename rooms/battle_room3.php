@@ -16,7 +16,7 @@
         <div class="nav-links">
             <ul>
                 <li><a href="../new.php">NEWS</a></li>
-                <li><a href="../lightroom/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
+                <li><a href="../rooms/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
                 <li><a href="../apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
                 <li><a href="../equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
                 <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
@@ -26,7 +26,7 @@
     </nav>
     <header></header>
     <div class="loginbg">
-        <form action="../account.php?method=login&redirect=../battleroom/batlle_room2.php" method="POST"
+        <form action="../account.php?method=login&redirect=../rooms/batlle_room3.php" method="POST"
             class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
             <div class="login-content">
                 <p><SPAN STYLE="color:#000000"><b>Connexion</b></span></p>
@@ -61,7 +61,20 @@
 
     <div class="intro_container" id="intro">
 
-        <a href="#img1"><img class="img_trailer" src="../ressources/image_battle.png" /></a>
+        <div class="popup-btn"><img class="img_trailer" src="../ressources/VIDEO.webp"/></div>
+                
+                <!--POPUP VIDEO-->
+                <div class="popup-wrap">
+                
+                    <div class="popup-box">
+                        
+                        <div class="line"></div>
+
+                        <div class="trailer">
+                            <video id="video" width="1090"><source src="../ressources/Trailer/Trailer.mp4" type="video/mp4" /></video>
+                        </div>
+                    </div>
+                </div>
 
 
         <div class="texte_intro">
@@ -79,20 +92,18 @@
                 THE SENSE.
             </p>
 
+
+
+
         </div>
     </div>
 
     <!-- DERNIERE PARTIE -->
-    <div class="intro_exp_darkroom">
-        <a href="battle_room1.php"><img class="tonpere" src="../ressources/retournnoir.png"></a>
-    
-    <div class="img_dark2">
-      <img src="../ressources/darkroom_banner2.png">
+    <div class="second_part">
+        <div class="pc"><img src="../ressources/forme10.webp"></div>
+        <div class="mobile"><img src="../ressources/forme9.webp"></div>
     </div>
 
-    <div class="space"></div>
-
-</div>
 
 
 </body>
@@ -123,18 +134,6 @@
 </footer>
 
 <!-- POP UP VIDEO -->
-
-<a href="#_" class="lightbox" id="img1">
-    <div id="videoModal" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel"
-        aria-hidden="false" style="display: block;">
-        <div class="modal-header"></div>
-        <div class="modal-body"><iframe width="870" height="489" src="https://www.youtube.com/embed/9Qzm66JX-RA"
-                frameborder="0" allowfullscreen=""></iframe></div>
-        <div class="modal-footer"></div>
-    </div>
-
-
-
     <script>
     const menubtns = document.querySelector(".menu_bouton")
     const navLinks = document.querySelector(".nav-links")
@@ -172,8 +171,8 @@
     const footer = document.querySelector('footer');
     observer.observe(footer);
     </script>
-
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="../js/actions.js"></script>
+    <script src="../js/home.js"></script>
 
 </html>

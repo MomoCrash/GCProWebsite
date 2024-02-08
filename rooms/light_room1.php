@@ -15,7 +15,7 @@
       <div class="nav-links">
         <ul>
           <li><a href="../new.php">NEWS</a></li>
-          <li><a href="../lightroom/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
+          <li><a href="../rooms/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
           <li><a href="../apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
           <li><a href="../equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
           <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
@@ -25,7 +25,7 @@
   </nav>
   <header></header>
   <div class="loginbg">
-    <form action="../account.php?method=login&redirect=../lightroom/light_room1.php" method="POST" class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
+    <form action="../account.php?method=login&redirect=../rooms/light_room1.php" method="POST" class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
           <div class="login-content">
               <p><SPAN STYLE="color:#000000"><b>Connexion</b></span></p>
               <p> Identifiant <input class="login-input form-label" type="email" name="email" placeholder="abc@mail.fr"> </input>
@@ -54,7 +54,20 @@
 
     <div class="intro_container" id="intro">
 
-      <a href="#img1"><img class="img_trailer" src="../ressources/image_battle.png"/></a>
+      <div class="popup-btn"><img class="img_trailer" src="../ressources/lightroom_VIDEO.png"/></div>
+              
+              <!--POPUP VIDEO-->
+              <div class="popup-wrap">
+              
+                  <div class="popup-box">
+                      
+                      <div class="line"></div>
+
+                      <div class="trailer">
+                          <video id="video" width="1090"><source src="../ressources/Trailer/Trailer.mp4" type="video/mp4" /></video>
+                      </div>
+                  </div>
+              </div>
 
 
       <div class = "texte_intro">
@@ -358,5 +371,6 @@
 
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="../js/actions.js"></script>
+  <script src="../js/home.js"></script>
 
 </html>
