@@ -348,25 +348,25 @@
                 <div class="lightroom_pricing">
                     <img class="room_logo" src="ressources/LIGHT_ROOM_WHITE.webp" alt="lightroom_logo"/>
                     <p class="price_txt">DE 10H À 18H: <span class="lightprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
-                    <p class="price_txt">DE 18H À 21H: <span class="lightprice">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 18H À 21H: <span class="lightpriceNoon">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
                 </div>
 
                 <div class="darkroom_pricing">
                     <img class="room_logo" src="ressources/DARK_ROOM_WHITE.webp" alt="darkroom_logo"/>
                     <p class="price_txt">DE 10H À 18H: <span class="lightprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
-                    <p class="price_txt">DE 18H À 21H: <span class="lightprice">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 18H À 21H: <span class="lightpriceNoon">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
                 </div>     
 
                 <div class="battleroom_pricing">
                     <img class="room_logo" src="ressources/BATTLE_ROOM.webp" alt="battleroom_logo"/>
-                    <p class="price_txt">DE 10H À 18H: <span class="creativeprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
-                    <p class="price_txt">DE 18H À 21H: <span class="creativeprice">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 10H À 18H: <span class="lightprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 18H À 21H: <span class="lightpriceNoon">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
                 </div>    
 
                 <div class="creativeroom_pricing">
                     <img class="room_logo" src="ressources/CREATIVE_ROOM.webp" alt="battleroom_logo"/>
                     <p class="price_txt">DE 10H À 18H: <span class="lightprice">45€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
-                    <p class="price_txt">DE 18H À 21H: <span class="lightprice">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
+                    <p class="price_txt">DE 18H À 21H: <span class="lightpriceNoon">30€</span><span class="pers"><span class="per"> /</span>PERSONNE</span></p>
                 </div>   
 
 
@@ -568,19 +568,22 @@
                 </div>
             </div>
 
+            <!--ESPACE-->
+            <div class="littlespace"></div>
+
             <!--==================1 QUESTION==================-->
             <div class="question">
 
                     <!--BOUTON DEROULANT-->
                 <div class="container">
-                    <div class="button1"></div>
+                    <div class="button2"></div>
                 </div>
 
                     <div class="question_txt">
-                        <p class="question_title">Qu'est ce que The SENSE ?</p>
+                        <p class="question_title">Il y a-t-il un âge et taille minimum pour participer à une expérience The SENSE ? </p>
                     </div>
                 </div>
-                <div class="answer1">
+                <div class="answer2">
                     <p class="p_answer">
                         The SENSE est une immersion poussée grâce à la réalité virtuelle. The SENSE propose de nombreuses expériences
                         à faire entre amis ou avec la famille. Vous pouvez tout à fait favoriser une expérience avec de l’action comme notre 
@@ -590,19 +593,22 @@
                 </div>
             </div>
 
+            <!--ESPACE-->
+            <div class="littlespace"></div>
+
             <!--==================1 QUESTION==================-->
             <div class="question">
 
                     <!--BOUTON DEROULANT-->
                 <div class="container">
-                    <div class="button1"></div>
+                    <div class="button3"></div>
                 </div>
 
                     <div class="question_txt">
-                        <p class="question_title">Qu'est ce que The SENSE ?</p>
+                        <p class="question_title">  Quel est le nombre maximum de participants pour jouer ? </p>
                     </div>
                 </div>
-                <div class="answer1">
+                <div class="answer3">
                     <p class="p_answer">
                         The SENSE est une immersion poussée grâce à la réalité virtuelle. The SENSE propose de nombreuses expériences
                         à faire entre amis ou avec la famille. Vous pouvez tout à fait favoriser une expérience avec de l’action comme notre 
@@ -612,19 +618,22 @@
                 </div>
             </div>
 
+            <!--ESPACE-->
+            <div class="littlespace"></div>
+
             <!--==================1 QUESTION==================-->
             <div class="question">
 
                     <!--BOUTON DEROULANT-->
                 <div class="container">
-                    <div class="button1"></div>
+                    <div class="button4"></div>
                 </div>
 
                     <div class="question_txt">
-                        <p class="question_title">Qu'est ce que The SENSE ?</p>
+                        <p class="question_title">  Avez-vous une politique d'annulation et de remboursement ? Si oui, comment se déroule-t-elle ?</p>
                     </div>
                 </div>
-                <div class="answer1">
+                <div class="answer4">
                     <p class="p_answer">
                         The SENSE est une immersion poussée grâce à la réalité virtuelle. The SENSE propose de nombreuses expériences
                         à faire entre amis ou avec la famille. Vous pouvez tout à fait favoriser une expérience avec de l’action comme notre 
@@ -633,6 +642,34 @@
                         les clients peuvent à leurs tours imaginer et créer la meilleure expériences possibles. </p>
                 </div>
             </div>
+
+            <!--ESPACE-->
+            <div class="littlespace"></div>
+
+            <!--==================1 QUESTION==================-->
+            <div class="question">
+
+                    <!--BOUTON DEROULANT-->
+                <div class="container">
+                    <div class="button5"></div>
+                </div>
+
+                    <div class="question_txt">
+                        <p class="question_title">Est il possible de déposer mes affaires "encombrants" avant de faire une expérience ? Puis-je garder mes lunettes ?</p>
+                    </div>
+                </div>
+                <div class="answer5">
+                    <p class="p_answer">
+                        The SENSE est une immersion poussée grâce à la réalité virtuelle. The SENSE propose de nombreuses expériences
+                        à faire entre amis ou avec la famille. Vous pouvez tout à fait favoriser une expérience avec de l’action comme notre 
+                        Dark Room basé sur l’horreur. Ou encore, si vous le souhaiter par exemple, vous pouvez favoriser l’aspect compétitif 
+                        en participant aux expériences de notre Battle Room. De plus, The SENSE propose un système de création d’expérience où 
+                        les clients peuvent à leurs tours imaginer et créer la meilleure expériences possibles. </p>
+                </div>
+            </div>
+
+            <!--ESPACE-->
+            <div class="littlespace"></div>
         <!--=================================FOOTER=================================-->
         <footer>
         <div class="footer-nav">

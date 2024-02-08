@@ -43,11 +43,15 @@ html{
     scroll-behavior: smooth;
 }
 body {
-    background: url(../ressources/mobile_fond.webp); 
-    background-position:center;
+/*  background-position:center;
     background-repeat: no-repeat;
     background-position: fixed;
-    background-size: cover; 
+    background-size: cover; */
+    background: url(../ressources/mobile_fond.webp); 
+    background-size: contain;
+    resize: both;
+    overflow: scroll;
+    background-repeat: no-repeat;
 }
 
 /*BOUTON DECOUVRIR*/
@@ -226,6 +230,10 @@ body {
     height:200px;
 }
 
+.littlespace{
+    height:50px
+}
+
 /*CSS EXPERIENCES*/
 
 /*EXP INTRO*/
@@ -326,10 +334,11 @@ body {
 
 /*Titre*/
 .about_title{
+    padding-top: 20px;
     display: flex;
     align-items: center;
     height:0%;
-    margin-bottom: 0px;
+    margin-bottom: 40px;
     margin-left: 30px;
 }
 
@@ -353,7 +362,6 @@ body {
 
 .txt_about_title{
     font-family: Amiko bold;
-    margin-top: 20px;
     font-size:30px;
     height:37px;
     color:#3B4040;
@@ -498,7 +506,7 @@ body {
     font-size: 20px;
 }
 
-.lightprice{
+.lightprice, .lightpriceNoon{
     font-weight: bold;
     font-size: 40px;
 }
@@ -631,7 +639,8 @@ body {
     background-color: #646363;
 }
 
-.button{
+/*==================================BOUTONS====================================*/
+.button1, .button2, .button3, .button4, .button5{
     position: relative;
     margin-left: 3px;
     margin-top: 3px;
@@ -639,7 +648,11 @@ body {
     height: 14px;
 }
 
-.button:before, .button:after{
+.button1:before, .button1:after,
+.button2:before, .button2:after,
+.button3:before, .button3:after,
+.button4:before, .button4:after,
+.button5:before, .button5:after{
         content: "";
         position: absolute;
         background-color: #61E1C2;
@@ -647,7 +660,7 @@ body {
 }
 
 /* Vertical line */
-.button:before{
+.button1:before, .button2:before, .button3:before, .button4:before, .button5:before{
     top: 0;
     left: 50%;
     width: 4px;
@@ -656,7 +669,7 @@ body {
 }
 
 /* horizontal line */
-.button:after{
+.button1:after, .button2:after, .button3:after, .button4:after, .button5:after{
     top: 50%;
     left: 0;
     width: 100%;
@@ -664,13 +677,16 @@ body {
     margin-top: -2px;
 }
 
-.button:hover{
-    cursor: pointer;
-    
+.button1:hover, .button2:hover, .button3:hover, .button4:hover, .button5:hover{
+    cursor:pointer;
+}
+
+.button1.active, .button2.active, .button3.active, .button4.active, .button5.active{
     &:before{ transform: rotate(90deg); }
     &:after{ transform: rotate(180deg); }
 }
 
+/*questions*/
 .question{
     display: flex;
     align-items: baseline;
@@ -686,12 +702,22 @@ body {
     font-size:40px;
 }
 
-.answer{
+.answer1, .answer2, .answer3, .answer4, .answer5{
     margin-left: 250px;
     font-family: poppins thin;
     color:#646363; 
     font-size:30px;  
+    display: none;
 }
+
+.answer1.active, .answer2.active, .answer3.active, .answer4.active, .answer5.active{
+    margin-left: 250px;
+    font-family: poppins thin;
+    color:#646363; 
+    font-size:30px;  
+    display: block;
+}
+
 
 /*=====================================CARROUSEL=====================================*/
 .images {
