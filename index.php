@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/home.css" />
         <link rel="stylesheet" href="css/bookingstyle.css">
+        <link rel="stylesheet" href="css/booking.css">
 
         <title>The Sense - Home</title>
     </head>
@@ -50,7 +51,7 @@
                     que vous vivez, c’est la réalité.
                 </p>
 
-                <a href="Apropos.html" class="about_btn">DÉCOUVREZ THE SENSE ➜</a>
+                <a href="Apropos.php" class="about_btn">DÉCOUVREZ THE SENSE ➜</a>
             </div>
         </div>
 
@@ -128,12 +129,12 @@
 
                 <!--BOUTON POUR RESERVER-->
                 <div class="book_btn">
-                    <a href="lightroom.html"><img class="book_img" src="ressources/reserve.webp" alt="bouton reserver"></a>
+                    <a href="lightroom/light_room1.php"><img class="book_img" src="ressources/reserve.webp" alt="bouton reserver"></a>
                 </div>
 
                 <!--BOUTON DISCOVER-->
                 <div class="room_discover">
-                    <a href="lightroom.html" class="discover_room"><p>DÉCOUVREZ LA LIGHT ROOM →</p></a>
+                    <a href="lightroom/light_room1.php" class="discover_room"><p>DÉCOUVREZ LA LIGHT ROOM →</p></a>
                 </div>
             </div>
         
@@ -189,12 +190,12 @@
 
                 <!--BOUTON POUR RESERVER-->
                 <div class="book_btn">
-                    <a href="darkroom.html"><img class="book_img" src="ressources/reserve.webp" alt="bouton reserver"></a>
+                    <a href="darkroom/dark_room1.php"><img class="book_img" src="ressources/reserve.webp" alt="bouton reserver"></a>
                 </div>
 
                 <!--BOUTON DISCOVER-->
                 <div class="room_discover">
-                    <a href="lightroom.html" class="discover_room"><p>DÉCOUVREZ LA DARK ROOM →</p></a>
+                    <a href="darkroom/dark_room1.php" class="discover_room"><p>DÉCOUVREZ LA DARK ROOM →</p></a>
                 </div>
             </div>
 
@@ -250,12 +251,12 @@
 
                 <!--BOUTON POUR RESERVER-->
                 <div class="book_btn">
-                    <a href="battleroom.html"><img class="book_img" src="ressources/reserve.webp" alt="bouton reserver"></a>
+                    <a href="battleroom/battle_room1.php"><img class="book_img" src="ressources/reserve.webp" alt="bouton reserver"></a>
                 </div>
 
                 <!--BOUTON DISCOVER-->
                 <div class="room_discover">
-                    <a href="lightroom.html" class="discover_room"><p>DÉCOUVREZ LA BATTLE ROOM →</p></a>
+                    <a href="battleroom/battle_room1.php" class="discover_room"><p>DÉCOUVREZ LA BATTLE ROOM →</p></a>
                 </div>
             </div>
         </div>
@@ -306,12 +307,12 @@
 
                 <!--BOUTON POUR RESERVER-->
                 <div class="book_btn">
-                    <a href="lightroom.html"><img class="book_img" src="ressources/reserve.webp" alt="bouton reserver"></a>
+                    <a href="creative/creative.php"><img class="book_img" src="ressources/reserve.webp" alt="bouton reserver"></a>
                 </div>
 
                 <!--BOUTON DOSCPVER-->
                 <div class="room_discover">
-                    <a href="lightroom.html" class="discover_room"><p>DÉCOUVREZ LA CREATIVE ROOM →</p></a>
+                    <a href="creative/creative.php" class="discover_room"><p>DÉCOUVREZ LA CREATIVE ROOM →</p></a>
                 </div>
 
             </div>
@@ -376,7 +377,9 @@
         </div>
         
         <div class="book_planning">
-                
+            <div id="calendar" class="calendar"></div>
+            <div class="status unavailable">NON DISPONIBLE</div>
+            <div class="status reserved">RÉSERVÉ</div>
         </div>
 
         <!--ESPACE-->
@@ -706,5 +709,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="js/booking.js"></script>
+
+    <script>
+        generateCalendar(7)
+    </script>
     
 </html>
