@@ -61,7 +61,21 @@
 
     <div class="intro_container" id="intro">
 
-        <a href="#img1"><img class="img_trailer" src="../ressources/image_battle.png" /></a>
+        <!--LOGO A GAUCHE-->
+        <div class="popup-btn"><img class="img_trailer" src="../ressources/VIDEO.webp"/></div>
+            
+            <!--POPUP VIDEO-->
+            <div class="popup-wrap">
+            
+                <div class="popup-box">
+                    
+                    <div class="line"></div>
+
+                    <div class="trailer">
+                        <video id="video" width="1090"><source src="../ressources/Trailer/Trailer.mp4" type="video/mp4" /></video>
+                    </div>
+                </div>
+            </div>
 
 
         <div class="texte_intro">
@@ -81,11 +95,6 @@
 
         </div>
     </div>
-
-    <!-- DERNIERE PARTIE -->
-
-    <!--EXPERIENCES-->
-
 
     <!--INTRO-->
     <div class="intro_exp">
@@ -289,15 +298,6 @@
 
 <!-- POP UP VIDEO -->
 
-<a href="#_" class="lightbox" id="img1">
-    <div id="videoModal" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel"
-        aria-hidden="false" style="display: block;">
-        <div class="modal-header"></div>
-        <div class="modal-body"><iframe width="870" height="489" src="https://www.youtube.com/embed/9Qzm66JX-RA"
-                frameborder="0" allowfullscreen=""></iframe></div>
-        <div class="modal-footer"></div>
-    </div>
-
 
 
     <script>
@@ -391,5 +391,6 @@
 
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="../js/actions.js"></script>
+    <script src="../js/home.js"></script>
 
 </html>
