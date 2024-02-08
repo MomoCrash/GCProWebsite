@@ -524,6 +524,29 @@ body {
     background-color: #000000;
     margin-left: -0.5%;
     margin-right: -0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.status {
+    font-size: 16px;
+    padding: 5px;
+    color: white;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    width: 120px; /* You can adjust the width as needed */
+}
+
+.unavailable {
+    background-color: #ff4d4d; /* red */
+}
+
+.reserved {
+    background-color: #40e0d0; /* turquoise */
 }
 
 /*NEWS DU MOIS*/
