@@ -53,7 +53,20 @@
 
     <div class="intro_container_dark_room" id="intro">
 
-      <a href="#img1"><img class="img_trailer" src="../ressources/darkroom_video.png"/></a>
+      <div class="popup-btn"><img class="img_trailer" src="../ressources/darkroom_video.png"/></div>
+              
+              <!--POPUP VIDEO-->
+              <div class="popup-wrap">
+              
+                  <div class="popup-box">
+                      
+                      <div class="line"></div>
+
+                      <div class="trailer">
+                          <video id="video" width="1090"><source src="../ressources/Trailer/Trailer.mp4" type="video/mp4" /></video>
+                      </div>
+                  </div>
+              </div>
 
 
       <div class = "texte_intro_white">
@@ -169,5 +182,6 @@
   </script>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="../js/actions.js"></script>
+  <script src="../js/home.js"></script>
 
 </html>

@@ -52,7 +52,20 @@
     <div id="text"></div>
     <div class="animated-on-scroll">
       <div class="firs-div">
-          <div class="img-first"><img src="ressources\VIDEObtob.png" alt="header"></div>
+        <div class="popup-btn"><img class="img_trailer" src="ressources/apropos_VIDEO.png"/></div>
+              
+              <!--POPUP VIDEO-->
+              <div class="popup-wrap">
+              
+                  <div class="popup-box">
+                      
+                      <div class="line"></div>
+
+                      <div class="trailer">
+                          <video id="video" width="1090"><source src="ressources/Trailer/Trailer.mp4" type="video/mp4" /></video>
+                      </div>
+                  </div>
+              </div>
           <div class="text-content">
               <h1>THE SENSE POUR LES PROFESSIONELS</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -201,6 +214,7 @@
 
 </script>
 <script src="js/actions.js"></script>
+<script src="js/home.js"></script>
 
 
 </html>

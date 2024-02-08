@@ -48,7 +48,7 @@ body {
     background-position: fixed;
     background-size: cover; */
     background: url(../ressources/mobile_fond.webp); 
-    background-size: contain;
+    background-size: 100%;
     resize: both;
     overflow: scroll;
     background-repeat: no-repeat;
