@@ -41,6 +41,4 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     echo json_encode(array("error" => "ID de l'article non spécifié."));
 }
 
-// Fermez la connexion
-$conn->close();
 ?>

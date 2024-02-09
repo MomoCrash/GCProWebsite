@@ -43,10 +43,10 @@ if (isset($_SESSION["email"])) {
         </div>
         <div class="nav-links">
             <ul>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#" class="nav-border">NOS EXPERIENCES</a></li>
-                <li><a href="#" class="nav-border">A PROPOS DE NOUS</a></li>
-                <li><a href="#" class="nav-border">NOS EQUIPEMENTS</a></li>
+                <li><a href="../new.php">NEWS</a></li>
+                <li><a href="../rooms/light_room1.php" class="nav_dark_room-border">NOS EXPERIENCES</a></li>
+                <li><a href="../apropos.php" class="nav_dark_room-border">A PROPOS DE NOUS</a></li>
+                <li><a href="../equipement.php" class="nav_dark_room-border">NOS EQUIPEMENTS</a></li>
                 <?php if(!isset($email)): ?>
                 <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
                 <?php else: ?>

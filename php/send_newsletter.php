@@ -1,7 +1,7 @@
 <?php
 // Assurez-vous que cette ligne pointe vers le bon fichier et que ce fichier retourne un objet PDO
-if (file_exists('sql/sql-manager.php')) {
-    require_once 'sql/sql-manager.php';
+if (file_exists('../sql/sql-manager.php')) {
+    require_once '../sql/sql-manager.php';
 } else {
     exit('Le fichier sql_manager.php n\'existe pas dans le chemin spécifié.');
 }
@@ -36,6 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["subject"], $_POST["mes
             sendMail($row['email'], $subject, $message);
         }
         echo "Newsletter envoyée avec succès à tous les abonnés.\n";
+        header('Location: ../admin.php');
     } else {
         echo "Aucun utilisateur abonné à la newsletter.\n";
     }

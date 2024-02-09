@@ -1,7 +1,7 @@
 <?php
 // Inclure le gestionnaire de base de données
-if (file_exists('sql\sql-manager.php')) {
-    require_once 'sql\sql-manager.php';
+if (file_exists('../sql\sql-manager.php')) {
+    require_once '../sql\sql-manager.php';
 } else {
     echo 'Le fichier sql_manager.php n\'existe pas dans le chemin spécifié.';
 }
@@ -53,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute();
 
         echo "Article créé avec succès!";
+        header('Location: ../admin.php');
     } catch(PDOException $e) {
         echo "Erreur: " . $e->getMessage();
     }

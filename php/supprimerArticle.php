@@ -1,7 +1,7 @@
 <?php
 // Inclure le gestionnaire de base de données
-if (file_exists('sql\sql-manager.php')) {
-    require_once 'sql\sql-manager.php';
+if (file_exists('../sql\sql-manager.php')) {
+    require_once '../sql\sql-manager.php';
 } else {
     echo 'Le fichier sql_manager.php n\'existe pas dans le chemin spécifié.';
 }
@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['article_id'])) {
 
         if ($stmt->rowCount() > 0) {
             echo "Article supprimé avec succès!";
+            header('Location: ../admin.php');
         } else {
             echo "Aucun article trouvé avec cet ID.";
         }

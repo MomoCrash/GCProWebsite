@@ -16,7 +16,7 @@ if (isset($_POST['article_id'])) {
     ];
 
     // Générer le formulaire de modification
-    echo "<form method='post' action='modifierArticle.php' enctype='multipart/form-data'>
+    echo "<form method='post' action='php/modifierArticle.php' enctype='multipart/form-data'>
             <input type='hidden' name='article_id' value='{$article['id']}'>
             <div class='form-group'>
                 <label for='article-title'>Titre de l'article:</label>

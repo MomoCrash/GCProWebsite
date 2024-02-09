@@ -22,7 +22,7 @@
         <div class="nav-links">
             <ul>
                 <li><a href="new.php">NEWS</a></li>
-                <li><a href="lightroom/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
+                <li><a href="rooms/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
                 <li><a href="apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
                 <li><a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
                 <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
@@ -30,8 +30,6 @@
         </div>
         <img src="ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton" id="menu_bouton">
     </nav>
-    <header></header>
-    <div class="img-header"><img src="ressources/EN TÊTE.png" alt="header"></div>
     <div class="loginbg">
         <form action="account.php?method=login&redirect=darkroom/dark_room1.php" method="POST" class="login-pan mb-3"
             style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
@@ -43,11 +41,13 @@
                 <p> Mot de passe <input class="login-input form-label" type="password" name="password"
                         placeholder="······"> </input>
                 </p>
-                <a style="gray" href="../account.php?method=register'">Crée un compte</a> <button type="submit"
+                <a style="gray" href="account.php?method=register'">Crée un compte</a> <button type="submit"
                     name="submit" placeholder="Connexion">Connexion</button>
             </div>
         </form>
     </div>
+    <header></header>
+    <div class="img-header"><img src="ressources/EN TÊTE.png" alt="header"></div>
 
     <main>
         <!-- Main content sections -->
@@ -235,26 +235,23 @@
 
     </body>
 
-<script>
+    <script>
     const menubtns = document.querySelector(".menu_bouton")
     const navLinks = document.querySelector(".nav-links")
     const navbar = document.getElementById("navbar")
     var isOpen = true
-    
 
-    menubtns.addEventListener('click',()=>{
-      navLinks.classList.toggle('mobile-menu');
-      if(isOpen){
-      navbar.style.backdropFilter = 'none';
-      isOpen = false
-      }else{
-        navbar.style.backdropFilter = 'blur(10px)'
-        isOpen = true
-      }
+
+    menubtns.addEventListener('click', () => {
+        navLinks.classList.toggle('mobile-menu');
+        if (isOpen) {
+            navbar.style.backdropFilter = 'none';
+            isOpen = false
+        } else {
+            navbar.style.backdropFilter = 'blur(10px)'
+            isOpen = true
+        }
     })
-
-
-
-</script>
+    </script>
 
 </html>

@@ -1,6 +1,6 @@
 <?php
-    if (file_exists('sql/sql-manager.php')) {
-        require_once 'sql/sql-manager.php';
+    if (file_exists('../sql/sql-manager.php')) {
+        require_once '../sql/sql-manager.php';
     } else {
         echo 'Le fichier sql_manager.php n\'existe pas dans le chemin spécifié.';
         exit;
@@ -22,7 +22,7 @@
             }
 
             $conn->commit();
-            header('Location: admin.php'); // Redirection vers la page d'administration
+            header('Location: ../admin.php'); // Redirection vers la page d'administration
             exit;
         } catch(PDOException $e) {
             $conn->rollBack();

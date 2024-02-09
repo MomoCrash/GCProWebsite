@@ -23,7 +23,7 @@
         <div class="nav-links">
             <ul>
                 <li><a href="new.php">NEWS</a></li>
-                <li><a href="lightroom/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
+                <li><a href="rooms/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
                 <li><a href="apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
                 <li><a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
                 <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
@@ -144,70 +144,23 @@
                 </div>
             </div>
         </section>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="ressources/image129.webp" alt="First slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>LES ÉQUIPEMENTS THE SENSE</h5>
-                        <p>Tous nos équipements sont prévus pour toutes les tailles et tous les âges, ils conviennent
-                            aussi bien aux adultes qu'aux jeunes de 12 ans. Ils vous garantissent également un confort à
-                            toutes épreuves lors de vos voyages chez nous.</p>
-                    </div>
+        <div class="container">
+          <div class="contact-container">
+
+            <h2>CONTACTEZ NOUS</h2>
+                <form action="Apropos.php" method="post">
+                  <input class="inputcontact" id="nom" name="nom" size="28" type="text" placeholder="Nom"/> 
+                  <input class="inputcontact" id="prenom" name="prenom" size="27" type="text" placeholder="Prenom"/> <br> <br>
+                  <input class="inputcontact" id="mail" name="mail" size="27" type="text" placeholder="Mail"/> <br> <br>
+                  <input class="inputcontact" id="content" name="content" size="81" type="text" placeholder="Votre message/avis"/></p>
+                  <input class="submitcontact" type="submit" value="Envoyer" name="submit"> </input>
+                </form>
+                <div class="tel">
+                  <p> ou par téléphone </p>
+                  <a href="tel:0601023672">06 01 02 36 72</a>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="ressources/Rectangle94.webp" alt="Second slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <p>"C'est dingue, j'ai vraiment eu l'impression d'être transporté dans un autre monde. Avant je
-                            ne faisais pas d'expérience VR car je ne croyais pas en la qualité mais grâce à The Sense,
-                            j'ai pu traverser la frontière du réel."</p>
-                        <p>- Denise, 23 Octobre 2020 -</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="ressources/image127.webp" alt="Third slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <p>“Avec mes fils nous avons tenté l'expérience “NAMELESS”, moi qui pensais avoir tout vu dans
-                            le domaine de l'horreur, je ne me suis jamais autant trompé. Si vous êtes à la recherche de
-                            sensation forte et de frissons, la DARK ROOM est faite pour vous”</p>
-                        <p>- Denise, 23 Octobre 2020 -</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="ressources/image128.webp" alt="Second slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>NOUVELLE ROOM EN VUE !</h5>
-                        <p>En 2021, préparez à manger du slime en pleine face, les fantômes de Ghost Buster arrivent
-                            chez THE SENSE. Ça promet de belles parties de chasse aux fantômes dans tout le complexe.
-                            Les réservations sont d'ores et déjà possible sur place et en Février sur internet.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="ressources/image130.webp" alt="Second slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <p>“Avec mes fils nous avons tenté l'expérience “NAMELESS”, moi qui pensais avoir tout vu dans
-                            le domaine de l'horreur, je ne me suis jamais autant trompé. Si vous êtes à la recherche de
-                            sensation forte et de frissons, la DARK ROOM est faite pour vous”</p>
-                        <p>- Denise, 23 Octobre 2020 -</p>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
+          </div>
+      </div>
     </main>
 
     <body>

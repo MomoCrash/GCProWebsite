@@ -11,7 +11,7 @@ if (isset($_GET["method"])) {
 }
 
 session_start();
-if ($_SESSION["id"]) {
+if (isset($_SESSION["id"])) {
     $id = $_SESSION["id"];
     $email = $_SESSION["email"];
     $name = $_SESSION["name"];
@@ -41,7 +41,7 @@ if ($_SESSION["id"]) {
             </div>
             <div class="nav-right">
                 <a href="new.php">NEWS</a>
-                <a href="lightroom/light_room1.php" class="nav-border">NOS EXPERIENCES</a>
+                <a href="rooms/light_room1.php" class="nav-border">NOS EXPERIENCES</a>
                 <a href="apropos.php" class="nav-border">A PROPOS DE NOUS</a>
                 <a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a>
                 <a href="login.html" class="nav-border"><b>CONNEXION</b></a>

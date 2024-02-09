@@ -404,6 +404,59 @@ section{
     padding: 1%;
     border-radius: 30px;
 }
+
+.contact-container {
+    background-color: rgba(255, 255, 255, 0);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .inputcontact {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .submitcontact {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #08f1e6;
+      border-radius: 4px;
+      color: #ffffff;
+      background-color: rgba(12, 247, 255, 0.945);
+      margin: auto;
+  }
+  
+  .tel {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .tel a {
+    text-decoration: none;
+    color: #5cb85c;
+    font-weight: bold;
+  }
+  
+  .tel a:hover {
+    color: #4cae4c;
+  }
+  
   .visible {
     animation: fadeIn 2s forwards;
   }
@@ -580,3 +633,4 @@ section{
     /* margin-right: -100%; */
     /* transition: all 0.5s ease; */
     margin-top: -30%;
+}

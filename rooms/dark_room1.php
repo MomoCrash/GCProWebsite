@@ -152,13 +152,14 @@
     
             <!--BOUTON POUR RESERVER-->
             <div class="book_btn">
-                <a href="lightroom.html"><img src="../ressources/Bouton réserver (Blanc).png" alt="bouton reserver"></a>
+                <a href="dark_room2.php"><img src="../ressources/Bouton réserver (Blanc).png" alt="bouton reserver"></a>
             </div>
         </div>
     
         <!--ESPACE-->
         <div class="space"></div>
-    <!--==================1 EXPERIENCE==================-->
+        <br> <br>
+    <!--==================2 EXPERIENCE==================-->
     
         <!--IMAGE DE L'EXPERIENCE AVEC TOUS SES COMPOSANTS-->
         <div class="img_exp">
@@ -205,7 +206,7 @@
     
             <!--BOUTON POUR RESERVER-->
             <div class="book_btn">
-                <a href="../darkroom/dark_room1.html"><img class="image_black" src="../ressources/Bouton réserver (Blanc).png" alt="bouton reserver"></a>
+                <a href="dark_room1.php"><img class="image_black" src="../ressources/Bouton réserver (Blanc).png" alt="bouton reserver"></a>
             </div>
         </div>
     
@@ -216,6 +217,7 @@
     
       </div>
     
+      <br> <br>
     
 <!-- Slideshow container -->
 <div class="slideshow-container">

@@ -540,11 +540,12 @@ html{
     border: solid black;
     background-color: rgba(255, 255, 255);
     border-radius: 10px;
-    margin-top: -34%;
+    margin-top: 1%;
     margin-right: 10%;
     text-align: center;
     transition: 1s;
     font-family: abel;
+    overflow: hidden;
 }
 
 .login-content {
@@ -570,5 +571,4 @@ html{
     height: 100vh;
     margin-right: -100%;
     transition: all 0.5s ease;
-    z-index: 1;
 }

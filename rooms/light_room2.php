@@ -117,7 +117,7 @@ if (isset($_SESSION["email"])) {
 
   <!-- DERNIERE PARTIE -->
   <div class="intro_exp_darkroom">
-  <a href="../lightroom/light_room1.php"><img class="redirectbtn" src="../ressources/retournnoir.png"></a>
+  <a href="../rooms/light_room1.php"><img class="redirectbtn" src="../ressources/retournnoir.png"></a>
     
     <div class="img_dark2">
       <img src="../ressources/lightroom_banner2.png">

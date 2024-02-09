@@ -1,7 +1,7 @@
 <?php
 // Incluez votre fichier de connexion à la base de données
-if (file_exists('sql\sql-manager.php')) {
-    require_once 'sql\sql-manager.php';
+if (file_exists('../sql\sql-manager.php')) {
+    require_once '../sql\sql-manager.php';
 } else {
     echo 'Le fichier sql_manager.php n\'existe pas dans le chemin spécifié.';
 }
@@ -19,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['code']) && isset($_POS
 
     if ($stmt->execute()) {
         echo "Le code promo a été ajouté avec succès.";
+        header('Location: ../admin.php');
     } else {
         echo "Erreur: " . $stmt->error;
     }
@@ -27,6 +28,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['code']) && isset($_POS
     $stmt->close();
 }
 
-// Fermez la connexion
-$conn->close();
 ?>

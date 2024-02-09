@@ -73,7 +73,7 @@
       <div class = "texte_intro">
 
           <div class="titre_intro">
-              <p>QU'EST CE QUE LA <img src="../ressources/BATTLE_ROOM_pc.png" class="battle_room_logo"/><img src="../ressources/BATTLE_ROOM_mobile.png" class="battle_room_logo_mobile"/> ?</p>
+              <p>QU'EST CE QUE LA <img src="../ressources/LIGHT_ROOM_logo.png" class="battle_room_logo"/><img src="../ressources/BATTLE_ROOM_mobile.png" class="battle_room_logo_mobile"/> ?</p>
           </div> 
 
           <p> Vous cherchez à connaitre qui est le meilleur dans la famille ou qui fera le S.A.M ce
@@ -135,7 +135,7 @@
         <div class="about_title">
             <p class="txt_about_title">ULTIMATE FIGHT</p>
             <div class="break_line"></div><!--LIGNE SEPARATRICE-->
-            <p class="room_title">BATTLE ROOM</p>
+            <p class="room_title">LIGHT ROOM</p>
         </div>
 
         <!--TXT A PROPOS-->
@@ -147,13 +147,14 @@
 
         <!--BOUTON POUR RESERVER-->
         <div class="book_btn">
-            <a href="lightroom.html"><img src="../ressources/reserve.webp" alt="bouton reserver"></a>
+            <a href="light_room2.php"><img src="../ressources/reserve.webp" alt="bouton reserver"></a>
         </div>
     </div>
 
     <!--ESPACE-->
     <div class="space"></div>
-<!--==================1 EXPERIENCE==================-->
+    <br> <br>
+<!--==================2 EXPERIENCE==================-->
 
     <!--IMAGE DE L'EXPERIENCE AVEC TOUS SES COMPOSANTS-->
     <div class="img_exp">
@@ -189,7 +190,7 @@
         <div class="about_title">
             <p class="txt_about_title">GARDEN WAR</p>
             <div class="break_line"></div><!--LIGNE SEPARATRICE-->
-            <p class="room_title">BATTLE ROOM</p>
+            <p class="room_title">LIGHT ROOM</p>
         </div>
 
         <!--TXT A PROPOS-->
@@ -199,7 +200,7 @@
 
         <!--BOUTON POUR RESERVER-->
         <div class="book_btn">
-            <a href="../darkroom/dark_room1.html"><img class="image_black" src="../ressources/reserve.webp" alt="bouton reserver"></a>
+            <a href="../rooms/light_room2.php"><img class="image_black" src="../ressources/reserve.webp" alt="bouton reserver"></a>
         </div>
     </div>
 
@@ -209,6 +210,8 @@
 
 
   </div>
+
+  <br> <br>
 
 <!-- Slideshow container -->
 <div class="slideshow-container">
