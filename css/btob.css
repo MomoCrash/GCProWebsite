@@ -56,7 +56,7 @@
 
 /*BOUTON DECOUVRIR*/
 .btn_container {
-    margin-top : 35%; 
+    margin-top : 15%; 
     height: 300px;
     position: relative;
 }
@@ -65,7 +65,6 @@
     text-decoration: none;
     margin:0;
     position: absolute;
-    margin-top: 150px;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -73,7 +72,6 @@
     background: linear-gradient(to left, black 50%, white 50%) right;
     background-size: 200%;
     transition: .5s ease-out;
-
     padding:10px;
     padding-right: 50px;
     padding-left:50px;
@@ -452,7 +450,6 @@ section{
         overflow: hidden; /* Ensures the content doesn't spill outside the container */
         border-radius: 10px; /* Optional: Adds rounded corners to the container */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow to the container */
-        background: url('/path/to/your/image.png') no-repeat center center; /* Replace with the path to your image */
         background-size: cover; /* Ensure the background image covers the entire container */
     }
 
@@ -474,3 +471,112 @@ section{
         flex: 1; /* Cela attribuera une largeur égale aux deux enfants, ajustez selon les besoins */
     }
   }
+
+
+  /* Répondre aux petits écrans, comme les téléphones */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        text-align: center;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .img-header img {
+        width: 100%; /* Assure que l'image d'en-tête est responsive */
+    }
+
+    .intro_container, .text_intro, .second-div, .third-div, .four-div, .five-div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-content, .text-content-third, .text-content-four, .text-content-five {
+        padding: 20px;
+    }
+
+    /* Ajuster la taille des images dans les sections pour qu'elles prennent toute la largeur */
+    .img-third, .img-four, .img-five {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Répondre aux tablettes et aux écrans plus larges */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Ici, vous pouvez ajuster la taille de la police, les marges, etc. */
+}
+
+/* Répondre aux écrans d'ordinateur de bureau */
+@media (min-width: 1025px) {
+    /* Ajustements pour les grands écrans */
+}
+
+
+/* Ajustements pour les petits écrans */
+@media screen and (max-width: 768px) {
+    .btn_container {
+        margin-top: 2%; /* Réduisez l'espace au-dessus du bouton */
+        padding: 10px 0; /* Ajustez le padding pour réduire l'espace blanc */
+    }
+
+    .discover_btn {
+        font-size: 20px; /* Ajustez la taille de la police pour les petits écrans */
+        padding: 8px 20px; /* Réduisez le padding pour les petits écrans */
+    }
+}
+
+/* Assurez-vous que le bouton est bien visible sur tous les types d'écran */
+@media screen and (max-width: 1000px) {
+    .discover_btn {
+        display: block; /* Assurez-vous que le bouton ne soit pas caché */
+    }
+}
+
+/* Style pour le conteneur du bouton Découvrir avec image de fond */
+.btn_container {
+    margin-top: 5%; /* Ajustez selon le besoin */
+    height: auto; /* Ajustement pour éviter un espace blanc excessif */
+    position: relative;
+    padding: 20px 0; /* Ajustez le padding si nécessaire */
+    background-size: cover; /* Assure que l'image de fond couvre entièrement l'espace */
+    background-position: center; /* Centrer l'image de fond */
+    display: flex;
+    justify-content: center; /* Centre le bouton dans le conteneur */
+    align-items: center; /* Centre le bouton verticalement */
+}
+
+/* Ajustements pour les petits écrans, comme les téléphones */
+@media screen and (max-width: 768px) {
+    .btn_container {
+        padding: 10px; /* Réduisez le padding pour les petits écrans */
+    }
+
+    .discover_btn {
+        width: auto; /* Ajustez la largeur du bouton pour les petits écrans */
+        font-size: 18px; /* Ajustez la taille de la police pour les petits écrans */
+        padding: 8px 20px; /* Réduisez le padding pour les petits écrans */
+    }
+}
+
+.loginbgb2b {
+    background-image: url("ressources/fond1.webp");
+}
+
+.loginbgb2b {
+    left: 0;
+    /* position: absolute; */
+    /* width: 10%; */
+    height: 70vh;
+    /* margin-right: -100%; */
+    /* transition: all 0.5s ease; */
+    margin-top: -30%;
