@@ -68,7 +68,7 @@ if (isset($_SESSION["email"])) {
                 <p> Mot de passe <input class="login-input form-label" type="password" name="password"
                         placeholder="······"> </input>
                 </p>
-                <a style="gray" href="../account.php?method=register'">Crée un compte</a> <button type="submit"
+                <a style="gray" href="../account.php?method=register">Crée un compte</a> <button type="submit"
                     name="submit" placeholder="Connexion">Connexion</button>
             </div>
         </form>

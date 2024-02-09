@@ -15,14 +15,14 @@ var fidelity = $(".fidelity-point");
 
 $(".fidelity-text").text(number + " réservation(s)");
 
-for (let index = 0; index < number; index++) {
+for (let index = 0; index < number && index < 10; index++) {
     if (i == 5) {
         fidelity.append("<br>");
     }
     fidelity.append("<img src='ressources/fidelity_green.png'>");
     i++;
 }
-for (let index = 0; index < 10-number; index++) {
+for (let index = 0; index < 10-number && index < 10; index++) {
     if (i == 5) {
         fidelity.append("<br>");
     }

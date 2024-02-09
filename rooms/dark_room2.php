@@ -48,7 +48,11 @@ if (isset($_SESSION["email"])) {
                 <li><a href="../rooms/light_room1.php" class="nav_dark_room-border">NOS EXPERIENCES</a></li>
                 <li><a href="../apropos.php" class="nav_dark_room-border">A PROPOS DE NOUS</a></li>
                 <li><a href="../equipement.php" class="nav_dark_room-border">NOS EQUIPEMENTS</a></li>
+                <?php if(!isset($email)): ?>
                 <li><a href="#" id="login" class="nav_dark_room-border"><b>CONNEXION</b></a></li>
+                <?php else: ?>
+                <li><a href="#" id="login" class="nav_dark_room-border"><b>MON COMPTE</b></a></li>
+                <?php endif ?>
             </ul>
         </div>
         <img src="../ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton" id="menu_bouton">

@@ -33,13 +33,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Vous pouvez également vérifier la taille du fichier ici
             // Déplacer l'image téléchargée dans le répertoire de destination
             if (move_uploaded_file($_FILES['image']['tmp_name'], $targetFile)) {
-                $imagePath = $targetFile;
+                $imagePath = $imageName;
             } else {
                 echo "Désolé, il y a eu une erreur lors du téléchargement de votre fichier.";
             }
         } else {
             echo "Le fichier n'est pas une image.";
         }
+        $imagePath = "php/". $targetDirectory . $imageName;
     }
 
     // Préparer la requête SQL pour insérer l'article et le chemin de l'image

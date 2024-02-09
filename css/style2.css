@@ -479,12 +479,16 @@ html{
 }
 
 #form-login {
+
+    display: flex;
     
     background-image: url('../ressources/sense_grand.png');
     background-size: cover; 
     background-repeat: no-repeat; 
     width: 100%; 
     height: 800px;
+    
+    justify-content: space-between;
 }
 
 

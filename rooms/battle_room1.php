@@ -8,6 +8,20 @@
     <link href="../css/mainstyle.css" rel="stylesheet" type="text/css" />
 </head>
 
+<?php 
+
+include "../sql/sql-manager.php";
+
+session_start();
+if (isset($_SESSION["id"])) {
+    $id = $_SESSION["id"];
+    $email = $_SESSION["email"];
+    $name = $_SESSION["name"];
+    $admin = $_SESSION["admin"];
+}
+
+?>
+
 <body class="fond_template">
     <nav class="navbar" id="navbar">
         <div class="nav-img">
@@ -19,15 +33,19 @@
                 <li><a href="../rooms/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
                 <li><a href="../apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
                 <li><a href="../apropos.php" class="nav-border">NOS EQUIPEMENTS</a></li>
+                <?php if(!isset($email)): ?>
                 <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
+                <?php else: ?>
+                <li><a href="#" id="login" class="nav-border"><b>MON COMPTE</b></a></li>
+                <?php endif ?>
             </ul>
         </div>
         <img src="../ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton" id="menu_bouton">
     </nav>
     <header></header>
     <div class="loginbg">
-        <form action="../account.php?method=login&redirect=../rooms/batlle_room1.php" method="POST"
-            class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
+        <form action="../account.php?method=login&redirect=rooms/battle_room1.php" method="POST" class="login-pan mb-3"
+            style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
             <div class="login-content">
                 <p><SPAN STYLE="color:#000000"><b>Connexion</b></span></p>
                 <p> Identifiant <input class="login-input form-label" type="email" name="email"
@@ -36,7 +54,7 @@
                 <p> Mot de passe <input class="login-input form-label" type="password" name="password"
                         placeholder="······"> </input>
                 </p>
-                <a style="gray" href="../account.php?method=register'">Crée un compte</a> <button type="submit"
+                <a style="gray" href="../account.php?method=register">Crée un compte</a> <button type="submit"
                     name="submit" placeholder="Connexion">Connexion</button>
             </div>
         </form>
@@ -62,20 +80,22 @@
     <div class="intro_container" id="intro">
 
         <!--LOGO A GAUCHE-->
-        <div class="popup-btn"><img class="img_trailer" src="../ressources/VIDEO.webp"/></div>
-            
-            <!--POPUP VIDEO-->
-            <div class="popup-wrap">
-            
-                <div class="popup-box">
-                    
-                    <div class="line"></div>
+        <div class="popup-btn"><img class="img_trailer" src="../ressources/VIDEO.webp" /></div>
 
-                    <div class="trailer">
-                        <video id="video" width="1090"><source src="../ressources/Trailer/Trailer.mp4" type="video/mp4" /></video>
-                    </div>
+        <!--POPUP VIDEO-->
+        <div class="popup-wrap">
+
+            <div class="popup-box">
+
+                <div class="line"></div>
+
+                <div class="trailer">
+                    <video id="video" width="1090">
+                        <source src="../ressources/Trailer/Trailer.mp4" type="video/mp4" />
+                    </video>
                 </div>
             </div>
+        </div>
 
 
         <div class="texte_intro">
@@ -302,97 +322,97 @@
 
 
 
-    <script>
-    const menubtns = document.querySelector(".menu_bouton")
-    const navLinks = document.querySelector(".nav-links")
-    const navbar = document.getElementById("navbar")
-    var isOpen = true
+<script>
+const menubtns = document.querySelector(".menu_bouton")
+const navLinks = document.querySelector(".nav-links")
+const navbar = document.getElementById("navbar")
+var isOpen = true
 
 
-    menubtns.addEventListener('click', () => {
-        navLinks.classList.toggle('mobile-menu');
-        if (isOpen) {
-            navbar.style.backdropFilter = 'none';
-            isOpen = false
-        } else {
-            navbar.style.backdropFilter = 'blur(10px)'
-            isOpen = true
-        }
-    })
-
-    function handleIntersection(entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('footer-anim');
-                // Optionnel: Désactivez l'observer si vous ne voulez l'animation qu'une seule fois
-                observer.unobserve(entry.target);
-            }
-        });
+menubtns.addEventListener('click', () => {
+    navLinks.classList.toggle('mobile-menu');
+    if (isOpen) {
+        navbar.style.backdropFilter = 'none';
+        isOpen = false
+    } else {
+        navbar.style.backdropFilter = 'blur(10px)'
+        isOpen = true
     }
+})
 
-    // Création de l'observer avec la fonction et les options
-    const observer = new IntersectionObserver(handleIntersection, {
-        threshold: 0.1 // Déclenche l'animation lorsque 10% du footer est visible
+function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('footer-anim');
+            // Optionnel: Désactivez l'observer si vous ne voulez l'animation qu'une seule fois
+            observer.unobserve(entry.target);
+        }
     });
+}
 
-    // Cible le footer pour l'observer
-    const footer = document.querySelector('footer');
-    observer.observe(footer);
+// Création de l'observer avec la fonction et les options
+const observer = new IntersectionObserver(handleIntersection, {
+    threshold: 0.1 // Déclenche l'animation lorsque 10% du footer est visible
+});
 
-    let slideIndex = 0;
-    showSlides();
+// Cible le footer pour l'observer
+const footer = document.querySelector('footer');
+observer.observe(footer);
 
-    function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1
-        }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 8000); // Change image every 2 seconds
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
-
-
-    let slideyay = 1;
-    erm(slideyay);
-
-    // Next/previous controls
-    function plusSlides(n) {
-        erm(slideyay += n);
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1
     }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 8000); // Change image every 2 seconds
+}
 
-    // Thumbnail image controls
-    function currentSlide(n) {
-        erm(slideyay = n);
+
+let slideyay = 1;
+erm(slideyay);
+
+// Next/previous controls
+function plusSlides(n) {
+    erm(slideyay += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    erm(slideyay = n);
+}
+
+function erm(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+        slideyay = 1
     }
-
-    function erm(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideyay = 1
-        }
-        if (n < 1) {
-            slideyay = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideyay - 1].style.display = "block";
-        dots[slideyay - 1].className += " active";
+    if (n < 1) {
+        slideyay = slides.length
     }
-    </script>
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideyay - 1].style.display = "block";
+    dots[slideyay - 1].className += " active";
+}
+</script>
 
-    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="../js/actions.js"></script>
-    <script src="../js/home.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="../js/actions.js"></script>
+<script src="../js/home.js"></script>
 
 </html>

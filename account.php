@@ -23,8 +23,8 @@ if (isset($_SESSION["id"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/newstyle.css">
     <link href="css/style2.css" rel="stylesheet" type="text/css" />
+    <link href="css/mainstyle.css" rel="stylesheet" type="text/css" />
     <link href="css/booking.css" rel="stylesheet" type="text/css" />
     <meta name="google-signin-client_id"
         content="1055389349967-6clh6ao3sp4aadjb22g7sa0fbcvn0g99.apps.googleusercontent.com">
@@ -33,32 +33,37 @@ if (isset($_SESSION["id"])) {
 
 <body style="background-image: none">
 
-    <header>
 
-        <div class="nav">
-            <div class="nav-img">
-                <a href="index.html"><img src="ressources/logo_black.svg" alt="logo home"></a>
-            </div>
-            <div class="nav-right">
-                <a href="new.php">NEWS</a>
-                <a href="rooms/light_room1.php" class="nav-border">NOS EXPERIENCES</a>
-                <a href="apropos.php" class="nav-border">A PROPOS DE NOUS</a>
-                <a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a>
-                <a href="login.html" class="nav-border"><b>CONNEXION</b></a>
-
-            </div>
+    <nav class="navbar" id="navbar" style="position: inherit;">
+        <div class="nav-img">
+            <a href="index.php"><img src="ressources/logo_black.svg" alt="logo home"></a>
         </div>
-
-        <div class="header">
-            <div class="background-header"> </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="new.php">NEWS</a></li>
+                <li><a href="rooms/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
+                <li><a href="apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
+                <li><a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
+                <?php if(!isset($email)): ?>
+                <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
+                <?php else: ?>
+                <li><a href="#" id="login" class="nav-border"><b>MON COMPTE</b></a></li>
+                <?php endif ?>
+            </ul>
         </div>
+        <img src="ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton" id="menu_bouton">
+    </nav>
 
-    </header>
+    <div class="header">
+        <div class="background-header"> </div>
+    </div>
+    <header></header>
 
     <?php if($method == "login" && !isset($email)): ?>
-    <div id="form-login" class="row align-items-center justify-content-center">
-        <form action="account.php?method=login" method="POST" class="row justify-content-center" style="margin: 0;">
-            <div class="login-content">
+    <div id="form-login">
+        <form action="account.php?method=login" method="POST" style="margin: auto;">
+            <div class="login-content"
+                style="background-color: #E5E5E5; padding: 20px; border-radius: 10px; border: 1px solid;">
                 <p> Connexion </p>
                 <p> Identifiant <input class="form-label" type="email" name="email" required placeholder="abc@mail.fr"
                         value=<?= isset($_POST["email"]) ? $_POST["email"] : "" ?>> </input>
@@ -79,42 +84,41 @@ if (isset($_SESSION["id"])) {
         </form>
     </div>
     <?php elseif($method == "register"  && !isset($email)): ?>
-    <div id="form-login" class="row align-items-center justify-content-center">
-        <div class="text-center">
-            <form action="account.php?method=register" method="POST">
-                <div class="login-content">
-                    <p> Crée un compte </p>
-                    <h6>*Champs Obligatoires</h6>
-                    <p> Nom/Prénom* <input class="form-label" type="text" name="name" required
-                            placeholder="Jeremy Nadeau" value=<?= isset($_POST["name"]) ? $_POST["name"] : "" ?>>
-                        </input>
-                    </p>
-                    <p> Téléphone <input class="form-label" type="text" name="phone" placeholder="0601020304"
-                            value=<?= isset($_POST["phone"]) ? $_POST["phone"] : "" ?>> </input>
-                    </p>
-                    <p> Votre email* <input class="form-label" type="email" name="email" required
-                            placeholder="abc@mail.fr" value=<?= isset($_POST["email"]) ? $_POST["email"] : "" ?>>
-                        </input>
-                    </p>
-                    <p> Mot de passe* <input class="form-label" type="password" name="password" required
-                            placeholder="······" value=<?= isset($_POST["password"]) ? $_POST["password"] : "" ?>>
-                        </input>
-                    </p>
-                    <p> Confirmer le mot de passe* <input class="form-label" type="password" required
-                            name="password_repeat" placeholder="······"> </input>
-                    </p>
+    <div id="form-login">
+        <form action="account.php?method=register" method="POST" style="margin: auto;">
+            <div class="login-content"
+                style="background-color: #E5E5E5; padding: 20px; border-radius: 10px; border: 1px solid;">
+                <p> Crée un compte </p>
+                <h6>*Champs Obligatoires</h6>
+                <p> Nom/Prénom* <input class="form-label" type="text" name="name" required placeholder="Jeremy Nadeau"
+                        value=<?= isset($_POST["name"]) ? $_POST["name"] : "" ?>>
+                    </input>
+                </p>
+                <p> Téléphone <input class="form-label" type="text" name="phone" placeholder="0601020304"
+                        value=<?= isset($_POST["phone"]) ? $_POST["phone"] : "" ?>> </input>
+                </p>
+                <p> Votre email* <input class="form-label" type="email" name="email" required placeholder="abc@mail.fr"
+                        value=<?= isset($_POST["email"]) ? $_POST["email"] : "" ?>>
+                    </input>
+                </p>
+                <p> Mot de passe* <input class="form-label" type="password" name="password" required
+                        placeholder="······" value=<?= isset($_POST["password"]) ? $_POST["password"] : "" ?>>
+                    </input>
+                </p>
+                <p> Confirmer le mot de passe* <input class="form-label" type="password" required name="password_repeat"
+                        placeholder="······"> </input>
+                </p>
 
 
-                    <?php if(isset($_POST["email"])): ?>
-                    <a style="gray" href="account.php?method=login&email=<?= $_POST["email"] ?>"> Se connecter </a>
-                    <?php else: ?>
-                    <a style="gray" href="account.php?method=login"> Se connecter </a>
-                    <?php endif; ?>
+                <?php if(isset($_POST["email"])): ?>
+                <a style="gray" href="account.php?method=login&email=<?= $_POST["email"] ?>"> Se connecter </a>
+                <?php else: ?>
+                <a style="gray" href="account.php?method=login"> Se connecter </a>
+                <?php endif; ?>
 
-                    <button type="submit" name="submit" placeholder="Connexion"> Crée un compte </button>
-                </div>
-            </form>
-        </div>
+                <button type="submit" name="submit" placeholder="Connexion"> Crée un compte </button>
+            </div>
+        </form>
     </div>
     <?php endif; ?>
 
@@ -129,8 +133,10 @@ if (isset($_SESSION["id"])) {
     setcookie('fidelityCount', $currentRow["fidelity"], time() + (86400 * 30), "/");
     ?>
 
-    <div class="panel">
-        <div id="background" class="vertical-container">
+    <br> <br>
+    <div class="panel" style="margin: auto;">
+        <div id="background" class="vertical-container"
+            style="background-color: #E5E5E5; padding: 20px; border-radius: 10px; border: 1px solid;">
             <p> Mon adresse mail <?= $email ?></p>
             <p> Mot de passe XXXXXXXX</p>
 
@@ -144,6 +150,7 @@ if (isset($_SESSION["id"])) {
             </div>
         </div>
     </div>
+    <br> <br>
 
     <?php endif; ?>
 
@@ -186,7 +193,7 @@ if (isset($_SESSION["id"])) {
             $_SESSION["id"] = $currentRow["id"];
             $_SESSION["admin"] = false;
 
-            $redirect = "index.html";
+            $redirect = "index.php";
             if (isset($_GET["redirect"])) {
                 $redirect = $_GET["redirect"];
             }
@@ -219,7 +226,7 @@ if (isset($_SESSION["id"])) {
             } else {
                 $_SESSION["admin"] = false;
             }
-            $redirect = "index.html";
+            $redirect = "index.php";
 
             if (isset($_GET["redirect"])) {
                 $redirect = $_GET["redirect"];

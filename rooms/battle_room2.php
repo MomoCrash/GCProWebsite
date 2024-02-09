@@ -48,15 +48,19 @@ if (isset($_SESSION["email"])) {
                 <li><a href="../rooms/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
                 <li><a href="../apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
                 <li><a href="../equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
+                <?php if(!isset($email)): ?>
                 <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
+                <?php else: ?>
+                <li><a href="#" id="login" class="nav-border"><b>MON COMPTE</b></a></li>
+                <?php endif ?>
             </ul>
         </div>
         <img src="../ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton" id="menu_bouton">
     </nav>
     <header></header>
     <div class="loginbg">
-        <form action="../account.php?method=login&redirect=../rooms/batlle_room2.php" method="POST"
-            class="login-pan mb-3" style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
+        <form action="../account.php?method=login&redirect=rooms/batlle_room2.php" method="POST" class="login-pan mb-3"
+            style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
             <div class="login-content">
                 <p><SPAN STYLE="color:#000000"><b>Connexion</b></span></p>
                 <p> Identifiant <input class="login-input form-label" type="email" name="email"
@@ -65,7 +69,7 @@ if (isset($_SESSION["email"])) {
                 <p> Mot de passe <input class="login-input form-label" type="password" name="password"
                         placeholder="······"> </input>
                 </p>
-                <a style="gray" href="../account.php?method=register'">Crée un compte</a> <button type="submit"
+                <a style="gray" href="../account.php?method=register">Crée un compte</a> <button type="submit"
                     name="submit" placeholder="Connexion">Connexion</button>
             </div>
         </form>
@@ -90,20 +94,22 @@ if (isset($_SESSION["email"])) {
 
     <div class="intro_container" id="intro">
 
-        <div class="popup-btn"><img class="img_trailer" src="../ressources/VIDEO.webp"/></div>
-                
-                <!--POPUP VIDEO-->
-                <div class="popup-wrap">
-                
-                    <div class="popup-box">
-                        
-                        <div class="line"></div>
+        <div class="popup-btn"><img class="img_trailer" src="../ressources/VIDEO.webp" /></div>
 
-                        <div class="trailer">
-                            <video id="video" width="1090"><source src="../ressources/Trailer/Trailer.mp4" type="video/mp4" /></video>
-                        </div>
-                    </div>
+        <!--POPUP VIDEO-->
+        <div class="popup-wrap">
+
+            <div class="popup-box">
+
+                <div class="line"></div>
+
+                <div class="trailer">
+                    <video id="video" width="1090">
+                        <source src="../ressources/Trailer/Trailer.mp4" type="video/mp4" />
+                    </video>
                 </div>
+            </div>
+        </div>
 
 
         <div class="texte_intro">
@@ -127,16 +133,16 @@ if (isset($_SESSION["email"])) {
     <!-- DERNIERE PARTIE -->
     <div class="intro_exp_darkroom">
         <a href="battle_room1.php"><img class="redirectbtn" src="../ressources/retournnoir.png"></a>
-    
-    <div class="img_dark2">
-      <img src="../ressources/darkroom_banner2.png">
+
+        <div class="img_dark2">
+            <img src="../ressources/darkroom_banner2.png">
+        </div>
+
+        <div class="space"></div>
+
     </div>
 
-    <div class="space"></div>
-
-</div>
-
-<?php include "booking.php"; ?>
+    <?php include "booking.php"; ?>
 
 </body>
 
@@ -166,47 +172,47 @@ if (isset($_SESSION["email"])) {
 </footer>
 
 <!-- POP UP VIDEO -->
-    <script>
-    const menubtns = document.querySelector(".menu_bouton")
-    const navLinks = document.querySelector(".nav-links")
-    const navbar = document.getElementById("navbar")
-    var isOpen = true
+<script>
+const menubtns = document.querySelector(".menu_bouton")
+const navLinks = document.querySelector(".nav-links")
+const navbar = document.getElementById("navbar")
+var isOpen = true
 
 
-    menubtns.addEventListener('click', () => {
-        navLinks.classList.toggle('mobile-menu');
-        if (isOpen) {
-            navbar.style.backdropFilter = 'none';
-            isOpen = false
-        } else {
-            navbar.style.backdropFilter = 'blur(10px)'
-            isOpen = true
-        }
-    })
-
-    function handleIntersection(entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('footer-anim');
-                // Optionnel: Désactivez l'observer si vous ne voulez l'animation qu'une seule fois
-                observer.unobserve(entry.target);
-            }
-        });
+menubtns.addEventListener('click', () => {
+    navLinks.classList.toggle('mobile-menu');
+    if (isOpen) {
+        navbar.style.backdropFilter = 'none';
+        isOpen = false
+    } else {
+        navbar.style.backdropFilter = 'blur(10px)'
+        isOpen = true
     }
+})
 
-    // Création de l'observer avec la fonction et les options
-    const observer = new IntersectionObserver(handleIntersection, {
-        threshold: 0.1 // Déclenche l'animation lorsque 10% du footer est visible
+function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('footer-anim');
+            // Optionnel: Désactivez l'observer si vous ne voulez l'animation qu'une seule fois
+            observer.unobserve(entry.target);
+        }
     });
+}
 
-    // Cible le footer pour l'observer
-    const footer = document.querySelector('footer');
-    observer.observe(footer);
-    </script>
+// Création de l'observer avec la fonction et les options
+const observer = new IntersectionObserver(handleIntersection, {
+    threshold: 0.1 // Déclenche l'animation lorsque 10% du footer est visible
+});
 
-    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="../js/actions.js"></script>
-    <script src="../js/booking.js"></script>
-    <script src="../js/home.js"></script>
+// Cible le footer pour l'observer
+const footer = document.querySelector('footer');
+observer.observe(footer);
+</script>
+
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="../js/actions.js"></script>
+<script src="../js/booking.js"></script>
+<script src="../js/home.js"></script>
 
 </html>
