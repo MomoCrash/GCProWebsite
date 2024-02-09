@@ -11,6 +11,26 @@
 }
 
 @font-face {
+    font-family: "Amiko Regular";
+    src: url("https://db.onlinewebfonts.com/t/151717dc27ffdcefe9d50d975c5e5827.eot");
+    src: url("https://db.onlinewebfonts.com/t/151717dc27ffdcefe9d50d975c5e5827.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/151717dc27ffdcefe9d50d975c5e5827.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/151717dc27ffdcefe9d50d975c5e5827.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/151717dc27ffdcefe9d50d975c5e5827.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/151717dc27ffdcefe9d50d975c5e5827.svg#Amiko Regular")format("svg");
+}
+
+@font-face {
+    font-family: "Abel";
+    src: url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.eot");
+    src: url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.svg#Abel")format("svg");
+}
+
+@font-face {
     font-family: "Poppins Thin";
     src: url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.eot");
     src: url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.eot?#iefix")format("embedded-opentype"),
@@ -59,13 +79,17 @@ body {
 
 
 .calendar {
+    font-family: Abel;
     width: 100%;
     display: flex;
     padding: 10px;
+    text-align: center;
+    margin-right: -12%;
 }
 
 .day {
-    width: 90px;
+    font-family: Amiko regular;
+    width: 185px;
     height: 100%;
     margin: 0 auto;
     color: red;

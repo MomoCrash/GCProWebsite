@@ -6,11 +6,10 @@
         <link rel="icon" href="ressources/ongletIcon.png" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
-        <link href="css/mainstyle.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" type="text/css" href="css/home.css" />
+        <link href="css/mainstyle.css" rel="stylesheet" type="text/css"/>        
         <link rel="stylesheet" href="css/bookingstyle.css">
         <link rel="stylesheet" href="css/booking.css">
-        <link href="css/mainstyle.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="css/home.css" />
 
         <title>The Sense - Home</title>
     </head>
@@ -48,6 +47,7 @@
             </form>
         </div>
 
+        <div class="title_appear"><p>QUAND LE VIRTUEL DEVIENT RÉEL</p></div>
         <!--=================================BOUTON DECOUVRIR=================================-->
         <div class="btn_container">
             <a href="#intro" class="discover_btn">Découvrir</a>
@@ -56,7 +56,7 @@
         <!--=================================BANDEAU INTRO=================================-->
         <div class="intro_container" id="intro">
             <!--LOGO A GAUCHE-->
-            <div class="popup-btn"><img class="img_trailer" src="ressources/VIDEO.webp"/></div>
+            <div class="popup-btn"><img class="img_trailer" src="ressources/VIDEO.webp" alt="image pour lancer le trailer"/></div>
             
             <!--POPUP VIDEO-->
             <div class="popup-wrap">
@@ -75,7 +75,7 @@
             <div class = "text_intro">
 
                 <div class="title_intro">
-                    <p>QU'EST CE QUE <img class="logo" src="ressources/Sense.webp"/> ?</p>
+                    <p>QU'EST CE QUE <img class="logo" src="ressources/SENSE.webp" alt="logo the sense"/> ?</p>
                 </div> 
     
                 <p> Préparez-vous pour une expérience unique qui vous emmenera dans un autre univers.
@@ -116,7 +116,6 @@
             <div class="title">
                 <p>NOS EXPÉRIENCES LES PLUS APPRÉCIÉES</p>
             </div>
-
         <!--==================1 EXPERIENCE==================-->
 
             <!--IMAGE DE L'EXPERIENCE AVEC TOUS SES COMPOSANTS-->
@@ -212,6 +211,7 @@
                     <div class="break_line"></div><!--LIGNE SEPARATRICE-->
                     <p class="room_title">DARK ROOM</p>
                     <p class="warn">Expérience interdite aux -18</p>
+                    <div class="roundwarn"><p class="warntxt">-18</p></div>
                 </div>
 
                 <!--TXT A PROPOS-->
@@ -486,7 +486,7 @@
         <div class="space"></div>
 
         <!--TITRE-->
-        <div class="title">
+        <div class="title_disappear">
             <p>QU'EST CE QUI VOUS RETIENT ?</p>
         </div>
 

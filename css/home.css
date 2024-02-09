@@ -54,7 +54,7 @@ body {
 
 /*BOUTON DECOUVRIR*/
 .btn_container {
-    margin-top : 35%; 
+    margin-top : 30%; 
     height: 300px;
     position: relative;
 }
@@ -264,12 +264,23 @@ body {
 /*CSS EXPERIENCES*/
 
 /*EXP INTRO*/
-.title{
+.title, .title_disappear{
     font-family: Amiko Bold;
     font-weight:bold;
     font-size:30px;
     color:#3B4040;
     margin-left:10%;
+}
+
+.title_appear{
+    backdrop-filter: blur(4px);
+    font-family: Amiko Bold;
+    font-weight:bold;
+    font-size:30px;
+    color:black;
+    text-align: center;
+    margin-top: 35%;
+    display: none;
 }
 
 .txt_intro{
@@ -379,6 +390,25 @@ body {
     font-size: 20px;
 }
 
+.roundwarn{
+    background-color: #C13B3B;
+    position: absolute;
+    width:100px;
+    height:100px;
+    margin-top: -150px;
+    margin-left: -80px;
+    border-radius: 50%;
+    display: none;
+}
+
+.warntxt{
+    text-align: center;
+    margin-top: 30%;
+    color: black;
+    font-family: amiko bold;
+    font-size: 30px;
+}
+
 /*text*/
 .about_txt{
     font-family: Abel;
@@ -419,6 +449,10 @@ body {
 .book_img{
     width:100%;
     height:100%;
+}
+
+.book_btn.active{
+    filter: invert(1);
 }
 
 .book_btn:hover{
@@ -574,6 +608,9 @@ body {
     border-radius: 5px;
     text-align: center;
     width: 120px; /* You can adjust the width as needed */
+    position: relative;
+    margin-bottom: -38%;
+    left: -44%;
 }
 
 .unavailable {
@@ -826,4 +863,58 @@ body {
     .book_img{
         margin-top: 83px;
     }
+
+    .about_txt{
+        font-size: 15px;
+        margin-bottom: -70px;
+        margin-top: -50px;
+    }
+
+    .txt_about_title{
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .btn_container{
+        margin-top: 0;
+    }
+
+    .room_title{
+        font-size:20px;
+    }
+
+    .break_line{
+        height:30px;
+        width:5px;
+    }
+
+    .roundwarn, .title_appear{
+        display:block;
+    }
+
+    .img_behind{
+        width:1300px;
+        margin-left:-300px;
+    }
+
+    .img_exp{
+        overflow: hidden;
+    }
+
+    .pricing, .book_planning, .experiences_flex, .warn, .discover_room, .title_disappear{
+        display: none;
+    }
+
+    .title_appear{
+        display: block;
+    }
+
+    .images{
+        width: 30%;
+    }
+
+    .title_intro, .txt_intro{
+        text-align: center;
+    }
+
 }
