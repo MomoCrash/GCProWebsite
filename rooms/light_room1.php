@@ -369,7 +369,7 @@
 
   </script>
 
-  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="../js/actions.js"></script>
   <script src="../js/home.js"></script>
 

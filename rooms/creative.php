@@ -15,6 +15,17 @@
 include "../sql/sql-manager.php";
 
 session_start();
+
+if(isset($_SESSION["finalized"])){
+    if (isset($_SESSION["reloaded"])) {
+        unset($_SESSION["date"]);
+        unset($_SESSION["finalized"]);
+        unset($_SESSION["reloaded"]);
+    } else {
+        $_SESSION["reloaded"] = true;
+    }
+}
+
 if (isset($_SESSION["email"])) {
 
     $email = $_SESSION["email"];
@@ -47,7 +58,7 @@ if (isset($_SESSION["email"])) {
     </nav>
     <header></header>
     <div class="loginbg">
-        <form action="../account.php?method=login&redirect=creative/creative.php" method="POST" class="login-pan mb-3"
+        <form action="../account.php?method=login&redirect=rooms/creative.php" method="POST" class="login-pan mb-3"
             style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
             <div class="login-content">
                 <p><SPAN STYLE="color:#000000"><b>Connexion</b></span></p>
@@ -119,7 +130,7 @@ if (isset($_SESSION["email"])) {
             </div>
         </div>
         <div id="bookPanel" style="display: none;">
-            <?php include_once "booking.php"; ?>
+            <?php include "booking.php"; ?>
         </div>
     </div>
 
@@ -206,7 +217,7 @@ if (isset($_SESSION["email"])) {
     const footer = document.querySelector('footer');
     observer.observe(footer);
     </script>
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="../js/actions.js"></script>
     <script src="../js/booking.js"></script>
     <script src="../js/creative.js"></script>

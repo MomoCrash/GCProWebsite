@@ -31,6 +31,7 @@ function open(page) {
   switch (page) {
     case "dark":
       $("#darkRoomDiv").css("height", "900px");
+      $("#darkRoomDiv").append('<img src="../ressources/darkroom_banner2.png">')
       delayOpen(page, ["Escape game","Battle","Survival"], ["Cimetière", "Maison", "Ecole"], ["../ressources/temps_estime.png", "../ressources/bn_joueur.png"])
       break;
 

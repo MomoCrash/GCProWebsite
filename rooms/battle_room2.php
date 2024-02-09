@@ -6,7 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="../css/mainstyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../css/booking.css">
 </head>
+
+<?php
+
+include "../sql/sql-manager.php";
+
+session_start();
+
+$_SESSION["page"] = "battle_room";
+
+if(isset($_SESSION["finalized"])){
+    if (isset($_SESSION["reloaded"])) {
+        unset($_SESSION["date"]);
+        unset($_SESSION["finalized"]);
+        unset($_SESSION["reloaded"]);
+    } else {
+        $_SESSION["reloaded"] = true;
+    }
+}
+
+if (isset($_SESSION["email"])) {
+
+    $email = $_SESSION["email"];
+    $name = $_SESSION["name"];
+    $id = $_SESSION["id"];
+
+}
+
+?>
 
 <body class="fond_template">
     <nav class="navbar" id="navbar">
@@ -107,6 +136,7 @@
 
 </div>
 
+<?php include "booking.php"; ?>
 
 </body>
 
@@ -174,8 +204,9 @@
     observer.observe(footer);
     </script>
 
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="../js/actions.js"></script>
+    <script src="../js/booking.js"></script>
     <script src="../js/home.js"></script>
 
 </html>

@@ -1,14 +1,20 @@
 <body>
     <!-- Grand Calendrier de présentation de la semaine a venir -->
-    <div class="container-back">
+    <div class="container-back" style="color: white;">
         <form method="POST">
+            <?php if(!isset($_SESSION["finalized"])): ?>
             <h2 class="booking-title" style="font-weight: 700;"> VOTRE RESERVATION EST PRETE ! </h2>
             <h4 class="booking-subtitle" style="font-family: abel;"> IL NE RESTE PLUS QU'A VALIDER ! </h4>
+            <?php else: ?>
+            <h2 class="booking-title" style="font-weight: 700;"> C'EST PRÊT ! </h2>
+            <h4 class="booking-subtitle" style="font-family: abel;"> RÉCAPITULATIF DE VOTRE ACHAT </h4>
+            <?php endif; ?>
             <div class="separator" style="width: 60%; margin: 10px auto 10px auto;"></div>
             <div class="horizontal-container">
+                <?php if(!isset($_SESSION["finalized"])): ?>
                 <div class="vertical-container">
                     <div class="prevnextbtn">
-                        <h3 id="week-field" class="text"> </h3>
+                        <h3 id="week-field" class="book-text"> </h3>
                         <a href="#" id="previous" class="bruh" style="text-decoration: none; color: white;"><img>
                             << </img>
                         </a>
@@ -16,11 +22,49 @@
                         <div id="calendar" class="calendar"></div>
                     </div>
                 </div>
+                <?php endif; ?>
 
-                <?php if(isset($email)): ?>
+                <?php if(isset($_SESSION["finalized"])): ?>
                 <div class="vertical-container">
-                    <h4 class="text">Vous etes connecté avec le nom <?= $name ?> </h4>
-                    <h3 class="text">Email de la réservation : <?= $email ?></h3>
+                    <div class="login-content">
+                        <div class="vertical-container" style="text-align: center; margin: auto;">
+                            <div class="vertical-container">
+                                <h1> <?= date("Y-m-d", strtotime($_SESSION["date"])); ?> </h1>
+                                <h2 class="hour-display"> <?= date("H:i:s", strtotime($_SESSION["date"])); ?></h2>
+                            </div>
+
+                            <div class="vertical-container">
+                                <h1> <?=  $_SESSION["name"] ?> </h1>
+                                <h2 class="hour-display"> <?= $_POST["player_number"]; ?> joueurs </h2>
+                            </div>
+
+                            <div class="vertical-container">
+                                <h1> Prix total : </h1>
+                                <h2 class="hour-display"> € </h2>
+                            </div>
+
+                            <div class="vertical-container">
+                                <h5> Un mail de confirmation a été envoyé à l'adresse mail suivante
+                                    : <?=  $_SESSION["email"] ?> </h1>
+                            </div>
+
+                            <div class="vertical-container">
+                                <h5> En cas d’annulation, merci de nous contacter </h5>
+                                <h5> - Par téléphone : 01 23 45 67 89 </h5>
+                                <h5> - Par mail : gpasdidée@projet7.com </h5>
+                                <h6>*Seules les annulations jusqu’à 48h à l’avance seront remboursées</h6>
+                            </div>
+
+                            <div class="vertical-container">
+                                <h2> Toute l’équipe de The Sense vous remercie pour votre réservation, nous avons hâte de vous (re)voir !  </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php elseif(isset($email)): ?>
+                <div class="vertical-container">
+                    <h4 class="book-text">Vous etes connecté avec le nom <?= $name ?> </h4>
+                    <h3 class="book-text">Email de la réservation : <?= $email ?></h3>
                     <input class="item" type="text" name="name" required placeholder="Nom de la réservation"
                         value=<?= isset($_POST["name"]) ? $_POST["name"] : "" ?>>
                     </input>
@@ -31,9 +75,21 @@
                         <option value="4">4 joueurs</option>
                         <option value="5">5 joueurs</option>
                     </select>
-                    <div id="paypal-button-container" class="paypal"></div> <!-- PAYPAL PAYMENT -->
+                    <div class="horizontal-container">
+                                <input class="item" type="text" name="gift-code" placeholder="Code promo ou bon cadeau">
+                                </input>
+                                <case class="item" id="promo"> APPLIQUER </case>
+                            </div>
+                    <div class="horizontal-container">
+                        <div id="paypal-button-container" class="paypal" style="margin-right: 13%;"></div>
+                        <div class="separator" style="height: 100px; margin: 10px auto 10px auto;"></div>
+                        <div class="vertical-container">
+                            <h3 style="margin: 0; color: white;">Paiement Individuel</h3>
+                            <h5 style="margin: 0; margin-bottom: 10%; color: white;">(Sur place)</h5>
+                            <input type="checkbox" name="onPlace" id="onPlace">
+                        </div>
+                    </div>
                 </div>
-
                 <?php else: ?>
                 <div class="vertical-container">
                     <div class="login-content">
@@ -78,8 +134,8 @@
                                 <div id="paypal-button-container" class="paypal"></div>
                                 <div class="separator" style="height: 100px; margin: 10px auto 10px auto;"></div>
                                 <div class="vertical-container">
-                                    <h3 style="margin: 0;">Paiement Individuel</h3>
-                                    <h5 style="margin: 0; margin-bottom: 10%">(Sur place)</h5>
+                                    <h3 style="margin: 0; color: white;">Paiement Individuel</h3>
+                                    <h5 style="margin: 0; margin-bottom: 10%; color: white;">(Sur place)</h5>
                                     <input type="checkbox" name="onPlace" id="onPlace">
                                 </div>
                             </div>
@@ -88,8 +144,11 @@
                 </div>
                 <?php endif; ?>
             </div>
+            <?php if(!isset($_SESSION["finalized"])): ?>
             <a href="#bookPanel"> <input type='submit' name="submit" id="reserver"> </input></a>
+            <?php endif; ?>
         </form>
+        <?php if(!isset($_SESSION["finalized"])): ?>
         <button id="cancel" class="cancel">Cancel</button>
         <div class="bottom-text-book">
             <div class="title-bottom">
@@ -119,12 +178,11 @@
                 <img src="../ressources/Rectangle 236.png">
             </div>
         </div>
-    </div>
+        <?php endif; ?>
 
-    <?php
-
-            $day = $_COOKIE['date'];
-            if (!isset($day)) {
+        <?php 
+            if (isset($_COOKIE['date'])) {
+                $day = $_COOKIE['date'];
                 echo "Select a day";
             }
 
@@ -177,10 +235,26 @@
 
                     $_SESSION["id"] = $currentRow["id"];
                     $_SESSION["admin"] = false;
+                    
+                    $mode = "";
+                    if (isset($_GET["mode"])) {
+                        $mode = $_GET["mode"];
+                        if (isset($_GET["map"])) {
+                            $mode += $_GET["map"];
+                            if (isset($_GET["difficulty"])) {
+                                $mode += $_GET["difficulty"];
+                            }
+                        }
+                    }
 
-                    if (isset($_SESSION["id"])) {
-                        $request =  $conn->prepare("INSERT INTO `booking` (`id`, `user_id`, `date`, `player_number`, `paid`, `discover_way`) VALUES (NULL, '" . $_SESSION["id"] . "', '" . $sqlDate . "', '" . $player_number . "', '" . $paid . "', '" . $discorver_way . "');");
+                    if ($allowed) {
+                        $request =  $conn->prepare("INSERT INTO `booking` (`id`, `user_id`, `date`, `player_number`, `mode`, `paid`, `discover_way`) VALUES (NULL, '" . $_SESSION["id"] . "', '" . $sqlDate . "', '" . $player_number . "', '" . $mode . "', '" . $paid . "', '" . $discorver_way . "');");
                         $request->execute();
+                        
+                        $_SESSION["date"] = $day;
+                        $_SESSION["finalized"] = true;
+                    } else {
+                        echo "Echec lors du payement veillez payer sur place ou réesayer.";
                     }
 
                 }
@@ -193,7 +267,7 @@
                 $count = $request->rowCount();
                 $currentRow  = $request -> fetch();
 
-                if ($count > 0) {
+                if ($count > 0 && isset($_POST["name"])) {
                     $name = $_POST["name"];
                     $player_number = $_POST["player_number"];
 
@@ -210,6 +284,29 @@
                         }
                     }
 
+                    $mode = "";
+                    if (isset($_GET["mode"])) {
+                        $mode = $_GET["mode"];
+                        if (isset($_GET["map"])) {
+                            $mode .= $_GET["map"];
+                            if (isset($_GET["difficulty"])) {
+                                $mode .= $_GET["difficulty"];
+                            }
+                        }
+                    } elseif (isset($_SESSION["page"])) {
+                        switch ($_SESSION["page"]) {
+                            case 'light_room':
+                                $mode = "Light Room";
+                                break;
+                            case 'dark_room':
+                                $mode = "Dark Room";
+                                break;
+                            case 'battle_room':
+                                $mode = "Battle Room";
+                                break;
+                        }
+                    }
+
                     if ($allowed) {
                         date_default_timezone_set('Europe/Paris'); 
                         $sqlDate = date("Y-m-d H:i:s", strtotime($day));
@@ -217,8 +314,11 @@
                         $request =  $conn->prepare("UPDATE `users` SET `fidelity` = '". (intval($currentRow["fidelity"])+1) ."' WHERE `users`.`id` = ". $id .";");
                         $request->execute();
 
-                        $request =  $conn->prepare("INSERT INTO `booking` (`id`, `user_id`, `date`, `player_number`, `paid`, `discover_way`) VALUES (NULL, '" . $id . "', '" . $sqlDate . "', '" . $player_number . "', '" . $paid . "', '4');");
+                        $request =  $conn->prepare("INSERT INTO `booking` (`id`, `user_id`, `date`, `player_number`, `mode`, `paid`, `discover_way`) VALUES (NULL, '" . $id . "', '" . $sqlDate . "', '" . $player_number . "', '" . $mode . "', '" . $paid . "', '4');");
                         $request->execute();
+
+                        $_SESSION["date"] = $day;
+                        $_SESSION["finalized"] = true;
                     } else {
                         echo "Echec lors du payement veillez payer sur place ou réesayer.";
                     }
@@ -226,11 +326,12 @@
                 }
 
             }
+            ?>
 
-        ?>
+    </div>
 
 
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="../js/booking.js"></script>
     <script
         src="https://www.paypal.com/sdk/js?client-id=AZnYiH2U3I5gyVjD-xbHsvDYujBeMmvmD-UmrhfOHTOQLT9LP0Il05FQ6q6H1v5YLSxTZDFviJ5qCnrf">
