@@ -11,7 +11,7 @@
     </noscript>
     <link href="css/apropos.css" rel="stylesheet" type="text/css" />
     <link href="css/mainstyle.css" rel="stylesheet" type="text/css" />
-    <title>A propos</title>
+    <title>The Sense | A propos</title>
 </head>
 
 <?php 

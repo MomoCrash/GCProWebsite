@@ -11,7 +11,7 @@
     <link href="css/login.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/btob.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>B TO B</title>
+    <title>The Sense | B TO B</title>
 </head>
 
 <?php 

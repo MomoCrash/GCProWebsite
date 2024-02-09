@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="css/style2.css" rel="stylesheet" type="text/css" />
 
-    <title>Les News</title>
+    <title>The Sense | Les News</title>
 </head>
 
 <?php 

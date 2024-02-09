@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="css/mainstyle.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/admin.css">
-    <title>Admin</title>
+    <title>Page administateur</title>
 </head>
 <?php
 

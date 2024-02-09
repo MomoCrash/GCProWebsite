@@ -12,7 +12,7 @@
     <link href="css/equiStyle.css" rel="stylesheet" type="text/css" media="screen">
     <link href="css/mainstyle.css" rel="stylesheet" type="text/css" />
 
-    <title>Les News</title>
+    <title>The Sense | Équipements</title>
 </head>
 
 <?php 

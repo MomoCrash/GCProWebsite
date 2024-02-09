@@ -28,7 +28,7 @@ if (isset($_SESSION["id"])) {
     <link href="css/booking.css" rel="stylesheet" type="text/css" />
     <meta name="google-signin-client_id"
         content="1055389349967-6clh6ao3sp4aadjb22g7sa0fbcvn0g99.apps.googleusercontent.com">
-    <title>Document</title>
+    <title>Compte utilisateur</title>
 </head>
 
 <body style="background-image: none">
