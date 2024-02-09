@@ -31,7 +31,7 @@ function generateCalendar(size) {
         }
         let dayClass = $('<div class="calendar-col">').attr("class", "day");
 
-        $("#week-field").text("Du " + week + " au " + (week+size-1) + " " + dayDate.toLocaleDateString('fr-FR', {month: 'long'}))
+        $("#week-field").text("Du " + week + " au " + (week+size-1) + " " + dayDate.toLocaleDateString('fr-FR', {month: 'long'}));
 
         if (i != currentDays) {
             $(".calendar").append('<div class="separator" style="height: 300px; margin: auto;"></div>')

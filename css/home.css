@@ -48,15 +48,13 @@ body {
     background-position: fixed;
     background-size: cover; */
     background: url(../ressources/mobile_fond.webp); 
-    background-size: contain;
-    resize: both;
-    overflow: scroll;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /*BOUTON DECOUVRIR*/
 .btn_container {
-    margin-top : 35%; 
+    margin-top : 30%; 
     height: 300px;
     position: relative;
 }
@@ -91,7 +89,15 @@ body {
     background-position: left;
 }
 
+@media screen and (max-width: 1000px) {
+    .discover_btn{
+        display: block;
+    }
 
+    .btn_container{
+        display:block;
+    }
+}
 /*====================================BANDEAU INTRO==========================================*/
 .intro_container{
     padding-top:5%;
@@ -158,6 +164,27 @@ body {
     .texte_intro{
         text-align:center;
     }
+}
+
+@media screen and (max-width: 923px){
+    .popup-btn img{
+            height: 250px;
+            width: 250px;
+        }
+    
+        .title_intro {
+            text-align: center;
+            font-size: 20px;
+            font-family: 'amiko';
+            font-weight: 700;
+        }
+    
+        .text_intro p{
+            text-align: center;
+            font-size: 18px;
+            font-family: 'abel';
+            font-weight: 400;
+        }
 }
 
 /*TRAILER*/
@@ -237,12 +264,23 @@ body {
 /*CSS EXPERIENCES*/
 
 /*EXP INTRO*/
-.title{
+.title, .title_disappear{
     font-family: Amiko Bold;
     font-weight:bold;
     font-size:30px;
     color:#3B4040;
     margin-left:10%;
+}
+
+.title_appear{
+    backdrop-filter: blur(4px);
+    font-family: Amiko Bold;
+    font-weight:bold;
+    font-size:30px;
+    color:black;
+    text-align: center;
+    margin-top: 35%;
+    display: none;
 }
 
 .txt_intro{
@@ -352,6 +390,25 @@ body {
     font-size: 20px;
 }
 
+.roundwarn{
+    background-color: #C13B3B;
+    position: absolute;
+    width:100px;
+    height:100px;
+    margin-top: -150px;
+    margin-left: -80px;
+    border-radius: 50%;
+    display: none;
+}
+
+.warntxt{
+    text-align: center;
+    margin-top: 30%;
+    color: black;
+    font-family: amiko bold;
+    font-size: 30px;
+}
+
 /*text*/
 .about_txt{
     font-family: Abel;
@@ -392,6 +449,10 @@ body {
 .book_img{
     width:100%;
     height:100%;
+}
+
+.book_btn.active{
+    filter: invert(1);
 }
 
 .book_btn:hover{
@@ -547,6 +608,9 @@ body {
     border-radius: 5px;
     text-align: center;
     width: 120px; /* You can adjust the width as needed */
+    position: relative;
+    margin-bottom: -38%;
+    left: -44%;
 }
 
 .unavailable {
@@ -649,7 +713,6 @@ body {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
 
 
 /*=====================================FAQ=====================================*/
@@ -755,3 +818,103 @@ body {
     background-color:#00BA8D;
 }
 
+.carousel-control-next-icon-real, .carousel-control-prev-icon-real {
+    background-image: none;
+    color: black;
+    font-family: 'Amiko Bold';
+}
+
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    top: 25px;
+    bottom: 0;
+    z-index: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    width: 30px;
+    color: #fff;
+    text-align: center;
+    opacity: .5;
+    height: 30px;
+    transition: opacity .15s ease;
+    border: solid 1px black;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.carousel-control-prev {
+    margin-left:25px;
+}
+
+.carousel-control-next {
+    left:0;
+    margin-left: 75px ;
+}
+
+.carousel-control-next:hover, .carousel-control-prev:hover {
+    text-decoration: none;
+}
+
+/*================================VERSION TELEPHONE=====================================*/
+@media screen and (max-width: 1000px) {
+    .book_img{
+        margin-top: 83px;
+    }
+
+    .about_txt{
+        font-size: 15px;
+        margin-bottom: -70px;
+        margin-top: -50px;
+    }
+
+    .txt_about_title{
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .btn_container{
+        margin-top: 0;
+    }
+
+    .room_title{
+        font-size:20px;
+    }
+
+    .break_line{
+        height:30px;
+        width:5px;
+    }
+
+    .roundwarn, .title_appear{
+        display:block;
+    }
+
+    .img_behind{
+        width:1300px;
+        margin-left:-300px;
+    }
+
+    .img_exp{
+        overflow: hidden;
+    }
+
+    .pricing, .book_planning, .experiences_flex, .warn, .discover_room, .title_disappear{
+        display: none;
+    }
+
+    .title_appear{
+        display: block;
+    }
+
+    .images{
+        width: 30%;
+    }
+
+    .title_intro, .txt_intro{
+        text-align: center;
+    }
+
+}

@@ -585,6 +585,10 @@ ul {
     margin-left:5%;
 }
 
+.img_trailer:hover{
+    cursor: pointer;
+}
+
 .intro_container{
     display:flex;
     size:0;
@@ -701,6 +705,10 @@ ul {
     }
     .red_texte{
         text-align:center;
+    }
+
+    .top_container{
+        margin-left: 12%
     }
 }
 
@@ -1008,6 +1016,11 @@ footer {
     padding-top: 90px;
 }
 
+.intro_index{
+    margin-top: -1%;
+    padding-top: 90px;
+}
+
 .intro_exp_darkroom{
     background-image: url(../ressources/forme7.webp);
     background-size: 100%;
@@ -1177,7 +1190,6 @@ footer {
     font-family: Abel;
     color:#646363;
     font-size: 20px;
-    margin-left: 6%;
     margin-right: 5%;
     margin-top:2%;
 }
@@ -1186,7 +1198,6 @@ footer {
     font-family: Abel;
     color:#ffffff;
     font-size: 20px;
-    margin-left: 6%;
     margin-right: 5%;
     margin-top:2%;
 }
@@ -1205,7 +1216,6 @@ footer {
     font-size:30px;
     height:37px;
     color:#3B4040;
-    margin-left: 4%;
 }
 
 .txt_about_title_darkroom{
@@ -1213,7 +1223,6 @@ footer {
     font-size:30px;
     height:37px;
     color:#ffffff;
-    margin-left: 4%;
 }
 
 
@@ -1222,7 +1231,6 @@ footer {
     width:1px;
     background:#3B4040;
     margin-right: 25px;
-    margin-top: -1%;
     margin-left: 25px;
 }
 
@@ -1231,7 +1239,6 @@ footer {
     width:1px;
     background:#ffffff;
     margin-right: 25px;
-    margin-top: -1%;
     margin-left: 25px;
 }
 
@@ -1266,7 +1273,7 @@ footer {
     margin-bottom: -2px;
 }
 
-.space{
+.littlespace{
     height:50px;
 }
 
@@ -1342,10 +1349,6 @@ footer {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
-
 /* Fading animation */
 .fade {
   animation-name: fade;
@@ -1369,6 +1372,7 @@ footer {
     text-align: center;
     transition: 1s;
     font-family: abel;
+    overflow: hidden;
 }
 
 .login-content {
@@ -1425,4 +1429,69 @@ footer {
 .tonpere{
     margin-left: 15%;
     margin-bottom: 1%;
+}
+
+/*TRAILER*/
+.trailer{
+    position: fixed;
+    top: -17.2%;
+    left: 50%;
+    transform: translate(-50%,50%) scale(0);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: -1000;
+    pointer-events: none;
+}
+
+.trailer.active{
+    transform: translate(-50%,50%) scale(1);
+    z-index: 1000;
+    pointer-events: none;
+}
+
+
+@media (max-width:991px) {
+    .trailer video{
+        margin-top: 150px;;
+        max-width:90%;
+    }
+}
+/*ANIMATION LIGNE*/
+
+.line { 
+    margin: auto;
+    width: 55%; 
+    height: 650px; 
+    position: fixed;    
+    top: 50%; 
+    left: 50%; 
+    display: flex;
+    transform: translate(-50%, -50%); 
+    z-index:-1000;
+} 
+
+.line.active::before { 
+    content: ""; 
+    position: fixed;
+    display: flex; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: black; 
+    animation: slidein, openin;
+    animation-duration: 1s, 2s; 
+    animation-delay: 0s, 1s;
+    z-index: 1000;
+} 
+
+@keyframes slidein {
+    from {width:0px; height:3px; top:50%}
+    to   {width:100%;height:3px; top:50%}
+}
+
+@keyframes openin {
+    from { width:100%;height:3px; top:50%}
+    to   { transform: scaleY(1);}
 }

@@ -3,7 +3,7 @@ document.getElementById('article-select').addEventListener('change', function() 
     var articleId = this.value;
     if (articleId) {
         // Préparez une requête AJAX pour obtenir les données de l'article
-        fetch('getArticleForm.php', {
+        fetch('php/getArticleForm.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',

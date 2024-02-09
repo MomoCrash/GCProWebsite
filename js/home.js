@@ -32,6 +32,18 @@ btn.onclick = function() {
 
 }
 
+//Reserver
+let book_btn = document.querySelector(".book_btn");
+
+book_btn.onclick = function() {
+    book_btn.classList.toggle("active")
+    sleep(500).then(() => {
+        book_btn.classList.toggle("active")
+    })
+}
+
+
+
 //FAQ
 let btn1 = document.querySelector(".button1");
 let btn2 = document.querySelector(".button2");

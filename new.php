@@ -10,9 +10,22 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="css/style2.css" rel="stylesheet" type="text/css" />
 
-    <title>Les News</title>
+    <title>The Sense | Les News</title>
 </head>
 
+<?php 
+
+include "sql/sql-manager.php";
+
+session_start();
+if (isset($_SESSION["id"])) {
+    $id = $_SESSION["id"];
+    $email = $_SESSION["email"];
+    $name = $_SESSION["name"];
+    $admin = $_SESSION["admin"];
+}
+
+?>
 
 <body class="fond_page_news">
     <nav class="navbar" id="navbar" style="position: inherit;">
@@ -22,18 +35,20 @@
         <div class="nav-links">
             <ul>
                 <li><a href="new.php">NEWS</a></li>
-                <li><a href="lightroom/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
+                <li><a href="rooms/light_room1.php" class="nav-border">NOS EXPERIENCES</a></li>
                 <li><a href="apropos.php" class="nav-border">A PROPOS DE NOUS</a></li>
                 <li><a href="equipement.php" class="nav-border">NOS EQUIPEMENTS</a></li>
+                <?php if(!isset($email)): ?>
                 <li><a href="#" id="login" class="nav-border"><b>CONNEXION</b></a></li>
+                <?php else: ?>
+                <li><a href="#" id="login" class="nav-border"><b>MON COMPTE</b></a></li>
+                <?php endif ?>
             </ul>
         </div>
         <img src="ressources/bouton_menu_by_moi.png" alt="menu_bouton" class="menu_bouton" id="menu_bouton">
     </nav>
-    <header></header>
-    <div class="img-header"><img src="ressources/EN TÊTE.png" alt="header"></div>
     <div class="loginbg">
-        <form action="account.php?method=login&redirect=darkroom/dark_room1.php" method="POST" class="login-pan mb-3"
+        <form action="account.php?method=login&redirect=new.php" method="POST" class="login-pan mb-3"
             style="width: 0px; height: 0px; z-index: 1; visibility: hidden;">
             <div class="login-content">
                 <p><SPAN STYLE="color:#000000"><b>Connexion</b></span></p>
@@ -43,11 +58,13 @@
                 <p> Mot de passe <input class="login-input form-label" type="password" name="password"
                         placeholder="······"> </input>
                 </p>
-                <a style="gray" href="../account.php?method=register'">Crée un compte</a> <button type="submit"
+                <a style="gray" href="account.php?method=register">Crée un compte</a> <button type="submit"
                     name="submit" placeholder="Connexion">Connexion</button>
             </div>
         </form>
     </div>
+    <header></header>
+    <div class="img-header"><img src="ressources/EN TÊTE.png" alt="header"></div>
 
     <main>
         <!-- Main content sections -->
@@ -60,72 +77,35 @@
                 </p>
             </div>
         </div>
+
+        <?php
+            $news = array();
+            try {
+                $stmt = $conn->query("SELECT title, content, image_path FROM new");
+                $news = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            } catch(PDOException $e) {
+                echo "Erreur: " . $e->getMessage();
+            }
+
+            foreach ($news as $new):
+        ?>
+
         <section>
             <!-- News article -->
             <div class="animated-on-scroll">
                 <div class="second-p">
-                    <img src="ressources\image141.webp" alt="video" width=110% height=110%>
+                    <img src="<?= $new['image_path'] ?>" alt="video" width=110% height=110%>
                     <div class="text-second" animation-type="fadeIn" animation-delay="0.5s">
-                        <h1>ÉVÉNEMENT : LA LÉGENDE DU PÈRE NOËL</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
+                        <h1><?= htmlspecialchars($new['title']) ?></h1>
+                        <p><?= htmlspecialchars($new['content']) ?></p>
                     </div>
                 </div>
             </div>
         </section>
-        <section>
-            <div class="animated-on-scroll">
-                <div class="global-side">
-                    <div class="side-by-side">
-                        <div class="left-div">
-                            <img src="ressources\image_8.webp" alt="video" width=110% height=110%>
-                            <div class="text-third">
-                                <h2>ÉVÉNEMENT: LA CHASSE À L’OEUF</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                    deserunt mollit anim id est laborum.</p>
-                            </div>
-                        </div>
-                        <div class="right-div">
-                            <img src="ressources\image_9.webp" alt="video" width=110% height=110%>
-                            <div class="text-four">
-                                <h2>UN NOUVEL ÉQUIPEMENT ARRIVE !</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                    deserunt mollit anim id est laborum.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <!-- News article -->
-            <div class="animated-on-scroll">
-                <div class="second-p">
-                    <img src="ressources\image144.webp" alt="video" width=110% height=110%>
-                    <div class="text-second" animation-type="fadeIn" animation-delay="0.5s">
-                        <h1>ÉVÉNEMENT : LE MYSTÈRE DU LOUP PHARAON</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+        <?php endforeach; ?>
+
+        <!-- Carousel -->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -230,31 +210,28 @@
         </script>
         <script src="js/actions.js"></script>
         <script src="js/animation.js"></script>
-        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="../js/actions.js"></script>
 
     </body>
 
-<script>
+    <script>
     const menubtns = document.querySelector(".menu_bouton")
     const navLinks = document.querySelector(".nav-links")
     const navbar = document.getElementById("navbar")
     var isOpen = true
-    
 
-    menubtns.addEventListener('click',()=>{
-      navLinks.classList.toggle('mobile-menu');
-      if(isOpen){
-      navbar.style.backdropFilter = 'none';
-      isOpen = false
-      }else{
-        navbar.style.backdropFilter = 'blur(10px)'
-        isOpen = true
-      }
+
+    menubtns.addEventListener('click', () => {
+        navLinks.classList.toggle('mobile-menu');
+        if (isOpen) {
+            navbar.style.backdropFilter = 'none';
+            isOpen = false
+        } else {
+            navbar.style.backdropFilter = 'blur(10px)'
+            isOpen = true
+        }
     })
-
-
-
-</script>
+    </script>
 
 </html>
