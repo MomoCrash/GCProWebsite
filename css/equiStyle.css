@@ -245,16 +245,16 @@ section{
     }
 
     .img-third, .img-four, .img-five {
-        height: 258px; /* Set the height of the image container */
-        width: 400px; /* Set the width of the image container */
-        display: flex; /* Use flexbox to center the content */
-        align-items: center; /* Center content vertically within the container */
-        justify-content: center; /* Center content horizontally within the container */
-        overflow: hidden; /* Ensures the content doesn't spill outside the container */
-        border-radius: 10px; /* Optional: Adds rounded corners to the container */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow to the container */
+        height: 258px; 
+        width: 400px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        overflow: hidden; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
         
-        background-size: cover; /* Ensure the background image covers the entire container */
+        background-size: cover; 
     }
 
     .img-third img, .img-four img, .img-five img {
@@ -267,7 +267,7 @@ section{
 
     .four-div {
         display: flex;
-        flex-direction: column-reverse; /* Ceci inversera l'ordre des éléments flex enfants */
+        flex-direction: column-reverse; 
     }
     
     /* Assurez-vous que la largeur des enfants de .four-div est définie ou gérée correctement */
@@ -314,14 +314,14 @@ footer {
 }
 
 .footer-nav {
-    margin-left: 30px; /* Adjust as needed */
+    margin-left: 30px; 
     font-size: 17px;
 }
 
 .footer-nav a {
     color: #82FFE1;
     text-decoration: none;
-    padding-right: 20px; /* Spacing between nav links */
+    padding-right: 20px; 
 }
 
 .footer-nav a:hover {
@@ -337,7 +337,7 @@ footer {
 }
 
 .social-icons {
-    margin-right: 30px; /* Adjust as needed */
+    margin-right: 30px; 
 }
 
 .social-icons a {
@@ -375,7 +375,7 @@ footer {
     text-decoration: none;
     color: #82FFE1;
     padding: 5px 0;
-    margin: 0 10px; /* Exemple de margin, ajustez selon vos besoins */
+    margin: 0 10px; 
 }
 
 /* Le span à l'intérieur du lien pour appliquer la barre d'animation */
