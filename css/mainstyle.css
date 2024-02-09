@@ -1190,7 +1190,6 @@ footer {
     font-family: Abel;
     color:#646363;
     font-size: 20px;
-    margin-left: 6%;
     margin-right: 5%;
     margin-top:2%;
 }
@@ -1199,7 +1198,6 @@ footer {
     font-family: Abel;
     color:#ffffff;
     font-size: 20px;
-    margin-left: 6%;
     margin-right: 5%;
     margin-top:2%;
 }
@@ -1275,7 +1273,7 @@ footer {
     margin-bottom: -2px;
 }
 
-.space{
+.littlespace{
     height:50px;
 }
 
@@ -1374,6 +1372,7 @@ footer {
     text-align: center;
     transition: 1s;
     font-family: abel;
+    overflow: hidden;
 }
 
 .login-content {
